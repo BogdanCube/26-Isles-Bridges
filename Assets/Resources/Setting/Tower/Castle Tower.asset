@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4f3232823a84efaa46e8173627e5bea, type: 3}
+  m_Name: Castle Tower
+  m_EditorClassIdentifier: 
+  Templates:
+  - Mesh: {fileID: -3933884076122576325, guid: 52cbcc33837f34bbf9ac1b71e7962a31, type: 3}
+    Materials:
+    - {fileID: 269840283077852131, guid: 52cbcc33837f34bbf9ac1b71e7962a31, type: 3}
+    - {fileID: -8911499558433741390, guid: 52cbcc33837f34bbf9ac1b71e7962a31, type: 3}
+    - {fileID: -3324096961576636649, guid: 52cbcc33837f34bbf9ac1b71e7962a31, type: 3}
+  - Mesh: {fileID: 2902601518729054453, guid: 52cbcc33837f34bbf9ac1b71e7962a31, type: 3}
+    Materials:
+    - {fileID: 269840283077852131, guid: 52cbcc33837f34bbf9ac1b71e7962a31, type: 3}
+    - {fileID: -8911499558433741390, guid: 52cbcc33837f34bbf9ac1b71e7962a31, type: 3}
+    - {fileID: -3324096961576636649, guid: 52cbcc33837f34bbf9ac1b71e7962a31, type: 3}
+  - Mesh: {fileID: -958735625704209013, guid: 52cbcc33837f34bbf9ac1b71e7962a31, type: 3}
+    Materials:
+    - {fileID: 269840283077852131, guid: 52cbcc33837f34bbf9ac1b71e7962a31, type: 3}
+    - {fileID: -8911499558433741390, guid: 52cbcc33837f34bbf9ac1b71e7962a31, type: 3}
+    - {fileID: -3324096961576636649, guid: 52cbcc33837f34bbf9ac1b71e7962a31, type: 3}

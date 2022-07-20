@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6e341d93-820d-4fe0-8b38-63ebe917c210" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Managers/GameLogic.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Managers/GameManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Managers/GameManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Managers/Level/Level.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Managers/Level/Level.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Managers/UIManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Managers/UIManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UI/DisplayParametrs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UI/Localization.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UI/Localization/DynamicLocalizeText.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UI/Localization/DynamicLocalizeText.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UI/Screen.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UI/Screen/UIScreen.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UI/Screen/UIScreen.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Graphics/Font.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../Graphics/Font.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Graphics/Font/Peace Sans Webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Graphics/Font/Peace Sans Webfont.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Graphics/Font/Peace Sans.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Graphics/Font/Peace Sans.otf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Graphics/Sprite/Square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Graphics/Sprite/Square.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Examples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Examples/Example Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Examples/Example Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Examples/Ground.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Examples/Ground.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Examples/JoystickPlayerExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Examples/JoystickPlayerExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Examples/JoystickSetterExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Examples/JoystickSetterExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Examples/Player.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Examples/Player.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Prefabs/Dynamic Joystick.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Prefabs/Dynamic Joystick.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Prefabs/Fixed Joystick.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Prefabs/Fixed Joystick.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Prefabs/Floating Joystick.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Prefabs/Floating Joystick.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Prefabs/Variable Joystick.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Prefabs/Variable Joystick.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Base.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Base/Joystick.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Base/Joystick.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Editor/JoystickEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Editor/JoystickEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Joysticks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Joysticks/DynamicJoystick.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Joysticks/DynamicJoystick.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/All Axis Backgrounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline_Arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline_Arrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain_Arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain_Arrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged_Arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged_Arrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Handles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Handles/Handle_Outline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Handles/Handle_Outline.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Handles/Handle_Outline_Arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Handles/Handle_Outline_Arrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Handles/Handle_Plain.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Handles/Handle_Plain.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Handles/Handle_Plain_Arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Handles/Handle_Plain_Arrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Handles/Handle_Ridged.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Handles/Handle_Ridged.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Handles/Handle_Ridged_Arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Handles/Handle_Ridged_Arrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Horizontal Backgrounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline_Arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline_Arrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain_Arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain_Arrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged_Arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged_Arrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Vertical Backgrounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline_Arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline_Arrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain_Arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain_Arrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged_Arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged_Arrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Cube.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Cube.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Editor/NavMeshComponentsExamplesEditor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Editor/NavMeshComponentsExamplesEditor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Editor/NavMeshPrefabInstanceEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Editor/NavMeshPrefabInstanceEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/brightgreen.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/brightgreen.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/brown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/brown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/crosshair.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/crosshair.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/floor.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/floor.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/green.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/green.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/grey.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/grey.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/modify_crosshair.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/modify_crosshair.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/yellow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Materials/yellow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/NavMeshComponentsExamples.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/NavMeshComponentsExamples.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/BanyanTree.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/BanyanTree.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/BanyanTree.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/BanyanTree.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile0.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile0.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile10.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile10.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile11.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile11.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile12.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile12.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile13.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile13.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile14.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile14.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile15.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile15.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile4.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile4.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile5.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile5.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile6.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile6.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile7.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile7.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile8.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile8.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile9.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/DungeonTiles/Tile9.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/GroundTile.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/GroundTile.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/Materials/BanyanBark.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/Materials/BanyanBark.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/Materials/BanyanBranches.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/Materials/BanyanBranches.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/Plank.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Prefabs/Plank.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/1_multiple_agent_sizes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/1_multiple_agent_sizes.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/1_multiple_agent_sizes.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/1_multiple_agent_sizes/NavMesh-Geometry 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/1_multiple_agent_sizes/NavMesh-Geometry 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/1_multiple_agent_sizes/NavMesh-Geometry.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/1_multiple_agent_sizes/NavMesh-Geometry.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/2_drop_plank.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/2_drop_plank.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/3_free_orientation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/3_free_orientation.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/3_free_orientation.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/3_free_orientation/NavMesh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/3_free_orientation/NavMesh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/4_sliding_window_infinite.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/4_sliding_window_infinite.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/5_sliding_window_terrain.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/5_sliding_window_terrain.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/6_modify_mesh.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/6_modify_mesh.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/7_dungeon.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/7_dungeon.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/7b_dungeon_tile_prefabs.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scenes/7b_dungeon_tile_prefabs.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/AgentLinkMover.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/AgentLinkMover.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/ClickToMove.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/ClickToMove.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/DestroyOnTrigger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/DestroyOnTrigger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/DungeonManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/DungeonManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/EnableIffSleeping.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/EnableIffSleeping.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/FreeCam.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/FreeCam.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/LocalNavMeshBuilder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/LocalNavMeshBuilder.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/MeshTool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/MeshTool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/NavMeshPrefabInstance.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/NavMeshPrefabInstance.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/NavMeshSourceTag.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/NavMeshSourceTag.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/Oscillator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/Oscillator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/RandomInstancing.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/RandomInstancing.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/RandomWalk.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/RandomWalk.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/SpawnPrefabOnKeyDown.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Scripts/SpawnPrefabOnKeyDown.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Terrains.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Terrains/Islands.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Terrains/Islands.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Terrains/LightmapWithFog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Terrains/LightmapWithFog.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Terrains/layer_LightmapWithFog(2048.000,2048.000)(0.000,0.000)(0.000,0.000,0.000),0.000,0.000.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Examples/Terrains/layer_LightmapWithFog(2048.000,2048.000)(0.000,0.000)(0.000,0.000,0.000),0.000,0.000.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Gizmos.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Gizmos/NavMeshLink Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Gizmos/NavMeshLink Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Gizmos/NavMeshModifierVolume Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Gizmos/NavMeshModifierVolume Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Gizmos/NavMeshSurface Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Gizmos/NavMeshSurface Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshAssetManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshAssetManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshComponentsEditor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshComponentsEditor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshComponentsGUIUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshComponentsGUIUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshLinkEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshLinkEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshModifierEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshModifierEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshModifierVolumeEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshModifierVolumeEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshSurfaceEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Editor/NavMeshSurfaceEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Scripts/NavMeshComponents.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Scripts/NavMeshComponents.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Scripts/NavMeshLink.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Scripts/NavMeshLink.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Scripts/NavMeshModifier.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Scripts/NavMeshModifier.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Scripts/NavMeshModifierVolume.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Scripts/NavMeshModifierVolume.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Scripts/NavMeshSurface.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/NavMeshComponents/Scripts/NavMeshSurface.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/Editor/NavMeshComponentsTestsEditmode.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/Editor/NavMeshComponentsTestsEditmode.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/Editor/NavMeshModifierVolumeInPrefabTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/Editor/NavMeshModifierVolumeInPrefabTests.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/Editor/NavMeshSurfaceInPrefabTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/Editor/NavMeshSurfaceInPrefabTests.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/Editor/NavMeshSurfaceInPrefabVariantTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/Editor/NavMeshSurfaceInPrefabVariantTests.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/Editor/PrefabSavingUtil.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/Editor/PrefabSavingUtil.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/Editor/PrefabStageAutoSavingUtil.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/Editor/PrefabStageAutoSavingUtil.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/NavMeshComponentsTestsPlaymode.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/NavMeshComponentsTestsPlaymode.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/NavMeshSurfaceAgentTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/NavMeshSurfaceAgentTests.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/NavMeshSurfaceLinkTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/NavMeshSurfaceLinkTests.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/NavMeshSurfaceModifierTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/NavMeshSurfaceModifierTests.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/NavMeshSurfaceModifierVolumeTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/NavMeshSurfaceModifierVolumeTests.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/NavMeshSurfaceTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Assets/Tests/NavMeshSurfaceTests.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/ConnectingSurfaces.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/ConnectingSurfaces.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/Images.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/Images/ConnectingSurfaces-Example.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/Images/ConnectingSurfaces-Example.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/Images/NavMeshLink-Example.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/Images/NavMeshLink-Example.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/Images/NavMeshModifier-Example.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/Images/NavMeshModifier-Example.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/Images/NavMeshModifierVolume-Example.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/Images/NavMeshModifierVolume-Example.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/Images/NavMeshSurface-Advanced.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/Images/NavMeshSurface-Advanced.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/Images/NavMeshSurface-Example.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/Images/NavMeshSurface-Example.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/NavMeshLink.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/NavMeshLink.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/NavMeshModifier.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/NavMeshModifier.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/NavMeshModifierVolume.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/NavMeshModifierVolume.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/NavMeshSurface.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/NavMeshSurface.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Documentation/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/LICENSE.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Packages.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Packages/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/Packages/manifest.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/AudioManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/AudioManager.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/ClusterInputManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/ClusterInputManager.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/DynamicsManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/DynamicsManager.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/EditorBuildSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/EditorSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/EditorSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/GraphicsSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/GraphicsSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/InputManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/InputManager.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/NavMeshAreas.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/NavMeshAreas.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/NetworkManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/NetworkManager.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/Physics2DSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/Physics2DSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/PresetManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/PresetManager.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/ProjectSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/ProjectSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/ProjectVersion.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/ProjectVersion.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/QualitySettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/QualitySettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/TagManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/TagManager.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/TimeManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/TimeManager.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/UnityConnectSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/VFXManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/VFXManager.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/XRSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/ProjectSettings/XRSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/NavMeshComponents/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Materials/Ground.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Materials/Ground.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Materials/Stand.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Materials/Stand.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Materials/Stickman_Gray.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Materials/Stickman_Gray.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Materials/Stickman_Green.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Materials/Stickman_Green.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Materials/Stickman_Red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Materials/Stickman_Red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Materials/Stickman_Yellow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Materials/Stickman_Yellow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Models/Stand.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Models/Stand.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Models/Stickman_heads_sphere.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Models/Stickman_heads_sphere.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Prefabs/Stand.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Prefabs/Stand.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Prefabs/Stickman_heads_sphere.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Prefabs/Stickman_heads_sphere.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/README.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/SampleAnimationController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/SampleAnimationController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Package/Stickman/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/DOTween.XML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/DOTween.XML.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/DOTween.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/DOTween.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/DOTween.dll.mdb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/DOTween.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll.mdb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/Imgs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenMiniIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenMiniIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Plugins/Demigiant/DOTween/readme.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core/Bot/Bot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Core/Bot/Bot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core/Bot/FinderBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Core/Bot/FinderBlock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core/Character/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Core/Character/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core/Character/DeathComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DeathComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core/Character/DeathComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/DeathComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core/Player/.idea/.idea.Player.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Core/Player/.idea/.idea.Player.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Environment.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Core/Environment.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Environment/BlockColor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Environment/BlockColor/BlockColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Core/Environment/BlockColor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Environment/BlockColor/BlockColor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Core/Environment/BlockColor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Environment/BlockColor/BlockHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Managers/GameLogic/BlockHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Environment/BlockColor/BlockHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Managers/GameLogic/BlockHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Environment/Level.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Managers/Level.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Environment/Level/LoaderLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Managers/Level/LoaderLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Environment/Level/LoaderLevel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Managers/Level/LoaderLevel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Environment/Spawner.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Environment/Spawner/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Managers/GameLogic/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Environment/Spawner/Spawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Managers/GameLogic/Spawner.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/DisplayedWave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/DisplayParametrs/WaveDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/DisplayedWave.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/DisplayParametrs/WaveDisplay.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../StreamingAssets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/../../../UserSettings/Search.settings" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2C0wU3SV7b6BFbjcDMVnbUF1jGI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e341d93-820d-4fe0-8b38-63ebe917c210" name="Changes" comment="" />
+      <created>1657952828435</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657952828435</updated>
+      <workItem from="1657952844155" duration="33000" />
+      <workItem from="1657953639692" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
