@@ -7,6 +7,7 @@ namespace Core.Environment.Block
         public void SetPosition(Vector3 position)
         {
             transform.localPosition = position;
+            transform.localScale = Vector3.one; 
         }
     }
 }

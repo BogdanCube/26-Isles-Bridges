@@ -5,8 +5,10 @@ namespace Core.Environment.Island
 {
     public class Island : MonoBehaviour
     {
-        [Range(0,10)] [SerializeField] private float _radius;
+        [Range(0,25)] [SerializeField] private float _radius;
         [SerializeField] private float _coefficient;
+        [SerializeField] private float _coefficientCollider;
+        [SerializeField] private SphereCollider _sphereCollider;
         [SerializeField] private Transform _inside;
         [SerializeField] private Transform _outside;
 
@@ -16,6 +18,8 @@ namespace Core.Environment.Island
             
             var outRadius = _coefficient * _radius;
             _outside.localScale = new Vector3(outRadius, _outside.localScale.y, outRadius);
+
+            _sphereCollider.radius = _coefficientCollider * _radius;;
         }
     }
 }

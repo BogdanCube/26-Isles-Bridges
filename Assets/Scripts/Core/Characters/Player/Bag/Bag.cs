@@ -8,10 +8,10 @@ namespace Core.Player.Bag
 {
     public class Bag : MonoBehaviour
     {
-        [SerializeField] private int _maxCount;
         [SerializeField] private int _currentCount;
-
+        [SerializeField] private int _maxCount;
         public event Action<int> OnUpdateBag;
+        public bool HasCount => _currentCount > 0;
 
         private void Start()
         {
@@ -29,7 +29,7 @@ namespace Core.Player.Bag
         }
 
         [Button]
-        public void Remove()
+        public void Spend()
         {
             if (_currentCount > 0)
             {
@@ -37,6 +37,6 @@ namespace Core.Player.Bag
                 OnUpdateBag?.Invoke(_currentCount);
             }
         }
-        
+
     }
 }
