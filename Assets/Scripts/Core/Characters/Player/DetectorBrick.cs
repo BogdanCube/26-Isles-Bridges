@@ -11,7 +11,7 @@ namespace Core.Characters.Player
 
         private void OnTriggerEnter(Collider other)
         {
-            if(_bag.HasCount && other.TryGetComponent(out Brick brick))
+            if(_bag.HasCanSpend && other.TryGetComponent(out Brick brick))
             {
                 if (brick.IsSet == false)
                 {

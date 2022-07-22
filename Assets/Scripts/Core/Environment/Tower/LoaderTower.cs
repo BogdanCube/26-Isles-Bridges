@@ -1,4 +1,6 @@
+using Managers.Level;
 using NaughtyAttributes;
+using NTC.Global.Pool;
 using UnityEngine;
 
 namespace Core.Environment.Tower
@@ -6,15 +8,13 @@ namespace Core.Environment.Tower
     public class LoaderTower : MonoBehaviour
     {
         [Expandable] [SerializeField] private SettingLevelTower _setting;
-        
-        [SerializeField] private MeshFilter _meshFilter;
-        [SerializeField] private MeshRenderer _meshRenderer;
-        
+        [SerializeField] private Transform _currentTower;
         public void Load(int index)
         {
-            var currentTower = _setting.Templates[index];
-            _meshFilter.mesh = currentTower.Mesh;
-            _meshRenderer.materials = currentTower.Materials;
+            Destroy(_currentTower.gameObject);
+            var tower = _setting.Templates[index].Model;
+            _currentTower = Instantiate(tower, transform);
+            LoaderLevel.Instance.UpdateBake();
         }
     }
 }

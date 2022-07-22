@@ -6,14 +6,12 @@ namespace Core.Environment.Tower
     [CreateAssetMenu(fileName = "SettingLevelTower", menuName = "My Assets/Tower", order = 0)]
     public class SettingLevelTower : ScriptableObject
     {
-
         public List<TemplateTower> Templates;
     }
-    
     [System.Serializable]
     public class TemplateTower
     {
-        public Mesh Mesh;
-        public Material[] Materials;
+        public Transform Model;
+        public int Value;
     }
 }

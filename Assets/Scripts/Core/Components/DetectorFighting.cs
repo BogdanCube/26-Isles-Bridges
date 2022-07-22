@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Core.Character
+namespace Core.Components
 {
     public class DetectorFighting : MonoBehaviour
     {

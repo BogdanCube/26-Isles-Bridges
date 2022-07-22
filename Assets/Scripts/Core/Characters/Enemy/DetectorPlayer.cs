@@ -1,4 +1,5 @@
 using Core.Character;
+using Core.Components;
 using UnityEngine;
 
 namespace Core.Characters.Enemy

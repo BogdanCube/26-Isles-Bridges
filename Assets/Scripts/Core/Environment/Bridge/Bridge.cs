@@ -8,11 +8,9 @@ namespace Core.Environment.Bridge
     {
         [SerializeField] private float _offset;
         [SerializeField] private int _poolCount;
-        
-        [Space][SerializeField] private int _countBrick;
-        [SerializeField] private int _maxCount;
         [SerializeField] private Island.Island _builtTo;
-
+        private int _maxCount;
+        
         public event Action<int> OnBuild;
         public float Offset => _offset;
         private void Start()

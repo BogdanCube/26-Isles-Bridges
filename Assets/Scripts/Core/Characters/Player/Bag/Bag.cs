@@ -11,7 +11,8 @@ namespace Core.Player.Bag
         [SerializeField] private int _currentCount;
         [SerializeField] private int _maxCount;
         public event Action<int> OnUpdateBag;
-        public bool HasCount => _currentCount > 0;
+        public bool HasCanSpend => _currentCount > 0;
+        public bool HasCanAdd => _currentCount + 1 <= _maxCount;
 
         private void Start()
         {
@@ -21,21 +22,15 @@ namespace Core.Player.Bag
         [Button]
         public void Add()
         {
-            if (_currentCount + 1 <= _maxCount)
-            {
-                _currentCount++;
-                OnUpdateBag?.Invoke(_currentCount);
-            }
+            _currentCount++;
+            OnUpdateBag?.Invoke(_currentCount);
         }
 
         [Button]
         public void Spend()
         {
-            if (_currentCount > 0)
-            {
-                _currentCount--;
-                OnUpdateBag?.Invoke(_currentCount);
-            }
+            _currentCount--;
+            OnUpdateBag?.Invoke(_currentCount);
         }
 
     }

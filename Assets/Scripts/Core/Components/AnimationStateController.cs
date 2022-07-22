@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Core.Character
+namespace Core.Components
 {
     public class AnimationStateController : MonoBehaviour
     {
