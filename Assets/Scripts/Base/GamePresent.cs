@@ -1,6 +1,7 @@
 using System;
 using Components;
 using Components.Health;
+using Core.Components.Health;
 using UI.Screen;
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,7 +17,7 @@ namespace Managers
         public UnityEvent OnLose;
         public bool IsGameOver => _healthComponent.IsDeath;
 
-        #region Enable/Disable
+        /*#region Enable/Disable
         private void OnEnable()
         {
             _healthComponent.OnDeath += Lose;
@@ -27,7 +28,7 @@ namespace Managers
             _healthComponent.OnDeath -= Lose;
 
         }
-        #endregion
+        #endregion*/
         
         private void Start()
         {

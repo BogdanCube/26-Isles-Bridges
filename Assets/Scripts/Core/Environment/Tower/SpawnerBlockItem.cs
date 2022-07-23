@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Core.Components._ProgressComponents;
 using Core.Environment.Block;
 using NaughtyAttributes;
 using NTC.Global.Pool;
@@ -8,7 +9,7 @@ using Random = UnityEngine.Random;
 
 namespace Core.Environment.Tower
 {
-    public class SpawnerBlockItem : MonoBehaviour
+    public class SpawnerBlockItem : ProgressComponent
     {
         [SerializeField] private BlockItem _block;
 
@@ -17,31 +18,33 @@ namespace Core.Environment.Tower
         
         [MinMaxSlider(0, 10)] [SerializeField]
         private Vector2Int _countSpawn;
-        [SerializeField] private int _limitCount;
-        [SerializeField] private float _timeSpawn;
         [SerializeField] private float _heightSpawn;
 
         [Space] [SerializeField] private int _currentCount;
+        [SerializeField] private int _limitSpawn;
         [SerializeField] private float _coeffienceRadious;
 
         private float RandomMinus => Random.Range(-1f, 1f) > 0 ? 1 : - 1;
         private float RandomPos => RandomMinus * Random.Range(_radius.x, _radius.y);
+        private float TimeSpawn => _maxCount;
+
         private void Start()
         {
+            Load();
             StartCoroutine(SpawnCoroutine());
         }
+        
 
-       
         private IEnumerator SpawnCoroutine()
         {
-            while (_currentCount < _limitCount)
+            while (_currentCount < _limitSpawn)
             {
                 var count = Random.Range(_countSpawn.x, _countSpawn.y);
                 for (int i = 0; i < count; i++)
                 {
                     Spawn();
                 }
-                yield return new WaitForSeconds(_timeSpawn);
+                yield return new WaitForSeconds(TimeSpawn);
             }
         }
         [Button]

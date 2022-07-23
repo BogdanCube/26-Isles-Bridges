@@ -2,6 +2,7 @@ using Components.Health;
 using Components.Weapon;
 using Core.Character;
 using Core.Character.Behavior;
+using Core.Components.Health;
 using UnityEngine;
 
 namespace Core.Components.Behavior

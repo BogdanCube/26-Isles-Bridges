@@ -1,6 +1,7 @@
 using System;
+using Core.Components._ProgressComponents.Bag;
+using Core.Components.Bag;
 using Core.Environment.Bridge.Brick;
-using Core.Player.Bag;
 using UnityEngine;
 
 namespace Core.Characters.Player
