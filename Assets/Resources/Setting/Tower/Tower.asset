@@ -13,13 +13,9 @@ MonoBehaviour:
   m_Name: Tower
   m_EditorClassIdentifier: 
   Templates:
-  - Model: {fileID: 5633958274150839768, guid: ec49667082e924997bf6b4217e0cb44b, type: 3}
-    Value: 0
-  - Model: {fileID: 7310432682863505358, guid: 76c557d1d0a7d4a398293b7e7a5eea0e, type: 3}
-    Value: 0
-  - Model: {fileID: 2464938631305307120, guid: 05d702ec7a9b0454eb5a4ec08c590c21, type: 3}
-    Value: 0
-  - Model: {fileID: 1989899359541259338, guid: 42ad1fcaee53f40c999b4365447beaed, type: 3}
-    Value: 0
-  - Model: {fileID: 4399100910973393474, guid: f47b85201eed64a1dac6a3fd92ddb3f8, type: 3}
-    Value: 0
+  - Model: {fileID: 1307419418133522450, guid: 3b0b717f26c6b4f4bb45325d331e664a, type: 3}
+    Price: 15
+  - Model: {fileID: 3115033361882452212, guid: ec8274d6123344f42a7e88d73811db47, type: 3}
+    Price: 25
+  - Model: {fileID: 1826486161593071305, guid: d667021521b3142338a7f67bb0a8671c, type: 3}
+    Price: 0

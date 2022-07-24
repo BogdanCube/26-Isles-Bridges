@@ -6,15 +6,15 @@ using UnityEngine.Serialization;
 
 namespace Core.Environment.Island
 {
-    public class FreeIsland : MonoBehaviour
+    public class FreeIsland : Island
     {
         [SerializeField] private MeshRenderer _meshRenderer;
         [SerializeField] private float _duration;
-        [SerializeField] private bool _isFree;
-
+        [SerializeField] private bool _isDelight;
+        public event Action OnDelightIsland;
         private void Start()
         {
-            if (_isFree)
+            if (_isDelight == false)
             {
                 SetColor(Color.gray, 0);
             }
@@ -22,9 +22,10 @@ namespace Core.Environment.Island
 
         private void OnTriggerEnter(Collider other)
         {
-            if(_isFree && other.TryGetComponent(out Components.Behavior.Character character))
+            if(_isDelight == false && other.TryGetComponent(out Components.Behavior.Character character))
             {
-                _isFree = false;
+                _isDelight = true;
+                OnDelightIsland?.Invoke();
                 SetColor(character.Color,_duration);
             }
         }

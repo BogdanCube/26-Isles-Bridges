@@ -10,8 +10,11 @@ namespace Core.Components
         {
             if (_detachmentRecruit.HasCanAdd && other.TryGetComponent(out FollowOwner recruit))
             {
-                _detachmentRecruit.Add(recruit);
-                recruit.SetTarget(transform);
+                if (recruit.IsMove == false)
+                {
+                    _detachmentRecruit.Add(recruit);
+                    recruit.SetTarget(transform);
+                }
             }
         }
     }

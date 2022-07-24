@@ -7,8 +7,9 @@ namespace Core.Components.Wallet
     {
         [SerializeField] private int _countCoin;
         public event Action<int> OnUpdateCount;
+        public int CurrentCount => _countCoin;
 
-        public bool HasSpend(int count) => _countCoin > count;
+        public bool HasCanSpend(int count = 1) => _countCoin > count;
 
         private void Start()
         {
@@ -24,9 +25,15 @@ namespace Core.Components.Wallet
             }
         }
 
-        public void Spend(int count)
+        public void Spend(int count = 1)
         {
             _countCoin -= count;
+            OnUpdateCount?.Invoke(_countCoin);
+        }
+
+        public void Reset()
+        {
+            _countCoin = 0;
             OnUpdateCount?.Invoke(_countCoin);
         }
     }

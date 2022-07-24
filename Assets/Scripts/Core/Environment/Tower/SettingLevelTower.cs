@@ -12,6 +12,6 @@ namespace Core.Environment.Tower
     public class TemplateTower
     {
         public Transform Model;
-        public int Value;
+        public int Price;
     }
 }

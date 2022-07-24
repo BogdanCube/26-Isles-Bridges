@@ -12,12 +12,14 @@ namespace Core.Components.Health
         [ProgressBar("Health", 20, EColor.Red)] 
         [SerializeField] private int _currentCount;
         public event Action<int> OnUpdateHealth;
-        
         public bool IsDeath => _currentCount <= 0;
         public int MaxCount => _maxCount;
         private void Start()
         {
-            Load();
+            if (IsProgress)
+            {
+                Load();
+            }
             UpdateCount();
         }
 

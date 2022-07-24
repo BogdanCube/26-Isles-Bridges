@@ -31,7 +31,7 @@ namespace Core.Environment.Tower.ShopProgressItem
         {
             var wallet = _detectorWallet.Wallet;
             var price = _progressComponent.Price;
-            if (_progressComponent.IsMaxLevel == false && wallet.HasSpend(price))
+            if (_progressComponent.IsMaxLevel == false && wallet.HasCanSpend(price))
             {
                 _progressComponent.LevelUp();
                 wallet.Spend(price);

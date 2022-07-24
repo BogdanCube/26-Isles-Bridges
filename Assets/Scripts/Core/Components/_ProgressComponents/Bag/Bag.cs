@@ -10,10 +10,14 @@ namespace Core.Components._ProgressComponents.Bag
         public event Action<int> OnUpdateBag;
         public bool HasCanSpend => _currentCount > 0;
         public bool HasCanAdd => _currentCount + 1 <= _maxCount;
+        public int CurrentCount => _currentCount;
 
         private void Start()
         {
-            Load();
+            if (IsProgress)
+            {
+                Load();
+            }
             OnUpdateBag?.Invoke(_currentCount);
         }
 
@@ -31,5 +35,10 @@ namespace Core.Components._ProgressComponents.Bag
             OnUpdateBag?.Invoke(_currentCount);
         }
 
+        public void Reset()
+        {
+            _currentCount = 0;
+            OnUpdateBag?.Invoke(_currentCount);
+        }
     }
 }

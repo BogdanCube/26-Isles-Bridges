@@ -12,9 +12,7 @@ namespace Components.Weapon
 
 
         [Header("Graphic Parameters")] [CanBeNull]
-        //public Vector3 Offset;
         public Mesh Mesh;
-        //public Gradient GradientTrail;
     }
     
 }
