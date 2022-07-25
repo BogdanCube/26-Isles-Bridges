@@ -23,10 +23,13 @@ namespace Core.Components._Spawners
         
         protected IEnumerator SpawnCoroutine(RandomData randomData,int timeSpawn)
         {
-            while (_currentCount < _limitSpawn)
+            while (true)
             {
-                Spawn(randomData);
                 yield return new WaitForSeconds(timeSpawn);
+                if (_currentCount < _limitSpawn)
+                {
+                    Spawn(randomData);
+                }
             }
         }
         protected void Spawn(RandomData randomData)

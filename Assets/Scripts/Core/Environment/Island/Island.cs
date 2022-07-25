@@ -14,10 +14,10 @@ namespace Core.Environment.Island
 
         private void OnValidate()
         {
-            _inside.localScale = new Vector3(_radius, _inside.localScale.y, _radius);
+            _inside.localScale = new Vector3(_radius, _radius,_inside.localScale.z);
             
             var outRadius = _coefficient * _radius;
-            _outside.localScale = new Vector3(outRadius, _outside.localScale.y, outRadius);
+            _outside.localScale = new Vector3(outRadius, outRadius,_outside.localScale.z);
 
             _sphereCollider.radius = _coefficientCollider * _radius;;
         }

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4f3232823a84efaa46e8173627e5bea, type: 3}
+  m_Name: Mine
+  m_EditorClassIdentifier: 
+  Templates:
+  - Model: {fileID: 1454889852477475580, guid: 1219c89c752564ce8ae8502932da7b61, type: 3}
+    Price: 55
+  - Model: {fileID: 8078736933946096707, guid: ef9dc6c7d0fcf4e6fbf9e12a08124091, type: 3}
+    Price: 75
+  - Model: {fileID: 8822074500984792707, guid: 5a70b620df1d74a4ea26ce00beb9cd2c, type: 3}
+    Price: 0

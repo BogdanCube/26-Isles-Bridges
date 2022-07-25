@@ -11,9 +11,9 @@ namespace Core.Environment.Tower
 {
     public class TowerLevel : MonoBehaviour
     {
-        [Range(0,5)] [SerializeField] private int _level;
+        [SerializeField] private int _level;
         [SerializeField] private float _pumpingSpeed;
-        [SerializeField] private Wallet _shopWallet;
+        [SerializeField] private Bag _shopBag;
         [SerializeField] private LoaderTower _loaderTower;
         
         public Action<int,int> OnUpdateDisplayed;
@@ -32,19 +32,19 @@ namespace Core.Environment.Tower
             //particle
             _loaderTower.Load(_level);
         }
-        public IEnumerator ReplenishmentBlock(Wallet wallet)
+        public IEnumerator ReplenishmentCoin(Bag bag)
         {
             while (IsMaxLevel == false)
             {
                 yield return new WaitForSeconds(_pumpingSpeed);
-                if (wallet.HasCanSpend())
+                if (bag.HasCanSpend)
                 {
-                    wallet.Spend();
-                    _shopWallet.Add();
-                    if (_shopWallet.CurrentCount >= _loaderTower.PriceNextLevel(_level))
+                    bag.Spend();
+                    _shopBag.Add();
+                    if (_shopBag.CurrentCount >= _loaderTower.PriceNextLevel(_level))
                     {
                         LevelUp();
-                        _shopWallet.Reset();
+                        _shopBag.Reset();
                     }
                     UpdateDisplay();
                 }
@@ -53,7 +53,7 @@ namespace Core.Environment.Tower
 
         private void UpdateDisplay()
         {
-            OnUpdateDisplayed.Invoke(_shopWallet.CurrentCount, _loaderTower.PriceNextLevel(_level));
+            OnUpdateDisplayed.Invoke(_shopBag.CurrentCount, _loaderTower.PriceNextLevel(_level));
             if (IsMaxLevel)
             {
                 OnMaxUpgrade.Invoke();

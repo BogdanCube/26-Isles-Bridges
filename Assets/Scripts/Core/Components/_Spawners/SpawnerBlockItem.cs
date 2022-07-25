@@ -1,20 +1,22 @@
-using Core.Components._Spawners;
+using System.Collections;
 using Core.Components._Spawners.RandomSpawner;
-using Core.Environment.Block;
 using NaughtyAttributes;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-namespace Core.Environment.Tower
+namespace Core.Components._Spawners
 {
     public class SpawnerBlockItem : Spawner
     {
-        [SerializeField] private LoaderTimeSpawn _loaderTimeSpawn;
         [Expandable][SerializeField] private RandomData _randomData;
-        [ShowNativeProperty] private int Time => _loaderTimeSpawn.TimeSpawn;
-        private void Start()
+        private IEnumerator _coroutine;
+        public void StartSpawn(int time)
         {
-            StartCoroutine(SpawnCoroutine(_randomData,Time));
+            if (_coroutine != null)
+            {
+                StopCoroutine(_coroutine);
+            }
+            _coroutine = SpawnCoroutine(_randomData,time);
+            StartCoroutine(_coroutine);
         }
     }
 }

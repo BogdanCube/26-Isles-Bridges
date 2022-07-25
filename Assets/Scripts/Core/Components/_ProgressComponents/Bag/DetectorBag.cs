@@ -1,18 +1,30 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using Core.Environment.Tower;
 using UnityEngine;
 
 namespace Core.Components._ProgressComponents.Bag
 {
+
     public class DetectorBag : MonoBehaviour
     {
-        private Bag _currentBag;
+        [SerializeField] private TowerLevel _towerLevel;
+        private Bag _bag;
+        private IEnumerator _coroutine;
+        
         private void OnTriggerEnter(Collider other)
         {
             if ( other.TryGetComponent(out Bag bag))
             {
                 if (bag.HasCanSpend)
                 {
-                    _currentBag = bag;
+                    _bag = bag;
+                    if (_towerLevel.IsMaxLevel == false)
+                    {
+                        _coroutine = _towerLevel.ReplenishmentCoin(_bag);
+                        StartCoroutine(_coroutine);
+                    }
                 }
             }        
         }
@@ -20,6 +32,8 @@ namespace Core.Components._ProgressComponents.Bag
         {
             if (other.TryGetComponent(out Bag bag))
             {
+                StopCoroutine(_coroutine);
+                _bag = null;
             }
         }
     }
