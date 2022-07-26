@@ -7,11 +7,9 @@ namespace Core.Characters.Enemy
 {
     public class BehaviourEnemy : BehaviourSystem
     {
-        [SerializeField] private Bag _bag;
-
         private void Start()
         {
-            SetState(ScriptableObject.CreateInstance<IdleState>());
+            SetState(ScriptableObject.CreateInstance<RunningState>());
         }
 
         private void Update()
@@ -19,12 +17,18 @@ namespace Core.Characters.Enemy
             if (_character.HealthComponent.IsDeath == false)
             {
                 _currentState.Update();
-                if (_bag.CheckCount)
+                
+                if (_character.DetectorFighting.IsFight)
                 {
+                    SetState(ScriptableObject.CreateInstance<FightingState>());
+                }
+                else if (_character.MovementController.IsMove)
+                {
+                    SetState(ScriptableObject.CreateInstance<RunningState>());
                 }
                 else
                 {
-                    SetState(ScriptableObject.CreateInstance<DeathState>());
+                    SetState(ScriptableObject.CreateInstance<IdleState>());
                 }
             }
             else

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace UI.DisplayParametrs
 {
-    public class WalletDisplay : MonoBehaviour
+    public class DisplayWallet : MonoBehaviour
     {
         [SerializeField] private Wallet _wallet;
         [SerializeField] private TextMeshProUGUI _text;

@@ -17,14 +17,15 @@ namespace Core.Characters.Recruit
             {
                 _currentState.Update();
                 
-                if (_character.MovementController.IsMove)
+                if (_character.DetectorFighting.IsFight)
+                {
+                    SetState(ScriptableObject.CreateInstance<FightingState>());
+                }
+                
+                else if (_character.MovementController.IsMove)
                 {
                     SetState(ScriptableObject.CreateInstance<RunningState>());
                     
-                }
-                else if (_character.DetectorFighting.IsFight)
-                {
-                    SetState(ScriptableObject.CreateInstance<FightingState>());
                 }
                 else
                 {

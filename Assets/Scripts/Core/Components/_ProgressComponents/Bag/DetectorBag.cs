@@ -32,7 +32,10 @@ namespace Core.Components._ProgressComponents.Bag
         {
             if (other.TryGetComponent(out Bag bag))
             {
-                StopCoroutine(_coroutine);
+                if (_coroutine != null)
+                {
+                    StopCoroutine(_coroutine);
+                }
                 _bag = null;
             }
         }

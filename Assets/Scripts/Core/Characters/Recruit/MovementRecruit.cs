@@ -2,16 +2,19 @@ using Core.Character.Behavior;
 using DG.Tweening;
 using UnityEngine;
 
-namespace Core.Characters.Enemy
+namespace Core.Characters.Recruit
 {
-    public class FollowСharacter : MovementController
+    public class MovementRecruit : MovementController
     {
         [Space][SerializeField] private protected Transform _target;
-        public override bool IsMove => _target != null;
-        
-        public virtual void Start()
+        [SerializeField] private float _stoppingDistance;
+        public override bool IsMove => _target != null && DistanceToTarget > _stoppingDistance;
+        private float DistanceToTarget => Vector3.Distance(transform.position, _target.position);
+
+        private void Start()
         {
             _navMeshAgent.speed = _speed;
+            _navMeshAgent.stoppingDistance = _stoppingDistance;
         }
         
         public override void Move()
@@ -29,4 +32,3 @@ namespace Core.Characters.Enemy
         }
     }
 }
-

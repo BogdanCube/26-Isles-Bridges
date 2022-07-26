@@ -1,4 +1,3 @@
-using Components.Health;
 using Components.Weapon;
 using Core.Character;
 using Core.Character.Behavior;

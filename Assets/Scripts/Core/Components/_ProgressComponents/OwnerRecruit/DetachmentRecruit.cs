@@ -7,14 +7,14 @@ namespace Core.Components
 {
     public class DetachmentRecruit : ProgressComponent
     {
-        [SerializeField] private List<FollowOwner> _recruits = new List<FollowOwner>();
+        [SerializeField] private List<MovementRecruit> _recruits = new List<MovementRecruit>();
         public bool HasCanAdd => _recruits.Count + 1 <= _maxCount;
         
         private void Start()
         {
             Load();
         }
-        public void Add(FollowOwner recruit)
+        public void Add(MovementRecruit recruit)
         {
             _recruits.Add(recruit);
         }

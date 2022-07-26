@@ -1,17 +1,15 @@
-using System;
-using Core.Character;
-using Core.Character.Behavior;
-using Core.Components.Behavior;
 using Core.Components.Health;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Components.Health
+namespace UI.DisplayParametrs
 {
-    public class HealthDisplay : MonoBehaviour
+    public class DisplayHealth : MonoBehaviour
     {
-        [SerializeField] private Text _text;
+        [SerializeField] private Camera _camera;
+        [SerializeField] private TextMeshProUGUI _text;
         [SerializeField] private Image _sliderHp;
         
         [Space(5)][SerializeField] private HealthComponent _healthComponent;
@@ -29,7 +27,7 @@ namespace Components.Health
         
         private void LateUpdate()
         {
-            transform.LookAt(Camera.main.transform);
+            transform.LookAt(_camera.transform);
         }
        
         

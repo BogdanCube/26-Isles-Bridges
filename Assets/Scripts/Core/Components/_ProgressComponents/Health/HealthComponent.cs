@@ -3,6 +3,7 @@ using Core.Components._ProgressComponents;
 using Core.Environment.Tower.ShopProgressItem;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 namespace Core.Components.Health

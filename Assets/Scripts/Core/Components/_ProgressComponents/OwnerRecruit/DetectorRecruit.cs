@@ -8,7 +8,7 @@ namespace Core.Components
         [SerializeField] private DetachmentRecruit _detachmentRecruit;
         private void OnTriggerEnter(Collider other)
         {
-            if (_detachmentRecruit.HasCanAdd && other.TryGetComponent(out FollowOwner recruit))
+            if (_detachmentRecruit.HasCanAdd && other.TryGetComponent(out MovementRecruit recruit))
             {
                 if (recruit.IsMove == false)
                 {

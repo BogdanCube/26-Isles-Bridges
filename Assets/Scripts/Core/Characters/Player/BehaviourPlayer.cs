@@ -1,6 +1,7 @@
 using System;
 using Core.Character.Behavior;
 using Core.Components.Behavior;
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace Core.Character.Player
@@ -17,7 +18,6 @@ namespace Core.Character.Player
             if (_character.HealthComponent.IsDeath == false)
             {
                 _currentState.Update();
-                
                 if (_character.MovementController.IsMove)
                 {
                     SetState(ScriptableObject.CreateInstance<RunningState>());
@@ -34,7 +34,7 @@ namespace Core.Character.Player
             }
             else
             {
-                SetState(ScriptableObject.CreateInstance<DeathState>());
+                SetState(ScriptableObject.CreateInstance<DeathState>()); 
             }
         }
     }

@@ -25,11 +25,11 @@ namespace Core.Components._Spawners
         {
             while (true)
             {
-                yield return new WaitForSeconds(timeSpawn);
                 if (_currentCount < _limitSpawn)
                 {
                     Spawn(randomData);
                 }
+                yield return new WaitForSeconds(timeSpawn);
             }
         }
         protected void Spawn(RandomData randomData)

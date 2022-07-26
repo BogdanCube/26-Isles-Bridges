@@ -1,18 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Core.Components
+namespace Core.Characters.Enemy.Finder
 {
-    public class DetectorFighting : MonoBehaviour
+    public class FinderBase : MonoBehaviour
     {
         [Range(0,12)] [SerializeField]  private float _radius;
         [SerializeField] private bool _isDebuged;
         [SerializeField] private SphereCollider _sphereCollider;
         [SerializeField] private Image _outline;
-        
-        protected Components.Behavior.Character _currentTarget;
-        public bool IsFight => _currentTarget != null && _currentTarget.HealthComponent.IsDeath == false;
-        public Components.Behavior.Character CurrentTarget => _currentTarget;
         
         private void OnValidate()
         {
