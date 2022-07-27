@@ -1,6 +1,6 @@
 using System;
-using Core.Components.Behavior;
-using Core.Components.Health;
+using Core.Characters.Base;
+using Core.Components._ProgressComponents.Health;
 using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -29,10 +29,10 @@ namespace Components.Weapon
              _meshFilter.mesh = weaponData.Mesh;
          }
          
-         public void TakeDamage(Character character)
+         public void TakeDamage(IHealthComponent target)
          {
-             transform.DOLookAt(character.transform.position, 0.5f);
-             character.HealthComponent.Hit(_damage);     
+             //transform.DOLookAt(target.transform.position, 0.5f);
+             target.Hit(_damage);     
              _healthComponent.Heal(CurrentHeal());
          }
          private float CurrentDamage()

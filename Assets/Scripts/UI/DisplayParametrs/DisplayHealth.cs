@@ -1,4 +1,4 @@
-using Core.Components.Health;
+using Core.Components._ProgressComponents.Health;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;

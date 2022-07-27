@@ -1,5 +1,6 @@
 using Core.Character;
 using Core.Components;
+using Core.Environment.Tower;
 using UnityEngine;
 
 namespace Core.Characters.Enemy
@@ -10,7 +11,14 @@ namespace Core.Characters.Enemy
         {
             if (other.TryGetComponent(out Character.Player.Player player))
             {
-                _currentTarget = player;
+                _currentTarget = player.HealthComponent;
+            }
+            if (other.TryGetComponent(out Tower tower))
+            {
+                if (tower.Owner.GetType() == typeof(Character.Player.Player))
+                {
+                    _currentTarget = tower.HealthComponent;
+                }
             }
         }
 
@@ -19,6 +27,13 @@ namespace Core.Characters.Enemy
             if (other.TryGetComponent(out Character.Player.Player player))
             {
                 _currentTarget = null;
+            }
+            if (other.TryGetComponent(out Tower tower))
+            {
+                if (tower.Owner.GetType() == typeof(Character.Player.Player))
+                {
+                    _currentTarget = null;
+                }
             }
         }
     }

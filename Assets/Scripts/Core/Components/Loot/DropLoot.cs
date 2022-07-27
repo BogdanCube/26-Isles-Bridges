@@ -1,5 +1,5 @@
 using System;
-using Core.Components.Health;
+using Core.Components._ProgressComponents.Health;
 using Core.Enemy.Loot.Data;
 using Random = UnityEngine.Random;
 using UnityEngine;

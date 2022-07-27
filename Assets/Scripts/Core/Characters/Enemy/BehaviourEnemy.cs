@@ -1,6 +1,6 @@
 using Core.Character.Behavior;
+using Core.Characters.Base.Behavior;
 using Core.Components._ProgressComponents.Bag;
-using Core.Components.Behavior;
 using UnityEngine;
 
 namespace Core.Characters.Enemy

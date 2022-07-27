@@ -23,7 +23,7 @@ namespace Core.Environment.Island
 
         private void OnTriggerEnter(Collider other)
         {
-            if(_isDelight == false && other.TryGetComponent(out Components.Behavior.Character character))
+            if(_isDelight == false && other.TryGetComponent(out Characters.Base.Character character))
             {
                 _isDelight = true;
                 OnDelightIsland?.Invoke();

@@ -22,16 +22,16 @@ namespace Core.Components._ProgressComponents.Bag
         }
 
         [Button]
-        public void Add()
+        public void Add(int count = 1)
         {
-            _currentCount++;
+            _currentCount += count;
             OnUpdateBag?.Invoke(_currentCount);
         }
 
         [Button]
-        public void Spend()
+        public void Spend(int count = 1)
         {
-            _currentCount--;
+            _currentCount -= count;
             OnUpdateBag?.Invoke(_currentCount);
         }
 

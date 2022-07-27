@@ -1,3 +1,5 @@
+using Core.Characters.Base.Behavior;
+
 namespace Core.Character.Behavior
 {
     public class RunningState : State

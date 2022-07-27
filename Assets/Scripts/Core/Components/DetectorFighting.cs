@@ -1,3 +1,4 @@
+using Core.Components._ProgressComponents.Health;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,9 +11,9 @@ namespace Core.Components
         [SerializeField] private SphereCollider _sphereCollider;
         [SerializeField] private Image _outline;
         
-        protected Components.Behavior.Character _currentTarget;
-        public bool IsFight => _currentTarget != null && _currentTarget.HealthComponent.IsDeath == false;
-        public Components.Behavior.Character CurrentTarget => _currentTarget;
+        protected IHealthComponent _currentTarget;
+        public bool IsFight => _currentTarget != null && _currentTarget.IsDeath == false;
+        public IHealthComponent CurrentTarget => _currentTarget;
         
         private void OnValidate()
         {

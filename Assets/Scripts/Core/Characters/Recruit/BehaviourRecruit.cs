@@ -1,5 +1,5 @@
 using Core.Character.Behavior;
-using Core.Components.Behavior;
+using Core.Characters.Base.Behavior;
 using UnityEngine;
 
 namespace Core.Characters.Recruit

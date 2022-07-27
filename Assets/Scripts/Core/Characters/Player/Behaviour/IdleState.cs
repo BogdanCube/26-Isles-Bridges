@@ -1,3 +1,4 @@
+using Core.Characters.Base.Behavior;
 using UnityEngine;
 
 namespace Core.Character.Behavior

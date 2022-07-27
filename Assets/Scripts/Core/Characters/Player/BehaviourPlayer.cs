@@ -1,6 +1,6 @@
 using System;
 using Core.Character.Behavior;
-using Core.Components.Behavior;
+using Core.Characters.Base.Behavior;
 using NaughtyAttributes;
 using UnityEngine;
 

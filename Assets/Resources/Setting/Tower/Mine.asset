@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Templates:
   - Model: {fileID: 1454889852477475580, guid: 1219c89c752564ce8ae8502932da7b61, type: 3}
+    TimeSpawn: 20
     Price: 55
   - Model: {fileID: 8078736933946096707, guid: ef9dc6c7d0fcf4e6fbf9e12a08124091, type: 3}
+    TimeSpawn: 15
     Price: 75
   - Model: {fileID: 8822074500984792707, guid: 5a70b620df1d74a4ea26ce00beb9cd2c, type: 3}
+    TimeSpawn: 10
     Price: 0

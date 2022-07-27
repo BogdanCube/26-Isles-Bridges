@@ -1,6 +1,6 @@
 using Core.Character;
+using Core.Characters.Base.Behavior;
 using Core.Components;
-using Core.Components.Behavior;
 using DG.Tweening;
 using UnityEngine;
 

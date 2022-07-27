@@ -1,19 +1,19 @@
 using System;
-using Core.Components._ProgressComponents;
-using Core.Environment.Tower.ShopProgressItem;
 using NaughtyAttributes;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Serialization;
 
-namespace Core.Components.Health
+namespace Core.Components._ProgressComponents.Health
 {
-    public class HealthComponent : ProgressComponent
+    public class HealthComponent : ProgressComponent, IHealthComponent
     {        
-        [ProgressBar("Health", 20, EColor.Red)] 
         [SerializeField] private int _currentCount;
         public event Action<int> OnUpdateHealth;
-        public bool IsDeath => _currentCount <= 0;
+        public bool IsDeath
+        {
+            get => _currentCount <= 0;
+            set => throw new NotImplementedException();
+        }
+
         public int MaxCount => _maxCount;
         private void Start()
         {
@@ -30,9 +30,9 @@ namespace Core.Components.Health
             OnUpdateHealth?.Invoke(_currentCount);
         }
 
-        public void Heal(int healHealth)
+        public void Heal(int count)
         {
-            _currentCount += healHealth;
+            _currentCount += count;
             if (_currentCount > _maxCount)
             {
                 _currentCount = _maxCount;

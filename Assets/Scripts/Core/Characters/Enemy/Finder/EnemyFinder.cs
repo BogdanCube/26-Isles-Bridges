@@ -13,11 +13,11 @@ namespace Core.Characters.Enemy.Finder
 {
     public class EnemyFinder : FinderBase
     {
-        [SerializeField] private Components.Behavior.Character _character;
+        [SerializeField] private Base.Character _character;
         [SerializeField] private Brick _brick;
         [SerializeField] private BlockItem _block;
 
-        public Components.Behavior.Character Character => _character;
+        public Base.Character Character => _character;
         public Brick Brick => _brick;
         public bool IsBlock => _block != null;
         public BlockItem Block => _block;
@@ -25,7 +25,7 @@ namespace Core.Characters.Enemy.Finder
 
         private void OnTriggerStay(Collider other)
         {
-            if (other.TryGetComponent(out Components.Behavior.Character character))
+            if (other.TryGetComponent(out Base.Character character))
             {
                 _character = character;
             }
@@ -44,7 +44,7 @@ namespace Core.Characters.Enemy.Finder
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.TryGetComponent(out Components.Behavior.Character character))
+            if (other.TryGetComponent(out Base.Character character))
             {
                 _character = null;
             }
