@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98bd765e88db76b49a7b43e2b893faf2, type: 3}
-  m_Name: 0 No weapon
+  m_Name: 0 No Weapon
   m_EditorClassIdentifier: 
-  Damage: 2
+  Damage: 1
   ChanceVampirism: 0
   ChanceCritical: 0
   Mesh: {fileID: 0}

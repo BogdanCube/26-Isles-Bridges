@@ -7,16 +7,35 @@ namespace Core.Environment.Tower
     public class Tower : MonoBehaviour
     {
         [SerializeField] private Characters.Base.Character _owner;
-        
-        [SerializeReference]
-        public HealthTower _HealthTower;
-
+        [SerializeField] private HealthTower _healthTower;
+        private NoBuilding.NoBuilding _noBuilding;
         public Characters.Base.Character Owner => _owner;
-        public IHealthComponent HealthComponent => _HealthTower;
+        public IHealthComponent HealthComponent => _healthTower;
 
-        public void SetOwner(Characters.Base.Character owner)
+        #region Enable/Disable
+        private void OnEnable()
+        {
+            _healthTower.OnDeath += ReturnNoBuilding;
+        }
+
+        private void OnDisable()
+        {
+            _healthTower.OnDeath -= ReturnNoBuilding;
+        }
+        #endregion
+
+        public void SetOwner(Characters.Base.Character owner, NoBuilding.NoBuilding noBuilding)
         {
             _owner = owner;
+            _noBuilding = noBuilding;
+        }
+
+        private void ReturnNoBuilding()
+        {
+            if (_noBuilding)
+            {
+                _noBuilding.gameObject.SetActive(true);
+            }
         }
     }
 }

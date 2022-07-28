@@ -8,6 +8,8 @@ namespace Core.Components._ProgressComponents.Health
     {        
         [SerializeField] private int _currentCount;
         public event Action<int> OnUpdateHealth;
+        public Action OnDeath { get; set; }
+
         public bool IsDeath
         {
             get => _currentCount <= 0;
@@ -45,6 +47,7 @@ namespace Core.Components._ProgressComponents.Health
             if (_currentCount <= 0)
             {
                 _currentCount = 0;
+                OnDeath?.Invoke();
             }
             OnUpdateHealth?.Invoke(_currentCount);
         }

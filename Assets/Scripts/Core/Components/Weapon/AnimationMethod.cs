@@ -10,20 +10,15 @@ namespace Components.Weapon
     {
         [SerializeField] private Weapon _weapon;
         [SerializeField] private DetectorFighting _detectorFighting;
-        [SerializeField] private BehaviourSystem _behaviourSystem;
         public void Attack()
         {
             var target = _detectorFighting.CurrentTarget;
+            var health = _detectorFighting.CurrentHealth;
 
             if (target != null)
             {
-                _weapon.TakeDamage(target);
+                _weapon.TakeDamage(target,health);
             }
-        }
-
-        public void DisableBehaviour()
-        {
-            _behaviourSystem.enabled = false;
         }
     }
 }

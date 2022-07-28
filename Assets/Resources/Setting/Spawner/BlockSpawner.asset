@@ -15,4 +15,4 @@ MonoBehaviour:
   Templates:
   - ItemSpawn: {fileID: 2603998876523478737, guid: c944aab376d5247e082bb9dd3056e178, type: 3}
     Height: 0.25
-    CountSpawn: {x: 4, y: 7}
+    CountSpawn: {x: 7, y: 10}

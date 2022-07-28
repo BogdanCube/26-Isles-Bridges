@@ -31,7 +31,7 @@ namespace Core.Environment.Island
             }
         }
 
-        private void SetColor(Color color, float duration)
+        public void SetColor(Color color, float duration)
         {
             _meshRenderer.material.DOColor(color,duration);
         }

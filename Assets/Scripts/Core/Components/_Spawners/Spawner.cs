@@ -17,7 +17,7 @@ namespace Core.Components._Spawners
         [SerializeField] private int _limitSpawn;
 
         [Space] [SerializeField] private int _currentCount;
-        [SerializeField] private float _coeffienceRadious;
+        [SerializeField] private float _coeffienceRadious = 1.5f;
         private float RandomMinus => Random.Range(-1f, 1f) > 0 ? 1 : - 1;
         private float RandomPos => RandomMinus * Random.Range(_radius.x, _radius.y);
         

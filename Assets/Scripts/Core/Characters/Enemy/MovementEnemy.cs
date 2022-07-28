@@ -30,9 +30,9 @@ namespace Core.Characters.Enemy
 
         public override void Move()
         {
-            if (_enemyFinder.Character)
+            if (_enemyFinder.Player)
             {
-                SetTarget(_enemyFinder.Character.transform);
+                SetTarget(_enemyFinder.Player.transform);
             }
             else if(_finderIsland.IsFree)
             {
@@ -42,9 +42,9 @@ namespace Core.Characters.Enemy
             {
                 SetTarget(_enemyFinder.Brick.transform);
             }
-            else if(_bag.HasCanAdd && _enemyFinder.IsBlock)
+            else if(_bag.HasCanAdd && _enemyFinder.IsItem)
             {
-                SetTarget(_enemyFinder.Block.transform);
+                SetTarget(_enemyFinder.Item.transform);
             }
             
         }

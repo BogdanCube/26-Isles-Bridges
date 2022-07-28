@@ -8,6 +8,8 @@ namespace Core.Character.Behavior
         public override void Start()
         {
             BehaviourSystem.Character.AnimationStateController.Death();
+            BehaviourSystem.IsStop = true;
+            BehaviourSystem.Character.MovementController.Stop();
         }
 
         public override void Update()

@@ -9,5 +9,10 @@ namespace Core.Character.Behavior
         [SerializeField] private protected NavMeshAgent _navMeshAgent;
         public virtual bool IsMove => false;
         public abstract void Move();
+
+        public void Stop()
+        {
+            _navMeshAgent.isStopped = true;
+        }
     }
 }

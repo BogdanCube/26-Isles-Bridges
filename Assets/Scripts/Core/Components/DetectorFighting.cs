@@ -11,9 +11,12 @@ namespace Core.Components
         [SerializeField] private SphereCollider _sphereCollider;
         [SerializeField] private Image _outline;
         
-        protected IHealthComponent _currentTarget;
-        public bool IsFight => _currentTarget != null && _currentTarget.IsDeath == false;
-        public IHealthComponent CurrentTarget => _currentTarget;
+        protected Transform _currentTarget;
+        protected IHealthComponent _currentHealth;
+        public Transform CurrentTarget => _currentTarget;
+        public IHealthComponent CurrentHealth => _currentHealth;
+        public bool IsFight => _currentTarget != null && CurrentHealth.IsDeath == false;
+
         
         private void OnValidate()
         {

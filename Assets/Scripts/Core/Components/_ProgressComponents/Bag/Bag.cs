@@ -8,7 +8,8 @@ namespace Core.Components._ProgressComponents.Bag
     {
         [SerializeField] private int _currentCount;
         public event Action<int> OnUpdateBag;
-        public bool HasCanSpend => _currentCount > 0;
+        public bool HasCanSpend(int count = 1) => _currentCount >= count;
+
         public bool HasCanAdd => _currentCount + 1 <= _maxCount;
         public int CurrentCount => _currentCount;
         public bool CheckCount => _currentCount > 0.4f * _maxCount;

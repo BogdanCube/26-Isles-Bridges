@@ -10,15 +10,15 @@ namespace Core.Components._ProgressComponents.Bag
     {
         [SerializeField] private Tower _tower;
         [SerializeField] private TowerLevel towerLevel;
-        private Bag _bag;
+        private BagCharacter _bag;
         private IEnumerator _coroutine;
         private Characters.Base.Character _owner;
         
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent(out Bag bag))
+            if (other.TryGetComponent(out BagCharacter bag))
             {
-                if (CheckOwner(bag) && bag.HasCanSpend)
+                if (_tower.Owner == bag.Character && bag.HasCanSpend())
                 {
                     _bag = bag;
                     if (towerLevel.IsMaxLevel == false)
@@ -29,23 +29,10 @@ namespace Core.Components._ProgressComponents.Bag
                 }
             }        
         }
-
-        private bool CheckOwner(Bag bag)
-        {
-            if (_owner == null)
-            {
-                _owner = bag.GetComponent<Characters.Base.Character>();
-                return _tower.Owner == _owner;
-            }
-            else
-            {
-                return true;
-            }
-
-        }
+        
         private void OnTriggerExit(Collider other)
         {
-            if (other.TryGetComponent(out Bag bag))
+            if (other.TryGetComponent(out BagCharacter bag))
             {
                 if (_coroutine != null)
                 {

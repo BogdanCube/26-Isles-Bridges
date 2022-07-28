@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Core.Components._Spawners;
 using Core.Environment.Block;
 using Core.Environment.Bridge;
 using Core.Environment.Bridge.Brick;
@@ -13,21 +14,21 @@ namespace Core.Characters.Enemy.Finder
 {
     public class EnemyFinder : FinderBase
     {
-        [SerializeField] private Base.Character _character;
+        [SerializeField] private Character.Player.Player _player;
         [SerializeField] private Brick _brick;
-        [SerializeField] private BlockItem _block;
+        [SerializeField] private ItemSpawn _item;
 
-        public Base.Character Character => _character;
+        public Character.Player.Player Player => _player;
         public Brick Brick => _brick;
-        public bool IsBlock => _block != null;
-        public BlockItem Block => _block;
+        public bool IsItem => _item.enabled;
+        public ItemSpawn Item => _item;
 
 
         private void OnTriggerStay(Collider other)
         {
-            if (other.TryGetComponent(out Base.Character character))
+            if (other.TryGetComponent(out Character.Player.Player character))
             {
-                _character = character;
+                _player = character;
             }
             if (other.TryGetComponent(out Brick brick))
             {
@@ -36,9 +37,9 @@ namespace Core.Characters.Enemy.Finder
                     _brick = brick;
                 }
             }
-            if (other.TryGetComponent(out BlockItem blockItem))
+            if (other.TryGetComponent(out ItemSpawn item))
             {
-                _block = blockItem;
+                _item = item;
             }
         }
 
@@ -46,11 +47,11 @@ namespace Core.Characters.Enemy.Finder
         {
             if (other.TryGetComponent(out Base.Character character))
             {
-                _character = null;
+                _player = null;
             }
-            if (other.TryGetComponent(out BlockItem blockItem))
+            if (other.TryGetComponent(out ItemSpawn blockItem))
             {
-                _block = null;
+                _item = null;
             }
         }
     }

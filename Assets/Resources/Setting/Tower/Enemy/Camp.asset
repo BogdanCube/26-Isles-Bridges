@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4f3232823a84efaa46e8173627e5bea, type: 3}
+  m_Name: Camp
+  m_EditorClassIdentifier: 
+  Templates:
+  - Model: {fileID: 625380027849575487, guid: b4a1b549f95d2f440986948b5ead7d71, type: 3}
+    TimeSpawn: 35
+    Price: 55
+  - Model: {fileID: 998672529893085620, guid: 0b9a83f4f76559346a27142ae46566e2, type: 3}
+    TimeSpawn: 30
+    Price: 75
+  - Model: {fileID: 6245874311875055988, guid: 9df4ee5461fd3954499eb0821ef87397, type: 3}
+    TimeSpawn: 25
+    Price: 0

@@ -11,13 +11,15 @@ namespace Core.Characters.Enemy
         {
             if (other.TryGetComponent(out Character.Player.Player player))
             {
-                _currentTarget = player.HealthComponent;
+                _currentTarget = player.transform;
+                _currentHealth = player.HealthComponent;
             }
             if (other.TryGetComponent(out Tower tower))
             {
                 if (tower.Owner.GetType() == typeof(Character.Player.Player))
                 {
-                    _currentTarget = tower.HealthComponent;
+                    _currentTarget = tower.transform;
+                    _currentHealth = tower.HealthComponent;
                 }
             }
         }

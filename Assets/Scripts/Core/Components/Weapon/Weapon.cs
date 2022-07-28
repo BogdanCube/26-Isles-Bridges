@@ -29,10 +29,10 @@ namespace Components.Weapon
              _meshFilter.mesh = weaponData.Mesh;
          }
          
-         public void TakeDamage(IHealthComponent target)
+         public void TakeDamage(Transform target, IHealthComponent health)
          {
-             //transform.DOLookAt(target.transform.position, 0.5f);
-             target.Hit(_damage);     
+             transform.DOLookAt(target.transform.position, 0.5f);
+             health.Hit(_damage);     
              _healthComponent.Heal(CurrentHeal());
          }
          private float CurrentDamage()

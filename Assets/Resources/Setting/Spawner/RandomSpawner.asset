@@ -16,9 +16,9 @@ MonoBehaviour:
   - ItemSpawn: {fileID: 2603998876523478737, guid: c944aab376d5247e082bb9dd3056e178, type: 3}
     Height: 0.21
     CountSpawn: {x: 13, y: 19}
-  - ItemSpawn: {fileID: 6966094194240074862, guid: 2ce67b375b2e64531bc2c940484c1cc6, type: 3}
-    Height: 0.26
-    CountSpawn: {x: 5, y: 8}
+  - ItemSpawn: {fileID: 2707789178671934103, guid: a5eae7796c67c054faadb0772c2d22da, type: 3}
+    Height: 0.33
+    CountSpawn: {x: 1, y: 2}
   - ItemSpawn: {fileID: 4672824487970696455, guid: f8774cee839864014b581484321cbc4e, type: 3}
     Height: 0.15
     CountSpawn: {x: 2, y: 5}

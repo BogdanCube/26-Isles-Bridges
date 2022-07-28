@@ -7,17 +7,21 @@ namespace Core.Characters.Base.Behavior
     {
         [SerializeField] private protected State _currentState;
         [SerializeField] private protected Character _character;
-
+        [HideInInspector] public bool IsStop { private get; set; }
         public Character Character => _character;
 
         protected void SetState(State state)
         {
-            if (_currentState != null) {
-                _currentState.End();
+            if (IsStop == false)
+            {
+                if (_currentState != null) {
+                    _currentState.End();
+                }
+                _currentState = Instantiate(state);
+                _currentState.BehaviourSystem = this;
+                _currentState.Start();
             }
-            _currentState = Instantiate(state);
-            _currentState.BehaviourSystem = this;
-            _currentState.Start();
+          
         }
     }
 }

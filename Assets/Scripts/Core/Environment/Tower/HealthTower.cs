@@ -1,3 +1,4 @@
+using System;
 using Core.Components._ProgressComponents.Bag;
 using Core.Components._ProgressComponents.Health;
 using NaughtyAttributes;
@@ -9,7 +10,9 @@ namespace Core.Environment.Tower
     {
         [SerializeField] private Bag _bag;
         [SerializeField] private TowerLevel _towerLevel;
-        
+
+        public Action OnDeath { get; set; }
+
         public bool IsDeath
         {
             get => _bag.CurrentCount <= 0;
@@ -20,6 +23,11 @@ namespace Core.Environment.Tower
         public void Hit(int damage = 1)
         {
             _towerLevel.Hit();
+            if (IsDeath)
+            {
+                OnDeath?.Invoke();
+                _towerLevel.DestroyTower();
+            }
         }
     }
 }

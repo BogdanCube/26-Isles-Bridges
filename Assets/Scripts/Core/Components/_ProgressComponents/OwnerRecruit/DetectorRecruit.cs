@@ -1,4 +1,6 @@
 using Core.Characters.Recruit;
+using Core.Environment._ItemSpawn;
+using NTC.Global.Pool;
 using UnityEngine;
 
 namespace Core.Components
@@ -8,13 +10,10 @@ namespace Core.Components
         [SerializeField] private DetachmentRecruit _detachmentRecruit;
         private void OnTriggerEnter(Collider other)
         {
-            if (_detachmentRecruit.HasCanAdd && other.TryGetComponent(out MovementRecruit recruit))
+            if (_detachmentRecruit.HasCanAdd && other.TryGetComponent(out RecruitItem recruit))
             {
-                if (recruit.IsMove == false)
-                {
-                    _detachmentRecruit.Add(recruit);
-                    recruit.SetTarget(transform);
-                }
+                _detachmentRecruit.Add(recruit.transform);
+                NightPool.Despawn(recruit);
             }
         }
     }

@@ -2,9 +2,13 @@ using System;
 using System.Collections;
 using Core.Components._ProgressComponents.Bag;
 using Core.Components._ProgressComponents.Health;
+using DG.Tweening;
+using Managers.Level;
 using NaughtyAttributes;
+using NTC.Global.Pool;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Core.Environment.Tower
 {
@@ -14,6 +18,7 @@ namespace Core.Environment.Tower
         [SerializeField] private float _pumpingSpeed;
         [SerializeField] private Bag _shopBag;
         [SerializeField] private LoaderTower _loaderTower;
+        private int _maxLevel;
         
         public Action<int,int> OnUpdateDisplayed;
         public Action<int,int> OnHitDisplayed;
@@ -22,6 +27,7 @@ namespace Core.Environment.Tower
 
         private void Start()
         {
+            _maxLevel = _level;
             UpdateDisplay();
             _loaderTower.Load(_level);
         }
@@ -31,7 +37,7 @@ namespace Core.Environment.Tower
             while (IsMaxLevel == false)
             {
                 yield return new WaitForSeconds(_pumpingSpeed);
-                if (bag.HasCanSpend)
+                if (bag.HasCanSpend())
                 {
                     bag.Spend();
                     _shopBag.Add();
@@ -48,6 +54,10 @@ namespace Core.Environment.Tower
         private void LevelUp()
         {
             _level++;
+            if (_level > _maxLevel)
+            {
+                _maxLevel = _level;
+            }
             //particle
             _loaderTower.Load(_level);
             UpdateDisplay();
@@ -72,21 +82,26 @@ namespace Core.Environment.Tower
         }
         public void Hit(int damage = 1)
         {
-            if (_shopBag.HasCanSpend)
+            if (_shopBag.HasCanSpend())
             { 
                 _shopBag.Spend(damage);
                 OnHitDisplayed.Invoke(_shopBag.CurrentCount, _loaderTower.PriceNextLevel(_level));
             }
+        }
+
+        public void DestroyTower()
+        {
+            if (_level > 0)
+            {
+                LevelDown();
+            }
             else
             {
-                if (_level > 0)
+                transform.DOScale(0, 1f).OnComplete(() =>
                 {
-                    LevelDown();
-                }
-                else
-                {
-                    print("Death Tower");
-                }
+                    Destroy(gameObject);
+                    LoaderLevel.Instance.UpdateBake();
+                });
             }
         }
     }
