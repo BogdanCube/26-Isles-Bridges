@@ -12,7 +12,7 @@ namespace Core.Components._ProgressComponents.Bag
 
         public bool HasCanAdd => _currentCount + 1 <= _maxCount;
         public int CurrentCount => _currentCount;
-        public bool CheckCount => _currentCount > 0.4f * _maxCount;
+        public bool CheckCount(float percentage) => _currentCount > percentage * _maxCount;
         private void Start()
         {
             if (IsProgress)

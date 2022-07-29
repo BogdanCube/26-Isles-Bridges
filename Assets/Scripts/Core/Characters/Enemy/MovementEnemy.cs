@@ -38,7 +38,11 @@ namespace Core.Characters.Enemy
             {
                 SetTarget(_finderIsland.Island.transform);
             }
-            else if(_bag.CheckCount && _enemyFinder.Brick.IsSet == false)
+            else if (_bag.CheckCount(0.4f) && _enemyFinder.IsTower)
+            {
+                SetTarget(_enemyFinder.Tower.transform);
+            }
+            else if(_bag.CheckCount(0.8f) && _enemyFinder.Brick.IsSet == false)
             {
                 SetTarget(_enemyFinder.Brick.transform);
             }
