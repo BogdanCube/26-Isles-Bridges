@@ -29,24 +29,28 @@ namespace Core.Environment.Tower.ShopDataTower
             _button.onClick.AddListener(Buy);
         }
 
-        private void Buy()
+        public void Buy()
         {
             if (_bag.HasCanSpend(_price))
             {
                 _bag.Spend(_price);
-                var tower = NightPool.Spawn(_currentTemplate.Tower, _noBuilding.transform.position);
-                tower.SetOwner(_bag.Character,_noBuilding);
-
-                var colorCharacter = _bag.Character.Color;
-                _noBuilding.FreeIsland.SetColor(colorCharacter,1f);
-                _noBuilding.gameObject.SetActive(false);
-
+                BuyFree();
             }
             else
             {
                 _priceText.color = Color.red;
                 _priceText.DOColor(Color.white, 1f);
             }
+        }
+
+        public void BuyFree()
+        {
+            var tower = NightPool.Spawn(_currentTemplate.Tower, _noBuilding.transform.position);
+            tower.SetOwner(_bag.Character,_noBuilding);
+
+            var colorCharacter = _bag.Character.Color;
+            _noBuilding.FreeIsland.SetColor(colorCharacter,1f);
+            _noBuilding.gameObject.SetActive(false);
         }
     }
 }

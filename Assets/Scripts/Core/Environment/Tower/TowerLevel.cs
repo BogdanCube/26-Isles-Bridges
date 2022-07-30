@@ -18,7 +18,6 @@ namespace Core.Environment.Tower
         [SerializeField] private float _pumpingSpeed;
         [SerializeField] private Bag _shopBag;
         [SerializeField] private LoaderTower _loaderTower;
-        private int _maxLevel;
         
         public Action<int,int> OnUpdateDisplayed;
         public Action<int,int> OnHitDisplayed;
@@ -27,7 +26,6 @@ namespace Core.Environment.Tower
 
         private void Start()
         {
-            _maxLevel = _level;
             UpdateDisplay();
             _loaderTower.Load(_level);
         }
@@ -44,7 +42,6 @@ namespace Core.Environment.Tower
                     if (_shopBag.CurrentCount >= _loaderTower.PriceNextLevel(_level))
                     {
                         LevelUp();
-                        _shopBag.Reset();
                     }
                     UpdateDisplay();
                 }
@@ -53,16 +50,19 @@ namespace Core.Environment.Tower
         [Button]
         private void LevelUp()
         {
-            _level++;
-            if (_level > _maxLevel)
+            if (IsMaxLevel == false)
             {
-                _maxLevel = _level;
+                _shopBag.Reset();
+                _level++;
+                //particle
+                _loaderTower.Load(_level);
+                UpdateDisplay();
+                if (IsMaxLevel)
+                {
+                    _shopBag.Add();
+                }
             }
-            //particle
-            _loaderTower.Load(_level);
-            UpdateDisplay();
         }
-
         private void LevelDown()
         {
             _level--;

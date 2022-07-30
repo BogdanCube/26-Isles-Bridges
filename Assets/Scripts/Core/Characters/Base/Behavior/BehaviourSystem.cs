@@ -9,7 +9,7 @@ namespace Core.Characters.Base.Behavior
         [SerializeField] private protected Character _character;
         [HideInInspector] public bool IsStop { private get; set; }
         public Character Character => _character;
-
+        
         protected void SetState(State state)
         {
             if (IsStop == false)

@@ -71,6 +71,5 @@ namespace Core.Components._ProgressComponents.Health
             Hit(1);
         }
         #endregion
-
     }
 }

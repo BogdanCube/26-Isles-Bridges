@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d59320d8-84cf-43b4-b90d-b08e0da32404" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorNoBuilding.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorNoBuilding.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Toolkit/Extensions/RandomExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Toolkit/Extensions/RandomExtensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayBag.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayBag.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Characters/Enemy/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Enemy/Enemy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Characters/Player/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Player/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Characters/Recruit/Recruit.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Recruit/Recruit.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Camp (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Camp (Enemy).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Mine (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Mine (Enemy).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Tower (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Tower (Enemy).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/No Recruit.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/No Recruit.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/No building.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/No building.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Camp (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Camp (Player).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Mine (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Mine (Player).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Tower (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Tower (Player).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Enemy).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Player).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Chest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Coin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Optimization/PoolPreset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Optimization/PoolPreset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/ComponentData/BagData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/ComponentData/BagData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/ComponentData/DetachmentData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/ComponentData/DetachmentData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/ComponentData/HealthData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/ComponentData/HealthData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/ComponentData/TimeSpawnData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/ComponentData/TimeSpawnData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/PlayerTowers.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/PlayerTowers.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Spawner/BlockSpawner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Spawner/BlockSpawner.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Spawner/RandomSpawner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Spawner/RandomSpawner.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Camp.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Camp.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Enemy/Camp.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Enemy/Camp.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Enemy/Mine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Enemy/Mine.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Mine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Mine.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 0.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 10.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 10.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 11.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 11.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 12.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 12.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 13.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 13.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 14.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 14.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 8.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 9.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Weapon/Sword 9.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base/Behavior/BehaviourSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base/Behavior/BehaviourSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/EnemyFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/EnemyFinderOutside.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/EnemyFinder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/EnemyFinderOutside.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/FinderIsland.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/EnemyFinderInside.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/FinderIsland.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/EnemyFinderInside.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/MovementEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/MovementEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Behaviour/DeathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Behaviour/DeathState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/MovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/MovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Wallet/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Wallet/Wallet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/Bag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/Bag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Health/HealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Health/HealthComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetachmentRecruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetachmentRecruit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetectorRecruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetectorRecruit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/RandomSpawner/RandomData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/RandomSpawner/RandomData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/DisplayTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/DisplayTower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/HealthTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/HealthTower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/NoBuilding/DetectorDataTowers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/NoBuilding/DetectorDataTowers.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/NoBuilding/NoBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/NoBuilding/NoBuilding.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/ShopDataTower/ShopDataTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/ShopDataTower/ShopDataTower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/ShopProgressItem/ShopProgressComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/ShopProgressItem/ShopProgressComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/Tower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/Tower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/TowerLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/TowerLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayDataTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayDataTower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/BehaviourEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/BehaviourPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Characters/Recruit/BehaviourRecruit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorItems/DetectorWeaponItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/MovementController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/Wallet/Wallet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/Bag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DetectorBag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DisplayBag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/ComponentData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Health/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetachmentRecruit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/ItemSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/RandomSpawner/RandomData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Environment/Bridge/Bridge.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Environment/Island/DespawnBrick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Environment/Island/FreeIsland.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Environment/Island/Island.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/LoaderTower.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/ShopProgressItem/DetectorWallet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/TowerLevel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6ffc9e3cf18747d6970df6c4b6fa016d157800/05/a68c1409/Object.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2C9sTxTdSZ6vpTQE0s1MZgLL19p" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.3.6f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;$PROJECT_DIR$&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d59320d8-84cf-43b4-b90d-b08e0da32404" name="Changes" comment="" />
+      <created>1658226151199</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658226151199</updated>
+      <workItem from="1658226156744" duration="2067000" />
+      <workItem from="1658295007845" duration="767000" />
+      <workItem from="1658296051445" duration="13923000" />
+      <workItem from="1658383093017" duration="11060000" />
+      <workItem from="1658467554741" duration="17100000" />
+      <workItem from="1658571815404" duration="1291000" />
+      <workItem from="1658575797088" duration="5968000" />
+      <workItem from="1658593604206" duration="3126000" />
+      <workItem from="1658648621033" duration="16115000" />
+      <workItem from="1658742894086" duration="8818000" />
+      <workItem from="1658770674615" duration="21000" />
+      <workItem from="1658775332414" duration="2075000" />
+      <workItem from="1658816533867" duration="20434000" />
+      <workItem from="1659126159025" duration="373000" />
+      <workItem from="1659165982718" duration="18438000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BagData
   m_EditorClassIdentifier: 
   Template:
-  - MaxCount: 15
+  - MaxCount: 10
     Price: 5
-  - MaxCount: 25
+  - MaxCount: 15
     Price: 10
-  - MaxCount: 40
+  - MaxCount: 20
     Price: 0

@@ -111,4 +111,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationY: {x: 0, y: 0}
-  _count: {x: 0, y: 3}
+  _count: {x: 1, y: 3}

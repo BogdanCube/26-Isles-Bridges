@@ -34,17 +34,19 @@ namespace UI.DisplayParametrs
                 _camera = Camera.main;
             }
         }
-        
         private void LateUpdate()
         {
             transform.LookAt(_camera.transform);
         }
+       
         private void HideBar()
         {
             gameObject.SetActive(false);
         }
-       
-        
+        private void ShowBar()
+        {
+            gameObject.SetActive(true);
+        }
         private void UpdateHealthBar(int newHp)
         {
             _text.text = newHp.ToString();

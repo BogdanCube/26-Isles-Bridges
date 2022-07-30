@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Template:
   - MaxCount: 2
-    Price: 25
+    Price: 10
   - MaxCount: 3
-    Price: 35
+    Price: 20
   - MaxCount: 4
     Price: 0

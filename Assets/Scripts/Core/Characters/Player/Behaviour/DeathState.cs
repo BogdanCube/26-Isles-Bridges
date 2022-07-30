@@ -9,7 +9,7 @@ namespace Core.Character.Behavior
         {
             BehaviourSystem.Character.AnimationStateController.Death();
             BehaviourSystem.IsStop = true;
-            BehaviourSystem.Character.MovementController.Stop();
+            BehaviourSystem.Character.MovementController.IsStopped = true;
         }
 
         public override void Update()

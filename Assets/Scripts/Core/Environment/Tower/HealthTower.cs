@@ -9,6 +9,7 @@ namespace Core.Environment.Tower
     public class HealthTower : MonoBehaviour, IHealthComponent
     {
         [SerializeField] private Bag _bag;
+        [SerializeField] private Tower _tower;
         [SerializeField] private TowerLevel _towerLevel;
 
         public Action OnDeath { get; set; }
@@ -22,10 +23,10 @@ namespace Core.Environment.Tower
         [Button]
         public void Hit(int damage = 1)
         {
-            _towerLevel.Hit();
+            _towerLevel.Hit(damage);
             if (IsDeath)
             {
-                OnDeath?.Invoke();
+                _tower.ReturnNoBuilding();
                 _towerLevel.DestroyTower();
             }
         }

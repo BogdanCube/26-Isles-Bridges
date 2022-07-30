@@ -2014,6 +2014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bag: {fileID: 9169546999524227822}
+  _tower: {fileID: 9169546999524227820}
   _towerLevel: {fileID: 9169546999524227815}
 --- !u!1 &9169546999583526564
 GameObject:

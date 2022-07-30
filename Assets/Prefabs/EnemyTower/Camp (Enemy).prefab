@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _owner: {fileID: 0}
-  _HealthTower: {fileID: 6778660544289046883}
+  _healthTower: {fileID: 6778660544289046883}
 --- !u!114 &6778660544289046879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bag: {fileID: 6778660544289046877}
+  _tower: {fileID: 6778660544289046882}
   _towerLevel: {fileID: 6778660544289046879}
 --- !u!1 &6778660544595466864
 GameObject:

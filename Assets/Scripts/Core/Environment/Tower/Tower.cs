@@ -11,26 +11,14 @@ namespace Core.Environment.Tower
         private NoBuilding.NoBuilding _noBuilding;
         public Characters.Base.Character Owner => _owner;
         public IHealthComponent HealthComponent => _healthTower;
-
-        #region Enable/Disable
-        private void OnEnable()
-        {
-            _healthTower.OnDeath += ReturnNoBuilding;
-        }
-
-        private void OnDisable()
-        {
-            _healthTower.OnDeath -= ReturnNoBuilding;
-        }
-        #endregion
-
+        
         public void SetOwner(Characters.Base.Character owner, NoBuilding.NoBuilding noBuilding)
         {
             _owner = owner;
             _noBuilding = noBuilding;
         }
 
-        private void ReturnNoBuilding()
+        public void ReturnNoBuilding()
         {
             if (_noBuilding)
             {

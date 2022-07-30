@@ -535,6 +535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bag: {fileID: 6196909702914947650}
+  _tower: {fileID: 6196909702914947709}
   _towerLevel: {fileID: 6196909702914947648}
 --- !u!1 &6196909703221813615
 GameObject:

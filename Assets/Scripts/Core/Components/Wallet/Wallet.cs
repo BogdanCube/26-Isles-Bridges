@@ -9,7 +9,7 @@ namespace Core.Components.Wallet
         public event Action<int> OnUpdateCount;
         public int CurrentCount => _countCoin;
 
-        public bool HasCanSpend(int count = 1) => _countCoin > count;
+        public bool HasCanSpend(int count = 1) => _countCoin >= count;
 
         private void Start()
         {

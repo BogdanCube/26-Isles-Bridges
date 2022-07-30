@@ -1,6 +1,7 @@
 using System;
 using Core.Components._ProgressComponents;
 using Core.Components.Wallet;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,17 +32,26 @@ namespace Core.Environment.Tower.ShopProgressItem
         {
             var wallet = _detectorWallet.Wallet;
             var price = _progressComponent.Price;
-            if (_progressComponent.IsMaxLevel == false && wallet.HasCanSpend(price))
+            if (wallet.HasCanSpend(price))
             {
-                _progressComponent.LevelUp();
-                wallet.Spend(price);
-                UpdateText();
-                if (_progressComponent.IsMaxLevel)
+                if (_progressComponent.IsMaxLevel == false)
                 {
-                    _priceText.text = "MAX";
-                    _progressText.text = String.Empty;
+                    _progressComponent.LevelUp();
+                    wallet.Spend(price);
+                    UpdateText();
+                    if (_progressComponent.IsMaxLevel)
+                    {
+                        _priceText.text = "MAX";
+                        _progressText.text = String.Empty;
+                    }
                 }
+            } 
+            else
+            {
+                _priceText.color = Color.red;
+                _priceText.DOColor(Color.white, 1f);
             }
+            
         }
     } 
 }

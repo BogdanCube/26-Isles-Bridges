@@ -4,6 +4,7 @@ using Core.Character.Behavior;
 using Core.Characters.Enemy.Finder;
 using Core.Components;
 using Core.Components._ProgressComponents.Bag;
+using Core.Components._ProgressComponents.OwnerRecruit;
 using DG.Tweening;
 using Toolkit.Extensions;
 using UnityEngine;
@@ -14,41 +15,56 @@ namespace Core.Characters.Enemy
 {
     public class MovementEnemy : MovementController
     {
+        [SerializeField] private Transform _startPos;
         [SerializeField] private int _randomRadius;
         [SerializeField] private Transform _currentTarget;
         [SerializeField] private DetectorFighting _detectorFighting;
         [SerializeField] private Bag _bag;
-        [SerializeField] private EnemyFinder _enemyFinder;
-        [SerializeField] private FinderIsland _finderIsland;
+        [SerializeField] private DetachmentRecruit _detachmentRecruit;
+        [SerializeField] private EnemyFinderInside _finderInside;
+        [SerializeField] private EnemyFinderOutside _finderOutside;
         public override bool IsMove => _navMeshAgent.isStopped == false;
 
         private void Start()
         {
             _navMeshAgent.speed = _speed;
-            StartCoroutine(EraseTarget(5));
+            StartCoroutine(EraseTarget(3));
         }
 
         public override void Move()
         {
-            if (_enemyFinder.Player)
+            if (_finderOutside.Player)
             {
-                SetTarget(_enemyFinder.Player.transform);
+                SetTarget(_finderOutside.Player.transform);
             }
-            else if(_finderIsland.IsFree)
+            else if(_finderInside.IsFree)
             {
-                SetTarget(_finderIsland.Island.transform);
+                SetTarget(_finderInside.Island.transform);
             }
-            else if (_bag.CheckCount(0.4f) && _enemyFinder.IsTower)
+            else if(_bag.CheckCount(0.4f) && _finderOutside.IsBrick)
             {
-                SetTarget(_enemyFinder.Tower.transform);
+                SetTarget(_finderOutside.Brick.transform);
             }
-            else if(_bag.CheckCount(0.8f) && _enemyFinder.Brick.IsSet == false)
+            else if(_bag.CheckCount(0.5f) &&_finderInside.NoBuilding)
             {
-                SetTarget(_enemyFinder.Brick.transform);
+                SetTarget(_finderInside.NoBuilding.transform);
             }
-            else if(_bag.HasCanAdd && _enemyFinder.IsItem)
+            else if (_bag.CheckCount(0.8f) && _finderOutside.IsTower)
             {
-                SetTarget(_enemyFinder.Item.transform);
+                SetTarget(_finderOutside.Tower.transform);
+            }
+            
+            else if(_bag.HasCanAdd && _finderOutside.Item)
+            {
+                SetTarget(_finderOutside.Item.transform);
+            }
+            else if (_bag.HasCanSpend())
+            {
+                SetTarget(_finderOutside.Tower.transform);
+            }
+            else
+            {
+                SetTarget(_startPos);
             }
             
         }
@@ -65,8 +81,11 @@ namespace Core.Characters.Enemy
 
         private void SetTarget(Transform target)
         {
-            _currentTarget = target;
-            _navMeshAgent.SetDestination(_currentTarget.position);
+            if (target.gameObject.activeSelf)
+            {
+                _currentTarget = target;
+                _navMeshAgent.SetDestination(_currentTarget.position);
+            }
         }
     }
 }

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: HealthData
   m_EditorClassIdentifier: 
   Template:
-  - MaxCount: 5
-    Price: 1
-  - MaxCount: 7
+  - MaxCount: 10
     Price: 2
-  - MaxCount: 12
+  - MaxCount: 15
+    Price: 5
+  - MaxCount: 20
     Price: 0

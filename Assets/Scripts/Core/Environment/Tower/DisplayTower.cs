@@ -29,6 +29,7 @@ namespace Core.Environment.Tower
         
         private void UpdateDisplayed(int shopMoney, int priceNextLevel)
         {
+            _text.color = Color.white;
             _text.text = $"{shopMoney}/{priceNextLevel}";
         }
         private void UpdateHit(int shopMoney, int priceNextLevel)
