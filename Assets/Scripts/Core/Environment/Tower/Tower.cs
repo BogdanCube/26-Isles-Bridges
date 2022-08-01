@@ -7,10 +7,12 @@ namespace Core.Environment.Tower
     public class Tower : MonoBehaviour
     {
         [SerializeField] private Characters.Base.Character _owner;
+        [SerializeField] private ShopTower _shopTower;
         [SerializeField] private HealthTower _healthTower;
         private NoBuilding.NoBuilding _noBuilding;
         public Characters.Base.Character Owner => _owner;
         public IHealthComponent HealthComponent => _healthTower;
+        public ShopTower ShopTower => _shopTower;
         
         public void SetOwner(Characters.Base.Character owner, NoBuilding.NoBuilding noBuilding)
         {

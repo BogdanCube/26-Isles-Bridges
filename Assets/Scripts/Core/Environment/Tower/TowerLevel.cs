@@ -57,10 +57,7 @@ namespace Core.Environment.Tower
                 //particle
                 _loaderTower.Load(_level);
                 UpdateDisplay();
-                if (IsMaxLevel)
-                {
-                    _shopBag.Add();
-                }
+                _shopBag.Add();
             }
         }
         private void LevelDown()

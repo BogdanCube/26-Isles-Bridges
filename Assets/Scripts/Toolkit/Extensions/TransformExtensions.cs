@@ -64,5 +64,22 @@ namespace Rhodos.Toolkit.Extensions
                 original.SetPositionAndRotation(pos,rot);
             }
         }
+
+        public static void Activate(this Transform transform)
+        {
+            transform.gameObject.SetActive(true);
+        }
+        public static void Deactivate(this Transform transform)
+        {
+            transform.gameObject.SetActive(false);
+        }
+
+        public static void SlowLookY(this Transform transform,Transform target,float duration)
+        {
+            var lookPos = target.position - transform.position;
+            lookPos.y = 0;
+            var rotation = Quaternion.LookRotation(lookPos);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * duration);
+        }
     }
 }

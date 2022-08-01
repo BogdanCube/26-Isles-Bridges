@@ -5,11 +5,12 @@ using Core.Characters.Enemy.Finder;
 using Core.Components;
 using Core.Components._ProgressComponents.Bag;
 using Core.Components._ProgressComponents.OwnerRecruit;
+using Core.Components.DataTowers;
+using Core.Components.Wallet;
 using DG.Tweening;
+using Rhodos.Toolkit.Extensions;
 using Toolkit.Extensions;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.Serialization;
 
 namespace Core.Characters.Enemy
 {
@@ -18,9 +19,8 @@ namespace Core.Characters.Enemy
         [SerializeField] private Transform _startPos;
         [SerializeField] private int _randomRadius;
         [SerializeField] private Transform _currentTarget;
-        [SerializeField] private DetectorFighting _detectorFighting;
         [SerializeField] private Bag _bag;
-        [SerializeField] private DetachmentRecruit _detachmentRecruit;
+        [SerializeField] private DataProgressComponent _dataProgress;
         [SerializeField] private EnemyFinderInside _finderInside;
         [SerializeField] private EnemyFinderOutside _finderOutside;
         public override bool IsMove => _navMeshAgent.isStopped == false;
@@ -41,11 +41,15 @@ namespace Core.Characters.Enemy
             {
                 SetTarget(_finderInside.Island.transform);
             }
+            else if(_finderInside.ShopTower && _dataProgress.CanBuySomething)
+            {
+                SetTarget(_finderInside.ShopTower.transform);
+            }
             else if(_bag.CheckCount(0.4f) && _finderOutside.IsBrick)
             {
                 SetTarget(_finderOutside.Brick.transform);
             }
-            else if(_bag.CheckCount(0.5f) &&_finderInside.NoBuilding)
+            else if(_bag.CheckCount(1) &&_finderInside.NoBuilding)
             {
                 SetTarget(_finderInside.NoBuilding.transform);
             }
@@ -53,7 +57,6 @@ namespace Core.Characters.Enemy
             {
                 SetTarget(_finderOutside.Tower.transform);
             }
-            
             else if(_bag.HasCanAdd && _finderOutside.Item)
             {
                 SetTarget(_finderOutside.Item.transform);
@@ -78,12 +81,12 @@ namespace Core.Characters.Enemy
                 yield return new WaitForSeconds(time);
             }
         }
-
         private void SetTarget(Transform target)
         {
             if (target.gameObject.activeSelf)
             {
                 _currentTarget = target;
+                transform.SlowLookY(_currentTarget,1f);
                 _navMeshAgent.SetDestination(_currentTarget.position);
             }
         }

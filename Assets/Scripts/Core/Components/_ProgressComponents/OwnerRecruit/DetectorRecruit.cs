@@ -1,6 +1,7 @@
 using Core.Environment._ItemSpawn;
 using NaughtyAttributes;
 using NTC.Global.Pool;
+using Toolkit.Extensions;
 using UnityEngine;
 
 namespace Core.Components._ProgressComponents.OwnerRecruit
@@ -14,19 +15,20 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         {
             if (other.TryGetComponent(out RecruitItem recruit))
             {
-                if (_detachmentRecruit.HasCanAdd)
+                recruit.MoveToCharacter(transform, () =>
                 {
-                    _detachmentRecruit.Add();
-                }
-                else
-                {
-                    var count = Random.Range(_additionalCoin.x, _additionalCoin.y);
-                    _wallet.Add(count);
-                }
-                NightPool.Despawn(recruit);
-
+                    if (_detachmentRecruit.HasCanAdd)
+                    {
+                        _detachmentRecruit.Add();
+                    }
+                    else
+                    {
+                        var count = _additionalCoin.RandomRange();
+                        _wallet.Add(count);
+                    }
+                    NightPool.Despawn(recruit);
+                });
             }
-            
         }
     }
 }

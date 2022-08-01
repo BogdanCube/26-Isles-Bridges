@@ -1,4 +1,5 @@
 using System;
+using Core.Characters.Enemy.Finder;
 using Core.Components._ProgressComponents.Bag;
 using Core.Components.Bag;
 using Core.Environment.Bridge.Brick;

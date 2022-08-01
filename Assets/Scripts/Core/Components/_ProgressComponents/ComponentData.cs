@@ -7,6 +7,7 @@ namespace Core.Components._ProgressComponents
     public class ComponentData : ScriptableObject
     {
         public List<TemplateData> Template;
+        public Sprite Icon;
     }
 
     [System.Serializable]

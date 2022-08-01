@@ -5,6 +5,7 @@ using Core.Components._Spawners.RandomSpawner;
 using Core.Environment.Block;
 using NaughtyAttributes;
 using NTC.Global.Pool;
+using Toolkit.Extensions;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -19,7 +20,7 @@ namespace Core.Components._Spawners
         [Space] [SerializeField] private int _currentCount;
         [SerializeField] private float _coeffienceRadious = 1.5f;
         private float RandomMinus => Random.Range(-1f, 1f) > 0 ? 1 : - 1;
-        private float RandomPos => RandomMinus * Random.Range(_radius.x, _radius.y);
+        private float RandomPos => RandomMinus * _radius.RandomRange();
         
         protected IEnumerator SpawnCoroutine(RandomData randomData,int timeSpawn)
         {
@@ -33,15 +34,15 @@ namespace Core.Components._Spawners
             }
         }
         protected void Spawn(RandomData randomData)
-        {           
-            var currentTemplate = randomData.Templates[Random.Range(0, randomData.Templates.Count)];
-            var count = Random.Range(currentTemplate.CountSpawn.x, currentTemplate.CountSpawn.y);
+        {
+            var currentTemplate = randomData.Templates.RandomItem();
+            var count = currentTemplate.CountSpawn.RandomRange();
             
             for (int i = 0; i < count; i++)
             {
                 _currentCount++;
                 var itemSpawn = NightPool.Spawn(currentTemplate.ItemSpawn, transform);
-                var randomVector = new Vector3(RandomPos, currentTemplate.Height, RandomPos);
+                var randomVector = new Vector3(RandomPos, 0, RandomPos);
                 itemSpawn.SetSpawner(this,randomVector);
             }
         }

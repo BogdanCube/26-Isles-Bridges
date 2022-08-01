@@ -16,6 +16,7 @@ namespace Core.Environment.Tower.ShopDataTower
         private NoBuilding.NoBuilding _noBuilding;
         private BagCharacter _bag;
         private int _price;
+        public int Price => _price;
         public void Load(Components.DataTowers.TemplateTower templateTower, NoBuilding.NoBuilding noBuilding, BagCharacter bag)
         {
             transform.localScale = Vector3.one;
@@ -34,7 +35,7 @@ namespace Core.Environment.Tower.ShopDataTower
             if (_bag.HasCanSpend(_price))
             {
                 _bag.Spend(_price);
-                BuyFree();
+                BuyAhead();
             }
             else
             {
@@ -43,7 +44,7 @@ namespace Core.Environment.Tower.ShopDataTower
             }
         }
 
-        public void BuyFree()
+        public void BuyAhead()
         {
             var tower = NightPool.Spawn(_currentTemplate.Tower, _noBuilding.transform.position);
             tower.SetOwner(_bag.Character,_noBuilding);

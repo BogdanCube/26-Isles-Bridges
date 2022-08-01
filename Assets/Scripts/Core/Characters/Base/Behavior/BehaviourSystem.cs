@@ -1,4 +1,3 @@
-using Core.Character.Behavior;
 using UnityEngine;
 
 namespace Core.Characters.Base.Behavior

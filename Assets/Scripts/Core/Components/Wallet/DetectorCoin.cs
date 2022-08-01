@@ -11,8 +11,11 @@ namespace Core.Components.Wallet
         {
             if(other.TryGetComponent(out Coin coin))
             { 
-                _wallet.Add(coin.RandomCount);
-                NightPool.Despawn(coin);
+                coin.MoveToCharacter(transform,() =>
+                {
+                    _wallet.Add(coin.RandomCount);
+                    NightPool.Despawn(coin);
+                });
             }
         }
     }

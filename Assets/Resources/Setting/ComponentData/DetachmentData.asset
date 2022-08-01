@@ -19,3 +19,4 @@ MonoBehaviour:
     Price: 20
   - MaxCount: 4
     Price: 0
+  Icon: {fileID: 21300000, guid: e95dac559da713c4d935f38acdb9d9bc, type: 3}

@@ -1,26 +1,18 @@
-using System;
-using System.Collections.Generic;
 using Core.Components._Spawners;
 using Core.Environment._ItemSpawn;
-using Core.Environment.Block;
-using Core.Environment.Bridge;
 using Core.Environment.Bridge.Brick;
-using Core.Environment.Island;
 using Core.Environment.Tower;
-using NaughtyAttributes;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 namespace Core.Characters.Enemy.Finder
 {
-    public class EnemyFinderOutside : FinderBase
+    public class EnemyFinderOutside : DebugDetector
     {
-        [SerializeField] private Character.Player.Player _player;
-        [SerializeField] private TowerLevel _tower;
-        [SerializeField] private Brick _brick;
-        [SerializeField] private RecruitItem _recruitItem;
-        [SerializeField] private ItemSpawn _item;
+        private Character.Player.Player _player;
+        private TowerLevel _tower;
+        private Brick _brick;
+        private RecruitItem _recruitItem;
+        private ItemSpawn _item;
         public Character.Player.Player Player => _player;
         public TowerLevel Tower => _tower;
         public Brick Brick => _brick;

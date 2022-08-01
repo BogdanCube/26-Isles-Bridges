@@ -1,10 +1,6 @@
-using System;
-using Components;
 using Core.Components._ProgressComponents.Health;
-using UI.Screen;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 namespace Managers
 {

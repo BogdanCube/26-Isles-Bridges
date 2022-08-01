@@ -13,7 +13,6 @@ namespace Core.Components._Spawners.RandomSpawner
     public class TemplateSpawn
     {
         public ItemSpawn ItemSpawn;
-        public float Height;
         [MinMaxSlider(0, 25)] public Vector2Int CountSpawn;
     }
 }

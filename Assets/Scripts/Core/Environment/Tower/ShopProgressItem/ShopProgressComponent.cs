@@ -1,57 +1,61 @@
 using System;
 using Core.Components._ProgressComponents;
+using Core.Components._ProgressComponents.Bag;
+using Core.Components.DataTowers;
 using Core.Components.Wallet;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using NaughtyAttributes;
-using UnityEngine.Serialization;
+
 
 namespace Core.Environment.Tower.ShopProgressItem
 {
     public class ShopProgressComponent : MonoBehaviour
     {
-        [SerializeField] private ProgressComponent _progressComponent;
-        [SerializeField] private DetectorWallet _detectorWallet;
         [SerializeField] private TextMeshProUGUI _priceText;
         [SerializeField] private TextMeshProUGUI _progressText;
+        [SerializeField] private Image _image;
+        [SerializeField] private Button _button;
 
-        private void Start()
+        private ProgressComponent _currentComponent;
+        private Wallet _wallet;
+        private int _price;
+        public int Price => _price;
+        public void Load(ProgressComponent component, Wallet wallet)
         {
-            UpdateText();
+            transform.localScale = Vector3.one;
+            _currentComponent = component;
+            _wallet = wallet;
+            _price = component.Price;
+            
+            _image.sprite = _currentComponent.Icon;
+            _priceText.text = _currentComponent.IsMaxLevel ? "MAX" :_price.ToString();
+            _progressText.text = _currentComponent.IsMaxLevel ? String.Empty :_currentComponent.ProgressText;
+            _button.onClick.AddListener(Buy);
         }
-
-        private void UpdateText()
-        {
-            _priceText.text = _progressComponent.Price.ToString();
-            _progressText.text = _progressComponent.ProgressText;
-        }
-
+        
         public void Buy()
         {
-            var wallet = _detectorWallet.Wallet;
-            var price = _progressComponent.Price;
-            if (wallet.HasCanSpend(price))
+            if (_wallet.HasCanSpend(_price))
             {
-                if (_progressComponent.IsMaxLevel == false)
-                {
-                    _progressComponent.LevelUp();
-                    wallet.Spend(price);
-                    UpdateText();
-                    if (_progressComponent.IsMaxLevel)
-                    {
-                        _priceText.text = "MAX";
-                        _progressText.text = String.Empty;
-                    }
-                }
+                BuyAhead();
             } 
             else
             {
                 _priceText.color = Color.red;
                 _priceText.DOColor(Color.white, 1f);
             }
-            
+        }
+
+        public void BuyAhead()
+        {
+            if (_currentComponent.IsMaxLevel == false)
+            {
+                _currentComponent.LevelUp();
+                _wallet.Spend(_price);
+                Load(_currentComponent,_wallet);
+            }
         }
     } 
 }

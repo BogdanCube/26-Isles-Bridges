@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Toolkit.Extensions
 {
@@ -8,6 +9,17 @@ namespace Toolkit.Extensions
         {
             if (list.Count == 0) throw new System.IndexOutOfRangeException("Cannot select a random item from an empty list");
             return list[UnityEngine.Random.Range(0, list.Count)];
+        }
+
+        public static float RandomRange(this Vector2 vector)
+        {
+            var value = Random.Range(vector.x, vector.y);
+            return value;
+        }
+        public static int RandomRange(this Vector2Int vector)
+        {
+            var value = Random.Range(vector.x, vector.y);
+            return value;
         }
     }
 }

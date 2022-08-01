@@ -37,12 +37,12 @@ namespace Components.Weapon
          }
          private float CurrentDamage()
          {
-             return _chanceCritical > Random.Range(0f, 1f) ? _damage * 2 : _damage;
+             return _chanceCritical > Random.value ? _damage * 2 : _damage;
          }
 
          private int CurrentHeal()
          {
-             return _chanceVampirism > Random.Range(0f, 1f) ? _damage / 2 : 0;
+             return _chanceVampirism > Random.value ? _damage / 2 : 0;
          }
 
          

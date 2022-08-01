@@ -13,8 +13,12 @@ namespace Core.Components
         {
             if (other.TryGetComponent(out WeaponItem weaponItem))
             {
-                _weapon.Load(weaponItem.CurrentData);
-                NightPool.Despawn(weaponItem);
+                weaponItem.MoveToCharacter(transform,() =>
+                {
+                    _weapon.Load(weaponItem.CurrentData);
+                    NightPool.Despawn(weaponItem);
+                });
+               
             }
         }
     }

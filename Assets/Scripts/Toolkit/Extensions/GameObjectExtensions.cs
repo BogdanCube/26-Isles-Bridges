@@ -8,7 +8,6 @@ namespace Toolkit.Extensions
         {
             return Object.Instantiate<T>(prefab);
         }
-   
         public static T Instantiate<T>(this T prefab, Transform transformInfo) where T : Object
         {
             return Object.Instantiate<T>(prefab, transformInfo.position, transformInfo.rotation);

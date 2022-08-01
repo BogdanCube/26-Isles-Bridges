@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace Core.Characters.Enemy.Finder
 {
-    public class FinderBase : MonoBehaviour
+    public class DebugDetector : MonoBehaviour
     {
         [Range(0,12)] [SerializeField]  private float _radius;
         [SerializeField] private bool _isDebuged;

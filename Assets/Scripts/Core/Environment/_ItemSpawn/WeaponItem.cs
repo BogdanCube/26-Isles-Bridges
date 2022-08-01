@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Components.Weapon;
 using Core.Components._Spawners;
 using NaughtyAttributes;
+using Toolkit.Extensions;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -16,7 +17,7 @@ namespace Core.Environment.WeaponItem
         public WeaponData CurrentData => _currentData;
         private void Start()
         {
-            _currentData = _weapons[Random.Range(0, _weapons.Count)];
+            _currentData = _weapons.RandomItem();
             _meshFilter.mesh = _currentData.Mesh;
         }
     }

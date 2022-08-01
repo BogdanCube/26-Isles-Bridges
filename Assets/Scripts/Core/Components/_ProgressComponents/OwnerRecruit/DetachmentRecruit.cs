@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Core.Characters.Recruit;
-using NTC.Global.Pool;
 using UnityEngine;
 
 namespace Core.Components._ProgressComponents.OwnerRecruit
