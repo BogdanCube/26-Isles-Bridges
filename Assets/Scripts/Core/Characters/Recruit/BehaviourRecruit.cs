@@ -21,7 +21,6 @@ namespace Core.Characters.Recruit
                 {
                     SetState(ScriptableObject.CreateInstance<FightingState>());
                 }
-                
                 else if (_character.MovementController.IsMove)
                 {
                     SetState(ScriptableObject.CreateInstance<RunningState>());

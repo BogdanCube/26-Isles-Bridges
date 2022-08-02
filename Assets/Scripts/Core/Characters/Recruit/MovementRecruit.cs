@@ -1,33 +1,43 @@
 using Core.Character.Behavior;
+using Core.Components;
 using DG.Tweening;
+using NaughtyAttributes;
+using Rhodos.Toolkit.Extensions;
 using UnityEngine;
 
 namespace Core.Characters.Recruit
 {
     public class MovementRecruit : MovementController
     {
-        [Space][SerializeField] private protected Transform _target;
-        [SerializeField] private float _stoppingDistance;
-        public override bool IsMove => _target != null && DistanceToTarget > _stoppingDistance;
-        private float DistanceToTarget => Vector3.Distance(transform.position, _target.position);
-
+        [SerializeField] private DetectorFighting _outsideDetector;
+        //[SerializeField] private float _stoppingDistance;
+        private Base.Character _owner;
+        private Transform CurrentTarget => _outsideDetector.IsFight ? _outsideDetector.CurrentTarget : _owner.transform;
+        public override bool IsMove => _navMeshAgent.isStopped == false && (_owner || _outsideDetector.CurrentTarget);
+        public Base.Character Owner => _owner;
+        
         private void Start()
         {
             _navMeshAgent.speed = _speed;
-            _navMeshAgent.stoppingDistance = _stoppingDistance;
+            //_navMeshAgent.stoppingDistance = _stoppingDistance;
         }
         
         public override void Move()
         {
-            _navMeshAgent.SetDestination(_target.position);
-            transform.DOLookAt(_target.position, 0.5f);
+            _navMeshAgent.SetDestination(CurrentTarget.position);
+            transform.SlowLookY(CurrentTarget);
         }
 
-        public void SetTarget(Transform target)
+        public void ToogleMove(bool state)
         {
-            if (_target == null)
+            _navMeshAgent.isStopped = _outsideDetector.CurrentTarget == false && state;
+        }
+
+        public void SetOwner(Base.Character owner)
+        {
+            if (_owner == false)
             {
-                _target = target;
+                _owner = owner;
             }
         }
     }

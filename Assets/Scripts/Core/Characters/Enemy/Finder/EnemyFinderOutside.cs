@@ -52,7 +52,7 @@ namespace Core.Characters.Enemy.Finder
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.TryGetComponent(out Base.Character character))
+            if (other.TryGetComponent(out Character.Player.Player character))
             {
                 _player = null;
             }

@@ -74,7 +74,7 @@ namespace Rhodos.Toolkit.Extensions
             transform.gameObject.SetActive(false);
         }
 
-        public static void SlowLookY(this Transform transform,Transform target,float duration)
+        public static void SlowLookY(this Transform transform,Transform target,float duration = 1f)
         {
             var lookPos = target.position - transform.position;
             lookPos.y = 0;

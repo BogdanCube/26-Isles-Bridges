@@ -8,6 +8,7 @@ using Core.Components._ProgressComponents.OwnerRecruit;
 using Core.Components.DataTowers;
 using Core.Components.Wallet;
 using DG.Tweening;
+using NaughtyAttributes;
 using Rhodos.Toolkit.Extensions;
 using Toolkit.Extensions;
 using UnityEngine;
@@ -18,11 +19,11 @@ namespace Core.Characters.Enemy
     {
         [SerializeField] private Transform _startPos;
         [SerializeField] private int _randomRadius;
-        [SerializeField] private Transform _currentTarget;
         [SerializeField] private Bag _bag;
         [SerializeField] private DataProgressComponent _dataProgress;
         [SerializeField] private EnemyFinderInside _finderInside;
         [SerializeField] private EnemyFinderOutside _finderOutside;
+        [ShowNonSerializedField] private Transform _currentTarget;
         public override bool IsMove => _navMeshAgent.isStopped == false;
 
         private void Start()
@@ -33,7 +34,7 @@ namespace Core.Characters.Enemy
 
         public override void Move()
         {
-            if (_finderOutside.Player)
+            if (_finderOutside.Player && _finderOutside.Player.HealthComponent.IsDeath == false)
             {
                 SetTarget(_finderOutside.Player.transform);
             }
@@ -77,7 +78,7 @@ namespace Core.Characters.Enemy
             while (true)
             {
                 _currentTarget = null;
-                _navMeshAgent.SetDestination(_navMeshAgent.RandomPosition(_randomRadius));
+                _navMeshAgent.SetRandomDestination(_randomRadius);
                 yield return new WaitForSeconds(time);
             }
         }
@@ -86,7 +87,7 @@ namespace Core.Characters.Enemy
             if (target.gameObject.activeSelf)
             {
                 _currentTarget = target;
-                transform.SlowLookY(_currentTarget,1f);
+                transform.SlowLookY(_currentTarget);
                 _navMeshAgent.SetDestination(_currentTarget.position);
             }
         }

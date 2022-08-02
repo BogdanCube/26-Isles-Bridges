@@ -29,5 +29,7 @@ namespace Core.Environment.Bridge.Brick
             _brick.SetActive(true);
             LoaderLevel.Instance.UpdateBake();
         }
+
+        
     }
 }

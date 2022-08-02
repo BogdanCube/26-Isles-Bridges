@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98bd765e88db76b49a7b43e2b893faf2, type: 3}
   m_Name: Sword 14
   m_EditorClassIdentifier: 
-  Damage: 5
+  Damage: 4
   ChanceVampirism: 0
   ChanceCritical: 0
   Mesh: {fileID: 1865095037660423829, guid: 8a7dee14297f94201ab4a3ae74e40080, type: 3}

@@ -1,6 +1,7 @@
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 namespace Managers.Level
 {
@@ -28,6 +29,16 @@ namespace Managers.Level
         public void UpdateBake()
         {
             _navMeshSurface.BuildNavMesh();
+        }
+
+        public void Load()
+        {
+            
+            UpdateBake();
+        }
+        public void ReloadScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

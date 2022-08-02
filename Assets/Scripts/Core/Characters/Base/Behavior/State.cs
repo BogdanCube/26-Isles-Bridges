@@ -6,7 +6,7 @@ namespace Core.Characters.Base.Behavior
     {
         public BehaviourSystem BehaviourSystem;
         public virtual void Start() { } 
-        public abstract void Update();
+        public virtual void Update() { } 
 
         public virtual void End() { }
     }

@@ -7,13 +7,13 @@ namespace Toolkit.Extensions
 {
     public static class NavMeshExtensions
     {
-        public static Vector3 RandomPosition(this NavMeshAgent agent, float radius)
+        public static void SetRandomDestination(this NavMeshAgent navMeshAgent, float radius)
         {
             var randDirection = Random.insideUnitSphere * radius;
-            randDirection += agent.transform.position;
+            randDirection += navMeshAgent.transform.position;
             NavMeshHit navHit;
             NavMesh.SamplePosition(randDirection, out navHit, radius, -1);
-            return navHit.position;
+            navMeshAgent.SetDestination(navHit.position);
         }
     }
 }

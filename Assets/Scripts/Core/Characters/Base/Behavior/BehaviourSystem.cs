@@ -20,7 +20,6 @@ namespace Core.Characters.Base.Behavior
                 _currentState.BehaviourSystem = this;
                 _currentState.Start();
             }
-          
         }
     }
 }

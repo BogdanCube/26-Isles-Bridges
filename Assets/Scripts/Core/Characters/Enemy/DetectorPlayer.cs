@@ -7,7 +7,7 @@ namespace Core.Characters.Enemy
 {
     public class DetectorPlayer : DetectorFighting
     {
-        private void OnTriggerStay(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out Character.Player.Player player))
             {
@@ -26,9 +26,12 @@ namespace Core.Characters.Enemy
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.TryGetComponent(out Character.Player.Player player))
+            if (other.TryGetComponent(out  Character.Player.Player player))
             {
-                _currentTarget = null;
+                if (_isNullExit)
+                {
+                    _currentTarget = null;
+                }
             }
             if (other.TryGetComponent(out Tower tower))
             {

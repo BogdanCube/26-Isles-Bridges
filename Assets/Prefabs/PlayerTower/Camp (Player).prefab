@@ -474,6 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _owner: {fileID: 0}
+  _shopTower: {fileID: 0}
   _healthTower: {fileID: 6196909702914947708}
 --- !u!114 &6196909702914947648
 MonoBehaviour:
@@ -547,7 +548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6196909703221813613}
   - component: {fileID: 6196909703221813614}
-  - component: {fileID: 6196909703221813612}
+  - component: {fileID: 2615902509095914155}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -584,11 +585,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _radius: {x: 1.4738573, y: 3.4080896}
   _limitSpawn: 10
-  _currentCount: 0
-  _coeffienceRadious: 1.5
   _randomData: {fileID: 11400000, guid: 552f71c93d916704aace320abb31defa, type: 2}
   _currentTimeSpawn: 0
---- !u!114 &6196909703221813612
+--- !u!114 &2615902509095914155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -597,15 +596,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6196909703221813615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 484bc72c71f9415f9df27225aa161e14, type: 3}
+  m_Script: {fileID: 11500000, guid: 56d3deb1bfad4ea389ee959fddc4f2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: {x: 0, y: 1.1682245}
+  _radius: {x: 0, y: 1.16}
   _limitSpawn: 10
-  _currentCount: 0
-  _coeffienceRadious: 1.5
   _randomData: {fileID: 11400000, guid: 442b953639a184734bc585b43e352693, type: 2}
-  _healthComponent: {fileID: 6196909702914947708}
+  _iHealthComponent: {fileID: 6196909702914947708}
 --- !u!1001 &6196909701830857948
 PrefabInstance:
   m_ObjectHideFlags: 0

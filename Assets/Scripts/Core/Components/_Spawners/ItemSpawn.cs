@@ -18,7 +18,7 @@ namespace Core.Components._Spawners
         private Spawner _spawner;
         private Vector3 _startScale;
 
-        private void Start()
+        private void Awake()
         {
             _trailRenderer = GetComponent<TrailRenderer>();
         }
