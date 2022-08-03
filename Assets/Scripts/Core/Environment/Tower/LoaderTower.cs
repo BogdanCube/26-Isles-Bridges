@@ -16,10 +16,10 @@ namespace Core.Environment.Tower
         public int PriceNextLevel(int level) => _setting.Templates[level].Price;
         public void Load(int index)
         {
-            NightPool.Despawn(_currentTower.gameObject);
+            Destroy(_currentTower.gameObject);
             var currentTemplate = _setting.Templates[index];
             var tower = currentTemplate.Model;
-            _currentTower = NightPool.Spawn(tower, _modelParent);
+            _currentTower = Instantiate(tower, _modelParent);
             LoaderLevel.Instance.UpdateBake();
             
             _spawner.StartSpawn(currentTemplate.TimeSpawn);

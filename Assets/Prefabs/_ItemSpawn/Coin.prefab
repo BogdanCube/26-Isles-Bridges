@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -9168796071809029343, guid: e10028e0a6a7c43f5904482eb202b9b4, type: 3}
+  - {fileID: 2100000, guid: b70cd8ebc31094c08ba82de0066c54ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -144,7 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationY: {x: 0, y: 0}
-  _trailRenderer: {fileID: 7812864310974901488}
   _count: {x: 1, y: 3}
 --- !u!96 &7812864310974901488
 TrailRenderer:

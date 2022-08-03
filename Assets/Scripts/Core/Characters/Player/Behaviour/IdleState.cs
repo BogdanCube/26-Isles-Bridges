@@ -9,10 +9,5 @@ namespace Core.Character.Behavior
         {
             BehaviourSystem.Character.AnimationStateController.IsRunning = false;
         }
-
-        public override void Update()
-        {
-           
-        }
     }
 }

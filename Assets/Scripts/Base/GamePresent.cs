@@ -1,4 +1,5 @@
 using Core.Components._ProgressComponents.Health;
+using Core.Environment.Tower;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,24 +7,27 @@ namespace Managers
 {
     public class GamePresent : MonoBehaviour
     {
-        [SerializeField] private HealthComponent _healthComponent;
+        [SerializeField] private HealthTower _playerTower;
+        [SerializeField] private HealthTower _enemyTower;
 
         public UnityEvent OnStartGame;
+        public UnityEvent OnWin;
         public UnityEvent OnLose;
-        public bool IsGameOver => _healthComponent.IsDeath;
+        public bool IsGameOver => _playerTower.IsDeath;
 
-        /*#region Enable/Disable
+        #region Enable/Disable
         private void OnEnable()
         {
-            _healthComponent.OnDeath += Lose;
+            _playerTower.OnDeath += Lose;
+            _enemyTower.OnDeath += Win;
         }
 
         private void OnDisable()
         {
-            _healthComponent.OnDeath -= Lose;
-
+            _playerTower.OnDeath -= Lose;
+            _enemyTower.OnDeath -= Win;
         }
-        #endregion*/
+        #endregion
         
         private void Start()
         {
@@ -38,6 +42,10 @@ namespace Managers
         private void Restart()
         {
             
+        }
+        private void Win()
+        {
+            OnWin.Invoke();
         }
         private void Lose()
         {

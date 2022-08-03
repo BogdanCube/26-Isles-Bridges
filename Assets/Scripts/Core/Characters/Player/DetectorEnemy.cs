@@ -13,6 +13,7 @@ namespace Core.Characters.Player
             {
                 _currentTarget = enemy.transform;
                 _currentHealth = enemy.HealthComponent;
+                _displayHealth.ShowBar();
             }
             if (other.TryGetComponent(out Tower tower))
             {
@@ -20,6 +21,7 @@ namespace Core.Characters.Player
                 {
                     _currentTarget = tower.transform;
                     _currentHealth = tower.HealthComponent;
+                    _displayHealth.ShowBar();
                 }
             }
 
@@ -32,12 +34,14 @@ namespace Core.Characters.Player
                 {
                     _currentTarget = null;
                 }
+                _displayHealth.HideBar();
             }
             if (other.TryGetComponent(out Tower tower))
             {
                 if (tower.Owner.GetType() == typeof(Enemy.Enemy))
                 {
                     _currentTarget = null;
+                    _displayHealth.HideBar();
                 }
             }
         }

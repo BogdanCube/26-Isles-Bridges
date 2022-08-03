@@ -8,6 +8,7 @@ namespace Core.Components
         private readonly int _runningNameId = Animator.StringToHash("IsRunning");
         private readonly int _attackNameId = Animator.StringToHash("IsAttack");
         private readonly int _deathNameId = Animator.StringToHash("Death");
+        private readonly int _liveNameId = Animator.StringToHash("Live");
 
         private bool _isRunning;
         private bool _isFighting;
@@ -39,6 +40,10 @@ namespace Core.Components
         public void Death()
         {
             _animator.SetTrigger(_deathNameId);
+        }
+        public void Live()
+        {
+            _animator.SetTrigger(_liveNameId);
         }
     }
 }

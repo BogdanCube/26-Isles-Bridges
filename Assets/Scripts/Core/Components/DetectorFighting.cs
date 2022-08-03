@@ -1,4 +1,6 @@
 using Core.Components._ProgressComponents.Health;
+using JetBrains.Annotations;
+using UI.DisplayParametrs;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +13,7 @@ namespace Core.Components
         [SerializeField] private SphereCollider _sphereCollider;
         [SerializeField] private Image _outline;
         [SerializeField] private protected bool _isNullExit = true;
+        [SerializeField] [CanBeNull] private protected DisplayHealth _displayHealth;
         
         protected Transform _currentTarget;
         protected IHealthComponent _currentHealth;

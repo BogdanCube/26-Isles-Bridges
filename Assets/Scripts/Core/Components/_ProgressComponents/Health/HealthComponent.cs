@@ -9,6 +9,7 @@ namespace Core.Components._ProgressComponents.Health
         [SerializeField] private int _currentCount;
         public event Action<int> OnUpdateHealth;
         public Action OnDeath { get; set; }
+        public int CurrentCount => _currentCount;
 
         public bool IsDeath
         {
@@ -51,6 +52,11 @@ namespace Core.Components._ProgressComponents.Health
             }
             OnUpdateHealth?.Invoke(_currentCount);
         }
+        public void Respawn()
+        {
+            _currentCount = _maxCount;
+            OnUpdateHealth?.Invoke(_currentCount);
+        }
 
         public override void LevelUp()
         {
@@ -65,11 +71,13 @@ namespace Core.Components._ProgressComponents.Health
             Hit(1);
         }
         [Button]
-        private void Death()
+        public void Death()
         {
             _currentCount *= 0;
             Hit(1);
         }
         #endregion
+
+        
     }
 }

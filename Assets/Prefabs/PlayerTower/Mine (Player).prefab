@@ -588,6 +588,7 @@ MonoBehaviour:
   _bag: {fileID: 1110656629614492934}
   _tower: {fileID: 1110656629614492941}
   _towerLevel: {fileID: 1110656629614492936}
+  _lootSpawner: {fileID: 8315492558451457523}
 --- !u!1001 &1110656627745306737
 PrefabInstance:
   m_ObjectHideFlags: 0

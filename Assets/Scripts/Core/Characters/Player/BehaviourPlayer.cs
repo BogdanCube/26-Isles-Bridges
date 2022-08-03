@@ -15,9 +15,9 @@ namespace Core.Character.Player
 
         private void Update()
         {
+            _currentState.Update();
             if (_character.HealthComponent.IsDeath == false)
             {
-                _currentState.Update();
                 if (_character.MovementController.IsMove)
                 {
                     SetState(ScriptableObject.CreateInstance<RunningState>());

@@ -1,6 +1,7 @@
 using System;
 using Core.Components._ProgressComponents.Bag;
 using Core.Components._ProgressComponents.Health;
+using Core.Components.Loot;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ namespace Core.Environment.Tower
         [SerializeField] private Bag _bag;
         [SerializeField] private Tower _tower;
         [SerializeField] private TowerLevel _towerLevel;
-
+        [SerializeField] private LootSpawner _lootSpawner;
         public Action OnDeath { get; set; }
 
         public bool IsDeath
@@ -27,7 +28,10 @@ namespace Core.Environment.Tower
             if (IsDeath)
             {
                 _tower.ReturnNoBuilding();
+                _lootSpawner.DespawnLoot();
+                OnDeath?.Invoke();
                 _towerLevel.DestroyTower();
+
             }
         }
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Core.Components._ProgressComponents.Health;
 using DG.Tweening;
 using TMPro;
@@ -10,11 +11,11 @@ namespace UI.DisplayParametrs
     public class DisplayHealth : MonoBehaviour
     {
         [SerializeField] private Camera _camera;
-        [SerializeField] private TextMeshProUGUI _text;
+        [SerializeField] private HealthComponent _healthComponent;
+        
+        [Header("UI")]
         [SerializeField] private Image _sliderHp;
-        
-        [Space(5)][SerializeField] private HealthComponent _healthComponent;
-        
+        [SerializeField] private TextMeshProUGUI _text;
         #region Enable / Disable
         private void OnEnable()
         {
@@ -25,6 +26,7 @@ namespace UI.DisplayParametrs
         { 
             _healthComponent.OnUpdateHealth -= UpdateHealthBar;
             _healthComponent.OnDeath -= HideBar;
+
         }
         #endregion
         private void Start()
@@ -33,20 +35,23 @@ namespace UI.DisplayParametrs
             {
                 _camera = Camera.main;
             }
+            HideBar();
         }
         private void LateUpdate()
         {
             transform.LookAt(_camera.transform);
         }
        
-        private void HideBar()
+        public void HideBar()
         {
-            gameObject.SetActive(false);
+           gameObject.SetActive(false);
         }
-        private void ShowBar()
+        public void ShowBar()
         {
             gameObject.SetActive(true);
+            _text.text = _healthComponent.CurrentCount.ToString();
         }
+        
         private void UpdateHealthBar(int newHp)
         {
             _text.text = newHp.ToString();

@@ -23,5 +23,11 @@ namespace Core.Character.Behavior
         }
         public abstract void Move();
 
+        public void SetStartPos(Vector3 position)
+        {
+            _navMeshAgent.updatePosition = false;
+            _navMeshAgent.nextPosition = position;
+            _navMeshAgent.updatePosition = true;
+        }
     }
 }
