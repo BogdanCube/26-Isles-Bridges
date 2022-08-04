@@ -543,7 +543,7 @@ MonoBehaviour:
   _pumpingSpeed: 0.05
   _shopBag: {fileID: 1110656629614492934}
   _loaderTower: {fileID: 1110656629614492937}
-  _particleLevel: {fileID: 0}
+  _particleLevel: {fileID: 3656429307020123468}
 --- !u!114 &1110656629614492937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,7 +591,7 @@ MonoBehaviour:
   _tower: {fileID: 1110656629614492941}
   _towerLevel: {fileID: 1110656629614492936}
   _lootSpawner: {fileID: 8315492558451457523}
-  _particleHit: {fileID: 0}
+  _particleHit: {fileID: 6674549820140169011}
 --- !u!1 &1224492668660914341
 GameObject:
   m_ObjectHideFlags: 0
@@ -5528,3 +5528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 1
+--- !u!198 &3656429307020123468 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2688722068387150000, guid: 5eed158ccd55b90459e89e5eb11daeef, type: 3}
+  m_PrefabInstance: {fileID: 1724453613607790076}
+  m_PrefabAsset: {fileID: 0}

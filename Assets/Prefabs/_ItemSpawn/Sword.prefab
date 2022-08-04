@@ -143,8 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22341e8036854b0f95953c0f64a227ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationY: {x: 0, y: 0}
-  _trailRenderer: {fileID: 5929676010130001390}
+  _rotationY: {x: 0, y: 360}
   _weapons:
   - {fileID: 11400000, guid: 3baaa245a73ed432986928ec7a118053, type: 2}
   - {fileID: 11400000, guid: 74b3a30f026fa48ca905792b9e14f68a, type: 2}

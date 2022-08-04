@@ -1,4 +1,5 @@
 using System;
+using Core.Environment.Tower;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -11,7 +12,6 @@ namespace Core.Components._ProgressComponents.Health
         public event Action<int> OnUpdateHealth;
         public Action OnDeath { get; set; }
         public int CurrentCount => _currentCount;
-
         public bool IsDeath
         {
             get => _currentCount <= 0;
@@ -27,7 +27,8 @@ namespace Core.Components._ProgressComponents.Health
             }
             UpdateCount();
         }
-
+        
+      
         private void UpdateCount()
         {
             _currentCount = _maxCount;
@@ -56,8 +57,7 @@ namespace Core.Components._ProgressComponents.Health
         }
         public void Respawn()
         {
-            _currentCount = _maxCount;
-            OnUpdateHealth?.Invoke(_currentCount);
+            Heal(_maxCount);
         }
 
         public override void LevelUp()

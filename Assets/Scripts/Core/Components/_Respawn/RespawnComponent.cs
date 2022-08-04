@@ -16,7 +16,7 @@ namespace Core.Components
         [SerializeField] private HealthComponent _healthComponent;
         [SerializeField] private GrayscaleModel _grayscaleModel;
         [SerializeField] private LootSpawner _lootSpawner;
-        [SerializeField] private bool _isRespawn;
+        public bool IsRespawn;
         private Vector3 _startPos;
         #region Enable/Disable
         private void OnEnable()
@@ -27,7 +27,6 @@ namespace Core.Components
         private void OnDisable()
         {
             _healthComponent.OnDeath -= HideBody;
-
         }
         #endregion
 
@@ -43,7 +42,7 @@ namespace Core.Components
                 _lootSpawner.DespawnLoot();
                 transform.DOScale(0,_timeRespawn * 0.25f).OnComplete(() =>
                 {
-                    if (_isRespawn)
+                    if (IsRespawn)
                     {
                         Respawn();
                     }

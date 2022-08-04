@@ -137,7 +137,7 @@ MonoBehaviour:
   _pumpingSpeed: 0.05
   _shopBag: {fileID: 6778660544289046877}
   _loaderTower: {fileID: 6778660544289046878}
-  _particleLevel: {fileID: 0}
+  _particleLevel: {fileID: 1471947650320991280}
 --- !u!114 &6778660544289046878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   _tower: {fileID: 6778660544289046882}
   _towerLevel: {fileID: 6778660544289046879}
   _lootSpawner: {fileID: 1305817113900071890}
-  _particleHit: {fileID: 0}
+  _particleHit: {fileID: 1892215590415147084}
 --- !u!1 &6778660544595466864
 GameObject:
   m_ObjectHideFlags: 0
@@ -5470,6 +5470,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eed158ccd55b90459e89e5eb11daeef, type: 3}
+--- !u!198 &1471947650320991280 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2688722068387150000, guid: 5eed158ccd55b90459e89e5eb11daeef, type: 3}
+  m_PrefabInstance: {fileID: 3548039287702469760}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1630713817159915552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2854261253155710112, guid: 5eed158ccd55b90459e89e5eb11daeef, type: 3}

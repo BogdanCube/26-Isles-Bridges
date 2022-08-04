@@ -38,18 +38,16 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         [Button]
         public void AddRecruit()
         {
-            var recruit = Instantiate(_prefabRecruit, transform.position,Quaternion.identity);
-            Add(recruit);
+            Add(Instantiate(_prefabRecruit, transform.position,Quaternion.identity));
+
         }
         [Button]
         public void AddArcher()
         {
-            var recruit = Instantiate(_prefabArcher, transform.position,Quaternion.identity);
-            Add(recruit);
+            Add(Instantiate(_prefabArcher, transform.position,Quaternion.identity));
         }
         private void Add(MovementRecruit recruit)
         {
-                //NightPool.Spawn(_prefab,Vector3.zero);
             recruit.SetOwner(_owner);
             _recruits.Add(recruit);
         }

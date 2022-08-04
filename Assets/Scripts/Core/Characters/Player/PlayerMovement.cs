@@ -9,12 +9,7 @@ namespace Core.Player
     {
         [SerializeField] private Joystick _joystick;
         public override bool IsMove => GetMoveVector() != Vector3.zero;
-
-        private void Start()
-        {
-            _joystick = FindObjectOfType<Joystick>();
-        }
-
+        
         public override void Move()
         {
             Rotation(GetMoveVector());

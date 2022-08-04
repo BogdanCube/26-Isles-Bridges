@@ -23,13 +23,20 @@ namespace Core.Components._Spawners
             _trailRenderer = GetComponent<TrailRenderer>();
         }
 
-        public void SetSpawner(Spawner spawner,Vector3 position)
+        public virtual void SetSpawner(Spawner spawner,Vector3 position)
         {
             _spawner = spawner;
-            transform.localPosition = position;
+            SetPosition(position);
             _startScale = transform.localScale;
 
-            //SetRandomAngle();
+            var randomRotation = _rotationY.RandomRange();
+            transform.localRotation = Quaternion.Euler(0, randomRotation, 0);
+        }
+
+        private void SetPosition(Vector3 position)
+        {
+            transform.localPosition = position;
+
         }
         public void SpendCount()
         {
@@ -49,11 +56,6 @@ namespace Core.Components._Spawners
 
                 callback.Invoke();
             });
-        }
-        protected void SetRandomAngle()
-        {
-            var randomRotation = _rotationY.RandomRange();
-            transform.localRotation = Quaternion.Euler(0, randomRotation, 0);
         }
     }
 }

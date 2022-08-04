@@ -20,12 +20,10 @@ namespace UI.DisplayParametrs
         private void OnEnable()
         {
             _healthComponent.OnUpdateHealth += UpdateHealthBar;
-            _healthComponent.OnDeath += HideBar;
         }
         private void OnDisable()
         { 
             _healthComponent.OnUpdateHealth -= UpdateHealthBar;
-            _healthComponent.OnDeath -= HideBar;
 
         }
         #endregion
@@ -35,21 +33,10 @@ namespace UI.DisplayParametrs
             {
                 _camera = Camera.main;
             }
-            HideBar();
         }
         private void LateUpdate()
         {
             transform.LookAt(_camera.transform);
-        }
-       
-        public void HideBar()
-        {
-           gameObject.SetActive(false);
-        }
-        public void ShowBar()
-        {
-            gameObject.SetActive(true);
-            _text.text = _healthComponent.CurrentCount.ToString();
         }
         
         private void UpdateHealthBar(int newHp)

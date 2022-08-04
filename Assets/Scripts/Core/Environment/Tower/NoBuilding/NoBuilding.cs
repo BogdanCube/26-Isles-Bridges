@@ -1,3 +1,4 @@
+using System;
 using Core.Components.DataTowers;
 using Core.Environment.Island;
 using UI.DisplayParametrs;
@@ -12,5 +13,10 @@ namespace Core.Environment.Tower.NoBuilding
 
         public FreeIsland FreeIsland => _freeIsland;
         public DisplayDataTower DisplayData => _displayData;
+
+        private void OnEnable()
+        {
+            _freeIsland.SetColor(Color.gray, 1);
+        }
     }
 }

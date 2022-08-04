@@ -5538,6 +5538,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: mine_lvl1
       objectReference: {fileID: 0}
+    - target: {fileID: 7133570492113828948, guid: bddb221b6a5f0dc44b3d83df27a8d686, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3464.142
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133570492113828948, guid: bddb221b6a5f0dc44b3d83df27a8d686, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3464.141
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133570492113828948, guid: bddb221b6a5f0dc44b3d83df27a8d686, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3464.1418
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133570492113828948, guid: bddb221b6a5f0dc44b3d83df27a8d686, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.752
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133570492113828948, guid: bddb221b6a5f0dc44b3d83df27a8d686, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.058
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133570492113828948, guid: bddb221b6a5f0dc44b3d83df27a8d686, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.717
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bddb221b6a5f0dc44b3d83df27a8d686, type: 3}
 --- !u!4 &2555577449693423917 stripped

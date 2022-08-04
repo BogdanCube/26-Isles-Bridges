@@ -17,22 +17,38 @@ namespace Core.Characters.Enemy
 {
     public class MovementEnemy : MovementController
     {
+        [Header("Setting")]
+        [SerializeField] private float _durationLooking;
+        [SerializeField] private float _timeErase;
+
         [SerializeField] private Transform _startPos;
         [SerializeField] private int _randomRadius;
+        [SerializeField] private Transform _currentTarget;
+
+        [Header("Components")]
         [SerializeField] private Bag _bag;
         [SerializeField] private DataProgressComponent _dataProgress;
         [SerializeField] private EnemyFinderInside _finderInside;
         [SerializeField] private EnemyFinderOutside _finderOutside;
-        [ShowNonSerializedField] private Transform _currentTarget;
         public override bool IsMove => _navMeshAgent.isStopped == false;
 
         private void Start()
         {
             _navMeshAgent.speed = _speed;
-            StartCoroutine(EraseTarget(3));
-        }
+            StartCoroutine(EraseTarget(_timeErase));
 
+        }
         public override void Move()
+        {
+            if (_currentTarget)
+            {
+                transform.SlowLookY(_currentTarget,_durationLooking);
+                _navMeshAgent.SetDestination(_currentTarget.position);
+            }
+            Find();
+        }
+        
+        private void Find()
         {
             if (_finderOutside.Player && _finderOutside.Player.HealthComponent.IsDeath == false)
             {
@@ -70,10 +86,8 @@ namespace Core.Characters.Enemy
             {
                 SetTarget(_startPos);
             }
-            
         }
-
-        private IEnumerator EraseTarget(int time)
+        private IEnumerator EraseTarget(float time)
         {
             while (true)
             {
@@ -84,11 +98,9 @@ namespace Core.Characters.Enemy
         }
         private void SetTarget(Transform target)
         {
-            if (target.gameObject.activeSelf)
+            if (target.gameObject.active)
             {
                 _currentTarget = target;
-                transform.SlowLookY(_currentTarget);
-                _navMeshAgent.SetDestination(_currentTarget.position);
             }
         }
     }

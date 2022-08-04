@@ -10,7 +10,8 @@ namespace Core.Components.DetectorDisplayShop
         [SerializeField] private Characters.Base.Character _character;
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent(out Tower tower) && other.TryGetComponent(out ShopTower shopTower))
+            if (other.TryGetComponent(out Tower tower) 
+                                                   && other.TryGetComponent(out ShopTower shopTower))
             {
                 if (tower.Owner == _character)
                 {

@@ -1277,7 +1277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: 0.9
-  _isDebuged: 1
+  _isDebuged: 0
   _sphereCollider: {fileID: 3352212447597578616}
   _outline: {fileID: 6244592345306378142}
   _isNullExit: 1
@@ -2720,7 +2720,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6244592345306378137}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2937,7 +2937,7 @@ MonoBehaviour:
   _healthComponent: {fileID: 6244592346247998390}
   _grayscaleModel: {fileID: 4597780721429738703}
   _lootSpawner: {fileID: 3122246940749348367}
-  _isRespawn: 0
+  IsRespawn: 0
 --- !u!114 &6244592346247998385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3612,7 +3612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d3deb1bfad4ea389ee959fddc4f2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: {x: 0, y: 1.16}
   _limitSpawn: 10
   _randomData: {fileID: 11400000, guid: 14387869c4169eb4cabc086812ee48f9, type: 2}
   _iHealthComponent: {fileID: 6244592346247998390}
@@ -3752,7 +3751,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8152086255616232476}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -3835,7 +3834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: 2.4
-  _isDebuged: 1
+  _isDebuged: 0
   _sphereCollider: {fileID: 8152086256201319531}
   _outline: {fileID: 8152086255616232477}
   _isNullExit: 0
@@ -8897,6 +8896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weapon: {fileID: 6244592346247998385}
   _detectorFighting: {fileID: 2691058666318368316}
+  _isVibration: 0
 --- !u!114 &4597780721429738703
 MonoBehaviour:
   m_ObjectHideFlags: 0

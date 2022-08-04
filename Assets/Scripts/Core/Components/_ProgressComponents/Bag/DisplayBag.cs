@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Core.Environment.Block;
+using MoreMountains.NiceVibrations;
 using NTC.Global.Pool;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ namespace Core.Components.Bag
         [SerializeField] private float _offset;
         [SerializeField] private _ProgressComponents.Bag.Bag _bag;
         [SerializeField] private Block _prefab;
+        [SerializeField] private bool _isVibration = false;
         private List<Block> _blocks = new List<Block>();
         
         #region Enable/Disable
@@ -45,6 +47,10 @@ namespace Core.Components.Bag
     
         private void AddBlock()
         {
+            if (_isVibration)
+            {
+                MMVibrationManager.Haptic (HapticTypes.LightImpact);
+            }
             var block =  NightPool.Spawn(_prefab, transform);
             block.SetPosition(GetNextHeight());
             _blocks.Add(block);

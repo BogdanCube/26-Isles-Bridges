@@ -1,7 +1,9 @@
 using System;
 using Components;
 using NaughtyAttributes;
+using Rhodos.Toolkit.Extensions;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace UI.Screen
 {
@@ -12,11 +14,11 @@ namespace UI.Screen
         private readonly int _hideNameId = Animator.StringToHash("Hide");
         
         private Action OnHideScreen;
-        
+        public UnityEvent OnHideEvent;
         [Button]
         public void Show()
         {
-            gameObject.SetActive(true);
+            transform.Activate();
             _animator.SetTrigger(_showNameId);
         }
         public void Hide(Action callback)
@@ -34,7 +36,8 @@ namespace UI.Screen
         private void EnableCallback()
         {
             OnHideScreen?.Invoke();
-            gameObject.SetActive(false);
+            OnHideEvent?.Invoke();
+            transform.Deactivate();
         }
     }
 }

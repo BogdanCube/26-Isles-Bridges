@@ -1,4 +1,6 @@
+using Base.Level;
 using Core.Components._ProgressComponents.Bag;
+using Managers.Level;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,12 +9,14 @@ namespace UI.DisplayParametrs
 {
     public class DisplayBag : MonoBehaviour
     {
-        [SerializeField] private Bag _bag;
+        [SerializeField] private LoaderLevel _loaderLevel;
         [SerializeField] private TextMeshProUGUI _text;
-        
+        private Bag _bag;
+
         #region Enable / Disable
         private void OnEnable()
         {
+            _bag = _loaderLevel.CurrentPlayer.Bag;
             _bag.OnUpdateBag += UpdateText;
         }
         private void OnDisable()

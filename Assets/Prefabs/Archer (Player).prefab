@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: 2.4
-  _isDebuged: 1
+  _isDebuged: 0
   _sphereCollider: {fileID: 2928768870161780579}
   _outline: {fileID: 2114750113615211168}
   _isNullExit: 0
@@ -759,7 +759,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5897944743142623428}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -842,7 +842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: 3.4
-  _isDebuged: 1
+  _isDebuged: 0
   _sphereCollider: {fileID: 1751137693015026649}
   _outline: {fileID: 7577937894640296017}
   _isNullExit: 1
@@ -891,7 +891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d3deb1bfad4ea389ee959fddc4f2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: {x: 0, y: 1.16}
   _limitSpawn: 10
   _randomData: {fileID: 11400000, guid: 14387869c4169eb4cabc086812ee48f9, type: 2}
   _iHealthComponent: {fileID: 7577937895850353785}
@@ -1392,7 +1391,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7577937894640296022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2997,6 +2996,8 @@ MonoBehaviour:
   _detectorFighting: {fileID: 8080593619660349365}
   _weapon: {fileID: 7577937895850353790}
   _color: {r: 0.3647059, g: 0.54901963, b: 0.3647059, a: 1}
+  _bag: {fileID: 0}
+  _wallet: {fileID: 0}
 --- !u!114 &7577937895850353786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3073,7 +3074,7 @@ MonoBehaviour:
   _healthComponent: {fileID: 7577937895850353785}
   _grayscaleModel: {fileID: 8593899929708769715}
   _lootSpawner: {fileID: 5554994800692292955}
-  _isRespawn: 0
+  IsRespawn: 0
 --- !u!114 &7577937895850353790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3172,6 +3173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weapon: {fileID: 7577937895850353790}
   _detectorFighting: {fileID: 8080593619660349365}
+  _isVibration: 0
 --- !u!114 &8593899929708769715
 MonoBehaviour:
   m_ObjectHideFlags: 0

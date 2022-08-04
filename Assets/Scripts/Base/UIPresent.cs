@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UI.Screen;
 using UnityEngine;
 
@@ -5,7 +6,7 @@ namespace Managers
 {
     public class UIPresent : MonoBehaviour
     {
-        [SerializeField] private UIScreen _currentScreen;
+        [ShowNonSerializedField] private UIScreen _currentScreen;
         private void Awake()
         {
             DisableAllScreen();

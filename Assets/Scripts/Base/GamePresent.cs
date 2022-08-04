@@ -1,55 +1,50 @@
-using Core.Components._ProgressComponents.Health;
-using Core.Environment.Tower;
+using Base.Level;
+using Managers.Level;
+using MoreMountains.NiceVibrations;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Managers
+namespace Base
 {
     public class GamePresent : MonoBehaviour
     {
-        [SerializeField] private HealthTower _playerTower;
-        [SerializeField] private HealthTower _enemyTower;
-
+        [SerializeField] private LoaderLevel _loaderLevel;
         public UnityEvent OnStartGame;
         public UnityEvent OnWin;
         public UnityEvent OnLose;
-        public bool IsGameOver => _playerTower.IsDeath;
-
-        #region Enable/Disable
-        private void OnEnable()
-        {
-            _playerTower.OnDeath += Lose;
-            _enemyTower.OnDeath += Win;
-        }
 
         private void OnDisable()
         {
-            _playerTower.OnDeath -= Lose;
-            _enemyTower.OnDeath -= Win;
+            _loaderLevel.CurrentLevel.DeathPlayerTower -= Lose;
+            _loaderLevel.CurrentLevel.DeathEnemyTower -= Win;
         }
-        #endregion
         
         private void Start()
         {
-            StartGame();
+            LoadGame();
         }
 
-        private void StartGame()
+        private void LoadGame()
         {
             OnStartGame.Invoke();
+            _loaderLevel.Load();
+            _loaderLevel.CurrentLevel.DeathPlayerTower += Lose;
+            _loaderLevel.CurrentLevel.DeathEnemyTower += Win;
         }
         // Pause
         private void Restart()
         {
-            
         }
         private void Win()
         {
+            _loaderLevel.LevelCompleted();
             OnWin.Invoke();
+            MMVibrationManager.Haptic (HapticTypes.Success);
         }
         private void Lose()
         {
             OnLose.Invoke();
+            MMVibrationManager.Haptic (HapticTypes.Warning);
         }
     }
 }

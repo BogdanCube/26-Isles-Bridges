@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Base.Level;
 using Core.Components._ProgressComponents.Bag;
 using Core.Components._ProgressComponents.Health;
 using DG.Tweening;
@@ -52,13 +53,13 @@ namespace Core.Environment.Tower
         {
             if (IsMaxLevel == false)
             {
-                _shopBag.Reset();
                 _level++;
                 _particleLevel.gameObject.SetActive(true);
                 _loaderTower.Load(_level);
                 UpdateDisplay();
-                _shopBag.Add();
             }
+            _shopBag.Reset();
+            _shopBag.Add();
         }
         private void LevelDown()
         {

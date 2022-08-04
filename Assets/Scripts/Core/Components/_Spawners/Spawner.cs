@@ -57,7 +57,7 @@ namespace Core.Components._Spawners
                 itemSpawn.SetSpawner(this,randomVector);
             }
         }
-
+        
         private float GetRandomPos(Island island)
         {
             var spawnRadius = new Vector2(island.Radius * 0.3f,island.Radius);
