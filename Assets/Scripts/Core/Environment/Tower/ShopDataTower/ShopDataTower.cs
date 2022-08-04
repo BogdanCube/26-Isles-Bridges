@@ -47,7 +47,7 @@ namespace Core.Environment.Tower.ShopDataTower
         public void BuyAhead()
         {
             var tower = NightPool.Spawn(_currentTemplate.Tower, _noBuilding.transform.position);
-            tower.SetOwner(_bag.Character,_noBuilding);
+            tower.SetOwner(_bag.Character,_noBuilding,_noBuilding.FreeIsland);
 
             var colorCharacter = _bag.Character.Color;
             _noBuilding.FreeIsland.SetColor(colorCharacter,1f);

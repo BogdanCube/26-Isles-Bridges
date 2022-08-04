@@ -2,6 +2,7 @@ using System.Runtime.InteropServices;
 using Core.Components._ProgressComponents.Health;
 using Core.Components._Spawners;
 using Core.Components._Spawners.RandomSpawner;
+using Core.Environment.Island;
 using NaughtyAttributes;
 using NTC.Global.Pool;
 using Rhodos.Toolkit.Extensions;
@@ -16,6 +17,8 @@ namespace Core.Components.Loot
         [Expandable][SerializeField] private RandomData _randomData;
         [InterfaceType(typeof(IHealthComponent))]
         public Object _iHealthComponent;
+        private Vector2 _radius = new(0,1.16f);
+
         private IHealthComponent HealthComponent => _iHealthComponent as IHealthComponent;
         #region Enable/Disable
         private void OnEnable()
@@ -31,7 +34,7 @@ namespace Core.Components.Loot
 
         private void SpawnLoot()
         {
-            Spawn(_randomData);
+            Spawn(_randomData,_radius);
         }
         public void DespawnLoot()
         {

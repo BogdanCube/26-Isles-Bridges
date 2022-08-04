@@ -11,7 +11,7 @@ namespace Core.Environment.Island
         [SerializeField] private SphereCollider _sphereCollider;
         [SerializeField] private Transform _inside;
         [SerializeField] private Transform _outside;
-
+        public float Radius => _radius;
         private void OnValidate()
         {
             _inside.localScale = new Vector3(_radius, _radius,_inside.localScale.z);

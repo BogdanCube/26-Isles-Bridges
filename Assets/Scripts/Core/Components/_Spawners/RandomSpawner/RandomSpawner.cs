@@ -6,8 +6,8 @@ namespace Core.Components._Spawners.RandomSpawner
 {
     public class RandomSpawner : Spawner
     {
-        [Expandable] [SerializeField] private RandomData _randomData;
         [SerializeField] private FreeIsland _freeIsland;
+        [Expandable] [SerializeField] private RandomData _randomData;
         
         #region Enable/Disable
         private void OnEnable()
@@ -24,7 +24,7 @@ namespace Core.Components._Spawners.RandomSpawner
         [Button]
         private void SpawnRandom()
         {
-            Spawn(_randomData);
+            Spawn(_randomData,_freeIsland);
         }
     }
 }

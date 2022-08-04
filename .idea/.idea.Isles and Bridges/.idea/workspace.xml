@@ -2,205 +2,89 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d59320d8-84cf-43b4-b90d-b08e0da32404" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/GameScreen.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/GameScreen/GameScreen.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/GameScreen/GameScreen.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/GameScreen/Hide.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/GameScreen/Hide.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/GameScreen/Show.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/GameScreen/Show.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Lose.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Lose/Hide.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Lose/Hide.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Lose/LosePanel.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Lose/LosePanel.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Lose/Show.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Lose/Show.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/StartScreen.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/StartScreen/Hide.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/StartScreen/Hide.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/StartScreen/Show.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/StartScreen/Show.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/StartScreen/StartScreen.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/StartScreen/StartScreen.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Win.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Win/Hide.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Win/Hide.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Win/Show.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Win/Show.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Win/WinPanel.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/UI/Win/WinPanel.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower/Enemy.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower/Enemy/def_tower_lvl1.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower/Enemy/def_tower_lvl1.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower/Enemy/def_tower_lvl2.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower/Enemy/def_tower_lvl2.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower/Enemy/def_tower_lvl3.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower/Enemy/def_tower_lvl3.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower/def_tower_lvl1.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower/def_tower_lvl1.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower/def_tower_lvl2.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower/def_tower_lvl2.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower/def_tower_lvl3.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Def Tower/def_tower_lvl3.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Light Setting.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Light Setting.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Armor.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Armor.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Body (Enemy).mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Body (Enemy).mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Body (Player).mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Body (Player).mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Flag (Enemy).mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Flag (Enemy).mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Flag (Player).mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Flag (Player).mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Island (Enemy).mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Island (Enemy).mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Island (Player).mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Island (Player).mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Lining.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Lining.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Models/Enemy.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Models/Enemy.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Models/def_tower_lvl1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Models/def_tower_lvl1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Models/def_tower_lvl2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Models/def_tower_lvl2.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Models/def_tower_lvl3.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Models/def_tower_lvl3.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders/Grayscale.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders/Grayscale.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders/ObjectGrayscale.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders/ObjectGrayscale.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders/UnlitGrayscale.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Shaders/UnlitGrayscale.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Sprites/camp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Sprites/camp.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Sprites/def tower.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Sprites/def tower.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Sprites/mine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Sprites/mine.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Archer (Enemy).prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Archer (Enemy).prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Archer (Player).prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Archer (Player).prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Def Tower (Player).prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Def Tower (Player).prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/No Archer.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/No Archer.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Spawner/ArcherSpawner.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Spawner/ArcherSpawner.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Def Tower.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Def Tower.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/LightingData.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/LightingData.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_dir.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_light.exr.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_shadowmask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_shadowmask.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/ReflectionProbe-0.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/ReflectionProbe-0.exr.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetectorArcher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetectorArcher.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn/GrayscaleEffect.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn/GrayscaleEffect/GrayMaterial.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn/GrayscaleEffect/GrayMaterial.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn/GrayscaleEffect/GrayscaleModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn/GrayscaleEffect/GrayscaleModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn/RespawnComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn/RespawnComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/_ItemSpawn/ArcherItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/_ItemSpawn/ArcherItem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Def Tower (Enemy).prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Def Tower (Enemy).prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Free Island (No Building).prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Free Island (No Building).prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Free Island.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Free Island.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower/Enemy.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower/Enemy/def_tower_lvl1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower/Enemy/def_tower_lvl1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower/Enemy/def_tower_lvl2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower/Enemy/def_tower_lvl2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower/Enemy/def_tower_lvl3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower/Enemy/def_tower_lvl3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower/def_tower_lvl1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower/def_tower_lvl1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower/def_tower_lvl2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower/def_tower_lvl2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower/def_tower_lvl3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/Def Tower/def_tower_lvl3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Enemy/Def Tower.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Enemy/Def Tower.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Isles and Bridges/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Isles and Bridges/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Characters/Enemy/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Enemy/Enemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Characters/Player/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Player/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Characters/Recruit/Recruit.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Recruit/Recruit.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Block.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Block.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Block.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Block.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Coin.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Coin.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Coin.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Coin.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Enemy Flag.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Enemy Flag.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Flag Player.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Flag Player.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Island Enemy.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Island Enemy.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Island Player.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Island Player.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/NoBuilding.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/NoBuilding.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/Enemy@Breathing Idle.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/Enemy@Breathing Idle.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/evil_king.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/evil_king.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower/Enemy.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower/Enemy/def_tower_lvl1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower/Enemy/def_tower_lvl1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower/Enemy/def_tower_lvl2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower/Enemy/def_tower_lvl2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower/Enemy/def_tower_lvl3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower/Enemy/def_tower_lvl3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower/def_tower_lvl1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower/def_tower_lvl1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower/def_tower_lvl2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower/def_tower_lvl2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower/def_tower_lvl3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Def Tower/def_tower_lvl3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Archer (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Archer (Enemy).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Archer (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Archer (Player).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Camp (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Camp (Enemy).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Mine (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Mine (Enemy).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/No building.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/No building.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Camp (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Camp (Player).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Def Tower (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Def Tower (Player).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Mine (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Mine (Player).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Enemy).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Player).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Coin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Bridge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Bridge.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/EnemyTowers.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/EnemyTowers.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/PlayerTowers.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/PlayerTowers.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Spawner/RandomSpawner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Spawner/RandomSpawner.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Def Tower.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Def Tower.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base/GamePresent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base/GamePresent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base/Behavior.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/UI.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base/Behavior/BehaviourSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base/Behavior/BehaviourSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base/Behavior/State.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base/Behavior/State.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base/Character.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base/Character.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/BehaviourEnemy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/BehaviourEnemy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/DetectorPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/DetectorPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Behaviour/DeathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Behaviour/DeathState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Behaviour/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Behaviour/IdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/BehaviourPlayer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/BehaviourPlayer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/DetectorEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/DetectorEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Recruit/BehaviourRecruit.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Recruit/BehaviourRecruit.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Recruit/MovementRecruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Recruit/MovementRecruit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/AnimationStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/AnimationStateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorDisplayShop/DetectorShopTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorDisplayShop/DetectorShopTower.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorFighting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorFighting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base/Level/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Loot/LootSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Loot/LootSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/MovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/MovementController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Health/HealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Health/HealthComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetachmentRecruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetachmentRecruit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetectorRecruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetectorRecruit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/RandomSpawner/RandomSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/RandomSpawner/RandomSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/SpawnerTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/SpawnerTower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Bridge/Bridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Bridge/Bridge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Island/Island.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Island/Island.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/HealthTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/HealthTower.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/LoaderTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/LoaderTower.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/Hybrid Shader Demo Assets/Ground Hybrid.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/Hybrid Shader Demo Assets/Ground Hybrid.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/Hybrid Shader Demo Assets/Robot Hybrid Basic.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/Hybrid Shader Demo Assets/Robot Hybrid Basic.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/Hybrid Shader Demo Assets/Robot Hybrid Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/Hybrid Shader Demo Assets/Robot Hybrid Glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/Hybrid Shader Demo Assets/Robot Hybrid Outline Lit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/Hybrid Shader Demo Assets/Robot Hybrid Outline Lit.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/Hybrid Shader Demo Assets/Robot Standard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/Hybrid Shader Demo Assets/Robot Standard.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/SG Demo Assets/PBS/TCP2_Demo_Robot_PBS.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/SG Demo Assets/PBS/TCP2_Demo_Robot_PBS.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/TCP2 Demo Assets/Robot Kyle/Materials/TCP2_Demo Robot PBS.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Post Processing/JMO Assets/Toony Colors Pro/Demo TCP2/TCP2 Demo Assets/Robot Kyle/Materials/TCP2_Demo Robot PBS.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Package/Post Processing/Simple Toon/Demo/Materials/DemoMat6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Post Processing/Simple Toon/Demo/Materials/DemoMat6.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Package/Post Processing/Simple Toon/Demo/Materials/TeddyDark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Package/Post Processing/Simple Toon/Demo/Materials/TeddyDark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Package/UI/Mega Hyper Casual GUI Pack/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/UI/Mega Hyper Casual GUI Pack/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Package/UI/Mega Hyper Casual GUI Pack/Scenes/Settings.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/UI/Mega Hyper Casual GUI Pack/Scenes/Settings.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tower_lvl1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tower_lvl1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tower_lvl2.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tower_lvl2.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tower_lvl3.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tower_lvl3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/ShopDataTower/ShopDataTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/ShopDataTower/ShopDataTower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/Tower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/Tower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/TowerLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/TowerLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Gradients/PolyGradientSoftMirror_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Gradients/PolyGradientSoftMirror_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Gradients/PolyGradientSoft_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Gradients/PolyGradientSoft_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Gradients/PolyGradient_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Gradients/PolyGradient_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Gradients/PolySpriteGlowDark_M.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Gradients/PolySpriteGlowDark_M.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Gradients/PolySpriteGlow_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Gradients/PolySpriteGlow_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Gradients/PolySpriteGlow_NS_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Gradients/PolySpriteGlow_NS_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Main/PolyGlow_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Main/PolyGlow_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Main/PolySolidGlow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Main/PolySolidGlow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Solids/PolyRocketGradient.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Solids/PolyRocketGradient.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolyIconEye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolyIconEye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolyIconSilence.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolyIconSilence.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolySlash03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolySlash03.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolySplat_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolySplat_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolySpriteRingGlowSharp_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolySpriteRingGlowSharp_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolySpriteRingGlowSoft_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolySpriteRingGlowSoft_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolySprite_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolySprite_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolyZzZ.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Package/Particle/Polygon Arsenal/Materials/Sprites/PolyZzZ.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +92,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../HitMaster-main/Assets/Scripts/Core/Player/Behaviour/PlayerState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/Wallet/Wallet.cs" root0="FORCE_HIGHLIGHTING" />
@@ -232,9 +115,6 @@
     <setting file="file://$PROJECT_DIR$/../Robin Good Project/Assets/Scripts/Enemy/Enemy State Machine/BasedEnemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Robin Good Project/Assets/Scripts/Enemy/Enemy State Machine/EnemyStateMachine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Robin-3D-main/Robin 3D Project/Assets/Scripts/Player/PlayerAnimator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../grayscale-shader-master/Assets/Scripts/ClickMe.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../grayscale-shader-master/Assets/Scripts/FadeToGray.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../grayscale-shader-master/Assets/Scripts/PostProcess.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/409b515b57b348c7a0a186d4cfac6c1e157800/9c/0af99a47/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/b7/c23faf75/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6ffc9e3cf18747d6970df6c4b6fa016d157800/05/a68c1409/Object.cs" root0="SKIP_HIGHLIGHTING" />
@@ -325,7 +205,8 @@
       <workItem from="1659464223724" duration="217000" />
       <workItem from="1659464567088" duration="2834000" />
       <workItem from="1659506820797" duration="6305000" />
-      <workItem from="1659535717992" duration="9306000" />
+      <workItem from="1659535717992" duration="9458000" />
+      <workItem from="1659594916666" duration="4195000" />
     </task>
     <servers />
   </component>

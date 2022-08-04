@@ -18,7 +18,7 @@ namespace Core.Environment.Tower
         [SerializeField] private float _pumpingSpeed;
         [SerializeField] private Bag _shopBag;
         [SerializeField] private LoaderTower _loaderTower;
-        
+        [SerializeField] private ParticleSystem _particleLevel;
         public Action<int,int> OnUpdateDisplayed;
         public Action<int,int> OnHitDisplayed;
         public Action OnMaxUpgrade;
@@ -54,7 +54,7 @@ namespace Core.Environment.Tower
             {
                 _shopBag.Reset();
                 _level++;
-                //particle
+                _particleLevel.gameObject.SetActive(true);
                 _loaderTower.Load(_level);
                 UpdateDisplay();
                 _shopBag.Add();

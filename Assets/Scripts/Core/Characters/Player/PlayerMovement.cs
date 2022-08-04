@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using Core.Character.Behavior;
 using UnityEngine;
@@ -8,6 +9,11 @@ namespace Core.Player
     {
         [SerializeField] private Joystick _joystick;
         public override bool IsMove => GetMoveVector() != Vector3.zero;
+
+        private void Start()
+        {
+            _joystick = FindObjectOfType<Joystick>();
+        }
 
         public override void Move()
         {

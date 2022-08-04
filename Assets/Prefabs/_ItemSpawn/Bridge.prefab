@@ -130,10 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offset: 1.4
-  _poolCount: 0
-  _countBrick: 0
-  _maxCount: 0
-  _builtTo: {fileID: 0}
+  _poolCount: 5
 --- !u!114 &823748199782308387
 MonoBehaviour:
   m_ObjectHideFlags: 0

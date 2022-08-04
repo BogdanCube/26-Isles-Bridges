@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Def Tower
   m_EditorClassIdentifier: 
   Templates:
-  - Model: {fileID: 6506120669149308870, guid: c1ff86a1ebfb642479819d54128a0baa, type: 3}
+  - Model: {fileID: 5035144264353052727, guid: b515847a591384b4bb6ecf80a6b2c275, type: 3}
     TimeSpawn: 25
     Price: 35
-  - Model: {fileID: 5509226876462973990, guid: 970e818aae37c4edc9be0fe76c6800b3, type: 3}
+  - Model: {fileID: 1394447440923026500, guid: b654af14c455648ac9040d2ea5ca1a63, type: 3}
     TimeSpawn: 20
     Price: 45
-  - Model: {fileID: 1010876210725080111, guid: eafa5a9ae1fda4b0392ad3f3b26c9dc0, type: 3}
+  - Model: {fileID: 2182428134504715340, guid: f1b35ec3e5331474c9edbeebad482a72, type: 3}
     TimeSpawn: 15
     Price: 0

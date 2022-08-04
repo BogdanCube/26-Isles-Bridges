@@ -7,6 +7,7 @@ namespace Core.Components._ProgressComponents.Health
     public class HealthComponent : ProgressComponent, IHealthComponent
     {        
         [SerializeField] private int _currentCount;
+        [SerializeField] private ParticleSystem _particleHit;
         public event Action<int> OnUpdateHealth;
         public Action OnDeath { get; set; }
         public int CurrentCount => _currentCount;
@@ -45,6 +46,7 @@ namespace Core.Components._ProgressComponents.Health
         public void Hit(int damage)
         {
             _currentCount -= damage;
+            _particleHit.gameObject.SetActive(true);
             if (_currentCount <= 0)
             {
                 _currentCount = 0;

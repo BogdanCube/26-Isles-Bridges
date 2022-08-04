@@ -13,6 +13,8 @@ namespace Core.Environment.Tower
         [SerializeField] private Tower _tower;
         [SerializeField] private TowerLevel _towerLevel;
         [SerializeField] private LootSpawner _lootSpawner;
+        [SerializeField] private ParticleSystem _particleHit;
+
         public Action OnDeath { get; set; }
 
         public bool IsDeath
@@ -25,6 +27,7 @@ namespace Core.Environment.Tower
         public void Hit(int damage = 1)
         {
             _towerLevel.Hit(damage);
+            _particleHit.gameObject.SetActive(true);
             if (IsDeath)
             {
                 _tower.ReturnNoBuilding();
