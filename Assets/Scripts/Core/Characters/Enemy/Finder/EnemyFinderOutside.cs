@@ -8,12 +8,12 @@ namespace Core.Characters.Enemy.Finder
 {
     public class EnemyFinderOutside : DebugDetector
     {
-        private Character.Player.Player _player;
+        private Player.Player _player;
         private TowerLevel _tower;
         private Brick _brick;
         private RecruitItem _recruitItem;
         private ItemSpawn _item;
-        public Character.Player.Player Player => _player;
+        public Player.Player Player => _player;
         public TowerLevel Tower => _tower;
         public Brick Brick => _brick;
         public ItemSpawn Item => _item;
@@ -23,7 +23,7 @@ namespace Core.Characters.Enemy.Finder
         
         private void OnTriggerStay(Collider other)
         {
-            if (other.TryGetComponent(out Character.Player.Player player))
+            if (other.TryGetComponent(out Player.Player player))
             {
                 if (player.HealthComponent.IsDeath == false)
                 {
@@ -52,7 +52,7 @@ namespace Core.Characters.Enemy.Finder
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.TryGetComponent(out Character.Player.Player character))
+            if (other.TryGetComponent(out Player.Player character))
             {
                 _player = null;
             }

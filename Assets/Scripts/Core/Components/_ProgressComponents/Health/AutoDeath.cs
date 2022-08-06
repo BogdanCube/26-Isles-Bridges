@@ -7,7 +7,6 @@ namespace Core.Components._ProgressComponents.Health
     {
         [SerializeField] private HealthTower _healthTower;
         [SerializeField] private HealthComponent _healthComponent;
-        [SerializeField] private RespawnComponent _respawnComponent;
         #region Enable / Disable
         private void OnEnable()
         {
@@ -21,8 +20,7 @@ namespace Core.Components._ProgressComponents.Health
         #endregion
         private void Death()
         {
-            _healthComponent.Death();
-            _respawnComponent.IsRespawn = false;
+            _healthComponent.IsOver = true;
         }
     }
 }

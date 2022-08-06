@@ -1,3 +1,4 @@
+using Core.Characters.Player.Behaviour;
 using UnityEngine;
 
 namespace Core.Characters.Base.Behavior
@@ -20,6 +21,10 @@ namespace Core.Characters.Base.Behavior
                 _currentState.BehaviourSystem = this;
                 _currentState.Start();
             }
+        }
+        public void SetDanceState()
+        {
+            SetState(ScriptableObject.CreateInstance<DanceState>());
         }
     }
 }

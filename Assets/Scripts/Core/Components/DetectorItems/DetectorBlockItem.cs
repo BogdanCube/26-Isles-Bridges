@@ -10,9 +10,9 @@ namespace Core.Components.DetectorItems
         {
             if (_bag.HasCanAdd && other.TryGetComponent(out BlockItem block))
             {
+                _bag.Add();
                 block.MoveToCharacter(transform,() =>
                 {
-                    _bag.Add();
                     block.SpendCount();
                 });
             }

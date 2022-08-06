@@ -2,6 +2,8 @@ using Components.Weapon;
 using Core.Character.Behavior;
 using Core.Components;
 using Core.Components._ProgressComponents.Health;
+using Core.Components.Weapon;
+using Core.Environment.Tower;
 using UnityEngine;
 
 namespace Core.Characters.Base
@@ -14,7 +16,6 @@ namespace Core.Characters.Base
         [SerializeField] private DetectorFighting _detectorFighting;
         [SerializeField] private Weapon _weapon;
         [SerializeField] private Color _color;
-
         public MovementController MovementController => _movementController;
         public AnimationStateController AnimationStateController => _animationStateController;
         public IHealthComponent HealthComponent => _healthComponent as IHealthComponent;

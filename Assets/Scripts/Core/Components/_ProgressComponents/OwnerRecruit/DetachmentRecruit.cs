@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Core.Characters.Recruit;
 using Core.Components._ProgressComponents.Health;
@@ -15,8 +16,11 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         [SerializeField] private MovementRecruit _prefabArcher;
         [SerializeField] private HealthComponent _healthComponent;
         private Characters.Base.Character _owner;
+        public event Action<int> OnAddRecruit;
+        public Action OnMax;
         public bool HasCanAdd => _recruits.Count + 1 <= _maxCount;
-        
+        public int MaxCount => _maxCount;
+
         #region Enable/Disable
         private void OnEnable()
         {
@@ -50,6 +54,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         {
             recruit.SetOwner(_owner);
             _recruits.Add(recruit);
+            OnAddRecruit.Invoke(_recruits.Count);
         }
 
         [Button]

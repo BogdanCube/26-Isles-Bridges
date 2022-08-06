@@ -1,19 +1,19 @@
 using System.Collections.Generic;
 using Core.Environment.Block;
 using MoreMountains.NiceVibrations;
+using NaughtyAttributes;
 using NTC.Global.Pool;
 using UnityEngine;
 
 namespace Core.Components.Bag
 {
-    public class DisplayBag : MonoBehaviour
+    public class DisplayCountBrick : MonoBehaviour
     {
         [SerializeField] private float _offset;
         [SerializeField] private _ProgressComponents.Bag.Bag _bag;
         [SerializeField] private Block _prefab;
-        [SerializeField] private bool _isVibration = false;
         private List<Block> _blocks = new List<Block>();
-        
+        [ShowNativeProperty] private int Count => _blocks.Count;
         #region Enable/Disable
         private void OnEnable()
         {
@@ -31,14 +31,16 @@ namespace Core.Components.Bag
         {
             if (count > _blocks.Count)
             {
-                for (int i = 0; i < count - _blocks.Count; i++)
+                int difference = count - _blocks.Count;
+                for (int i = 0; i < difference; i++)
                 {
                     AddBlock();
                 }
             }
             else
             {
-                for (int i = 0; i < _blocks.Count - count; i++)
+                int difference = _blocks.Count - count;
+                for (int i = 0; i < difference; i++)
                 {
                     RemoveBlock();
                 }
@@ -47,10 +49,6 @@ namespace Core.Components.Bag
     
         private void AddBlock()
         {
-            if (_isVibration)
-            {
-                MMVibrationManager.Haptic (HapticTypes.LightImpact);
-            }
             var block =  NightPool.Spawn(_prefab, transform);
             block.SetPosition(GetNextHeight());
             _blocks.Add(block);
@@ -59,7 +57,6 @@ namespace Core.Components.Bag
         private void RemoveBlock()
         {
             var block = _blocks[^1];
-            
             _blocks.Remove(block);
             NightPool.Despawn(block);
         }

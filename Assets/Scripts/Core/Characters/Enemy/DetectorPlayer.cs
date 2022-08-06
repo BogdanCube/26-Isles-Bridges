@@ -9,7 +9,7 @@ namespace Core.Characters.Enemy
     {
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent(out Character.Player.Player player))
+            if (other.TryGetComponent(out Player.Player player))
             {
                 _currentTarget = player.transform;
                 _currentHealth = player.HealthComponent;
@@ -17,7 +17,7 @@ namespace Core.Characters.Enemy
             }
             if (other.TryGetComponent(out Tower tower))
             {
-                if (tower.Owner.GetType() == typeof(Character.Player.Player))
+                if (tower.Owner.GetType() == typeof(Player.Player))
                 {
                     _currentTarget = tower.transform;
                     _currentHealth = tower.HealthComponent;
@@ -28,7 +28,7 @@ namespace Core.Characters.Enemy
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.TryGetComponent(out  Character.Player.Player player))
+            if (other.TryGetComponent(out  Player.Player player))
             {
                 if (_isNullExit)
                 {
@@ -38,7 +38,7 @@ namespace Core.Characters.Enemy
             }
             if (other.TryGetComponent(out Tower tower))
             {
-                if (tower.Owner.GetType() == typeof(Character.Player.Player))
+                if (tower.Owner.GetType() == typeof(Player.Player))
                 {
                     _currentTarget = null;
                     //_displayHealth.HideBar();

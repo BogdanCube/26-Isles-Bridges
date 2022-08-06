@@ -23,6 +23,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
                     }
                     else
                     {
+                        _detachmentRecruit.OnMax.Invoke();
                         var count = _additionalCoin.RandomRange();
                         _wallet.Add(count);
                     }

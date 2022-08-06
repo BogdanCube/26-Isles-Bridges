@@ -1,66 +1,34 @@
-using System;
 using Core.Character.Behavior;
-using Core.Components._ProgressComponents.Health;
-using Core.Components.Loot;
+using Core.Characters.Base.Behavior;
+using Core.Components._ProgressComponents.Bag;
 using DG.Tweening;
-using NTC.Global.Pool;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace Core.Components
 {
-    public class RespawnComponent : MonoBehaviour
+    public class RespawnComponent : RespawnRecruit
     {
-        [SerializeField] private float _timeRespawn;
+        [SerializeField] private BehaviourSystem _behaviourSystem;
         [SerializeField] private MovementController _movementController;
-        [SerializeField] private HealthComponent _healthComponent;
-        [SerializeField] private GrayscaleModel _grayscaleModel;
-        [SerializeField] private LootSpawner _lootSpawner;
-        public bool IsRespawn;
+        [SerializeField] private AnimationStateController _animationState;
+        [SerializeField] private BagCharacter _bag;
         private Vector3 _startPos;
-        #region Enable/Disable
-        private void OnEnable()
-        {
-            _healthComponent.OnDeath += HideBody;
-        }
-
-        private void OnDisable()
-        {
-            _healthComponent.OnDeath -= HideBody;
-        }
-        #endregion
 
         private void Start()
         {
             _startPos = transform.position;
         }
-
-        private void HideBody()
+        protected override void Respawn()
         {
-            _grayscaleModel.FadeGray(_timeRespawn * 0.75f).OnComplete(() =>
+            _bag.Reset();
+            _animationState.Live();
+            _movementController.SetStartPos(_startPos);
+            transform.DOScale(1, 0.2f).OnComplete(() =>
             {
-                _lootSpawner.DespawnLoot();
-                transform.DOScale(0,_timeRespawn * 0.25f).OnComplete(() =>
-                {
-                    if (IsRespawn)
-                    {
-                        Respawn();
-                    }
-                    else
-                    {
-                        transform.DOScale(1, 0);
-                        NightPool.Despawn(this);
-                    }
-                });
-                
+                _behaviourSystem.IsStop = false;
+                _movementController.IsStopped = false;
             });
-        }
-        private void Respawn()
-        {
-            transform.DOScale(1, 0);
-            _grayscaleModel.FadeToDefault(0);
-            _movementController.SetStartPos(_startPos); 
-            _healthComponent.Respawn();
+         
         }
     }
 }

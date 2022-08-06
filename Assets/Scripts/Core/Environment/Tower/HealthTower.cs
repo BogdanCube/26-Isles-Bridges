@@ -22,7 +22,7 @@ namespace Core.Environment.Tower
             get => _bag.CurrentCount <= 0;
             set => throw new System.NotImplementedException();
         }
-        
+
         [Button]
         public void Hit(int damage = 1)
         {
@@ -32,9 +32,7 @@ namespace Core.Environment.Tower
             {
                 _tower.ReturnNoBuilding();
                 _lootSpawner.DespawnLoot();
-                OnDeath?.Invoke();
-                _towerLevel.DestroyTower();
-
+                _towerLevel.DestroyTower(OnDeath);
             }
         }
     }

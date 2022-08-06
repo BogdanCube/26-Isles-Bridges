@@ -1,33 +1,32 @@
 using Base.Level;
-using Core.Components.Wallet;
+using Core.Components._ProgressComponents.Bag;
 using Managers.Level;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.DisplayParametrs
+namespace UI.DisplayParameters
 {
-    public class DisplayWallet : MonoBehaviour
+    public class DisplayBag : MonoBehaviour
     {
         [SerializeField] private LoaderLevel _loaderLevel;
         [SerializeField] private TextMeshProUGUI _text;
-        private Wallet _wallet;
-        #region Enable/Disable
+        private Bag _bag;
+
+        #region Enable / Disable
         private void OnEnable()
         {
-            _wallet = _loaderLevel.CurrentPlayer.Wallet;
-            _wallet.OnUpdateCount += UpdateText;
+            _bag = _loaderLevel.CurrentPlayer.Bag;
+            _bag.OnUpdateBag += UpdateText;
         }
         private void OnDisable()
-        {
-            _wallet.OnUpdateCount -= UpdateText;
-
+        { 
+            _bag.OnUpdateBag -= UpdateText;
         }
         #endregion
-        
         private void UpdateText(int count)
         {
-            _text.text = count.ToString();
+            _text.text = $"{count} / {_bag.MaxCount}";
         }
     }
 }

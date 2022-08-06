@@ -25,7 +25,7 @@ namespace Core.Environment.Tower
         public Action OnMaxUpgrade;
         public bool IsMaxLevel => _level + 1 >= _loaderTower.MaxLevel;
 
-        private void Start()
+        public void LoadTower()
         {
             UpdateDisplay();
             _loaderTower.Load(_level);
@@ -87,7 +87,7 @@ namespace Core.Environment.Tower
             }
         }
 
-        public void DestroyTower()
+        public void DestroyTower(Action callback)
         {
             if (_level > 0)
             {
@@ -97,6 +97,7 @@ namespace Core.Environment.Tower
             {
                 transform.DOScale(0, 1f).OnComplete(() =>
                 {
+                    callback?.Invoke();
                     Destroy(gameObject);
                     LoaderLevel.Instance.UpdateBake();
                 });

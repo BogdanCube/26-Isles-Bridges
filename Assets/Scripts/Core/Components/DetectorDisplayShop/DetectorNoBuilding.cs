@@ -10,16 +10,24 @@ namespace Core.Components.DetectorDisplayShop
         {
             if (other.TryGetComponent(out NoBuilding noBuilding))
             {
-                var displayData = noBuilding.DisplayData;
-                displayData.Load(_dataTowers.TowerData,_dataTowers.Bag);
+                if (noBuilding.isLoaded == false)
+                {
+                    var displayData = noBuilding.DisplayData;
+                    displayData.Load(_dataTowers.TowerData,_dataTowers.Bag);
+                    noBuilding.isLoaded = true;
+                }
             }
         }
         private void OnTriggerExit(Collider other)
         {
             if (other.TryGetComponent(out NoBuilding noBuilding))
             {
-                var displayData = noBuilding.DisplayData;
-                displayData.Deload();
+                if (noBuilding.isLoaded)
+                {
+                    var displayData = noBuilding.DisplayData;
+                    displayData.Deload();
+                    noBuilding.isLoaded = false;
+                }
             }
         }
     }

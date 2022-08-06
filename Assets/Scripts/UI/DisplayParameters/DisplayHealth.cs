@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.DisplayParametrs
+namespace UI.DisplayParameters
 {
     public class DisplayHealth : MonoBehaviour
     {

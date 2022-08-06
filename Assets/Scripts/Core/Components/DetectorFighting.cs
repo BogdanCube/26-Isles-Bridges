@@ -1,6 +1,6 @@
 using Core.Components._ProgressComponents.Health;
 using JetBrains.Annotations;
-using UI.DisplayParametrs;
+using UI.DisplayParameters;
 using UnityEngine;
 using UnityEngine.UI;
 

@@ -1,7 +1,7 @@
 using System;
 using Core.Components.DataTowers;
 using Core.Environment.Island;
-using UI.DisplayParametrs;
+using UI.DisplayParameters;
 using UnityEngine;
 
 namespace Core.Environment.Tower.NoBuilding
@@ -10,6 +10,7 @@ namespace Core.Environment.Tower.NoBuilding
     {
         [SerializeField] private FreeIsland _freeIsland;
         [SerializeField] private DisplayDataTower _displayData;
+        [HideInInspector] public bool isLoaded;
 
         public FreeIsland FreeIsland => _freeIsland;
         public DisplayDataTower DisplayData => _displayData;

@@ -9,6 +9,7 @@ namespace Core.Components._ProgressComponents.Health
     {        
         [SerializeField] private int _currentCount;
         [SerializeField] private ParticleSystem _particleHit;
+        private bool _isOver;
         public event Action<int> OnUpdateHealth;
         public Action OnDeath { get; set; }
         public int CurrentCount => _currentCount;
@@ -17,7 +18,16 @@ namespace Core.Components._ProgressComponents.Health
             get => _currentCount <= 0;
             set => throw new NotImplementedException();
         }
-
+        public bool IsOver
+        {
+            get => _isOver;
+            set
+            {
+                _isOver = value; 
+                Death();
+            }
+        }
+       
         public int MaxCount => _maxCount;
         private void Start()
         {

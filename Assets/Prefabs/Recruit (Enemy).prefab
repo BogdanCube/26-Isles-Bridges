@@ -2760,7 +2760,7 @@ GameObject:
   - component: {fileID: 9033622210821594679}
   - component: {fileID: 6244592346247998391}
   - component: {fileID: 6244592346247998390}
-  - component: {fileID: 2594156092723305005}
+  - component: {fileID: 628432287755830959}
   - component: {fileID: 6244592346247998385}
   - component: {fileID: 8345799829440642703}
   m_Layer: 0
@@ -2920,7 +2920,7 @@ MonoBehaviour:
   _maxCount: 5
   _currentCount: 0
   _particleHit: {fileID: 2357259222873721268}
---- !u!114 &2594156092723305005
+--- !u!114 &628432287755830959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2929,15 +2929,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6244592346247998387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19f9268e97c46b080d828a9699d4528, type: 3}
+  m_Script: {fileID: 11500000, guid: ffe334ca2ad0405ea843d8fd65967a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _timeRespawn: 5
-  _movementController: {fileID: 9033622210821594679}
-  _healthComponent: {fileID: 6244592346247998390}
   _grayscaleModel: {fileID: 4597780721429738703}
+  _healthComponent: {fileID: 6244592346247998390}
   _lootSpawner: {fileID: 3122246940749348367}
-  IsRespawn: 0
 --- !u!114 &6244592346247998385
 MonoBehaviour:
   m_ObjectHideFlags: 0

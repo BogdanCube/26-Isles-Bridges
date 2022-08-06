@@ -21,7 +21,6 @@ namespace Core.Components._ProgressComponents.Bag
             }
             OnUpdateBag?.Invoke(_currentCount);
         }
-
         [Button]
         public void Add(int count = 1)
         {
@@ -35,6 +34,7 @@ namespace Core.Components._ProgressComponents.Bag
             _currentCount -= count;
             OnUpdateBag?.Invoke(_currentCount);
         }
+
 
         public void Reset()
         {

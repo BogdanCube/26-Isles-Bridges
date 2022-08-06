@@ -1,4 +1,4 @@
-using UI.DisplayParametrs;
+using UI.DisplayParameters;
 using UnityEngine;
 
 namespace Core.Environment.Tower

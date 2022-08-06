@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Cinemachine;
 using Core.Character.Player;
+using Core.Characters.Player;
 using MoreMountains.NiceVibrations;
 using NaughtyAttributes;
 using Rhodos.Toolkit.Extensions;

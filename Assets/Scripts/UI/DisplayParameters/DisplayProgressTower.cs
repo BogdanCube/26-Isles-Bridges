@@ -1,28 +1,31 @@
 using System.Collections.Generic;
+using Core.Components._ProgressComponents;
 using Core.Components._ProgressComponents.Bag;
 using Core.Components.DataTowers;
+using Core.Components.Wallet;
 using Core.Environment.Tower.NoBuilding;
 using Core.Environment.Tower.ShopDataTower;
+using Core.Environment.Tower.ShopProgressItem;
 using NTC.Global.Pool;
 using Rhodos.Toolkit.Extensions;
 using UnityEngine;
 
-namespace UI.DisplayParametrs
+namespace UI.DisplayParameters
 {
-    public class DisplayDataTower : MonoBehaviour
+    public class DisplayProgressTower : MonoBehaviour
     {
-        [SerializeField] private ShopDataTower _prefab;
+        [SerializeField] private ShopProgressComponent _prefab;
         [SerializeField] private Transform _parent;
-        [SerializeField] private NoBuilding _noBuilding;
-        private List<ShopDataTower> _shopDataTower = new List<ShopDataTower>();
-        public List<ShopDataTower> ShopDataTowers => _shopDataTower;
-        public void Load(TowerData towerData,BagCharacter bag)
+        private List<ShopProgressComponent> _shopDataTower = new List<ShopProgressComponent>();
+        public List<ShopProgressComponent> ShopDataTowers => _shopDataTower;
+        
+        public void Load(List<ProgressComponent> components,Wallet wallet)
         {
-            foreach (var template in towerData.Templates)
+            foreach (var component in components)
             {
                 var shop = NightPool.Spawn(_prefab, _parent);
                 _shopDataTower.Add(shop);
-                shop.Load(template,_noBuilding,bag);
+                shop.Load(component,wallet);
             }
         }
 

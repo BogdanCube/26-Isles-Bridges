@@ -17,6 +17,7 @@ namespace Core.Characters.Player
             {
                 if (brick.IsSet == false)
                 {
+                    
                     _bag.Spend();
                     brick.SetBrick();
                 }

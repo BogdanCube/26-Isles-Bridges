@@ -2,485 +2,79 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d59320d8-84cf-43b4-b90d-b08e0da32404" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Recruit/No Recruit/Run.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Recruit/No Recruit/Run.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Health/AutoDeath.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Health/AutoDeath.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/Android.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/Android/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/Android/AndroidManifest.xml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/iOS.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/iOS/MMNViOSHapticsInterface.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/iOS/MMNViOSHapticsInterface.m.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/iOS/Swift.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/iOS/Swift/MMNViOSCoreHapticsInterface.mm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/iOS/Swift/MMNViOSCoreHapticsInterface.mm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/iOS/Swift/MMNViOSCoreHapticsInterface.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/iOS/Swift/MMNViOSCoreHapticsInterface.swift.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/iOS/Swift/UnitySwift-Bridging-Header.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/iOS/Swift/UnitySwift-Bridging-Header.h.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/iOS/Swift/module.modulemap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Plugins/iOS/Swift/module.modulemap.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Resources.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Resources/MMNVPathDefinition.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Resources/MMNVPathDefinition.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor/DefineSymbols.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor/DefineSymbols/NiceVibrationsDefineSymbols.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor/DefineSymbols/NiceVibrationsDefineSymbols.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor/MMNVAndroidWaveFormAssetEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor/MMNVAndroidWaveFormAssetEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor/MMNVAssetPostProcessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor/MMNVAssetPostProcessor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor/MMNVBuildPostProcessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor/MMNVBuildPostProcessor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor/MMNVRumbleWaveFormAssetEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor/MMNVRumbleWaveFormAssetEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor/MoreMountains.NiceVibrations.Editor.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Editor/MoreMountains.NiceVibrations.Editor.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVAHAP.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVAHAP.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVAltThread.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVAltThread.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVAndroid.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVAndroid.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVAndroidWaveFormAsset.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVAndroidWaveFormAsset.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVEnumCondition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVEnumCondition.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVHapticTypes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVHapticTypes.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVInspectorButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVInspectorButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVPlatform.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVPlatform.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVRumbleWaveFormAsset.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNVRumbleWaveFormAsset.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNViOS.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNViOS.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNViOSCoreHaptics.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MMNViOSCoreHaptics.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MoreMountains.NiceVibrations.Haptics.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Haptics/MoreMountains.NiceVibrations.Haptics.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/NiceVibrations.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/NiceVibrations/MMNVPath.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/NiceVibrations/MMNVPath.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/NiceVibrations/MMVibrationManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/NiceVibrations/MMVibrationManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/NiceVibrations/MMVibrationManagerTester.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/NiceVibrations/MMVibrationManagerTester.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/NiceVibrations/MoreMountains.NiceVibrations.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/NiceVibrations/MoreMountains.NiceVibrations.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Rumble.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Rumble/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Rumble/Editor/DefineSymbols.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Rumble/Editor/DefineSymbols/NiceVibrationsRumbleDefineSymbols.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Rumble/Editor/DefineSymbols/NiceVibrationsRumbleDefineSymbols.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Rumble/Editor/MoreMountains.NiceVibrations.Rumble.Editor.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Rumble/Editor/MoreMountains.NiceVibrations.Rumble.Editor.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Rumble/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Rumble/Scripts/MMNVRumble.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Rumble/Scripts/MMNVRumble.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Rumble/Scripts/MoreMountains.NiceVibrations.Rumble.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/Rumble/Scripts/MoreMountains.NiceVibrations.Rumble.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Sounds.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Sounds/NiceVibrationsContinuous.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Sounds/NiceVibrationsContinuous.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Sounds/NiceVibrationsTransient.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Sounds/NiceVibrationsTransient.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVBoing.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVBoing.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVDrums.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVDrums.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVGravel.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVGravel.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVHeartbeats.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVHeartbeats.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVInflate.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVInflate.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVOscillate.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVOscillate.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVRumble.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVRumble.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVSparkle.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack1/NVSparkle.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVCaptainAHAP.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVCaptainAHAP.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVCarillon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVCarillon.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVDice.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVDice.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVDrumsLoop.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVDrumsLoop.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVGameOver.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVGameOver.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVHeartbeats.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVHeartbeats.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVLaser.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVLaser.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVPowerOff.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVPowerOff.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVReload.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVReload.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVTeleport.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AHAP/AHAPPack2/NVTeleport.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVCarillon.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVCarillon.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVDice.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVDice.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVDrumsLoop.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVDrumsLoop.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVGameOver.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVGameOver.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVHeartbeats.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVHeartbeats.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVLaser.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVLaser.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVPowerOff.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVPowerOff.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVReload.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVReload.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVTeleport.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/AndroidWaveforms/NVTeleport.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Animations.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Animations/AHAPPresetIconAnimator.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Animations/AHAPPresetIconAnimator.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Animations/IdleAnimation.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Animations/IdleAnimation.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Animations/ShakingAnimation.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Animations/ShakingAnimation.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Animations/SwapAnimation.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Animations/SwapAnimation.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRCarillon.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRCarillon.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRDice.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRDice.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRDrumsLoop.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRDrumsLoop.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRGameOver.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRGameOver.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRHeartbeats.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRHeartbeats.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRLaser.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRLaser.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRPowerOff.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRPowerOff.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRReload.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRReload.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRTeleport.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/RumbleWaveforms/NVRTeleport.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Scripts/PresetDemoManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Scripts/PresetDemoManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Scripts/PresetDemoRotator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Scripts/PresetDemoRotator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVCarillon.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVCarillon.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVDice.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVDice.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVDrumsLoop.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVDrumsLoop.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVGameOver.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVGameOver.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVHeartbeats.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVHeartbeats.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVLaser.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVLaser.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVPowerOff.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVPowerOff.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVReload.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVReload.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVTeleport.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sounds/NVTeleport.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sprites/NVPresetsIcons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/AHAPPresetsDemo/Sprites/NVPresetsIcons.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/HitAnimation.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/HitAnimation.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/IdleAnimation.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/IdleAnimation.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/NVBallAnimatorController.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/NVBallAnimatorController.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Physics2DMaterials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Physics2DMaterials/NVBouncy.physicsMaterial2D" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Physics2DMaterials/NVBouncy.physicsMaterial2D.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Scripts/BallDemoBall.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Scripts/BallDemoBall.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Scripts/BallDemoManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Scripts/BallDemoManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Scripts/BallDemoWall.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Scripts/BallDemoWall.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Scripts/BallPusher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Scripts/BallPusher.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Scripts/BallTouchZone.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Scripts/BallTouchZone.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Sprites/NVBall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Sprites/NVBall.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Sprites/NVBallParticle.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Sprites/NVBallParticle.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Sprites/NVBallParticle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/BallDemo/Sprites/NVBallParticle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo/Scripts/CarDemoManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo/Scripts/CarDemoManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo/Scripts/PowerBarElement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo/Scripts/PowerBarElement.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo/Sounds.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo/Sounds/NVCarEngine.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo/Sounds/NVCarEngine.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo/Sprites/NVCar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo/Sprites/NVCar.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo/Sprites/NVCarWheel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/CarDemo/Sprites/NVCarWheel.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/ContinuousDemo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/ContinuousDemo/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/ContinuousDemo/Scripts/ContinuousHapticsDemoManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/ContinuousDemo/Scripts/ContinuousHapticsDemoManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/RegularPresetsDemo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/RegularPresetsDemo/RegularPresetsDemoManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/RegularPresetsDemo/RegularPresetsDemoManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/RegularPresetsDemo/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/RegularPresetsDemo/Sprites/RegularPresetsIcons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/RegularPresetsDemo/Sprites/RegularPresetsIcons.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/TransientDemo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/TransientDemo/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/TransientDemo/Scripts/TransientHapticsDemoManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/TransientDemo/Scripts/TransientHapticsDemoManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/AHAP.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/AHAP/NVSpring.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/AHAP/NVSpring.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Animations.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Animations/WobbleButtonAnimator.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Animations/WobbleButtonAnimator.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Animations/WobbleIdle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Animations/WobbleIdle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Animations/WobbleSpark.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Animations/WobbleSpark.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Prefabs/WobbleButton.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Prefabs/WobbleButton.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Scripts/WobbleButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Scripts/WobbleButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Scripts/WobbleDemoManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Scripts/WobbleDemoManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Sounds.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Sounds/NVWobbleSpring.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/DemoAssets/WobbleDemo/Sounds/NVWobbleSpring.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/MoreMountains.NiceVibrations.Demos.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/MoreMountains.NiceVibrations.Demos.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/NiceVibrationsDemo.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/NiceVibrationsDemo.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Fonts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Fonts/BIG JOHN.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Fonts/BIG JOHN.otf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Fonts/RobotoMono-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Fonts/RobotoMono-Bold.ttf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Fonts/RobotoMono-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Fonts/RobotoMono-Light.ttf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Fonts/RobotoMono-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Fonts/RobotoMono-Medium.ttf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Fonts/RobotoMono-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Fonts/RobotoMono-Regular.ttf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Prefabs/HorizontalSliderComponent.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Prefabs/HorizontalSliderComponent.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Prefabs/PaginationDot.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Prefabs/PaginationDot.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Prefabs/VerticalProgressBar.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Prefabs/VerticalProgressBar.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Prefabs/VerticalSliderComponent.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Prefabs/VerticalSliderComponent.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/DemoManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/DemoManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/NiceVibrationsDemoHelpers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/NiceVibrationsDemoHelpers.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/SoundSwitch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/SoundSwitch.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/HapticCurve.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/HapticCurve.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMFPSCounter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMFPSCounter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMFPSUnlock.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMFPSUnlock.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMKnob.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMKnob.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMProgressBar.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMProgressBar.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMSignal.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMSignal.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMSpriteReplace.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMSpriteReplace.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMSwitch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMSwitch.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMTouchButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMTouchButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMUIShaker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/MMUIShaker.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/Pagination.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/UI/Pagination.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/V2DemoManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/V2DemoManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/VersionNumber.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Scripts/VersionNumber.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Shaders.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Shaders/CurveMaterial.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Shaders/CurveMaterial.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Shaders/MaskedUI.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Shaders/MaskedUI.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Shaders/MaskedUI.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Shaders/MaskedUI.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NV1x1White.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NV1x1White.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NV3Cols.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NV3Cols.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NV3Dots.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NV3Dots.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NV7Dots.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NV7Dots.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVArrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVArrow.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVDottedPattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVDottedPattern.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVKnob.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVKnob.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVLogoNice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVLogoNice.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVLogoVibrations.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVLogoVibrations.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVPaginationDot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVPaginationDot.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVRoundedCorners.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVRoundedCorners.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVRoundedCornersBig.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVRoundedCornersBig.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVSwitchBackground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVSwitchBackground.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVSwitchIndicator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVSwitchIndicator.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVSwitchKnob.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVSwitchKnob.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVVerticalProgressBar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_Common/Sprites/NVVerticalProgressBar.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Scripts/NiceVibrationsDemoManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Scripts/NiceVibrationsDemoManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Sprites/DemoBackground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Sprites/DemoBackground.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Sprites/MoreMountainsLogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Sprites/MoreMountainsLogo.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Sprites/NiceVibrationsIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Sprites/NiceVibrationsIcon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Sprites/NiceVibrationsLogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Sprites/NiceVibrationsLogo.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Sprites/RoundedCorners10Stroke5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Sprites/RoundedCorners10Stroke5.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Sprites/icon-nice-vibrations.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/Sprites/icon-nice-vibrations.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/v1Demo.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/Demos/_OLD/v1Demo/v1Demo.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/OlderVersions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/OlderVersions/v1.7.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/OlderVersions/v1.7/NiceVibrations-v-1-7-readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/OlderVersions/v1.7/NiceVibrations-v-1-7-readme.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/OlderVersions/v1.7/NiceVibrations-v-1-7.unitypackage.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/OlderVersions/v2.0.1.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/OlderVersions/v2.0.1/NiceVibrations-v-2-0-1-readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/OlderVersions/v2.0.1/NiceVibrations-v-2-0-1-readme.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/OlderVersions/v2.0.1/NiceVibrations-v-2-0-1.unitypackage.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/ThirdParty.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/ThirdParty/Newtonsoft.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/ThirdParty/Newtonsoft/NewtonsoftJsonLicense.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/ThirdParty/Newtonsoft/NewtonsoftJsonLicense.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/license.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/license.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Package/NiceVibrations/readme.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoreMountains.NiceVibrations.Demos.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoreMountains.NiceVibrations.Editor.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoreMountains.NiceVibrations.Haptics.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoreMountains.NiceVibrations.Rumble.Editor.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoreMountains.NiceVibrations.Rumble.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoreMountains.NiceVibrations.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Player/Dance.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Player/Dance.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Place No Building.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Place No Building.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Sprites/Place No Building.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Sprites/Place No Building.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Base/PlayerVibration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Base/PlayerVibration.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Behaviour/DanceState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Behaviour/DanceState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn/RespawnRecruit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn/RespawnRecruit.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParameters/DisplayDetachment.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParameters/DisplayDetachment.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Isles and Bridges/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Isles and Bridges/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Characters/Recruit/No Recruit/No Recruit.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Recruit/No Recruit/No Recruit.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Characters/Enemy/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Enemy/Enemy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Characters/Player/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Player/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Characters/Recruit/Recruit.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Characters/Recruit/Recruit.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/UI/GameScreen/Hide.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/UI/GameScreen/Hide.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/UI/GameScreen/Show.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/UI/GameScreen/Show.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/UI/Win/Hide.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/UI/Win/Hide.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/UI/Win/WinPanel.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/UI/Win/WinPanel.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Archer (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Archer (Enemy).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Archer (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Archer (Player).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Camp (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Camp (Enemy).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Def Tower (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Def Tower (Enemy).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Mine (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Mine (Enemy).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/No building.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/No building.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Camp (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Camp (Player).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Def Tower (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Def Tower (Player).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Mine (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Mine (Player).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Enemy).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Player).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Chest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Coin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/No Archer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/No Archer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/No Recruit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/No Recruit.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Sword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Sword.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/MineLevel/mine_lvl1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/MineLevel/mine_lvl1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/MineLevel/mine_lvl2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/MineLevel/mine_lvl2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/MineLevel/mine_lvl3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_TowerLevels/MineLevel/mine_lvl3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/EnemyTowers.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/EnemyTowers.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/PlayerTowers.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/PlayerTowers.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base/GamePresent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base/GamePresent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base/Level/Level.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base/Level/LoaderLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base/Level/LoaderLevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base/UIPresent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base/UIPresent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base/Behavior/BehaviourSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base/Behavior/BehaviourSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Base/Character.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/DetectorPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/DetectorPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/MovementEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/MovementEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/DetectorEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/DetectorEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/EnemyFinderOutside.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/EnemyFinderOutside.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Behaviour/DeathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Behaviour/DeathState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/DetectorBrick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/DetectorBrick.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorDisplayShop/DetectorShopTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorDisplayShop/DetectorShopTower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/AnimationStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/AnimationStateController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorDisplayShop/DetectorNoBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorDisplayShop/DetectorNoBuilding.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorFighting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorFighting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorItems/DetectorBlockItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorItems/DetectorBlockItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorItems/DetectorWeaponItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorItems/DetectorWeaponItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/AnimationMethod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/AnimationMethod.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DisplayBag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DisplayBag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/Bag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/Bag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DisplayBag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DisplayCountBrick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DisplayBag.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DisplayCountBrick.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Health/AutoDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Health/AutoDeath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Health/HealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Health/HealthComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetachmentRecruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetachmentRecruit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetectorArcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetectorArcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetectorRecruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetectorRecruit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn/RespawnComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn/RespawnComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/ItemSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/ItemSpawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/Spawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Bridge/Brick/Brick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Bridge/Brick/Brick.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/LoaderTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/LoaderTower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/HealthTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/HealthTower.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/NoBuilding/NoBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/NoBuilding/NoBuilding.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/ShopTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/ShopTower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/Tower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/Tower.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/TowerLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/TowerLevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/_ItemSpawn/ArcherItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/_ItemSpawn/ArcherItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/_ItemSpawn/RecruitItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/_ItemSpawn/RecruitItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayBag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayBag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayWallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayWallet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Screen/UIScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Screen/UIScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParameters.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayBag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParameters/DisplayBag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayBag.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParameters/DisplayBag.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayDataTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParameters/DisplayDataTower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayDataTower.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParameters/DisplayDataTower.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParameters/DisplayHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayHealth.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParameters/DisplayHealth.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayProgressTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParameters/DisplayProgressTower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayProgressTower.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParameters/DisplayProgressTower.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayWallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParameters/DisplayWallet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParametrs/DisplayWallet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DisplayParameters/DisplayWallet.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -494,7 +88,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/Wallet/Wallet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/Bag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DetectorBag.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DisplayBag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DisplayCountBrick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/ComponentData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Health/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetachmentRecruit.cs" root0="FORCE_HIGHLIGHTING" />
@@ -605,6 +199,7 @@
       <workItem from="1659506820797" duration="6305000" />
       <workItem from="1659535717992" duration="9458000" />
       <workItem from="1659594916666" duration="21370000" />
+      <workItem from="1659769590621" duration="9571000" />
     </task>
     <servers />
   </component>
@@ -628,5 +223,24 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Base/GamePresent.cs</url>
+          <line>25</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Base/GamePresent.cs" initialLine="26" containingFunctionPresentation="method 'Start'">
+            <startOffsets>
+              <option value="652" />
+            </startOffsets>
+            <endOffsets>
+              <option value="653" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

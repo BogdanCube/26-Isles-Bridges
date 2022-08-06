@@ -1,11 +1,11 @@
 using System;
-using Core.Characters.Base;
+using Components.Weapon;
 using Core.Components._ProgressComponents.Health;
 using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Components.Weapon
+namespace Core.Components.Weapon
 {
      public class Weapon : MonoBehaviour
      {
@@ -15,6 +15,7 @@ namespace Components.Weapon
          private int _damage;
          private float _chanceVampirism;
          private float _chanceCritical;
+         public event Action OnTakeDamage;
 
          private void Start()
          {
@@ -34,6 +35,7 @@ namespace Components.Weapon
              transform.DOLookAt(target.transform.position, 0.5f);
              health.Hit(_damage);     
              _healthComponent.Heal(CurrentHeal());
+             OnTakeDamage?.Invoke();
          }
          private float CurrentDamage()
          {

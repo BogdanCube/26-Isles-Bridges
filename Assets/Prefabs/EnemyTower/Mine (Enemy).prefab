@@ -468,6 +468,7 @@ MonoBehaviour:
   _island: {fileID: 0}
   _healthTower: {fileID: 3983419277790982605}
   _shopTower: {fileID: 0}
+  _towerLevel: {fileID: 3983419277790982601}
 --- !u!114 &3983419277790982601
 MonoBehaviour:
   m_ObjectHideFlags: 0

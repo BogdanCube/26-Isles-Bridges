@@ -1,4 +1,5 @@
 using Base.Level;
+using Core.Characters.Base.Behavior;
 using Managers.Level;
 using MoreMountains.NiceVibrations;
 using UnityEngine;
@@ -37,6 +38,7 @@ namespace Base
         }
         private void Win()
         {
+            FindObjectOfType<BehaviourSystem>().SetDanceState();
             _loaderLevel.LevelCompleted();
             OnWin.Invoke();
             MMVibrationManager.Haptic (HapticTypes.Success);
