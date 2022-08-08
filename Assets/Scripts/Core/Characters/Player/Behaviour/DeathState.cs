@@ -7,7 +7,7 @@ namespace Core.Character.Behavior
     {
         public override void Start()
         {
-            BehaviourSystem.Character.AnimationStateController.Dance();
+            BehaviourSystem.Character.AnimationStateController.Death();
             BehaviourSystem.IsStop = true;
             BehaviourSystem.Character.MovementController.IsStopped = true;
         }

@@ -26,7 +26,7 @@ namespace Core.Components.DetectorDisplayShop
             {
                 if (tower.Owner == _character)
                 {
-                    var displayData = tower.ShopTower.DisplayProgress;
+                    var displayData = shopTower.DisplayProgress;
                     displayData.Deload();
                 }
             }

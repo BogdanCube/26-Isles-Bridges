@@ -9,12 +9,11 @@ namespace Core.Components._Spawners
 {
     public class SpawnerTower : Spawner
     {
-        [SerializeField] private Tower _tower;
         [Expandable][SerializeField] private RandomData _randomData;
         [SerializeField] private int _currentTimeSpawn;
         private IEnumerator _coroutine;
         
-        public void StartSpawn(int time)
+        public void StartSpawn(int time, Tower tower)
         {
             if (_coroutine != null)
             {
@@ -22,7 +21,7 @@ namespace Core.Components._Spawners
             }
 
             _currentTimeSpawn = time;
-            _coroutine = SpawnCoroutine(_randomData,_tower.Island,_currentTimeSpawn);
+            _coroutine = SpawnCoroutine(_randomData,tower.Island,_currentTimeSpawn);
             StartCoroutine(_coroutine);
         }
     }

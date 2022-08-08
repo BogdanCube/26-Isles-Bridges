@@ -19,7 +19,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
                 {
                     if (_detachmentRecruit.HasCanAdd)
                     {
-                        _detachmentRecruit.AddRecruit();
+                        _detachmentRecruit.Add();
                     }
                     else
                     {

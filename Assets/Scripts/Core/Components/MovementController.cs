@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,7 +18,8 @@ namespace Core.Character.Behavior
                 if (value != _isStopped)
                 {
                     _isStopped = value;
-                    _navMeshAgent.isStopped = value;
+                    _navMeshAgent.isStopped = _isStopped;
+                    _navMeshAgent.updatePosition = _isStopped;
                 }
             }
         }
@@ -25,9 +27,7 @@ namespace Core.Character.Behavior
 
         public void SetStartPos(Vector3 position)
         {
-            _navMeshAgent.updatePosition = false;
             _navMeshAgent.nextPosition = position;
-            _navMeshAgent.updatePosition = true;
         }
     }
 }

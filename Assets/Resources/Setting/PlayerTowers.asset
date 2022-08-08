@@ -19,6 +19,6 @@ MonoBehaviour:
   - Tower: {fileID: 6196909702914947709, guid: 9fd70d48dec9e9847979843bacd0e925, type: 3}
     Icon: {fileID: 21300000, guid: d127788c3505a435cb410442f381d7fd, type: 3}
     Price: 10
-  - Tower: {fileID: 6894686773269447988, guid: d55f41e4880de4fd988fcdac5dd1be52, type: 3}
+  - Tower: {fileID: 8608511698507568434, guid: 8966cd4f03b5e4ae0a481e8be846b059, type: 3}
     Icon: {fileID: 21300000, guid: 28161baa26e7341e48f53f74557b53ff, type: 3}
     Price: 15

@@ -3,6 +3,7 @@ using System.Collections;
 using Base.Level;
 using Core.Components._ProgressComponents.Bag;
 using Core.Components._ProgressComponents.Health;
+using Core.Environment.Tower._Base;
 using DG.Tweening;
 using Managers.Level;
 using NaughtyAttributes;
@@ -56,6 +57,7 @@ namespace Core.Environment.Tower
                 _level++;
                 _particleLevel.gameObject.SetActive(true);
                 _loaderTower.Load(_level);
+                transform.DOShakeScale(1f, Vector3.one/10f);
                 UpdateDisplay();
             }
             _shopBag.Reset();

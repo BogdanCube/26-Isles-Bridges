@@ -13,7 +13,6 @@ namespace Core.Components
         [SerializeField] private SphereCollider _sphereCollider;
         [SerializeField] private Image _outline;
         [SerializeField] private protected bool _isNullExit = true;
-        [SerializeField] [CanBeNull] private protected DisplayHealth _displayHealth;
         
         protected Transform _currentTarget;
         protected IHealthComponent _currentHealth;
@@ -24,9 +23,20 @@ namespace Core.Components
         
         private void OnValidate()
         {
+            UpdateDetector();
+        }
+
+        private void UpdateDetector()
+        {
             _sphereCollider.radius = _radius;
             _outline.transform.localScale = new Vector2(_radius, _radius);
             _outline.enabled = _isDebuged;
+        }
+
+        public void SetRadius(float radius)
+        {
+            _radius = radius;
+            UpdateDetector();
         }
     }
 }

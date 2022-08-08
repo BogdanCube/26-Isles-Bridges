@@ -12,8 +12,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
     public class DetachmentRecruit : ProgressComponent
     {
         [SerializeField] private List<MovementRecruit> _recruits = new List<MovementRecruit>();
-        [SerializeField] private MovementRecruit _prefabRecruit;
-        [SerializeField] private MovementRecruit _prefabArcher;
+        [SerializeField] private MovementRecruit _prefab;
         [SerializeField] private HealthComponent _healthComponent;
         private Characters.Base.Character _owner;
         public event Action<int> OnAddRecruit;
@@ -38,20 +37,11 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
             Load();
             _owner = GetComponent<Characters.Base.Character>();
         }
-
+        
         [Button]
-        public void AddRecruit()
+        public void Add()
         {
-            Add(Instantiate(_prefabRecruit, transform.position,Quaternion.identity));
-
-        }
-        [Button]
-        public void AddArcher()
-        {
-            Add(Instantiate(_prefabArcher, transform.position,Quaternion.identity));
-        }
-        private void Add(MovementRecruit recruit)
-        {
+            var recruit = Instantiate(_prefab, transform.position, Quaternion.identity);
             recruit.SetOwner(_owner);
             _recruits.Add(recruit);
             OnAddRecruit.Invoke(_recruits.Count);

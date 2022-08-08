@@ -14,13 +14,13 @@ namespace Core.Characters.Base
         [SerializeField] private AnimationStateController _animationStateController;
         [SerializeField] private HealthComponent _healthComponent;
         [SerializeField] private DetectorFighting _detectorFighting;
-        [SerializeField] private Weapon _weapon;
+        [SerializeField] [InterfaceType(typeof(IWeapon))] private Object _weapon;
         [SerializeField] private Color _color;
         public MovementController MovementController => _movementController;
         public AnimationStateController AnimationStateController => _animationStateController;
-        public IHealthComponent HealthComponent => _healthComponent as IHealthComponent;
+        public IHealthComponent HealthComponent => _healthComponent;
         public DetectorFighting DetectorFighting => _detectorFighting;
-        public Weapon Weapon => _weapon;
+        public IWeapon Weapon => (IWeapon)_weapon;
         public Color Color => _color;
     }
 }

@@ -4,8 +4,9 @@ namespace Core.Components.Weapon
 {
     public class AnimationMethod : MonoBehaviour
     {
-        [SerializeField] private Weapon _weapon;
+        [SerializeField] [InterfaceType(typeof(IWeapon))] private Object _weapon;
         [SerializeField] private DetectorFighting _detectorFighting;
+        private IWeapon Weapon => (IWeapon)_weapon;
         public void Attack()
         {
             var target = _detectorFighting.CurrentTarget;
@@ -13,7 +14,7 @@ namespace Core.Components.Weapon
 
             if (target != null)
             {
-                _weapon.TakeDamage(target,health);
+                Weapon.TakeDamage(target,health);
             }
         }
     }

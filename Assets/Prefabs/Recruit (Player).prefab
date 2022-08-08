@@ -7208,7 +7208,7 @@ GameObject:
   - component: {fileID: 6905456092542197433}
   - component: {fileID: 8368246196949314361}
   - component: {fileID: 8368246196949314360}
-  - component: {fileID: 2364640867710907974}
+  - component: {fileID: 5189748620010548315}
   - component: {fileID: 8368246196949314367}
   - component: {fileID: 3947361403777773625}
   m_Layer: 0
@@ -7270,12 +7270,12 @@ Rigidbody:
   m_GameObject: {fileID: 8368246196949314365}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 5
-  m_AngularDrag: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!136 &8368246196949314245
 CapsuleCollider:
@@ -7311,6 +7311,7 @@ MonoBehaviour:
   _color: {r: 0.3647059, g: 0.54901963, b: 0.3647059, a: 1}
   _bag: {fileID: 0}
   _wallet: {fileID: 0}
+  _detachment: {fileID: 0}
 --- !u!114 &8368246196949314363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7370,7 +7371,7 @@ MonoBehaviour:
   _maxCount: 5
   _currentCount: 0
   _particleHit: {fileID: 68313888063173034}
---- !u!114 &2364640867710907974
+--- !u!114 &5189748620010548315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7379,15 +7380,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8368246196949314365}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19f9268e97c46b080d828a9699d4528, type: 3}
+  m_Script: {fileID: 11500000, guid: ffe334ca2ad0405ea843d8fd65967a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _timeRespawn: 5
-  _movementController: {fileID: 6905456092542197433}
-  _healthComponent: {fileID: 8368246196949314360}
   _grayscaleModel: {fileID: 7658494026962140914}
+  _healthComponent: {fileID: 8368246196949314360}
   _lootSpawner: {fileID: 5772642339116491290}
-  IsRespawn: 0
 --- !u!114 &8368246196949314367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7487,7 +7486,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weapon: {fileID: 8368246196949314367}
   _detectorFighting: {fileID: 7867732319374168308}
-  _isVibration: 0
 --- !u!114 &7658494026962140914
 MonoBehaviour:
   m_ObjectHideFlags: 0

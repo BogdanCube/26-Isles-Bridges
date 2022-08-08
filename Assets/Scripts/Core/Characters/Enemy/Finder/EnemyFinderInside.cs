@@ -39,12 +39,12 @@ namespace Core.Characters.Enemy.Finder
                     _bag.Reset();
                 }
             }
-            if (other.TryGetComponent(out Tower tower))
+            if (other.TryGetComponent(out Tower tower) && other.TryGetComponent(out ShopTower shopTower))
             {
                 if (tower.Owner == _bag.Character)
                 {
                     _tower = tower;
-                    var shop = _tower.ShopTower;
+                    var shop = shopTower;
                     var dataProgress =shop.DisplayProgress.ShopDataTowers;
                     
                     if (dataProgress.Count(data => data.Price <= _wallet.CurrentCount) > 0)

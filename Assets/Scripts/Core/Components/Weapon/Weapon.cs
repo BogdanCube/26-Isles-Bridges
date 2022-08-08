@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 namespace Core.Components.Weapon
 {
-     public class Weapon : MonoBehaviour
+     public class Weapon : MonoBehaviour,IWeapon
      {
          [SerializeField] private WeaponData _currentData;
          [SerializeField] private HealthComponent _healthComponent;
@@ -15,7 +15,7 @@ namespace Core.Components.Weapon
          private int _damage;
          private float _chanceVampirism;
          private float _chanceCritical;
-         public event Action OnTakeDamage;
+         public Action OnTakeDamage;
 
          private void Start()
          {
@@ -29,7 +29,13 @@ namespace Core.Components.Weapon
              _chanceCritical = weaponData.ChanceCritical;
              _meshFilter.mesh = weaponData.Mesh;
          }
-         
+
+         Action IWeapon.OnTakeDamage
+         {
+             get => OnTakeDamage;
+             set => OnTakeDamage = value;
+         }
+
          public void TakeDamage(Transform target, IHealthComponent health)
          {
              transform.DOLookAt(target.transform.position, 0.5f);
