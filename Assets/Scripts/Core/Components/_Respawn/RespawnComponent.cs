@@ -26,7 +26,6 @@ namespace Core.Components
             transform.DOScale(1, 0.2f).OnComplete(() =>
             {
                 _behaviourSystem.IsStop = false;
-                _movementController.IsStopped = false;
             });
          
         }

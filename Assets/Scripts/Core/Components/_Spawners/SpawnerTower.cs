@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Core.Components._Spawners.RandomSpawner;
 using Core.Environment.Island;
@@ -13,7 +14,7 @@ namespace Core.Components._Spawners
         [SerializeField] private int _currentTimeSpawn;
         private IEnumerator _coroutine;
         
-        public void StartSpawn(int time, Tower tower)
+        public void StartSpawn(int time, Tower tower, Action<int> callback)
         {
             if (_coroutine != null)
             {
@@ -21,7 +22,7 @@ namespace Core.Components._Spawners
             }
 
             _currentTimeSpawn = time;
-            _coroutine = SpawnCoroutine(_randomData,tower.Island,_currentTimeSpawn);
+            _coroutine = SpawnCoroutine(_randomData,tower.Island,_currentTimeSpawn,callback);
             StartCoroutine(_coroutine);
         }
     }

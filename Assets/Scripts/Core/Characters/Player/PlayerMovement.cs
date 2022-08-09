@@ -12,8 +12,12 @@ namespace Core.Player
         
         public override void Move()
         {
+            base.Move();
             Rotation(GetMoveVector());
-            _navMeshAgent.Move(GetMoveVector() * _speed * Time.deltaTime);
+            if (_navMeshAgent.enabled)
+            {
+                _navMeshAgent.Move(GetMoveVector() * _speed * Time.deltaTime);
+            }
         }
         private void Rotation(Vector3 moveVector)
         {

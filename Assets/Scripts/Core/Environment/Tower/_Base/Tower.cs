@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Base.Level;
 using Core.Components._ProgressComponents.Health;
 using DG.Tweening;
 using UnityEngine;
@@ -18,16 +19,16 @@ namespace Core.Environment.Tower
         public IHealthComponent HealthComponent => _healthTower;
         public Island.Island Island => _island;
         public TowerLevel TowerLevel => _towerLevel;
-
         
-        public void SetOwner(Characters.Base.Character owner, NoBuilding.NoBuilding noBuilding, Island.Island island)
+        public void Initialization(Characters.Base.Character owner, NoBuilding.NoBuilding noBuilding, Island.Island island)
         {
             transform.localScale = Vector3.zero;
-            transform.DOScale(1, 1f); _owner = owner;
+            transform.DOScale(1, 1f).OnComplete(LoaderLevel.Instance.UpdateBake); 
+            _owner = owner;
             _noBuilding = noBuilding;
             _island = island;
             TowerLevel.LoadTower();
-
+            Owner.HealthComponent.OnOver += _healthTower.Over;
         }
 
         public void ReturnNoBuilding()

@@ -9,7 +9,7 @@ namespace Core.Characters.Enemy.Finder
         [SerializeField] private bool _isDebuged;
         [SerializeField] private SphereCollider _sphereCollider;
         [SerializeField] private Image _outline;
-        
+        public float Radius => _radius;
         private void OnValidate()
         {
             _sphereCollider.radius = _radius;

@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -12,6 +14,7 @@ namespace Core.Components._ProgressComponents.Bag
         public bool HasCanAdd => _currentCount + 1 <= _maxCount;
         public int CurrentCount => _currentCount;
         public bool CheckCount(float percentage) => _currentCount > percentage * _maxCount;
+        public bool IsZero => _currentCount == 0;
         public int MaxCount => _maxCount;
         private void Start()
         {
@@ -34,12 +37,20 @@ namespace Core.Components._ProgressComponents.Bag
             _currentCount -= count;
             OnUpdateBag?.Invoke(_currentCount);
         }
-
-
         public void Reset()
         {
             _currentCount = 0;
             OnUpdateBag?.Invoke(_currentCount);
+        }
+
+        public IEnumerator MovedCount(Bag bag, float pumpingSpeed)
+        {
+            while (bag.HasCanSpend() && HasCanAdd)
+            {
+                Add();
+                bag.Spend();
+                yield return new WaitForSeconds(pumpingSpeed);
+            }
         }
     }
 }

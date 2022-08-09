@@ -5,6 +5,7 @@ namespace Core.Components
     public class AnimationStateController : MonoBehaviour
     {
         [SerializeField] private Animator _animator;
+        private float _speed;
         private readonly int _runningNameId = Animator.StringToHash("IsRunning");
         private readonly int _attackNameId = Animator.StringToHash("IsAttack");
         private readonly int _deathNameId = Animator.StringToHash("Death");
@@ -13,7 +14,7 @@ namespace Core.Components
 
         private bool _isRunning;
         private bool _isFighting;
-
+        public float Speed => _speed;
         public bool IsRunning
         {
             get => _isRunning;
@@ -38,7 +39,14 @@ namespace Core.Components
                 }
             }
         }
-        
+
+        public void SetSpeed(float speed)
+        {
+            _speed = speed;
+            _animator.speed = _speed;
+
+        }
+
         public void Death()
         {
             _animator.SetTrigger(_deathNameId);

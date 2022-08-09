@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using JetBrains.Annotations;
 using NaughtyAttributes;
 using NTC.Global.Pool;
 using Rhodos.Toolkit.Extensions;
@@ -9,20 +10,14 @@ using Random = UnityEngine.Random;
 
 namespace Core.Components._Spawners
 {
-    [RequireComponent(typeof(TrailRenderer))]
     public class ItemSpawn : MonoBehaviour
     {
         [MinMaxSlider(0, 360)] [SerializeField] private Vector2 _rotationY;
-        private TrailRenderer _trailRenderer;
+        [SerializeField] [CanBeNull] private TrailRenderer _trailRenderer;
         private float _speedMagnet = 6;
         private Spawner _spawner;
         private Vector3 _startScale;
-
-        private void Awake()
-        {
-            _trailRenderer = GetComponent<TrailRenderer>();
-        }
-
+        
         public virtual void SetSpawner(Spawner spawner,Vector3 position)
         {
             _spawner = spawner;

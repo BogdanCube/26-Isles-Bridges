@@ -1,3 +1,6 @@
+using System;
+using DG.Tweening;
+using NTC.Global.Pool;
 using UnityEngine;
 
 namespace Core.Environment.Block
@@ -8,6 +11,10 @@ namespace Core.Environment.Block
         {
             transform.localPosition = position;
             transform.localScale = Vector3.one; 
+        }
+        public void MoveToTower(Transform tower, float speed, Action callback)
+        {
+            transform.DOMove(tower.position, speed).OnComplete(callback.Invoke);
         }
     }
 }

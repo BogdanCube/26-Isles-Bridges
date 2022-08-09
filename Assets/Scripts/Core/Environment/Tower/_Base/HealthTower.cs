@@ -1,7 +1,9 @@
 using System;
+using Base.Level;
 using Core.Components._ProgressComponents.Bag;
 using Core.Components._ProgressComponents.Health;
 using Core.Components.Loot;
+using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -14,15 +16,15 @@ namespace Core.Environment.Tower
         [SerializeField] private TowerLevel _towerLevel;
         [SerializeField] private LootSpawner _lootSpawner;
         [SerializeField] private ParticleSystem _particleHit;
-
         public Action OnDeath { get; set; }
+        public Action OnOver { get; set; }
+        public bool IsDeath => _bag.CurrentCount <= 0;
 
-        public bool IsDeath
+        private void OnDisable()
         {
-            get => _bag.CurrentCount <= 0;
-            set => throw new System.NotImplementedException();
+            _tower.Owner.HealthComponent.OnOver -= Over;
         }
-
+        
         [Button]
         public void Hit(int damage = 1)
         {
@@ -30,10 +32,20 @@ namespace Core.Environment.Tower
             _particleHit.gameObject.SetActive(true);
             if (IsDeath)
             {
-                _tower.ReturnNoBuilding();
                 _lootSpawner.DespawnLoot();
-                _towerLevel.DestroyTower(OnDeath);
+                _towerLevel.DestroyTower(Over);
             }
+        }
+        [Button]
+        public void Over()
+        {
+            transform.DOScale(0, 1f).OnComplete(() =>
+            {
+                OnDeath.Invoke();
+                _tower.ReturnNoBuilding();
+                Destroy(gameObject);
+                LoaderLevel.Instance.UpdateBake();
+            });
         }
     }
 }

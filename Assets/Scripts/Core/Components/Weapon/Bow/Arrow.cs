@@ -1,5 +1,6 @@
 using System;
 using Core.Components._ProgressComponents.Health;
+using NTC.Global.Pool;
 using UnityEngine;
 
 namespace Core.Components.Weapon.Bow
@@ -10,14 +11,7 @@ namespace Core.Components.Weapon.Bow
         [SerializeField] private float _force;
         private Transform _currentTarget;
         private Action OnHitTarget;
-
-        private void FixedUpdate()
-        {
-            if (_currentTarget)
-            {
-            }
-        }
-
+        
         public void Launch(Transform target,Action callback)
         {
             _currentTarget = target;
@@ -32,6 +26,10 @@ namespace Core.Components.Weapon.Bow
             if (other.transform == _currentTarget)
             {
                 OnHitTarget.Invoke();
+            }
+            else
+            {
+                NightPool.Despawn(this);
             }
         }
     }

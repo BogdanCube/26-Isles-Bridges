@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolItems:
   - prefab: {fileID: 2425533584157290132, guid: d5e6cb21440784f62b1c4b04e86615fe, type: 3}
-    size: 50
+    size: 100
   - prefab: {fileID: 6048834963379291059, guid: 77239b7ee9ec2402db8934b75e37e4be, type: 3}
-    size: 50
+    size: 100
   - prefab: {fileID: 1494383508569629546, guid: c944aab376d5247e082bb9dd3056e178, type: 3}
-    size: 50
+    size: 100
   - prefab: {fileID: 6453174960618891343, guid: 2ce67b375b2e64531bc2c940484c1cc6, type: 3}
     size: 25
   - prefab: {fileID: 2046052542619594636, guid: dad842c74fb67954ea1b3088860ee604, type: 3}

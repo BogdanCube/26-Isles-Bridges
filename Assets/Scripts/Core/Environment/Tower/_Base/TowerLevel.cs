@@ -32,7 +32,7 @@ namespace Core.Environment.Tower
             _loaderTower.Load(_level);
         }
         
-        public IEnumerator ReplenishmentCoin(Bag bag)
+        public IEnumerator ReplenishmentBrick(Bag bag)
         {
             while (IsMaxLevel == false)
             {
@@ -89,20 +89,15 @@ namespace Core.Environment.Tower
             }
         }
 
-        public void DestroyTower(Action callback)
+        public void DestroyTower(Action callback, bool isOver = true)
         {
-            if (_level > 0)
+            if (_level > 0 && isOver)
             {
                 LevelDown();
             }
             else
             {
-                transform.DOScale(0, 1f).OnComplete(() =>
-                {
-                    callback?.Invoke();
-                    Destroy(gameObject);
-                    LoaderLevel.Instance.UpdateBake();
-                });
+                callback.Invoke();
             }
         }
     }

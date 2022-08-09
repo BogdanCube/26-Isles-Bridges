@@ -64,7 +64,6 @@ MonoBehaviour:
   _sphereCollider: {fileID: 3868264479959269410}
   _outline: {fileID: 23327030536611297}
   _isNullExit: 0
-  _displayHealth: {fileID: 0}
 --- !u!1 &2652359511585189110
 GameObject:
   m_ObjectHideFlags: 0
@@ -5362,7 +5361,6 @@ MonoBehaviour:
   _sphereCollider: {fileID: 380149263272371352}
   _outline: {fileID: 8368246195739258640}
   _isNullExit: 1
-  _displayHealth: {fileID: 3010961516451668569}
 --- !u!1 &5535610824647427973
 GameObject:
   m_ObjectHideFlags: 0
@@ -7210,7 +7208,6 @@ GameObject:
   - component: {fileID: 8368246196949314360}
   - component: {fileID: 5189748620010548315}
   - component: {fileID: 8368246196949314367}
-  - component: {fileID: 3947361403777773625}
   m_Layer: 0
   m_Name: Recruit (Player)
   m_TagString: Untagged
@@ -7253,7 +7250,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -7340,7 +7337,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3
   _navMeshAgent: {fileID: 8368246196949314247}
-  _outsideDetector: {fileID: 7405272410557801930}
   _healthComponent: {fileID: 8368246196949314360}
 --- !u!114 &8368246196949314361
 MonoBehaviour:
@@ -7402,19 +7398,6 @@ MonoBehaviour:
   _currentData: {fileID: 11400000, guid: 74b3a30f026fa48ca905792b9e14f68a, type: 2}
   _healthComponent: {fileID: 8368246196949314360}
   _meshFilter: {fileID: 8368246195970667640}
---- !u!114 &3947361403777773625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8368246196949314365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 811fc1b74d394968b7758b0ac893c532, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _movementRecruit: {fileID: 6905456092542197433}
 --- !u!1 &8368246196953058546
 GameObject:
   m_ObjectHideFlags: 0

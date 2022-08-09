@@ -1,3 +1,4 @@
+using System;
 using Core.Character.Behavior;
 using Core.Components;
 using Core.Components._ProgressComponents.Health;
@@ -10,37 +11,30 @@ namespace Core.Characters.Recruit
 {
     public class MovementRecruit : MovementController
     {
-        [SerializeField] private DetectorFighting _outsideDetector;
         [SerializeField] private HealthComponent _healthComponent;
-        //[SerializeField] private float _stoppingDistance;
         private Base.Character _owner;
-        private Transform CurrentTarget => _outsideDetector.IsFight ? _outsideDetector.CurrentTarget : _owner.transform;
-        public override bool IsMove => _navMeshAgent.isStopped == false && (_owner || _outsideDetector.CurrentTarget);
-        public Base.Character Owner => _owner;
-        public HealthComponent HealthComponent => _healthComponent;
         private void Start()
         {
             _navMeshAgent.speed = _speed;
-            //_navMeshAgent.stoppingDistance = _stoppingDistance;
-        }
-        
-        public override void Move()
-        {
-            _navMeshAgent.SetDestination(CurrentTarget.position);
-            transform.SlowLookY(CurrentTarget);
         }
 
-        public void ToogleMove(bool state)
+        private void MoveToTarget(Transform target)
         {
-            _navMeshAgent.isStopped = _outsideDetector.CurrentTarget == false && state;
+            print("а");
+            _navMeshAgent.SetDestination(target.position);
+            transform.SlowLookY(target);
         }
 
-        public void SetOwner(Base.Character owner)
+        public void Initialization(Base.Character owner)
         {
-            if (_owner == false)
-            {
-                _owner = owner;
-            }
+            _owner = owner;
+            _owner.MovementController.OnChangePosition += MoveToTarget;
+        }
+
+        public void StopMove()
+        {
+            _owner.MovementController.OnChangePosition -= MoveToTarget;
+            _healthComponent.Death();
         }
     }
 }

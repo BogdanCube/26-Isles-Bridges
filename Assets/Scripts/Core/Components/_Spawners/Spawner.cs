@@ -19,12 +19,13 @@ namespace Core.Components._Spawners
         private float _coeffientToIsland = 3f;
         private float RandomMinus => Random.Range(-1f, 1f) > 0 ? 1 : - 1;
         
-        protected IEnumerator SpawnCoroutine(RandomData randomData,Island island,int timeSpawn)
+        protected IEnumerator SpawnCoroutine(RandomData randomData, Island island, int timeSpawn, Action<int> callback)
         {
             while (true)
             {
                 if (_currentCount < _limitSpawn)
                 {
+                    callback?.Invoke(timeSpawn);
                     Spawn(randomData,island);
                 }
                 yield return new WaitForSeconds(timeSpawn);

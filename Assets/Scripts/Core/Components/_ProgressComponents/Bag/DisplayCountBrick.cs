@@ -1,19 +1,18 @@
 using System.Collections.Generic;
 using Core.Environment.Block;
-using MoreMountains.NiceVibrations;
 using NaughtyAttributes;
 using NTC.Global.Pool;
 using UnityEngine;
 
-namespace Core.Components.Bag
+namespace Core.Components._ProgressComponents.Bag
 {
     public class DisplayCountBrick : MonoBehaviour
     {
         [SerializeField] private float _offset;
-        [SerializeField] private _ProgressComponents.Bag.Bag _bag;
+        [SerializeField] private protected Bag _bag;
         [SerializeField] private Block _prefab;
         private List<Block> _blocks = new List<Block>();
-        [ShowNativeProperty] private int Count => _blocks.Count;
+        [ShowNativeProperty] public int Count => _blocks.Count;
         #region Enable/Disable
         private void OnEnable()
         {
@@ -50,6 +49,11 @@ namespace Core.Components.Bag
         private void AddBlock()
         {
             var block =  NightPool.Spawn(_prefab, transform);
+            SetBlock(block);
+        }
+
+        protected virtual void SetBlock(Block block)
+        {
             block.SetPosition(GetNextHeight());
             _blocks.Add(block);
         }
@@ -57,6 +61,11 @@ namespace Core.Components.Bag
         private void RemoveBlock()
         {
             var block = _blocks[^1];
+            _blocks.Remove(block);
+            NightPool.Despawn(block);
+        }
+        protected void RemoveBlock(Block block)
+        {
             _blocks.Remove(block);
             NightPool.Despawn(block);
         }

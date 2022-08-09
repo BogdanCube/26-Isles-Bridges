@@ -12,6 +12,7 @@ namespace Core.Components._ProgressComponents.Health
         private bool _isOver;
         public event Action<int> OnUpdateHealth;
         public Action OnDeath { get; set; }
+        public Action OnOver { get; set; }
         public int CurrentCount => _currentCount;
         public bool IsDeath
         {
@@ -24,6 +25,7 @@ namespace Core.Components._ProgressComponents.Health
             set
             {
                 _isOver = value; 
+                OnOver?.Invoke();
                 Death();
             }
         }

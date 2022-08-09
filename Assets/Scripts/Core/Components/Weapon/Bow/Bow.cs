@@ -2,6 +2,7 @@ using System;
 using Core.Components._ProgressComponents.Health;
 using Core.Environment.Tower;
 using DG.Tweening;
+using NaughtyAttributes;
 using NTC.Global.Pool;
 using Rhodos.Toolkit.Extensions;
 using UnityEngine;
@@ -10,18 +11,17 @@ namespace Core.Components.Weapon.Bow
 {
     public class Bow : MonoBehaviour, IWeapon
     {
-        [SerializeField] private int _damage;
-        [SerializeField] [Range(1, 2)] private float _speed = 1;
         [SerializeField] private Arrow _arrow;
         [SerializeField] private Transform _spawnPoint;
-        [SerializeField] private Animator _animator;
+        [SerializeField] private AnimationStateController _animation;
+        [ShowNonSerializedField] private int _damage;
         public Action OnTakeDamage { get; set; }
+        [ShowNativeProperty] private float Speed => _animation.Speed;
 
         public void Load(TemplateDefTower template)
         {
             _damage = template.Damage;
-            _speed = template.Speed;
-            _animator.speed = _speed;
+            _animation.SetSpeed(template.Speed);
         }
         public void TakeDamage(Transform target, IHealthComponent health)
         {
@@ -32,17 +32,6 @@ namespace Core.Components.Weapon.Bow
                 health.Hit(_damage);
                 NightPool.Despawn(arrow);
             });
-
-
-            // створення префаба
-            // вистріл + кут
-            // якщо стріла столкнулася -хп
-            //speed
-        }
-
-        public void Load()
-        {
-            throw new NotImplementedException();
         }
     }
 }

@@ -42,15 +42,15 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         public void Add()
         {
             var recruit = Instantiate(_prefab, transform.position, Quaternion.identity);
-            recruit.SetOwner(_owner);
+            recruit.Initialization(_owner);
             _recruits.Add(recruit);
-            OnAddRecruit.Invoke(_recruits.Count);
+            OnAddRecruit?.Invoke(_recruits.Count);
         }
 
         [Button]
         private void RemoveAll()
         {
-            _recruits.ForEach(recruit => recruit.HealthComponent.Death());
+            _recruits.ForEach(recruit => recruit.StopMove());
             _recruits = new List<MovementRecruit>();
         }
     }

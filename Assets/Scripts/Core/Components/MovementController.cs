@@ -1,4 +1,5 @@
 using System;
+using Base.Level;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,6 +9,10 @@ namespace Core.Character.Behavior
     {
         [SerializeField] private protected float _speed;
         [SerializeField] private protected NavMeshAgent _navMeshAgent;
+        private Transform _transform;
+        private Vector3 _lastPose;
+        public event Action<Transform> OnChangePosition;
+
         public virtual bool IsMove => false;
         private bool _isStopped;
         public bool IsStopped
@@ -19,15 +24,30 @@ namespace Core.Character.Behavior
                 {
                     _isStopped = value;
                     _navMeshAgent.isStopped = _isStopped;
-                    _navMeshAgent.updatePosition = _isStopped;
                 }
             }
         }
-        public abstract void Move();
+        private void Awake()
+        {
+            _transform = GetComponent<Transform>();
+            _lastPose = _transform.position;
+
+        }
+        public virtual void Move()
+        {
+            if (_transform.position != _lastPose)
+            {
+                OnChangePosition?.Invoke(_transform);
+            }
+
+            _lastPose = _transform.position;
+        }
 
         public void SetStartPos(Vector3 position)
         {
-            _navMeshAgent.nextPosition = position;
+            IsStopped = false;
+            _navMeshAgent.Warp(position);
+            LoaderLevel.Instance.UpdateBake();
         }
     }
 }

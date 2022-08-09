@@ -1521,11 +1521,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a893820da094bb9b75f24f535bc3f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 2
-  _speed: 1.562
   _arrow: {fileID: 5811912623596504809, guid: 95bb2d15d7f3344ff9431fcaeb7ee133, type: 3}
   _spawnPoint: {fileID: 8938689015674812283}
-  _animator: {fileID: 7343635733061772015}
+  _animation: {fileID: 3835149317231361849}
 --- !u!1 &3835149318168787735
 GameObject:
   m_ObjectHideFlags: 0
