@@ -12,7 +12,6 @@ namespace Core.Components
         [SerializeField] private bool _isDebuged;
         [SerializeField] private SphereCollider _sphereCollider;
         [SerializeField] private Image _outline;
-        [SerializeField] private protected bool _isNullExit = true;
         
         protected Transform _currentTarget;
         protected IHealthComponent _currentHealth;

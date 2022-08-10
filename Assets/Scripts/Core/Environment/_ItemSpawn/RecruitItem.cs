@@ -8,7 +8,7 @@ namespace Core.Environment._ItemSpawn
     {
         [SerializeField] private Animator _animator;
         [SerializeField] private int _speed;
-        private bool _isPickUp;
+        [SerializeField] private bool _isPickUp;
         private readonly int _runningNameId = Animator.StringToHash("IsRunning");
         public bool IsPickUp => _isPickUp;
         public override void SetSpawner(Spawner spawner, Vector3 position)

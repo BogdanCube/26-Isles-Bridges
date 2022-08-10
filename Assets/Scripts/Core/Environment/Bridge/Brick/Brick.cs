@@ -11,8 +11,8 @@ namespace Core.Environment.Bridge.Brick
     public class Brick : MonoBehaviour
     {
         [SerializeField] private GameObject _brick;
-
-        public bool IsSet => _brick.activeSelf;
+        private bool _isSet = false;
+        public bool IsSet => _isSet;
         private void Start()
         {
             _brick.SetActive(false);
@@ -28,6 +28,7 @@ namespace Core.Environment.Bridge.Brick
         public void SetBrick()
         {
             _brick.SetActive(true);
+            _isSet = true;
             LoaderLevel.Instance.UpdateBake();
         }
 

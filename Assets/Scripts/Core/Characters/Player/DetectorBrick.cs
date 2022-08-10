@@ -10,13 +10,12 @@ namespace Core.Characters.Player
     {
         [SerializeField] private Bag _bag;
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerStay(Collider other)
         {
             if(_bag.HasCanSpend() && other.TryGetComponent(out Brick brick))
             {
                 if (brick.IsSet == false)
                 {
-                    
                     _bag.Spend();
                     brick.SetBrick();
                 }

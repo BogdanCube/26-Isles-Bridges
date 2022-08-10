@@ -162,8 +162,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3.3
-  m_Center: {x: 0, y: 0, z: 3.68}
+  m_Radius: 3.55
+  m_Center: {x: 0, y: 0, z: 4.37}
 --- !u!114 &6778611347518559182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _componentData: {fileID: 0}
-  _maxCount: 999
+  _maxCount: 20
   _currentCount: 0
 --- !u!1 &6338007941493043642
 GameObject:

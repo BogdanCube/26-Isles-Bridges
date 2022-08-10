@@ -31,7 +31,7 @@ namespace Core.Characters.Enemy.Finder
                         if(_bag.HasCanSpend(data.Price))
                         {
                             data.BuyAhead();
-                            _bag.Reset();
+                            _bag.Spend(data.Price);
                             break;
                         }
                     }
@@ -41,24 +41,19 @@ namespace Core.Characters.Enemy.Finder
             {
                 if (tower.Owner == _bag.Character)
                 {
+                    ShopTower = tower.transform;
                     var dataProgress =shopTower.DisplayProgress.ShopDataTowers;
                     
                     if (dataProgress.Count(data => data.Price <= _wallet.CurrentCount) > 0)
                     {
-                        ShopTower = tower.transform;
                         foreach (var data in dataProgress)
                         {
                             if(_wallet.HasCanSpend(data.Price))
                             {
                                 data.BuyAhead();
-                                break;
                             }
                         }
-                    }
-                    else
-                    {
-                        ShopTower = null;
-                    }
+                    } 
                 }
             }
         }

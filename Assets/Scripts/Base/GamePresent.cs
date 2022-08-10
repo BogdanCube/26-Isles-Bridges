@@ -1,3 +1,4 @@
+using System.Linq;
 using Base.Level;
 using Core.Characters.Base.Behavior;
 using Managers.Level;
@@ -38,6 +39,8 @@ namespace Base
         }
         private void Win()
         {
+            var characters = FindObjectsOfType<BehaviourSystem>().ToList();
+            characters.ForEach(character => character.SetDanceState());
             FindObjectOfType<BehaviourSystem>().SetDanceState();
             _loaderLevel.LevelCompleted();
             OnWin.Invoke();

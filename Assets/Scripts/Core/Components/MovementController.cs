@@ -11,9 +11,9 @@ namespace Core.Character.Behavior
         [SerializeField] private protected NavMeshAgent _navMeshAgent;
         private Transform _transform;
         private Vector3 _lastPose;
-        public event Action<Transform> OnChangePosition;
+        public event Action<Vector3> OnChangePosition;
 
-        public virtual bool IsMove => false;
+        public abstract bool IsMove { get; }
         private bool _isStopped;
         public bool IsStopped
         {
@@ -37,7 +37,7 @@ namespace Core.Character.Behavior
         {
             if (_transform.position != _lastPose)
             {
-                OnChangePosition?.Invoke(_transform);
+                OnChangePosition?.Invoke(_transform.position);
             }
 
             _lastPose = _transform.position;
@@ -47,7 +47,6 @@ namespace Core.Character.Behavior
         {
             IsStopped = false;
             _navMeshAgent.Warp(position);
-            LoaderLevel.Instance.UpdateBake();
         }
     }
 }

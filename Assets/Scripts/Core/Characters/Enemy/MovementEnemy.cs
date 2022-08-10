@@ -38,21 +38,22 @@ namespace Core.Characters.Enemy
         private void Start()
         {
             _navMeshAgent.speed = _speed;
-
             //StartCoroutine(FindTarget(_timeErase));
 
         }
         public override void Move()
         {
+            base.Move();
             FindTarget();
+            
             if (_currentTarget && Vector3.Distance(transform.position,_currentTarget.position) > 1)
             {
                 transform.SlowLookY(_currentTarget,_durationLooking);
             }
             else
             {
-               _currentTarget = null;
-               _navMeshAgent.SetRandomDestination(_randomRadius);
+                _currentTarget = null;
+                _navMeshAgent.SetRandomDestination(_randomRadius);
             }
         }
         private void FindTarget()
@@ -62,13 +63,18 @@ namespace Core.Characters.Enemy
                 SetTarget(_finderOutside.Target);
             }
             
+            else if(_dataProgress.CanBuySomething &&_finderInside.ShopTower)
+            {
+                SetTarget(_finderInside.ShopTower);
+            }
+            
             else if (_bag.IsZero || _bag.CheckCount(0.5f) == false)
             {
                 if (_finderOutside.BlockItem == false)
                 {
                     SetTarget(_startPos);
                 }
-                else if(_bag.HasCanAdd && _finderOutside.BlockItem && _bag.CheckCount(0.8f) == false)
+                else if(_bag.HasCanAdd && _finderOutside.BlockItem && _bag.CheckCount(0.9f) == false)
                 {
                     SetTarget(_finderOutside.BlockItem);
                 }
@@ -77,17 +83,13 @@ namespace Core.Characters.Enemy
             {
                 SetTarget(_finderOutside.Item);
             }
-            else if(_dataProgress.CanBuySomething &&_finderInside.ShopTower)
-            {
-                SetTarget(_finderInside.ShopTower);
-            }
             else
             {
                 if (_dataTowers.CanBuySomething() &&_finderOutside.NoBuilding)
                 {
                     SetTarget(_finderOutside.NoBuilding);
                 }
-                if(_bag.CheckCount(0.95f))
+                if(_bag.CheckCount(0.55f))
                 {
                     if (_finderOutside.Tower)
                     {
@@ -102,8 +104,7 @@ namespace Core.Characters.Enemy
         }
         private void SetTarget(Transform target)
         {
-           
-            if (target.gameObject.active)
+            if (target.gameObject.activeSelf)
             {
                 _currentTarget = target;
                 _navMeshAgent.SetDestination(_currentTarget.position);

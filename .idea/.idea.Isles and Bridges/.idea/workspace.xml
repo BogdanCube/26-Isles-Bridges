@@ -3,17 +3,36 @@
   <component name="ChangeListManager">
     <list default="true" id="d59320d8-84cf-43b4-b90d-b08e0da32404" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Isles and Bridges/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Isles and Bridges/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/EnemyTowers.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/EnemyTowers.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Camp (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Camp (Enemy).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Def Tower (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Def Tower (Enemy).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Mine (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Mine (Enemy).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Camp (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Camp (Player).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Def Tower (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Def Tower (Player).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Mine (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Mine (Player).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Enemy).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Player).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Brick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Brick.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Def Tower.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Setting/Tower/Def Tower.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base/GamePresent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base/GamePresent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/DetectorPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/DetectorPlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/EnemyFinderInside.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/EnemyFinderInside.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/EnemyFinderOutside.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/EnemyFinderOutside.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/MovementEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/MovementEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Behaviour/DanceState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/Behaviour/DanceState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/DetectorBrick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/DetectorBrick.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/DetectorEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/DetectorEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DataTowers/DataTowers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DataTowers/DataTowers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetectorRecruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetectorRecruit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Recruit/MovementRecruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Recruit/MovementRecruit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorFighting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorFighting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/MovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/MovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/Bow/Arrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/Bow/Arrow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/Bow/Bow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/Bow/Bow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetachmentRecruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/OwnerRecruit/DetachmentRecruit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn/RespawnComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Respawn/RespawnComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/ItemSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/ItemSpawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Bridge/Brick/Brick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Bridge/Brick/Brick.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/_ItemSpawn/RecruitItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/_ItemSpawn/RecruitItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +164,7 @@
       <workItem from="1659966480480" duration="7752000" />
       <workItem from="1660032662929" duration="15941000" />
       <workItem from="1660063750435" duration="9661000" />
-      <workItem from="1660114176475" duration="11908000" />
+      <workItem from="1660114176475" duration="21732000" />
     </task>
     <servers />
   </component>

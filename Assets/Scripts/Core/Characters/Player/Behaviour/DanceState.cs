@@ -6,6 +6,7 @@ namespace Core.Characters.Player.Behaviour
     {
         public override void Start()
         {
+            BehaviourSystem.Character.MovementController.IsStopped = true;
             BehaviourSystem.Character.AnimationStateController.Dance();
         }
     }

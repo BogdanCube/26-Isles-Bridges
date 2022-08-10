@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _componentData: {fileID: 0}
-  _maxCount: 999
+  _maxCount: 20
   _currentCount: 0
 --- !u!1 &5090490827761476479
 GameObject:
@@ -5570,15 +5570,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2688722068387150000, guid: 5eed158ccd55b90459e89e5eb11daeef, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0
+      value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 2688722068387150000, guid: 5eed158ccd55b90459e89e5eb11daeef, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0
+      value: 0.6509804
       objectReference: {fileID: 0}
     - target: {fileID: 2688722068387150000, guid: 5eed158ccd55b90459e89e5eb11daeef, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 1
+      value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 2689051912718821436, guid: 5eed158ccd55b90459e89e5eb11daeef, type: 3}
       propertyPath: m_Materials.Array.size

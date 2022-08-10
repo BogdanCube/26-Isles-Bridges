@@ -5086,7 +5086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _componentData: {fileID: 0}
-  _maxCount: 999
+  _maxCount: 20
   _currentCount: 0
 --- !u!1 &6196909701779487464
 GameObject:

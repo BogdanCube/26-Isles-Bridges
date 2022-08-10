@@ -28,10 +28,7 @@ namespace Core.Characters.Enemy
         {
             if (other.TryGetComponent(out  Player.Player player))
             {
-                if (_isNullExit)
-                {
-                    _currentTarget = null;
-                }
+                _currentTarget = null;
             }
             if (other.TryGetComponent(out Tower tower))
             {

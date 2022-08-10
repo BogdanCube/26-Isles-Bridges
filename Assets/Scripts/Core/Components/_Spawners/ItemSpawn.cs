@@ -17,14 +17,10 @@ namespace Core.Components._Spawners
         private float _speedMagnet = 6;
         private Spawner _spawner;
         private Vector3 _startScale;
-
-        private void Start()
-        {
-            _trailRenderer.enabled = false;
-        }
-
+        
         public virtual void SetSpawner(Spawner spawner,Vector3 position)
         {
+            _trailRenderer.enabled = false;
             _spawner = spawner;
             SetPosition(position);
             _startScale = transform.localScale;

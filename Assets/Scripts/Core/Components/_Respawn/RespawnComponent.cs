@@ -1,3 +1,4 @@
+using Base.Level;
 using Core.Character.Behavior;
 using Core.Characters.Base.Behavior;
 using Core.Components._ProgressComponents.Bag;
@@ -26,6 +27,7 @@ namespace Core.Components
             transform.DOScale(1, 0.2f).OnComplete(() =>
             {
                 _behaviourSystem.IsStop = false;
+                LoaderLevel.Instance.UpdateBake();
             });
          
         }
