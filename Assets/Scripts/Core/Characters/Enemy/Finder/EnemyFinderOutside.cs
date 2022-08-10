@@ -1,66 +1,83 @@
+using System.Collections.Generic;
+using Core.Components._ProgressComponents.Health;
 using Core.Components._Spawners;
 using Core.Environment._ItemSpawn;
+using Core.Environment.Block;
 using Core.Environment.Bridge.Brick;
 using Core.Environment.Island;
 using Core.Environment.Tower;
 using Core.Environment.Tower.NoBuilding;
+using NaughtyAttributes;
+using UnityEditor;
 using UnityEngine;
 
 namespace Core.Characters.Enemy.Finder
 {
     public class EnemyFinderOutside : DebugDetector
     {
-        private Player.Player _player;
-        private TowerLevel _tower;
-        private Brick _brick;
-        private RecruitItem _recruitItem;
-        private ItemSpawn _item;
-        private Island _island;
-        private NoBuilding _noBuilding;
-        public Player.Player Player => _player;
-        public TowerLevel Tower => _tower;
-        public Brick Brick => _brick;
-        public ItemSpawn Item => _item;
-        public Island Island => _island;
-        public NoBuilding NoBuilding => _noBuilding;
-        public bool IsTower => _tower && _tower.IsMaxLevel == false;
-        public bool IsBrick => _brick && _brick.IsSet == false;
-        
-        
+        public Transform Target { get; private set; }
+        [ShowNativeProperty] public Transform Tower { get; private set; }
+        public Transform Brick { get; private set; }
+        public Transform Item { get; private set; }
+        public Transform BlockItem { get; private set; }
+        public Transform NoBuilding { get; private set; }
+        private List<Tower> _ignoreTowers = new List<Tower>();
         private void OnTriggerStay(Collider other)
         {
             if (other.TryGetComponent(out Player.Player player))
             {
                 if (player.HealthComponent.IsDeath == false)
                 {
-                    _player = player;
+                    Target = player.transform;
                 }
             }
-            if (other.TryGetComponent(out TowerLevel tower) && other.TryGetComponent(out HealthTower _healthTower))
+            if (other.TryGetComponent(out Tower tower))
             {
-                if (_healthTower.IsDeath == false && tower.IsMaxLevel == false)
+                if (tower.Owner.GetType() == typeof(Player.Player))
                 {
-                    _tower = tower;
+                    if (tower.HealthComponent.IsDeath == false)
+                    {
+                        Target = tower.transform;
+                    }
                 }
+                else if (tower.Owner.GetType() == typeof(Enemy) && tower.HealthComponent.IsDeath == false)
+                {
+                    if (_ignoreTowers.Contains(tower) == false)
+                    {
+                        if (tower.TowerLevel.IsMaxLevel)
+                        {
+                            _ignoreTowers.Add(tower);
+                            Tower = null;
+                        }
+                        else
+                        {
+                            Tower = tower.transform;
+                        }
+                    }
+                }
+                
             }
             if (other.TryGetComponent(out NoBuilding noBuilding))
             {
-                _noBuilding = noBuilding;
-            }
-            if (other.TryGetComponent(out Island island))
-            {
-                _island = island;
+                NoBuilding = noBuilding.transform;
             }
             if (other.TryGetComponent(out Brick brick))
             {
                 if (brick.IsSet == false)
                 {
-                    _brick = brick;
+                    Brick = brick.transform;
                 }
             }
             if (other.TryGetComponent(out ItemSpawn item))
             {
-                _item = item;
+                if (item.GetType() != typeof(BlockItem))
+                {
+                    Item = item.transform;
+                }
+                else
+                {
+                    BlockItem = item.transform;
+                }
             }
         }
 
@@ -68,19 +85,15 @@ namespace Core.Characters.Enemy.Finder
         {
             if (other.TryGetComponent(out Player.Player player))
             {
-                _player = null;
+                Target = null;
             }
-            /*if (other.TryGetComponent(out TowerLevel tower))
+            if (other.TryGetComponent(out ItemSpawn item))
             {
-                _tower = null;
-            }*/
-            if (other.TryGetComponent(out Island island))
-            {
-                _island = null;
+                Item = null;
             }
-            if (other.TryGetComponent(out ItemSpawn blockItem))
+            if (other.TryGetComponent(out BlockItem blockItem))
             {
-                _item = null;
+                BlockItem = null;
             }
         }
     }

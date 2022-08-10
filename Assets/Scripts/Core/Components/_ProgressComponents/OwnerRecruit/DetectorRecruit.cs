@@ -11,9 +11,9 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         [SerializeField] private DetachmentRecruit _detachmentRecruit;
         [SerializeField] private Wallet.Wallet _wallet;
         [MinMaxSlider(0f, 25f)] [SerializeField] private Vector2Int _additionalCoin;
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerStay(Collider other)
         {
-            if (other.TryGetComponent(out RecruitItem recruit))
+            if (other.TryGetComponent(out RecruitItem recruit) && recruit.IsPickUp)
             {
                 recruit.MoveToCharacter(transform, () =>
                 {

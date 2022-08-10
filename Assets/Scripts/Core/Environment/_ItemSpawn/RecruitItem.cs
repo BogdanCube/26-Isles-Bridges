@@ -8,8 +8,9 @@ namespace Core.Environment._ItemSpawn
     {
         [SerializeField] private Animator _animator;
         [SerializeField] private int _speed;
+        private bool _isPickUp;
         private readonly int _runningNameId = Animator.StringToHash("IsRunning");
-
+        public bool IsPickUp => _isPickUp;
         public override void SetSpawner(Spawner spawner, Vector3 position)
         {
             base.SetSpawner(spawner, new Vector3());
@@ -18,6 +19,7 @@ namespace Core.Environment._ItemSpawn
             transform.DOLocalMove(position, _speed).SetSpeedBased().SetEase(Ease.Flash).OnComplete(() =>
             {
                 _animator.SetBool(_runningNameId, false);
+                _isPickUp = true;
             });
         }
     }

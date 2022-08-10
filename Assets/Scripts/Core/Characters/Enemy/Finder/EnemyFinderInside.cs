@@ -14,52 +14,53 @@ namespace Core.Characters.Enemy.Finder
     {
         [SerializeField] private BagCharacter _bag;
         [SerializeField] private Wallet _wallet;
-        private FreeIsland _island;
-        private NoBuilding _noBuilding;
-        private Tower _tower;
-        public bool IsFree => _island != null && _island.IsDelight == false;
-        public FreeIsland Island => _island;
-        public NoBuilding NoBuilding => _noBuilding;
-        public Tower ShopTower => _tower;
+        public Transform NoBuilding { get; private set; }
+        public Transform ShopTower { get; private set; }
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerStay(Collider other)
         {
-            if (other.TryGetComponent(out FreeIsland island))
-            {
-                _island = island;
-            }
             if (other.TryGetComponent(out NoBuilding noBuilding))
             {
-                _noBuilding = noBuilding;
-                var shopDataTowers = _noBuilding.DisplayData.ShopDataTowers;
-                var randomItem = shopDataTowers.RandomItem();
-                if (_bag.HasCanSpend(randomItem.Price))
+                var shopDataTowers = noBuilding.DisplayData.ShopDataTowers;
+               
+                if (shopDataTowers.Count(data => data.Price <= _bag.CurrentCount) > 0)
                 {
-                    randomItem.BuyAhead();
-                    _bag.Reset();
+                    NoBuilding = noBuilding.transform;
+                    foreach (var data in shopDataTowers)
+                    {
+                        if(_bag.HasCanSpend(data.Price))
+                        {
+                            data.BuyAhead();
+                            _bag.Reset();
+                            break;
+                        }
+                    }
                 }
             }
             if (other.TryGetComponent(out Tower tower) && other.TryGetComponent(out ShopTower shopTower))
             {
                 if (tower.Owner == _bag.Character)
                 {
-                    _tower = tower;
-                    var shop = shopTower;
-                    var dataProgress =shop.DisplayProgress.ShopDataTowers;
+                    var dataProgress =shopTower.DisplayProgress.ShopDataTowers;
                     
                     if (dataProgress.Count(data => data.Price <= _wallet.CurrentCount) > 0)
                     {
+                        ShopTower = tower.transform;
                         foreach (var data in dataProgress)
                         {
                             if(_wallet.HasCanSpend(data.Price))
                             {
                                 data.BuyAhead();
+                                break;
                             }
                         }
                     }
+                    else
+                    {
+                        ShopTower = null;
+                    }
                 }
             }
-
         }
     }
 }
