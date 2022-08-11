@@ -1,3 +1,4 @@
+using System;
 using Core.Character.Behavior;
 using Core.Components._ProgressComponents.Bag;
 using Core.Components._ProgressComponents.Health;
@@ -26,7 +27,12 @@ namespace Core.Components
             _healthComponent.OnDeath -= HideBody;
         }
         #endregion
-        
+
+        private void Start()
+        {
+            _grayscaleModel.FadeToDefault(0);
+        }
+
         private void HideBody()
         {
             _grayscaleModel.FadeGray(_timeRespawn * 0.75f).OnComplete(() =>

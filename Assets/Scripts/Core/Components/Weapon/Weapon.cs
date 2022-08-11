@@ -2,6 +2,7 @@ using System;
 using Components.Weapon;
 using Core.Components._ProgressComponents.Health;
 using DG.Tweening;
+using NaughtyAttributes;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,7 +10,7 @@ namespace Core.Components.Weapon
 {
      public class Weapon : MonoBehaviour,IWeapon
      {
-         [SerializeField] private WeaponData _currentData;
+         [Expandable] [SerializeField] private WeaponData _currentData;
          [SerializeField] private HealthComponent _healthComponent;
          [SerializeField] private MeshFilter _meshFilter;
          private int _damage;

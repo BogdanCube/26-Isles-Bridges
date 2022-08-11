@@ -18,7 +18,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         [SerializeField] private MovementRecruit _prefab;
         [SerializeField] private HealthComponent _healthComponent;
         private Characters.Base.Character _owner;
-        public event Action<int> OnAddRecruit;
+        public event Action<int> OnUpdateCount;
         public Action OnMax;
         public bool HasCanAdd => _recruits.Count + 1 <= _maxCount;
         public int MaxCount => _maxCount;
@@ -46,16 +46,24 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         public void Add()
         {
             var recruit = Instantiate(_prefab, transform.position, Quaternion.identity);
-            recruit.Initialization(_owner);
+            recruit.Initialization(_owner,this);
             _recruits.Add(recruit);
-            OnAddRecruit?.Invoke(_recruits.Count);
+            OnUpdateCount?.Invoke(_recruits.Count);
         }
 
+        public void Remove(MovementRecruit recruit)
+        {
+            _recruits.Remove(recruit);
+            OnUpdateCount?.Invoke(_recruits.Count);
+        }
+        
         [Button]
         private void RemoveAll()
         {
-            _recruits.ForEach(recruit => recruit.StopMove());
-            _recruits = new List<MovementRecruit>();
+            foreach (var recruit in _recruits)
+            {
+                recruit.StopMove();
+            }
         }
         private void GroupMovement(Vector3 center)
         {
@@ -70,6 +78,12 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
             {
                 _recruits[i].MoveToTarget(center + result[i] * _radius);
             }
+        }
+
+        public override void LevelUp()
+        {
+            base.LevelUp();
+            OnUpdateCount?.Invoke(_recruits.Count);
         }
     }
 }

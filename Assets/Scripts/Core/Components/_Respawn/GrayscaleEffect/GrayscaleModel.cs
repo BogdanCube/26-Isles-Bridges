@@ -11,12 +11,7 @@ public class GrayscaleModel : MonoBehaviour
 {
     [SerializeField] private GrayMaterial _grayMaterial;
     private readonly string _nameID = "_AmbientCol";
-
-    private void Start()
-    {
-        SetFade(0);
-    }
-
+    
     [Button]
     public Tween FadeGray(float time = 5)
     {

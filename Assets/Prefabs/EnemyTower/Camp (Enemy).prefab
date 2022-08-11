@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b91705cb20246a6991a3e7bc9868cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _limitSpawn: 10
+  _limitSpawn: 4
   _randomData: {fileID: 11400000, guid: 552f71c93d916704aace320abb31defa, type: 2}
   _currentTimeSpawn: 0
 --- !u!114 &1305817113900071890

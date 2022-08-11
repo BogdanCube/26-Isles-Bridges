@@ -1,4 +1,5 @@
 using Core.Characters.Base.Behavior;
+using Rhodos.Toolkit.Extensions;
 
 namespace Core.Characters.Player.Behaviour
 {
@@ -8,6 +9,7 @@ namespace Core.Characters.Player.Behaviour
         {
             BehaviourSystem.Character.MovementController.IsStopped = true;
             BehaviourSystem.Character.AnimationStateController.Dance();
+            BehaviourSystem.Character.WinParticle.Activate();
         }
     }
 }

@@ -15,8 +15,10 @@ namespace Core.Components.Weapon.Bow
         [SerializeField] private Transform _spawnPoint;
         [SerializeField] private AnimationStateController _animation;
         [ShowNonSerializedField] private int _damage;
+        private Transform _transform;
         public Action OnTakeDamage { get; set; }
         [ShowNativeProperty] private float Speed => _animation.Speed;
+        
         
         public void Load(TemplateDefTower template)
         {

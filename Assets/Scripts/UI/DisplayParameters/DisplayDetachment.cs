@@ -18,13 +18,13 @@ namespace UI.DisplayParameters
         private void OnEnable()
         {
             _detachment = _loaderLevel.CurrentPlayer.Detachment;
-            _detachment.OnAddRecruit += UpdateText;
+            _detachment.OnUpdateCount += UpdateText;
             _detachment.OnMax += FadeMaxText;
         }
 
         private void OnDisable()
         {
-            _detachment.OnAddRecruit -= UpdateText;
+            _detachment.OnUpdateCount -= UpdateText;
             _detachment.OnMax -= FadeMaxText;
         }
 

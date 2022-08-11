@@ -9,7 +9,6 @@ namespace Core.Character.Behavior
     {
         [SerializeField] private protected float _speed;
         [SerializeField] private protected NavMeshAgent _navMeshAgent;
-        private Transform _transform;
         private Vector3 _lastPose;
         public event Action<Vector3> OnChangePosition;
 
@@ -29,18 +28,16 @@ namespace Core.Character.Behavior
         }
         private void Awake()
         {
-            _transform = GetComponent<Transform>();
-            _lastPose = _transform.position;
-
+            _lastPose = transform.position;
         }
         public virtual void Move()
         {
-            if (_transform.position != _lastPose)
+            if (transform.position != _lastPose)
             {
-                OnChangePosition?.Invoke(_transform.position);
+                OnChangePosition?.Invoke(transform.position);
             }
 
-            _lastPose = _transform.position;
+            _lastPose = transform.position;
         }
 
         public void SetStartPos(Vector3 position)

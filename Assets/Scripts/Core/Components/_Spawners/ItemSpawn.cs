@@ -46,10 +46,8 @@ namespace Core.Components._Spawners
             transform.DOMove(character.position, _speedMagnet).SetSpeedBased().SetEase(Ease.Flash);
             transform.DOScale(0, _speedMagnet).SetSpeedBased().SetEase(Ease.Flash).OnComplete(() =>
             {
-                _trailRenderer.enabled = false; 
                 transform.localScale = _startScale;
                 transform.Deactivate();
-
                 callback.Invoke();
             });
         }
