@@ -14,33 +14,19 @@ namespace Core.Components._ProgressComponents.Bag
         private IEnumerator _coroutineAdd;
         private IEnumerator _coroutineSpend;
         private Characters.Base.Character _owner;
-
-        #region Enable / Disable
-        private void OnEnable()
-        {
-            _towerLevel.OnMaxUpgrade += StopMoved;
-        }
-
-        private void OnDisable()
-        {
-            _towerLevel.OnMaxUpgrade -= StopMoved;
-        }
-        #endregion
+        
         private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out BagCharacter bag))
             {
                 if (_tower.Owner == bag.Character && bag.HasCanSpend())
                 {
-                    if (_towerLevel.IsMaxLevel == false)
+                    if (_coroutineSpend != null)
                     {
-                        if (_coroutineSpend != null)
-                        {
-                            StopCoroutine(_coroutineSpend);
-                        }
-                        _coroutineAdd = _tempBag.MovedCount(bag,_pumpingSpeed);
-                        StartCoroutine(_coroutineAdd);
+                        StopCoroutine(_coroutineSpend);
                     }
+                    _coroutineAdd = _tempBag.MovedCount(bag,_pumpingSpeed);
+                    StartCoroutine(_coroutineAdd);
                 }
             }        
         }
@@ -55,12 +41,6 @@ namespace Core.Components._ProgressComponents.Bag
                 _coroutineSpend = _towerLevel.ReplenishmentBrick(_tempBag);
                 StartCoroutine(_coroutineSpend);
             }
-        }
-        private void StopMoved()
-        {
-            _tempBag.Reset();
-            StopCoroutine(_coroutineSpend);
-            StopCoroutine(_coroutineAdd);
         }
     }
 }

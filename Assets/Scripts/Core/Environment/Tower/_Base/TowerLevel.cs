@@ -34,19 +34,19 @@ namespace Core.Environment.Tower
         
         public IEnumerator ReplenishmentBrick(Bag bag)
         {
-            while (IsMaxLevel == false)
+            while (bag.HasCanSpend())
             {
                 yield return new WaitForSeconds(_pumpingSpeed);
-                if (bag.HasCanSpend())
+                bag.Spend();
+                _shopBag.Add();
+                if (IsMaxLevel == false)
                 {
-                    bag.Spend();
-                    _shopBag.Add();
                     if (_shopBag.CurrentCount >= _loaderTower.PriceNextLevel(_level))
                     {
                         LevelUp();
                     }
-                    UpdateDisplay();
                 }
+                UpdateDisplay();
             }
         }
         [Button]
@@ -58,10 +58,14 @@ namespace Core.Environment.Tower
                 _particleLevel.gameObject.SetActive(true);
                 _loaderTower.Load(_level);
                 transform.DOShakeScale(1f, Vector3.one/10f);
-                UpdateDisplay();
+                if (IsMaxLevel)
+                {
+                    OnMaxUpgrade.Invoke();
+                }
             }
             _shopBag.Reset();
             _shopBag.Add();
+            UpdateDisplay();
         }
         private void LevelDown()
         {
@@ -75,10 +79,6 @@ namespace Core.Environment.Tower
         private void UpdateDisplay()
         {
             OnUpdateDisplayed.Invoke(_shopBag.CurrentCount, _loaderTower.PriceNextLevel(_level));
-            if (IsMaxLevel)
-            {
-                OnMaxUpgrade.Invoke();
-            }
         }
         public void Hit(int damage = 1)
         {
@@ -88,7 +88,7 @@ namespace Core.Environment.Tower
                 OnHitDisplayed.Invoke(_shopBag.CurrentCount, _loaderTower.PriceNextLevel(_level));
             }
         }
-
+        
         public void DestroyTower(Action callback, bool isOver = true)
         {
             if (_level > 0 && isOver)

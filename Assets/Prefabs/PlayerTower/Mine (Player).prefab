@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e666c3aa84d4c70a77c29b908de6f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerLevel: {fileID: 1110656629614492936}
+  _towerLevel: {fileID: 1110656629614492936}
   _text: {fileID: 1110656629011189776}
 --- !u!114 &6792791002695600861
 MonoBehaviour:
@@ -209,9 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b91705cb20246a6991a3e7bc9868cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _limitSpawn: 20
+  _limitSpawn: 7
   _randomData: {fileID: 11400000, guid: 14387869c4169eb4cabc086812ee48f9, type: 2}
-  _currentTimeSpawn: 0
 --- !u!114 &8315492558451457523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d3deb1bfad4ea389ee959fddc4f2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _limitSpawn: 10
+  _limitSpawn: 5
   _randomData: {fileID: 11400000, guid: 442b953639a184734bc585b43e352693, type: 2}
   _iHealthComponent: {fileID: 1110656629614492940}
 --- !u!1 &1110656629011189774
@@ -547,6 +546,7 @@ MonoBehaviour:
   _tower: {fileID: 1110656629614492941}
   _towerLevel: {fileID: 1110656629614492936}
   _lootSpawner: {fileID: 8315492558451457523}
+  _loaderTower: {fileID: 6183700178127858374}
   _particleHit: {fileID: 6674549820140169011}
 --- !u!1 &1224492668660914341
 GameObject:
@@ -5352,8 +5352,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.61
-  m_Center: {x: 0, y: 0, z: 3.68}
+  m_Radius: 1.93
+  m_Center: {x: 0, y: 0, z: 2.78}
 --- !u!114 &333050924870512164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5398,7 +5398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _componentData: {fileID: 0}
-  _maxCount: 20
+  _maxCount: 999
   _currentCount: 0
 --- !u!1 &4559838332183493545
 GameObject:

@@ -23,19 +23,23 @@ namespace Core.Environment.Tower
         public void Initialization(Characters.Base.Character owner, NoBuilding.NoBuilding noBuilding, Island.Island island)
         {
             transform.localScale = Vector3.zero;
-            transform.DOScale(1, 1f).OnComplete(LoaderLevel.Instance.UpdateBake); 
             _owner = owner;
             _noBuilding = noBuilding;
             _island = island;
-            TowerLevel.LoadTower();
             Owner.HealthComponent.OnOver += _healthTower.Over;
+
+            transform.DOScale(1, 1f).OnComplete(() =>
+            {
+                LoaderLevel.Instance.UpdateBake();
+                TowerLevel.LoadTower();
+            });
         }
 
         public void ReturnNoBuilding()
         {
             if (_noBuilding)
             {
-                _noBuilding.gameObject.SetActive(true);
+                _noBuilding.Enable();
             }
         }
     }

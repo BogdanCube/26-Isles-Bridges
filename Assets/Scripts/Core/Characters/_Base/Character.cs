@@ -2,6 +2,7 @@ using Components.Weapon;
 using Core.Character.Behavior;
 using Core.Components;
 using Core.Components._ProgressComponents.Health;
+using Core.Components.DataTowers;
 using Core.Components.Weapon;
 using Core.Environment.Tower;
 using Rhodos.Toolkit.Extensions;

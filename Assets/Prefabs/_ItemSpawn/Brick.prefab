@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _brick: {fileID: 6048834963863538920}
+  _collider: {fileID: 2809930216619770994}
 --- !u!65 &2809930216619770994
 BoxCollider:
   m_ObjectHideFlags: 0

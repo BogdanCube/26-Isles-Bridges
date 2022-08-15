@@ -30,15 +30,16 @@ namespace Core.Environment._ItemSpawn
 
         public void PickUp(Action callback)
         {
-            transform.DOShakeScale(1f, Vector3.one/10f);
-            _grayscaleModel.FadeToDefault(1).SetEase(Ease.Flash).OnComplete(() =>
+            _grayscaleModel.FadeToDefault(1);
+            transform.DOShakeScale(1f, Vector3.one/2f).OnComplete((() =>
             {
                 transform.DOScale(0, 1).OnComplete(() =>
-                    {
-                        callback.Invoke();
-                        NightPool.Despawn(transform);
-                    });
-            });
+                {
+                    callback.Invoke();
+                    SpendCount();
+                });
+            }));
+         
         }
     }
 }

@@ -22,10 +22,13 @@ namespace Core.Components._ProgressComponents
             _maxCount = CurrentMaxCount;
         }
 
-        public virtual void LevelUp()
+        public void LevelUp()
         {
             _level++;
             _maxCount = CurrentMaxCount;
+            UpdateCount();
         }
+
+        protected virtual void UpdateCount(){}
     }
 }

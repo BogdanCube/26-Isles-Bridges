@@ -17,10 +17,11 @@ namespace Core.Environment.Tower.ShopProgressItem
         [SerializeField] private TextMeshProUGUI _progressText;
         [SerializeField] private Image _image;
         [SerializeField] private Button _button;
-
         private ProgressComponent _currentComponent;
         private Wallet _wallet;
         private int _price;
+        private bool _isBuy = false;
+
         public int Price => _price;
         public void Load(ProgressComponent component, Wallet wallet)
         {
@@ -34,11 +35,12 @@ namespace Core.Environment.Tower.ShopProgressItem
             _progressText.text = _currentComponent.IsMaxLevel ? String.Empty :_currentComponent.ProgressText;
             _button.onClick.AddListener(Buy);
         }
-        
-        public void Buy()
+
+        private void Buy()
         {
-            if (_wallet.HasCanSpend(_price))
+            if (_wallet.HasCanSpend(_price) && _isBuy == false)
             {
+                _isBuy = true;
                 BuyAhead();
             } 
             else
@@ -48,13 +50,14 @@ namespace Core.Environment.Tower.ShopProgressItem
             }
         }
 
-        public void BuyAhead()
+        private void BuyAhead()
         {
             if (_currentComponent.IsMaxLevel == false)
             {
                 _currentComponent.LevelUp();
                 _wallet.Spend(_price);
                 Load(_currentComponent,_wallet);
+                _isBuy = false;
             }
         }
     } 

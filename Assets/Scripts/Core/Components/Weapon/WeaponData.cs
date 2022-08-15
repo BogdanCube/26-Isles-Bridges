@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace Components.Weapon
@@ -12,7 +13,7 @@ namespace Components.Weapon
 
 
         [Header("Graphic Parameters")] [CanBeNull]
-        public Mesh Mesh;
+        [ShowAssetPreview] public Mesh Mesh;
     }
     
 }

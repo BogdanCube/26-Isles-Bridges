@@ -253,4 +253,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rotationY: {x: 0, y: 360}
   _trailRenderer: {fileID: 1526409046246794514}
-  _count: {x: 1, y: 3}
+  _count: {x: 1, y: 2}

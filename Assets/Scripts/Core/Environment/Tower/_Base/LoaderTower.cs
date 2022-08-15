@@ -20,5 +20,7 @@ namespace Core.Environment.Tower._Base
             _currentTower = Instantiate(TowerModel(index), _modelParent);
             LoaderLevel.Instance.UpdateBake();
         }
+
+        public virtual void ResetTower() { }
     }
 }

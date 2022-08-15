@@ -60,9 +60,11 @@ namespace Core.Components._ProgressComponents.Bag
 
         private void RemoveBlock()
         {
+            if (_blocks.Count <= 0) return;
             var block = _blocks[^1];
             _blocks.Remove(block);
             NightPool.Despawn(block);
+
         }
         protected void RemoveBlock(Block block)
         {

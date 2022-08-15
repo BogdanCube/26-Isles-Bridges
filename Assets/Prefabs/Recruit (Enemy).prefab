@@ -627,6 +627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 0}
   _healthComponent: {fileID: 6244592346247998390}
+  _background: {fileID: 811160000325509848}
   _sliderHp: {fileID: 811159999887278076}
   _text: {fileID: 811159998653076936}
 --- !u!1 &855261288671918617
@@ -2834,7 +2835,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6244592346247998387}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 330b80325053545c0b61f4675d11fe8b, type: 2}
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.17527083
@@ -2886,7 +2887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7db40e301d224c6b978dcda3b46de6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 6.5
   _navMeshAgent: {fileID: 6244592346247998025}
   _healthComponent: {fileID: 6244592346247998390}
   _outsideDetector: {fileID: 8152086256201319533}
@@ -2947,7 +2948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47884ca3fccbb714d8397b927b56e45e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentData: {fileID: 11400000, guid: f4cefd1cbf92542be87a113e055629d6, type: 2}
+  _currentData: {fileID: 11400000, guid: 95c69b15d743e4f08879e97a11aa071f, type: 2}
   _healthComponent: {fileID: 6244592346247998390}
   _meshFilter: {fileID: 3979999682748619211}
 --- !u!1 &6266184587099089908

@@ -24,31 +24,50 @@ namespace Core.Characters.Enemy
         [Header("Setting")]
         [SerializeField] private Transform _currentTarget;
         [HorizontalLine(color: EColor.Red)][SerializeField] private Transform _startPos;
+        [SerializeField] private float _randomRadius;
         [SerializeField] private float _durationLooking;
-        [SerializeField] private int _randomRadius; 
 
         [Header("Components")]
         [SerializeField] private Bag _bag;
         [SerializeField] private DataProgressComponent _dataProgress;
-        [SerializeField] private DataTowers _dataTowers;
-        [SerializeField] private EnemyFinderInside _finderInside;
-        [SerializeField] private EnemyFinderOutside _finderOutside;
+        [SerializeField] private FinderInside _finderInside;
+        [SerializeField] private FinderOutside _finderOutside;
+        [SerializeField] private HealthTower _healthTower;
         private NavMeshPath _navMeshPath;
-        public override bool IsMove => _navMeshAgent.isStopped == false;
+        private bool IsTarget => _finderOutside.IsTarget || _dataProgress.CanBuySomething;
+        public override bool IsMove => transform.position != _startPos.position;
 
+        #region Enable / Disable
+        private void OnEnable()
+        {
+            _healthTower.OnHit += TeleportToSpawn;
+        }
+
+        private void OnDisable()
+        {
+            _healthTower.OnHit -= TeleportToSpawn;
+        }
+
+        private void TeleportToSpawn()
+        {
+            if (transform.DistanceToTarget(_healthTower) > _finderOutside.Radius)
+            {
+                SetStartPos(_startPos.position);
+            }
+        }
+
+        #endregion
         private void Start()
         {
             _navMeshAgent.speed = _speed;
             _navMeshPath = new NavMeshPath();
-            //StartCoroutine(FindTarget(_timeErase));
 
         }
         public override void Move()
         {
             base.Move();
-            FindTarget();
-            
-            if (_currentTarget && Vector3.Distance(transform.position,_currentTarget.position) > 1)
+
+            if (_currentTarget && _currentTarget.gameObject.activeSelf && Vector3.Distance(transform.position,_currentTarget.position) < 1)
             {
                 transform.SlowLookY(_currentTarget,_durationLooking);
             }
@@ -58,50 +77,70 @@ namespace Core.Characters.Enemy
                 _navMeshAgent.SetRandomDestination(_randomRadius);
             }
         }
+        private void LateUpdate()
+        {
+            if (IsTarget)
+            {
+                FindTarget();
+            }
+            else
+            {
+                FindFarm();
+            }
+        }
+
         private void FindTarget()
         {
-            if (_finderOutside.Target)
+            if (_finderOutside.PlayerTower)
             {
-                SetCheckTarget(_finderOutside.Target);
+                SetTarget(_finderOutside.PlayerTower);
             }
-            else if(_dataProgress.CanBuySomething &&_finderInside.ShopTower)
+            if (_finderOutside.IsPlayer)
+            {
+                SetCheckTarget(_finderOutside.Player);
+            }
+            if (_dataProgress.CanBuySomething && _finderInside.ShopTower)
             {
                 SetTarget(_finderInside.ShopTower);
             }
-            else if (_bag.IsZero || _bag.CheckCount(0.5f) == false)
+        }
+        private void FindFarm()
+        {
+            if (IsTarget) 
+                return;
+            
+            if (_bag.IsZero ||_bag.CheckCount(0.5f) == false)
             {
                 if (_finderOutside.BlockItem == false)
                 {
                     SetTarget(_startPos);
                 }
-                else if(_bag.HasCanAdd && _finderOutside.BlockItem && _bag.CheckCount(0.9f) == false)
+                else if (_bag.HasCanAdd && _finderOutside.BlockItem && _bag.CheckCount(0.9f) == false)
                 {
                     SetCheckTarget(_finderOutside.BlockItem);
                 }
             }
-            else if (_finderOutside.Item)
-            {
-                SetCheckTarget(_finderOutside.Item);
-            }
             else
             {
-                if (_dataTowers.CanBuySomething() &&_finderOutside.NoBuilding)
+                if (_finderOutside.IsTower)
                 {
-                    SetTarget(_finderOutside.NoBuilding);
+                    SetTarget(_finderOutside.Tower);
                 }
-                if(_bag.CheckCount(0.55f))
+                else if (_finderOutside.IsBrick)
                 {
-                    if (_finderOutside.Tower)
-                    {
-                        SetTarget(_finderOutside.Tower);
-                    }
-                    else if(_finderOutside.Brick)
-                    {
-                        SetTarget(_finderOutside.Brick);
-                    }
+                    SetTarget(_finderOutside.Brick);
+                }
+                if (_finderOutside.NoBuilding)
+                {
+                    SetCheckTarget(_finderOutside.NoBuilding);
+                }
+                if (_finderOutside.Item)
+                {
+                    SetCheckTarget(_finderOutside.Item);
                 }
             }
         }
+        
         private void SetTarget(Transform target)
         {
             if (target.gameObject.activeSelf)

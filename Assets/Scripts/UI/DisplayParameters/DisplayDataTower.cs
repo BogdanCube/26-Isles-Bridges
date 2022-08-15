@@ -18,6 +18,7 @@ namespace UI.DisplayParameters
         public List<ShopDataTower> ShopDataTowers => _shopDataTower;
         public void Load(TowerData towerData,BagCharacter bag)
         {
+            Deload();
             foreach (var template in towerData.Templates)
             {
                 var shop = NightPool.Spawn(_prefab, _parent);
@@ -32,6 +33,7 @@ namespace UI.DisplayParameters
             {
                 _parent.GetChild(i).transform.Deactivate();
             }
+            _shopDataTower = new List<ShopDataTower>();
         }
     }
 }

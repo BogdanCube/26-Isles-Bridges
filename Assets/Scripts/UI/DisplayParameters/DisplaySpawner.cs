@@ -10,27 +10,39 @@ namespace UI.DisplayParameters
     {
         [SerializeField] private LoaderSpawnerTower _loaderSpawner;
         [SerializeField] private Image _image;
+        private Tween _tween;
         #region Disable / Enable
 
         private void OnEnable()
         {
             _loaderSpawner.OnSpawn += StartSlider;
+            _loaderSpawner.OnReset += ResetSlider;
         }
 
+       
         private void OnDisable()
         {
             _loaderSpawner.OnSpawn -= StartSlider;
+            _loaderSpawner.OnReset -= ResetSlider;
+
         }
 
+        #endregion
+        
         private void StartSlider(int time)
         {
             _image.fillAmount = 0;
-            _image.DOFillAmount(1, time).SetEase(Ease.InCubic).OnComplete(() =>
+            _tween = _image.DOFillAmount(1, time).SetEase(Ease.InCubic).OnComplete(() =>
             {
                 _loaderSpawner.Shake();
             });
         }
 
-        #endregion
+        private void ResetSlider(Action callback)
+        {
+            _tween.Kill();
+            _image.DOFillAmount(0, 1).OnComplete(callback.Invoke);
+        }
+
     }
 }

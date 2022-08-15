@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
+using Core.Components;
 using Core.Components._ProgressComponents.Health;
 using DG.Tweening;
+using Rhodos.Toolkit.Extensions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,17 +16,21 @@ namespace UI.DisplayParameters
         [SerializeField] private HealthComponent _healthComponent;
         
         [Header("UI")]
+        [SerializeField] private Image _background;
         [SerializeField] private Image _sliderHp;
         [SerializeField] private TextMeshProUGUI _text;
         #region Enable / Disable
         private void OnEnable()
         {
             _healthComponent.OnUpdateHealth += UpdateHealthBar;
+            _healthComponent.OnDeath += Hide;
+            _healthComponent.OnRespawn += Show;
         }
         private void OnDisable()
         { 
             _healthComponent.OnUpdateHealth -= UpdateHealthBar;
-
+            _healthComponent.OnDeath += Hide;
+            _healthComponent.OnRespawn -= Show;
         }
         #endregion
         private void Start()
@@ -33,6 +39,20 @@ namespace UI.DisplayParameters
             {
                 _camera = Camera.main;
             }
+        }
+
+        private void Hide()
+        {
+            _background.DOFade(0, 1);
+            _sliderHp.DOFade(0, 1);
+            _text.DOFade(0, 1);
+        }
+
+        private void Show()
+        {
+            _background.DOFade(1, 1);
+            _sliderHp.DOFade(1, 1);
+            _text.DOFade(1, 1);
         }
         private void LateUpdate()
         {

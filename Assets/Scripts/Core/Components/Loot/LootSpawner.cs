@@ -11,7 +11,6 @@ using UnityEngine.Scripting;
 
 namespace Core.Components.Loot
 {
-    [RequiredInterface(typeof(IHealthComponent))]
     public class LootSpawner : Spawner
     {
         [Expandable][SerializeField] private RandomData _randomData;

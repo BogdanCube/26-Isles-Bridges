@@ -21,18 +21,20 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         public event Action<int> OnUpdateCount;
         public Action OnMax;
         public bool HasCanAdd => _recruits.Count + 1 <= _maxCount;
+        private bool IsRecruits => _recruits.Count > 0;
         public int MaxCount => _maxCount;
 
         #region Enable/Disable
         private void OnEnable()
         {
             _healthComponent.OnDeath += RemoveAll;
+            _healthComponent.OnOver += OverAll;
             _movementController.OnChangePosition += GroupMovement;
         }
-
         private void OnDisable()
         {
             _healthComponent.OnDeath -= RemoveAll;
+            _healthComponent.OnOver -= OverAll;
             _movementController.OnChangePosition -= GroupMovement;
         }
         #endregion
@@ -46,27 +48,40 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         public void Add()
         {
             var recruit = Instantiate(_prefab, transform.position, Quaternion.identity);
-            recruit.Initialization(_owner,this);
+            recruit.Init(_owner,this);
             _recruits.Add(recruit);
-            OnUpdateCount?.Invoke(_recruits.Count);
+            UpdateCount();
         }
 
         public void Remove(MovementRecruit recruit)
         {
             _recruits.Remove(recruit);
-            OnUpdateCount?.Invoke(_recruits.Count);
+            UpdateCount();
         }
         
         [Button]
         private void RemoveAll()
         {
+            if (!IsRecruits) return;
             foreach (var recruit in _recruits)
             {
                 recruit.StopMove();
             }
+            _recruits = new List<MovementRecruit>();
         }
+        private void OverAll()
+        {
+            if (!IsRecruits) return;
+            foreach (var recruit in _recruits)
+            {
+                NightPool.Despawn(recruit);
+            }
+        }
+
         private void GroupMovement(Vector3 center)
         {
+            if (!IsRecruits) return;
+                
             float step = (Mathf.Deg2Rad * 360) / _recruits.Count;
             List<Vector3> result = new List<Vector3>();
             for (int i = 0; i < _recruits.Count; i++)
@@ -79,10 +94,9 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
                 _recruits[i].MoveToTarget(center + result[i] * _radius);
             }
         }
-
-        public override void LevelUp()
+        
+        protected override void UpdateCount()
         {
-            base.LevelUp();
             OnUpdateCount?.Invoke(_recruits.Count);
         }
     }

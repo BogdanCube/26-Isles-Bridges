@@ -17,7 +17,8 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
             {
                 if (_detachmentRecruit.HasCanAdd)
                 {
-                    recruit.MoveToCharacter(transform, _detachmentRecruit.Add);
+                    _detachmentRecruit.Add();
+                    recruit.MoveToCharacter(transform);
                 }
                 else
                 {

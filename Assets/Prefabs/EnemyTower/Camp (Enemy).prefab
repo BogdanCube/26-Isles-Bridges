@@ -144,7 +144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4437491953623452347}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.211, z: -0.869}
+  m_LocalPosition: {x: -0.014, y: 0.211, z: -1.102}
   m_LocalScale: {x: 0.54500985, y: 0.15749905, z: 0.19111998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -162,8 +162,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3.55
-  m_Center: {x: 0, y: 0, z: 4.37}
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 4.95}
 --- !u!114 &6778611347518559182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _componentData: {fileID: 0}
-  _maxCount: 20
+  _maxCount: 999
   _currentCount: 0
 --- !u!1 &6338007941493043642
 GameObject:
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _componentData: {fileID: 0}
   _maxCount: 999
-  _currentCount: 0
+  _currentCount: 1
 --- !u!114 &6778660544289046883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +439,7 @@ MonoBehaviour:
   _tower: {fileID: 6778660544289046882}
   _towerLevel: {fileID: 6778660544289046879}
   _lootSpawner: {fileID: 1305817113900071890}
+  _loaderTower: {fileID: 5841170820925168488}
   _particleHit: {fileID: 1892215590415147084}
 --- !u!1 &6778660544595466864
 GameObject:
@@ -487,7 +488,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _limitSpawn: 4
   _randomData: {fileID: 11400000, guid: 552f71c93d916704aace320abb31defa, type: 2}
-  _currentTimeSpawn: 0
 --- !u!114 &1305817113900071890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d3deb1bfad4ea389ee959fddc4f2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _limitSpawn: 10
+  _limitSpawn: 5
   _randomData: {fileID: 11400000, guid: 442b953639a184734bc585b43e352693, type: 2}
   _iHealthComponent: {fileID: 6778660544289046883}
 --- !u!1 &6778660545082084152
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e666c3aa84d4c70a77c29b908de6f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerLevel: {fileID: 6778660544289046879}
+  _towerLevel: {fileID: 6778660544289046879}
   _text: {fileID: 6778660545747438917}
 --- !u!114 &1863633643735525287
 MonoBehaviour:

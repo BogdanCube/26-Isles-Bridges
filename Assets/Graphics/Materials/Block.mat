@@ -76,7 +76,7 @@ Material:
     - _MinLight: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset: 0.29
+    - _Offset: 0.72
     - _Parallax: 0.02
     - _Segmented: 1
     - _ShnIntense: 0.093

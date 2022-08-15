@@ -13,6 +13,7 @@ namespace Core.Environment.Tower
         [Expandable] [SerializeField] private SettingLevelTower _setting;
         [SerializeField] private SpawnerTower _spawner;
         public event Action<int> OnSpawn;
+        public event Action<Action>  OnReset;
         protected override Transform TowerModel(int index) => _setting.Templates[index].Model;
         public override int MaxLevel => _setting.Templates.Count;
         public override int PriceNextLevel(int level) => _setting.Templates[level].Price;
@@ -21,6 +22,11 @@ namespace Core.Environment.Tower
         {
             base.Load(index);
             _spawner.StartSpawn(_setting.Templates[index].TimeSpawn, _tower,OnSpawn);
+        }
+
+        public override void ResetTower()
+        {
+            _spawner.ResetSpawn(OnReset);
         }
 
         public void Shake()

@@ -28,8 +28,7 @@ namespace Core.Characters.Recruit
             if (_outsideDetector.IsFight)
             {
                 var target = _outsideDetector.CurrentTarget.position;
-                _navMeshAgent.SetDestination(target);
-                transform.DOLookAt(target, 0.5f);
+                MoveTo(target);
             }
         }
 
@@ -37,22 +36,26 @@ namespace Core.Characters.Recruit
         {
             if (_outsideDetector.IsFight == false)
             {
-                _navMeshAgent.SetDestination(target);
-                transform.DOLookAt(target, 0.5f);
+                MoveTo(target);
             }
         }
 
-        public void Initialization(Base.Character owner, DetachmentRecruit detachmentRecruit)
+        private void MoveTo(Vector3 target)
+        {
+            if (_healthComponent.IsDeath) return;
+            _navMeshAgent.SetDestination(target);
+            transform.DOLookAt(target, 0.5f);
+        }
+        public void Init(Base.Character owner, DetachmentRecruit detachmentRecruit)
         {
             _owner = owner;
             _detachmentRecruit = detachmentRecruit;
-            //_healthComponent.OnDeath += Deinitialization;
         }
 
-        private void Deinitialization()
+        private void Deinit()
         {
             _detachmentRecruit.Remove(this);
-            _healthComponent.OnDeath -= Deinitialization;
+            _healthComponent.OnDeath -= Deinit;
         }
 
         public void StopMove()

@@ -12,15 +12,16 @@ namespace Core.Components.Weapon.Bow
     {
         [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private float _force;
-        private Transform _currentTarget;
+        private Transform _target;
         private Action OnHitTarget;
         
         public void Launch(Transform target,Action callback)
         {
-            _currentTarget = target;
+            _target = target;
             OnHitTarget = callback;
+            _rigidbody.velocity = Vector3.zero;
+            transform.LookAt(_target);
             
-            transform.LookAt(_currentTarget);
             _rigidbody.AddForce(transform.forward * _force,ForceMode.Impulse);
             StartCoroutine(Deactive(5, transform.Deactivate));
         }
@@ -33,8 +34,9 @@ namespace Core.Components.Weapon.Bow
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.transform == _currentTarget)
+            if (other.transform == _target)
             {
+                _target = null;
                 OnHitTarget.Invoke();
             }
         }

@@ -46,8 +46,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.61
-  m_Center: {x: 0, y: 0, z: 3.68}
+  m_Radius: 2.13
+  m_Center: {x: 0, y: 0, z: 2.78}
 --- !u!114 &5245989963796921148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _componentData: {fileID: 0}
-  _maxCount: 20
+  _maxCount: 999
   _currentCount: 0
 --- !u!1 &5090490827761476479
 GameObject:
@@ -5008,7 +5008,8 @@ MonoBehaviour:
   _setting: {fileID: 11400000, guid: b334e5ccabbcd4b0cb93859630860c53, type: 2}
   _bow: {fileID: 3373683792569878218}
   _detector: {fileID: 6268438224084968954}
-  _coefficient: 0.4
+  _coefficient: 0.6
+  _resetTime: 4
 --- !u!114 &8608511698507568397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5040,6 +5041,7 @@ MonoBehaviour:
   _tower: {fileID: 8608511698507568434}
   _towerLevel: {fileID: 8608511698507568399}
   _lootSpawner: {fileID: 488014067933062628}
+  _loaderTower: {fileID: 8608511698507568429}
   _particleHit: {fileID: 2678996986509204587}
 --- !u!1 &8608511698812866080
 GameObject:
@@ -5085,7 +5087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d3deb1bfad4ea389ee959fddc4f2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _limitSpawn: 10
+  _limitSpawn: 5
   _randomData: {fileID: 11400000, guid: 442b953639a184734bc585b43e352693, type: 2}
   _iHealthComponent: {fileID: 8608511698507568435}
 --- !u!1 &8608511699333046120
@@ -5266,7 +5268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e666c3aa84d4c70a77c29b908de6f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerLevel: {fileID: 8608511698507568399}
+  _towerLevel: {fileID: 8608511698507568399}
   _text: {fileID: 8608511699728980245}
 --- !u!1 &8608511699728980243
 GameObject:
@@ -5457,6 +5459,10 @@ PrefabInstance:
     - target: {fileID: 3835149317231361853, guid: f2e4a88d7dd694da9ad7719ace2f46ed, type: 3}
       propertyPath: m_Name
       value: Archer (Player)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554454766960401906, guid: f2e4a88d7dd694da9ad7719ace2f46ed, type: 3}
+      propertyPath: _isDebuged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2e4a88d7dd694da9ad7719ace2f46ed, type: 3}

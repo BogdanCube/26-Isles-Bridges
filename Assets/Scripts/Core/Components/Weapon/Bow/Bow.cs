@@ -19,7 +19,6 @@ namespace Core.Components.Weapon.Bow
         public Action OnTakeDamage { get; set; }
         [ShowNativeProperty] private float Speed => _animation.Speed;
         
-        
         public void Load(TemplateDefTower template)
         {
             _damage = template.Damage;
@@ -28,7 +27,7 @@ namespace Core.Components.Weapon.Bow
         public void TakeDamage(Transform target, IHealthComponent health)
         {
             var arrow = NightPool.Spawn(_arrow,_spawnPoint.position);
-            transform.SlowLookY(target.transform, 0.5f);
+            transform.LookAt(target.transform);
             arrow.Launch(target, () =>
             {
                 health.Hit(_damage);

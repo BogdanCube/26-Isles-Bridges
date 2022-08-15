@@ -81,5 +81,15 @@ namespace Rhodos.Toolkit.Extensions
             var rotation = Quaternion.LookRotation(lookPos);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * duration);
         }
+
+        public static float DistanceToTarget(this Transform transform, Transform target)
+        {
+            return Vector3.Distance(transform.position, target.position);
+        }
+        public static float DistanceToTarget(this Transform transform, Component target)
+        {
+            return Vector3.Distance(transform.position, target.transform.position);
+        }
+        
     }
 }

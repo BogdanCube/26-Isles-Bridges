@@ -16,6 +16,8 @@ namespace Core.Environment.Tower.ShopDataTower
         private NoBuilding.NoBuilding _noBuilding;
         private BagCharacter _bag;
         private int _price;
+        private bool _isBuy = false;
+
         public int Price => _price;
         public void Load(Components.DataTowers.TemplateTower templateTower, NoBuilding.NoBuilding noBuilding, BagCharacter bag)
         {
@@ -30,12 +32,13 @@ namespace Core.Environment.Tower.ShopDataTower
             _button.onClick.AddListener(Buy);
         }
 
-        public void Buy()
+        private void Buy()
         {
-            if (_bag.HasCanSpend(_price))
+            if (_bag.HasCanSpend(_price) && _isBuy == false)
             {
                 _bag.Spend(_price);
                 BuyAhead();
+                _isBuy = true;
             }
             else
             {
@@ -48,10 +51,10 @@ namespace Core.Environment.Tower.ShopDataTower
         {
             var tower = NightPool.Spawn(_currentTemplate.Tower, _noBuilding.transform.position);
             tower.Initialization(_bag.Character,_noBuilding,_noBuilding.FreeIsland);
-
             var colorCharacter = _bag.Character.Color;
-            _noBuilding.FreeIsland.SetColor(colorCharacter,1f);
+            
             _noBuilding.gameObject.SetActive(false);
+            _noBuilding.FreeIsland.SetColor(colorCharacter,1f);
         }
     }
 }

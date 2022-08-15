@@ -14,7 +14,6 @@ namespace Core.Components.Wallet
                 coin.MoveToCharacter(transform,() =>
                 {
                     _wallet.Add(coin.RandomCount);
-                    NightPool.Despawn(coin);
                 });
             }
         }

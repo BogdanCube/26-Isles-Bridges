@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e666c3aa84d4c70a77c29b908de6f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerLevel: {fileID: 3983419277790982601}
+  _towerLevel: {fileID: 3983419277790982601}
   _text: {fileID: 3983419277587979473}
 --- !u!114 &7231640692620833075
 MonoBehaviour:
@@ -377,9 +377,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b91705cb20246a6991a3e7bc9868cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _limitSpawn: 20
+  _limitSpawn: 7
   _randomData: {fileID: 11400000, guid: 14387869c4169eb4cabc086812ee48f9, type: 2}
-  _currentTimeSpawn: 0
 --- !u!114 &8828450101602411303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,7 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d3deb1bfad4ea389ee959fddc4f2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _limitSpawn: 10
+  _limitSpawn: 5
   _randomData: {fileID: 11400000, guid: 442b953639a184734bc585b43e352693, type: 2}
   _iHealthComponent: {fileID: 3983419277790982605}
 --- !u!1 &3983419277790982598
@@ -531,7 +530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _componentData: {fileID: 0}
   _maxCount: 999
-  _currentCount: 0
+  _currentCount: 1
 --- !u!114 &3983419277790982605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,6 +547,7 @@ MonoBehaviour:
   _tower: {fileID: 3983419277790982604}
   _towerLevel: {fileID: 3983419277790982601}
   _lootSpawner: {fileID: 8828450101602411303}
+  _loaderTower: {fileID: 6496191654768852573}
   _particleHit: {fileID: 3327105535454645529}
 --- !u!1 &3983419278098372733
 GameObject:
@@ -762,7 +762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6572628720620607820}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.211, z: -0.869}
+  m_LocalPosition: {x: -0.014, y: 0.211, z: -1.102}
   m_LocalScale: {x: 0.54500985, y: 0.15749905, z: 0.19111998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -780,7 +780,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3.74
+  m_Radius: 4
   m_Center: {x: 0, y: 0, z: 6.53}
 --- !u!114 &8531986315755366295
 MonoBehaviour:
@@ -826,7 +826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _componentData: {fileID: 0}
-  _maxCount: 20
+  _maxCount: 999
   _currentCount: 0
 --- !u!1 &7622750181854480355
 GameObject:

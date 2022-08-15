@@ -12,6 +12,7 @@ namespace Core.Environment.Tower.Def_Tower
         [SerializeField] private Bow _bow;
         [SerializeField] private DetectorFighting _detector;
         [SerializeField] private float _coefficient = 0.4f;
+        private float _resetTime = 2;
         private float Radius => _tower.Island.Radius * _coefficient;
         public override int MaxLevel => _setting.Templates.Count;
         public override int PriceNextLevel(int level) => _setting.Templates[level].Price;

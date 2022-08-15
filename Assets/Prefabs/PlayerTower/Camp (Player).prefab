@@ -5040,8 +5040,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.61
-  m_Center: {x: 0, y: 0, z: 3.68}
+  m_Radius: 2.13
+  m_Center: {x: 0, y: 0, z: 2.78}
 --- !u!114 &2847939575906123896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5086,7 +5086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _componentData: {fileID: 0}
-  _maxCount: 20
+  _maxCount: 999
   _currentCount: 0
 --- !u!1 &6196909701779487464
 GameObject:
@@ -5236,7 +5236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e666c3aa84d4c70a77c29b908de6f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerLevel: {fileID: 6196909702914947648}
+  _towerLevel: {fileID: 6196909702914947648}
   _text: {fileID: 6196909701953746522}
 --- !u!114 &2195790596306339143
 MonoBehaviour:
@@ -5572,6 +5572,7 @@ MonoBehaviour:
   _tower: {fileID: 6196909702914947709}
   _towerLevel: {fileID: 6196909702914947648}
   _lootSpawner: {fileID: 2615902509095914155}
+  _loaderTower: {fileID: 2492952221869711740}
   _particleHit: {fileID: 3491824622188644196}
 --- !u!1 &6196909703221813615
 GameObject:
@@ -5618,9 +5619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b91705cb20246a6991a3e7bc9868cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _limitSpawn: 10
+  _limitSpawn: 5
   _randomData: {fileID: 11400000, guid: 552f71c93d916704aace320abb31defa, type: 2}
-  _currentTimeSpawn: 0
 --- !u!114 &2615902509095914155
 MonoBehaviour:
   m_ObjectHideFlags: 0

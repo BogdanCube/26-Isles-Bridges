@@ -1,6 +1,7 @@
 using System;
 using Core.Environment.Tower;
 using NaughtyAttributes;
+using NTC.Global.Pool;
 using UnityEngine;
 
 namespace Core.Components._ProgressComponents.Health
@@ -11,6 +12,8 @@ namespace Core.Components._ProgressComponents.Health
         [SerializeField] private ParticleSystem _particleHit;
         private bool _isOver;
         public event Action<int> OnUpdateHealth;
+        public event Action OnRespawn;
+        public Action OnHit { get; set; }
         public Action OnDeath { get; set; }
         public Action OnOver { get; set; }
         public int CurrentCount => _currentCount;
@@ -19,6 +22,8 @@ namespace Core.Components._ProgressComponents.Health
             get => _currentCount <= 0;
             set => throw new NotImplementedException();
         }
+
+
         public bool IsOver
         {
             get => _isOver;
@@ -26,7 +31,7 @@ namespace Core.Components._ProgressComponents.Health
             {
                 _isOver = value; 
                 OnOver?.Invoke();
-                Death();
+                NightPool.Despawn(transform);
             }
         }
        
@@ -40,14 +45,7 @@ namespace Core.Components._ProgressComponents.Health
             UpdateCount();
         }
         
-      
-        private void UpdateCount()
-        {
-            _currentCount = _maxCount;
-            OnUpdateHealth?.Invoke(_currentCount);
-        }
-
-        public void Heal(int count)
+        public void Heal(int count = 1)
         {
             _currentCount += count;
             if (_currentCount > _maxCount)
@@ -67,18 +65,17 @@ namespace Core.Components._ProgressComponents.Health
             }
             OnUpdateHealth?.Invoke(_currentCount);
         }
+        
         public void Respawn()
         {
+            OnRespawn?.Invoke();
             Heal(_maxCount);
         }
-
-        public override void LevelUp()
+        protected override void UpdateCount()
         {
-            base.LevelUp();
-            UpdateCount();
+            _currentCount = _maxCount;
+            OnUpdateHealth?.Invoke(_currentCount);
         }
-
-        #region Button Methood
         [Button]
         private void HitByOne()
         {
@@ -90,8 +87,5 @@ namespace Core.Components._ProgressComponents.Health
             _currentCount *= 0;
             Hit(1);
         }
-        #endregion
-
-        
     }
 }

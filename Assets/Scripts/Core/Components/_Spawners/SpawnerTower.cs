@@ -11,7 +11,7 @@ namespace Core.Components._Spawners
     public class SpawnerTower : Spawner
     {
         [Expandable][SerializeField] private RandomData _randomData;
-        [SerializeField] private int _currentTimeSpawn;
+        [ShowNonSerializedField] private int _currentTimeSpawn;
         private IEnumerator _coroutine;
         
         public void StartSpawn(int time, Tower tower, Action<int> callback)
@@ -24,6 +24,15 @@ namespace Core.Components._Spawners
             _currentTimeSpawn = time;
             _coroutine = SpawnCoroutine(_randomData,tower.Island,_currentTimeSpawn,callback);
             StartCoroutine(_coroutine);
+        }
+
+        public void ResetSpawn(Action<Action> callback)
+        {
+            StopCoroutine(_coroutine);
+            callback?.Invoke(() =>
+            {
+                StartCoroutine(_coroutine);
+            });
         }
     }
 }

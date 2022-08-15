@@ -1,6 +1,7 @@
 using System;
 using Core.Components.DataTowers;
 using Core.Environment.Island;
+using Rhodos.Toolkit.Extensions;
 using UI.DisplayParameters;
 using UnityEngine;
 
@@ -10,13 +11,13 @@ namespace Core.Environment.Tower.NoBuilding
     {
         [SerializeField] private FreeIsland _freeIsland;
         [SerializeField] private DisplayDataTower _displayData;
-        [HideInInspector] public bool isLoaded;
 
         public FreeIsland FreeIsland => _freeIsland;
         public DisplayDataTower DisplayData => _displayData;
 
-        private void OnEnable()
+        public void Enable()
         {
+            transform.Activate();
             _freeIsland.SetColor(Color.gray, 1);
         }
     }

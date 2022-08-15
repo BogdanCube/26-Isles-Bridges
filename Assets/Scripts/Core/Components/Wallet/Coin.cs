@@ -10,7 +10,6 @@ namespace Core.Components.Wallet
     {
         [MinMaxSlider(0, 50)] [SerializeField]
         private Vector2Int _count;
-        
         public int RandomCount =>  _count.RandomRange();
         public override void SetSpawner(Spawner spawner, Vector3 position)
         {

@@ -15,5 +15,6 @@ namespace Toolkit.Extensions
             NavMesh.SamplePosition(randDirection, out navHit, radius, -1);
             navMeshAgent.SetDestination(navHit.position);
         }
+        
     }
 }

@@ -16,7 +16,7 @@ MonoBehaviour:
   - MaxCount: 10
     Price: 5
   - MaxCount: 15
-    Price: 5
+    Price: 10
   - MaxCount: 20
     Price: 0
   Icon: {fileID: 21300000, guid: 921e8076e0ecfdb479bf6385abb035d6, type: 3}

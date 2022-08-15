@@ -7,7 +7,7 @@ namespace Core.Characters.Player
 {
     public class DetectorEnemy : DetectorFighting
     {
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerStay(Collider other)
         {
             if (other.TryGetComponent(out Enemy.Enemy enemy))
             {

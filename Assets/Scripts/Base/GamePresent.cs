@@ -41,7 +41,6 @@ namespace Base
         {
             var characters = FindObjectsOfType<BehaviourSystem>().ToList();
             characters.ForEach(character => character.SetDanceState());
-            FindObjectOfType<BehaviourSystem>().SetDanceState();
             _loaderLevel.LevelCompleted();
             OnWin.Invoke();
             MMVibrationManager.Haptic (HapticTypes.Success);

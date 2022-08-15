@@ -11,11 +11,12 @@ namespace Core.Environment.Bridge.Brick
     public class Brick : MonoBehaviour
     {
         [SerializeField] private GameObject _brick;
-        private bool _isSet = false;
-        public bool IsSet => _isSet;
+        private Collider _collider;
+        public bool IsSet => !_collider.enabled;
         private void Start()
         {
             _brick.SetActive(false);
+            _collider = GetComponent<Collider>();
         }
 
         public void SetPosition(Vector3 position)
@@ -28,10 +29,8 @@ namespace Core.Environment.Bridge.Brick
         public void SetBrick()
         {
             _brick.SetActive(true);
-            _isSet = true;
+            _collider.enabled = false;
             LoaderLevel.Instance.UpdateBake();
         }
-
-        
     }
 }

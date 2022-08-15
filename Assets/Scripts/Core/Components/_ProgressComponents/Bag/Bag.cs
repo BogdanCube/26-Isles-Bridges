@@ -28,19 +28,19 @@ namespace Core.Components._ProgressComponents.Bag
         public void Add(int count = 1)
         {
             _currentCount += count;
-            OnUpdateBag?.Invoke(_currentCount);
+            UpdateCount();
         }
 
         [Button]
-        public void Spend(int count = 1)
+        public virtual void Spend(int count = 1)
         {
             _currentCount -= count;
-            OnUpdateBag?.Invoke(_currentCount);
+            UpdateCount();
         }
         public void Reset()
         {
             _currentCount = 0;
-            OnUpdateBag?.Invoke(_currentCount);
+            UpdateCount();
         }
 
         public IEnumerator MovedCount(Bag bag, float pumpingSpeed)
@@ -51,6 +51,10 @@ namespace Core.Components._ProgressComponents.Bag
                 bag.Spend();
                 yield return new WaitForSeconds(pumpingSpeed);
             }
+        }
+        protected override void UpdateCount()
+        {
+            OnUpdateBag?.Invoke(_currentCount);
         }
     }
 }

@@ -40,7 +40,7 @@ namespace Core.Components._Spawners
             {
                 _currentCount++;
                 var itemSpawn = NightPool.Spawn(currentTemplate.ItemSpawn, transform);
-                var randomVector = new Vector3(GetRandomPos(island), 0, GetRandomPos(island));
+                var randomVector = new Vector3(RandomMinus * GetRandomPos(island), 0, RandomMinus * GetRandomPos(island));
                 itemSpawn.SetSpawner(this,randomVector);
             }
         }

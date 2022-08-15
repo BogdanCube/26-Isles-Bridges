@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rotationY: {x: 0, y: 360}
   _trailRenderer: {fileID: 984533779844660730}
-  _count: {x: 2, y: 4}
+  _count: {x: 0, y: 4}
 --- !u!1001 &7312865205936243969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,7 +87,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80d2046d8932f084c8d5c98a302e24ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0079765
+      value: 0.014
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80d2046d8932f084c8d5c98a302e24ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -95,7 +95,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80d2046d8932f084c8d5c98a302e24ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.040711
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80d2046d8932f084c8d5c98a302e24ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -214,7 +214,7 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
