@@ -12,17 +12,17 @@ namespace Core.Components._ProgressComponents.Health
         [SerializeField] private ParticleSystem _particleHit;
         private bool _isOver;
         public event Action<int> OnUpdateHealth;
+        public event Action<Transform> OnHit;
+        public event Action OnDeath;
         public event Action OnRespawn;
-        public Action OnHit { get; set; }
-        public Action OnDeath { get; set; }
-        public Action OnOver { get; set; }
+        public event Action OnOver;
         public int CurrentCount => _currentCount;
         public bool IsDeath
         {
             get => _currentCount <= 0;
             set => throw new NotImplementedException();
         }
-
+       
 
         public bool IsOver
         {

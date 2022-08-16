@@ -44,7 +44,7 @@ namespace Core.Characters.Recruit
         {
             if (_healthComponent.IsDeath) return;
             _navMeshAgent.SetDestination(target);
-            transform.DOLookAt(target, 0.5f);
+            _model.DOLookAt(target,1);
         }
         public void Init(Base.Character owner, DetachmentRecruit detachmentRecruit)
         {

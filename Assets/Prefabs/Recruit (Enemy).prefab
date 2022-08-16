@@ -2889,6 +2889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 6.5
   _navMeshAgent: {fileID: 6244592346247998025}
+  _model: {fileID: 4612993944447218920}
   _healthComponent: {fileID: 6244592346247998390}
   _outsideDetector: {fileID: 8152086256201319533}
 --- !u!114 &6244592346247998391
@@ -3597,6 +3598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d3deb1bfad4ea389ee959fddc4f2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _limitMaxSpawn: 0
   _limitSpawn: 10
   _randomData: {fileID: 11400000, guid: 14387869c4169eb4cabc086812ee48f9, type: 2}
   _iHealthComponent: {fileID: 6244592346247998390}

@@ -32,29 +32,25 @@ namespace Core.Characters.Enemy
         [SerializeField] private DataProgressComponent _dataProgress;
         [SerializeField] private FinderInside _finderInside;
         [SerializeField] private FinderOutside _finderOutside;
+        [SerializeField] private FinderPlayer _finderPlayer;
         [SerializeField] private HealthTower _healthTower;
         private NavMeshPath _navMeshPath;
-        private bool IsTarget => _finderOutside.IsTarget || _dataProgress.CanBuySomething;
-        public override bool IsMove => transform.position != _startPos.position;
+        private bool _isAhead;
+        private bool IsTarget => _finderOutside.IsTarget || _dataProgress.CanBuySomething || _finderPlayer.IsPlayer;
+        public override bool IsMove => true;
 
         #region Enable / Disable
+
         private void OnEnable()
         {
-            _healthTower.OnHit += TeleportToSpawn;
+            _healthTower.OnHit += AheadMove;
         }
 
         private void OnDisable()
         {
-            _healthTower.OnHit -= TeleportToSpawn;
+            _healthTower.OnHit -= AheadMove;
         }
-
-        private void TeleportToSpawn()
-        {
-            if (transform.DistanceToTarget(_healthTower) > _finderOutside.Radius)
-            {
-                SetStartPos(_startPos.position);
-            }
-        }
+        
 
         #endregion
         private void Start()
@@ -66,10 +62,16 @@ namespace Core.Characters.Enemy
         public override void Move()
         {
             base.Move();
-
-            if (_currentTarget && _currentTarget.gameObject.activeSelf && Vector3.Distance(transform.position,_currentTarget.position) < 1)
+            if (_isAhead &&_currentTarget  && transform.DistanceToTarget(_currentTarget) < _finderOutside.Radius)
             {
-                transform.SlowLookY(_currentTarget,_durationLooking);
+                _isAhead = false;
+                SpeedDeboost();
+            }
+            if(_currentTarget)
+            _model.SlowLookY(_currentTarget,1);
+
+            if (_currentTarget && _currentTarget.gameObject.activeSelf && Vector3.Distance(transform.position, _currentTarget.position) < 1)
+            {
             }
             else
             {
@@ -79,6 +81,8 @@ namespace Core.Characters.Enemy
         }
         private void LateUpdate()
         {
+            if (_isAhead) return;
+            
             if (IsTarget)
             {
                 FindTarget();
@@ -88,16 +92,21 @@ namespace Core.Characters.Enemy
                 FindFarm();
             }
         }
-
+        public void AheadMove(Transform target)
+        {
+            SetTarget(target);
+            _isAhead = true;
+            SpeedBoost();
+        }
         private void FindTarget()
         {
             if (_finderOutside.PlayerTower)
             {
                 SetTarget(_finderOutside.PlayerTower);
             }
-            if (_finderOutside.IsPlayer)
+            if (_finderPlayer.IsPlayer)
             {
-                SetCheckTarget(_finderOutside.Player);
+                SetCheckTarget(_finderPlayer.Player);
             }
             if (_dataProgress.CanBuySomething && _finderInside.ShopTower)
             {
@@ -106,15 +115,14 @@ namespace Core.Characters.Enemy
         }
         private void FindFarm()
         {
-            if (IsTarget) 
-                return;
+            if (IsTarget) return;
             
             if (_bag.IsZero ||_bag.CheckCount(0.5f) == false)
             {
                 if (_finderOutside.BlockItem == false)
                 {
                     SetTarget(_startPos);
-                }
+                } 
                 else if (_bag.HasCanAdd && _finderOutside.BlockItem && _bag.CheckCount(0.9f) == false)
                 {
                     SetCheckTarget(_finderOutside.BlockItem);
@@ -122,13 +130,13 @@ namespace Core.Characters.Enemy
             }
             else
             {
-                if (_finderOutside.IsTower)
-                {
-                    SetTarget(_finderOutside.Tower);
-                }
-                else if (_finderOutside.IsBrick)
+                if (_finderOutside.IsBrick && _bag.CheckCount(0.5f) && _bag.CheckCount(0.9f) == false)
                 {
                     SetTarget(_finderOutside.Brick);
+                }
+                if (_finderOutside.IsTower && _bag.CheckCount(0.9f))
+                {
+                    SetTarget(_finderOutside.Tower);
                 }
                 if (_finderOutside.NoBuilding)
                 {
@@ -136,14 +144,16 @@ namespace Core.Characters.Enemy
                 }
                 if (_finderOutside.Item)
                 {
-                    SetCheckTarget(_finderOutside.Item);
+                    SetTarget(_finderOutside.Item);
                 }
             }
+
+
         }
         
         private void SetTarget(Transform target)
         {
-            if (target.gameObject.activeSelf)
+            if (target.gameObject.activeSelf && transform.DistanceToTarget(_startPos) > 1)
             {
                 _currentTarget = target;
                 _navMeshAgent.SetDestination(_currentTarget.position);

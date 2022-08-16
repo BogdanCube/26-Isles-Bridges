@@ -15,7 +15,7 @@ namespace Core.Components._ProgressComponents.Bag
         private IEnumerator _coroutineSpend;
         private Characters.Base.Character _owner;
         
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerStay(Collider other)
         {
             if (other.TryGetComponent(out BagCharacter bag))
             {
@@ -32,7 +32,7 @@ namespace Core.Components._ProgressComponents.Bag
         }
         private void OnTriggerExit(Collider other)
         {
-            if (other.TryGetComponent(out BagCharacter bag))
+            if (other.TryGetComponent(out BagCharacter bag) && _tower.Owner == bag.Character)
             {
                 if (_coroutineAdd != null)
                 {

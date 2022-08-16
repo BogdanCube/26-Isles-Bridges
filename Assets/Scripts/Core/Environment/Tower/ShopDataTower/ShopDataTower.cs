@@ -1,3 +1,4 @@
+using System;
 using Core.Components._ProgressComponents.Bag;
 using DG.Tweening;
 using NTC.Global.Pool;
@@ -47,10 +48,11 @@ namespace Core.Environment.Tower.ShopDataTower
             }
         }
 
-        public void BuyAhead()
+        public void BuyAhead(Action<Transform> callback = null)
         {
             var tower = NightPool.Spawn(_currentTemplate.Tower, _noBuilding.transform.position);
             tower.Initialization(_bag.Character,_noBuilding,_noBuilding.FreeIsland);
+            tower.HealthComponent.OnHit += callback;
             var colorCharacter = _bag.Character.Color;
             
             _noBuilding.gameObject.SetActive(false);

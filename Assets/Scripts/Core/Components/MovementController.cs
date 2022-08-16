@@ -9,6 +9,7 @@ namespace Core.Character.Behavior
     {
         [SerializeField] private protected float _speed;
         [SerializeField] private protected NavMeshAgent _navMeshAgent;
+        [SerializeField] private protected Transform _model;
         private Vector3 _lastPose;
         public event Action<Vector3> OnChangePosition;
 
@@ -40,10 +41,22 @@ namespace Core.Character.Behavior
             _lastPose = transform.position;
         }
 
-        public void SetStartPos(Vector3 position)
+        public void SetStartPos(Vector3 target)
         {
             IsStopped = false;
-            _navMeshAgent.Warp(position);
+            _navMeshAgent.Warp(target);
+        }
+
+        public void SpeedBoost()
+        {
+            _speed *= 1.5f;
+            _navMeshAgent.speed = _speed;
+        }
+
+        public void SpeedDeboost()
+        {
+            _speed /= 1.5f;
+            _navMeshAgent.speed = _speed;
         }
     }
 }

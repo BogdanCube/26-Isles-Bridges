@@ -377,6 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b91705cb20246a6991a3e7bc9868cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _limitMaxSpawn: 25
   _limitSpawn: 7
   _randomData: {fileID: 11400000, guid: 14387869c4169eb4cabc086812ee48f9, type: 2}
 --- !u!114 &8828450101602411303
@@ -391,6 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d3deb1bfad4ea389ee959fddc4f2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _limitMaxSpawn: 0
   _limitSpawn: 5
   _randomData: {fileID: 11400000, guid: 442b953639a184734bc585b43e352693, type: 2}
   _iHealthComponent: {fileID: 3983419277790982605}
@@ -481,7 +483,8 @@ MonoBehaviour:
   _owner: {fileID: 0}
   _island: {fileID: 0}
   _healthTower: {fileID: 3983419277790982605}
-  _towerLevel: {fileID: 3983419277790982601}
+  _level: {fileID: 3983419277790982601}
+  _detectorBag: {fileID: 8531986315755366295}
 --- !u!114 &3983419277790982601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,7 +746,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5757829360628076546}
-  - component: {fileID: 8899712226473706075}
+  - component: {fileID: 7619119958989989642}
   - component: {fileID: 8531986315755366295}
   - component: {fileID: 7059371777303876357}
   - component: {fileID: 8688354434625701833}
@@ -769,8 +772,8 @@ Transform:
   m_Father: {fileID: 3983419277790982602}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &8899712226473706075
-SphereCollider:
+--- !u!65 &7619119958989989642
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -780,8 +783,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 6.53}
+  m_Size: {x: 2.47, y: 3.48, z: 4.68}
+  m_Center: {x: 0, y: 1.2, z: -0.49}
 --- !u!114 &8531986315755366295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,7 +797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1006811523449e0af8aa6982774d650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pumpingSpeed: 0.1
+  _pumpingSpeed: 0.05
   _tower: {fileID: 3983419277790982604}
   _towerLevel: {fileID: 3983419277790982601}
   _tempBag: {fileID: 8688354434625701833}

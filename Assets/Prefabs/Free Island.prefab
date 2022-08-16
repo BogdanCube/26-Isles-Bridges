@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3810dc15827e45ecb614c84921341406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _limitMaxSpawn: 0
   _limitSpawn: 0
-  _island: {fileID: 6129774378122216816}
-  _randomData: {fileID: 11400000, guid: 1fc45d7a79f7d4513854c91f9140dd8c, type: 2}
   _freeIsland: {fileID: 6129774378122216816}
+  _randomData: {fileID: 11400000, guid: 1fc45d7a79f7d4513854c91f9140dd8c, type: 2}
 --- !u!1 &6129774378122216826
 GameObject:
   m_ObjectHideFlags: 0

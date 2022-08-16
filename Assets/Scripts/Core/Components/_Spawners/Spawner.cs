@@ -14,14 +14,16 @@ namespace Core.Components._Spawners
 {
     public class Spawner : MonoBehaviour
     {
+        [SerializeField] private int _limitMaxSpawn;
         [SerializeField] private int _limitSpawn;
+        [ShowNonSerializedField] private int _currentMaxCount;
         [ShowNonSerializedField] private int _currentCount;
-        private float _coeffientToIsland = 3f;
+        private float _coefficientToIsland = 3f;
         private float RandomMinus => Random.Range(-1f, 1f) > 0 ? 1 : - 1;
         
         protected IEnumerator SpawnCoroutine(RandomData randomData, Island island, int timeSpawn, Action<int> callback)
         {
-            while (true)
+            while (_currentMaxCount < _limitMaxSpawn && _limitMaxSpawn != 0)
             {
                 if (_currentCount < _limitSpawn)
                 {
@@ -39,6 +41,7 @@ namespace Core.Components._Spawners
             for (int i = 0; i < count; i++)
             {
                 _currentCount++;
+                _currentMaxCount++;
                 var itemSpawn = NightPool.Spawn(currentTemplate.ItemSpawn, transform);
                 var randomVector = new Vector3(RandomMinus * GetRandomPos(island), 0, RandomMinus * GetRandomPos(island));
                 itemSpawn.SetSpawner(this,randomVector);
@@ -53,6 +56,7 @@ namespace Core.Components._Spawners
             for (int i = 0; i < count; i++)
             {
                 _currentCount++;
+                _currentMaxCount++;
                 var itemSpawn = NightPool.Spawn(currentTemplate.ItemSpawn, transform);
                 var randomVector = new Vector3(RandomMinus * radius.RandomRange(), 0, RandomMinus * radius.RandomRange());
                 itemSpawn.SetSpawner(this,randomVector);
@@ -62,11 +66,18 @@ namespace Core.Components._Spawners
         private float GetRandomPos(Island island)
         {
             var spawnRadius = new Vector2(island.Radius * 0.3f,island.Radius);
-            return (RandomMinus * spawnRadius.RandomRange()) / _coeffientToIsland;
+            return (RandomMinus * spawnRadius.RandomRange()) / _coefficientToIsland;
         }
         public void Spend()
         {
-            _currentCount--;
+            if (_currentCount > 0)
+            {
+                _currentCount--;
+            }
+            else
+            {
+                _currentCount = 0;
+            }
         }
     }
 }

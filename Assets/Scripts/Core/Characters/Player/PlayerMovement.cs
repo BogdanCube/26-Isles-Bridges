@@ -27,7 +27,7 @@ namespace Core.Player
             }
             
             var direct = Vector3.RotateTowards(transform.forward, moveVector, _speed, 0.0f);
-            transform.rotation = Quaternion.LookRotation(direct);
+            _model.rotation = Quaternion.LookRotation(direct);
         }
         private Vector3 GetMoveVector()
         {

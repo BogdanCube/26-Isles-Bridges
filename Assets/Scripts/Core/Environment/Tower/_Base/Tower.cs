@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using Base.Level;
+using Core.Components._ProgressComponents.Bag;
 using Core.Components._ProgressComponents.Health;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Core.Environment.Tower
 {
@@ -12,14 +14,15 @@ namespace Core.Environment.Tower
         [SerializeField] private Characters.Base.Character _owner;
         [SerializeField] private Island.Island _island;
         [SerializeField] private HealthTower _healthTower;
-        [SerializeField] private TowerLevel _towerLevel;
+        [SerializeField] private TowerLevel _level;
+        [SerializeField] private DetectorBag _detectorBag;
         
         private NoBuilding.NoBuilding _noBuilding;
         public Characters.Base.Character Owner => _owner;
         public IHealthComponent HealthComponent => _healthTower;
         public Island.Island Island => _island;
-        public TowerLevel TowerLevel => _towerLevel;
-        
+        public TowerLevel Level => _level;
+        public DetectorBag DetectorBag => _detectorBag;
         public void Initialization(Characters.Base.Character owner, NoBuilding.NoBuilding noBuilding, Island.Island island)
         {
             transform.localScale = Vector3.zero;
@@ -31,7 +34,7 @@ namespace Core.Environment.Tower
             transform.DOScale(1, 1f).OnComplete(() =>
             {
                 LoaderLevel.Instance.UpdateBake();
-                TowerLevel.LoadTower();
+                _level.LoadTower();
             });
         }
 

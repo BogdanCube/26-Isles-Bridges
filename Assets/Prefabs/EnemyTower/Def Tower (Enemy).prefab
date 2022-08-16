@@ -4767,7 +4767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4620827751255155231}
-  - component: {fileID: 1096656426432031873}
+  - component: {fileID: 6555459156565419344}
   - component: {fileID: 7030163259935730251}
   - component: {fileID: 168569849977159885}
   - component: {fileID: 5407640416242175382}
@@ -4786,15 +4786,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7276782162771200657}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.211, z: -1.102}
+  m_LocalPosition: {x: -0.014, y: 0.27, z: -1.102}
   m_LocalScale: {x: 0.54500985, y: 0.15749905, z: 0.19111998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8148075054047744003}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1096656426432031873
-SphereCollider:
+--- !u!65 &6555459156565419344
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4804,8 +4804,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 3.68}
+  m_Size: {x: 2.47, y: 3.48, z: 4.68}
+  m_Center: {x: 0, y: 1.2, z: -0.49}
 --- !u!114 &7030163259935730251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4818,7 +4818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1006811523449e0af8aa6982774d650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pumpingSpeed: 0.1
+  _pumpingSpeed: 0.05
   _tower: {fileID: 8519713285479395139}
   _towerLevel: {fileID: 8519713285479395198}
   _tempBag: {fileID: 5407640416242175382}
@@ -4972,7 +4972,8 @@ MonoBehaviour:
   _owner: {fileID: 0}
   _island: {fileID: 0}
   _healthTower: {fileID: 8519713285479395138}
-  _towerLevel: {fileID: 8519713285479395198}
+  _level: {fileID: 8519713285479395198}
+  _detectorBag: {fileID: 7030163259935730251}
 --- !u!114 &8519713285479395198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5009,7 +5010,6 @@ MonoBehaviour:
   _bow: {fileID: 3430109416578661563}
   _detector: {fileID: 6659559863451654347}
   _coefficient: 0.6
-  _resetTime: 4
 --- !u!114 &8519713285479395196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5087,6 +5087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d3deb1bfad4ea389ee959fddc4f2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _limitMaxSpawn: 0
   _limitSpawn: 5
   _randomData: {fileID: 11400000, guid: 442b953639a184734bc585b43e352693, type: 2}
   _iHealthComponent: {fileID: 8519713285479395138}

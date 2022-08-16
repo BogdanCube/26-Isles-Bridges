@@ -3,10 +3,8 @@ using DG.Tweening;
 using JetBrains.Annotations;
 using NaughtyAttributes;
 using NTC.Global.Pool;
-using Rhodos.Toolkit.Extensions;
 using Toolkit.Extensions;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Core.Components._Spawners
 {
@@ -36,9 +34,9 @@ namespace Core.Components._Spawners
         private void SetPosition(Vector3 position)
         {
             transform.localPosition = position;
-
         }
-        public void SpendCount()
+
+        protected void SpendCount()
         {
             _spawner.Spend();
             NightPool.Despawn(this);

@@ -17,8 +17,8 @@ namespace Base
 
         private void OnDisable()
         {
-            _loaderLevel.CurrentLevel.DeathPlayerTower -= Lose;
-            _loaderLevel.CurrentLevel.DeathEnemyTower -= Win;
+            _loaderLevel.HealthPlayer.OnOver -= Lose;
+            _loaderLevel.HealthEnemy.OnOver -= Win;
         }
         
         private void Start()
@@ -30,8 +30,8 @@ namespace Base
         {
             OnStartGame.Invoke();
             _loaderLevel.Load();
-            _loaderLevel.CurrentLevel.DeathPlayerTower += Lose;
-            _loaderLevel.CurrentLevel.DeathEnemyTower += Win;
+            _loaderLevel.HealthPlayer.OnOver += Lose;
+            _loaderLevel.HealthEnemy.OnOver += Win;
         }
         // Pause
         private void Restart()

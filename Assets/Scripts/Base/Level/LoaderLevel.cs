@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Cinemachine;
 using Core.Character.Player;
+using Core.Characters.Enemy;
 using Core.Characters.Player;
+using Core.Components._ProgressComponents.Health;
 using MoreMountains.NiceVibrations;
 using NaughtyAttributes;
 using Rhodos.Toolkit.Extensions;
@@ -22,8 +24,11 @@ namespace Base.Level
         [SerializeField] private TextMeshProUGUI _text;
         [SerializeField] private CinemachineVirtualCamera _virtualCamera;
         public static LoaderLevel Instance;
+        private Enemy CurrentEnemy=> _levels[_numberLevel].Enemy;
         public Level CurrentLevel => _levels[_numberLevel];
         public Player CurrentPlayer => _levels[_numberLevel].Player;
+        public HealthComponent HealthPlayer => (HealthComponent)CurrentPlayer.HealthComponent;
+        public HealthComponent HealthEnemy => (HealthComponent)CurrentEnemy.HealthComponent;
         #region Singleton
         private void Awake()
         {

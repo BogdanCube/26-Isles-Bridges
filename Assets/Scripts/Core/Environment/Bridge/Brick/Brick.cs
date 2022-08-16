@@ -30,6 +30,7 @@ namespace Core.Environment.Bridge.Brick
         {
             _brick.SetActive(true);
             _collider.enabled = false;
+            GetComponent<Brick>().enabled = false;
             LoaderLevel.Instance.UpdateBake();
         }
     }

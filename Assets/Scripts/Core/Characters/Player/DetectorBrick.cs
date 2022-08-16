@@ -14,11 +14,8 @@ namespace Core.Characters.Player
         {
             if(_bag.HasCanSpend() && other.TryGetComponent(out Brick brick))
             {
-                if (brick.IsSet == false)
-                {
-                    _bag.Spend();
-                    brick.SetBrick();
-                }
+                _bag.Spend();
+                brick.SetBrick();
             }
         }
     }

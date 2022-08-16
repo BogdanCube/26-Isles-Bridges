@@ -1,12 +1,14 @@
 using System;
+using UnityEngine;
 
 namespace Core.Components._ProgressComponents.Health
 {
     public interface IHealthComponent
     {
         bool IsDeath { get; }
-        Action OnDeath { get; set; }
-        Action OnOver { get; set; }
+        event Action<Transform> OnHit;
+        event Action OnDeath;
+        event Action OnOver;
         void Hit(int damage);
     }
 }

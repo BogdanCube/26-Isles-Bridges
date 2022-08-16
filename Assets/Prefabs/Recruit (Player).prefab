@@ -7309,6 +7309,7 @@ MonoBehaviour:
   _bag: {fileID: 0}
   _wallet: {fileID: 0}
   _detachment: {fileID: 0}
+  _data: {fileID: 0}
 --- !u!114 &8368246196949314363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7337,6 +7338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 6.5
   _navMeshAgent: {fileID: 8368246196949314247}
+  _model: {fileID: 8368246196953058547}
   _healthComponent: {fileID: 8368246196949314360}
   _outsideDetector: {fileID: 7405272410557801930}
 --- !u!114 &8368246196949314361
@@ -8607,6 +8609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d3deb1bfad4ea389ee959fddc4f2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _limitMaxSpawn: 0
   _limitSpawn: 10
   _randomData: {fileID: 11400000, guid: 14387869c4169eb4cabc086812ee48f9, type: 2}
   _iHealthComponent: {fileID: 8368246196949314360}
