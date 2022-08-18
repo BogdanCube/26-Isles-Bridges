@@ -39,7 +39,7 @@ namespace Core.Characters.Recruit
                 MoveTo(target);
             }
         }
-
+        
         private void MoveTo(Vector3 target)
         {
             if (_healthComponent.IsDeath) return;

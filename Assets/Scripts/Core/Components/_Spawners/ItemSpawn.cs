@@ -36,7 +36,7 @@ namespace Core.Components._Spawners
             transform.localPosition = position;
         }
 
-        protected void SpendCount()
+        public void SpendCount()
         {
             _spawner.Spend();
             NightPool.Despawn(this);

@@ -1,5 +1,6 @@
 using System;
 using Base.Level;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -27,9 +28,13 @@ namespace Core.Character.Behavior
                 }
             }
         }
+
+       
         private void Awake()
         {
             _lastPose = transform.position;
+            _navMeshAgent.speed = _speed;
+
         }
         public virtual void Move()
         {

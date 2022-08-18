@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3810dc15827e45ecb614c84921341406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _limitMaxSpawn: 0
   _limitSpawn: 0
   _freeIsland: {fileID: 1279414126905228110}
   _randomData: {fileID: 11400000, guid: 1fc45d7a79f7d4513854c91f9140dd8c, type: 2}
@@ -59,7 +60,7 @@ GameObject:
   - component: {fileID: 1279414126905228108}
   - component: {fileID: 1279414126905228109}
   - component: {fileID: 1279414126905228110}
-  - component: {fileID: 1279414126905228111}
+  - component: {fileID: 8126345104642861447}
   m_Layer: 7
   m_Name: Free Island (No Building)
   m_TagString: Untagged
@@ -135,7 +136,7 @@ MonoBehaviour:
   _meshRenderer: {fileID: 1279414128331238361}
   _duration: 1
   _isDelight: 0
---- !u!114 &1279414126905228111
+--- !u!114 &8126345104642861447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +145,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1279414126905228080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 907eae159c824a4280b47c206c2b3159, type: 3}
+  m_Script: {fileID: 11500000, guid: 23a21402844f4310914bfcf22b131b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1279414127611874233

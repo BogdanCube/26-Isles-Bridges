@@ -35,7 +35,7 @@ namespace Core.Environment.Tower
         {
             _towerLevel.Hit(damage);
             _loaderTower.ResetTower();
-            OnHit?.Invoke(transform);
+            OnHit?.Invoke(_tower.Island.transform);
             _particleHit.gameObject.SetActive(true);
             if (IsDeath)
             {

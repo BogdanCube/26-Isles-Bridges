@@ -44,8 +44,6 @@ namespace Core.Characters.Enemy.Finder
                     }
                 }
             }
-           
-            
             
             if (other.TryGetComponent(out ItemSpawn item))
             {
@@ -58,6 +56,11 @@ namespace Core.Characters.Enemy.Finder
                     BlockItem = item.transform;
                 }
             }
+            
+        }
+        
+        private void OnTriggerEnter(Collider other)
+        {
             if (other.TryGetComponent(out Brick brick))
             {
                 if (brick.IsSet == false)
@@ -65,11 +68,6 @@ namespace Core.Characters.Enemy.Finder
                     _brick = brick;
                 }
             }
-        }
-        
-        private void OnTriggerEnter(Collider other)
-        {
-            
             if (other.TryGetComponent(out Tower tower))
             {
                 if (tower.Owner.GetType() == typeof(Enemy) && tower.HealthComponent.IsDeath == false)

@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 6129774378122216823}
   - component: {fileID: 6129774378122216822}
   - component: {fileID: 6129774378122216816}
-  - component: {fileID: 6129774378122216820}
+  - component: {fileID: 9211598123511096679}
   m_Layer: 7
   m_Name: Free Island
   m_TagString: Untagged
@@ -136,7 +136,7 @@ MonoBehaviour:
   _meshRenderer: {fileID: 6129774378298003594}
   _duration: 1
   _isDelight: 0
---- !u!114 &6129774378122216820
+--- !u!114 &9211598123511096679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6129774378122216826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 907eae159c824a4280b47c206c2b3159, type: 3}
+  m_Script: {fileID: 11500000, guid: 23a21402844f4310914bfcf22b131b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6129774378227845543

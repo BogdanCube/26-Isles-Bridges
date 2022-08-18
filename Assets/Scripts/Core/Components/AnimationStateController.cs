@@ -44,7 +44,6 @@ namespace Core.Components
         {
             _speed = speed;
             _animator.speed = _speed;
-
         }
 
         public void Death()

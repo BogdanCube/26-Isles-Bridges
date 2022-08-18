@@ -32,21 +32,29 @@ namespace Core.Environment.Tower
             _loaderTower.Load(_level);
         }
         
-        public IEnumerator ReplenishmentBrick(Bag bag)
+        public IEnumerator ReplenishmentBrick(Bag bag,Action callback = null)
         {
-            while (bag.HasCanSpend())
+            while (true)
             {
-                yield return new WaitForSeconds(_pumpingSpeed);
-                bag.Spend();
-                _shopBag.Add();
-                if (IsMaxLevel == false)
+                if (bag.HasCanSpend())
                 {
-                    if (_shopBag.CurrentCount >= _loaderTower.PriceNextLevel(_level))
+                    yield return new WaitForSeconds(_pumpingSpeed);
+                    bag.Spend();
+                    _shopBag.Add();
+                    if (IsMaxLevel == false)
                     {
-                        LevelUp();
+                        if (_shopBag.CurrentCount >= _loaderTower.PriceNextLevel(_level))
+                        {
+                            LevelUp();
+                        }
                     }
+                    UpdateDisplay();
                 }
-                UpdateDisplay();
+                else
+                {
+                    callback?.Invoke();
+                    break;
+                }
             }
         }
         [Button]

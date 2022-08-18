@@ -11,11 +11,23 @@ namespace Core.Components._ProgressComponents.Bag
         [SerializeField] private int _currentCount;
         public event Action<int> OnUpdateBag;
         public bool HasCanSpend(int count = 1) => _currentCount >= count;
-        public bool HasCanAdd => _currentCount + 1 <= _maxCount;
+        public bool HasCanAdd => _currentCount + 1 <= _maxCount && IsBlockAdd;
         public int CurrentCount => _currentCount;
         public bool CheckCount(float percentage) => _currentCount > percentage * _maxCount;
         public bool IsZero => _currentCount == 0;
         public int MaxCount => _maxCount;
+        private bool _isBlockAdd = true;
+        public bool IsBlockAdd
+        {
+            get => _isBlockAdd;
+            set
+            {
+                if (value != _isBlockAdd)
+                {
+                    _isBlockAdd = value;
+                }
+            }
+        }
         private void Start()
         {
             if (IsProgress)
@@ -43,14 +55,23 @@ namespace Core.Components._ProgressComponents.Bag
             UpdateCount();
         }
 
-        public IEnumerator MovedCount(Bag bag, float pumpingSpeed)
+        public IEnumerator MovedCount(Bag bag, float pumpingSpeed,Action callback = null)
         {
-            while (bag.HasCanSpend() && HasCanAdd)
+            while (true)
             {
-                Add();
-                bag.Spend();
+                if (bag.HasCanSpend() && HasCanAdd)
+                {
+                    Add();
+                    bag.Spend();
+                }
+                else
+                {
+                    callback?.Invoke();
+                    break;
+                }
                 yield return new WaitForSeconds(pumpingSpeed);
             }
+
         }
         protected override void UpdateCount()
         {
