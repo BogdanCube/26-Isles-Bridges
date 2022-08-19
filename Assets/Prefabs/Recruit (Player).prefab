@@ -7399,7 +7399,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentData: {fileID: 11400000, guid: 6b6d5348cf3cc4cd3bc70eb05b5371f5, type: 2}
-  _healthComponent: {fileID: 8368246196949314360}
   _meshFilter: {fileID: 8368246195970667640}
 --- !u!1 &8368246196953058546
 GameObject:

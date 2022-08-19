@@ -29,9 +29,9 @@ namespace Core.Environment.Bridge.Brick
         public void SetBrick()
         {
             _brick.SetActive(true);
+            LoaderLevel.Instance.UpdateBake();
             _collider.enabled = false;
             GetComponent<Brick>().enabled = false;
-            LoaderLevel.Instance.UpdateBake();
         }
     }
 }

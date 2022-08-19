@@ -14,7 +14,7 @@ namespace Base
         #region Enable / Disable
         private void OnEnable()
         {
-            _player = _loaderLevel.CurrentPlayer.GetComponent<Player>();
+            _player = _loaderLevel.CurrentPlayer;
             _player.Bag.OnUpdateBag += UpdateBag;
             _player.Weapon.OnTakeDamage += TakeDamage;
         }

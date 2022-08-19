@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using Core.Character.Behavior;
+using Core.Components;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -13,12 +14,9 @@ namespace Core.Player
         
         public override void Move()
         {
-            if (_navMeshAgent.isStopped == false)
-            {            
-                base.Move();
-                Rotation(GetMoveVector());
-                _navMeshAgent.Move(GetMoveVector() * _speed * Time.deltaTime);
-            }
+            base.Move();
+            Rotation(GetMoveVector());
+            _navMeshAgent.Move(GetMoveVector() * _speed * Time.deltaTime);
         }
         private void Rotation(Vector3 moveVector)
         {

@@ -26,7 +26,7 @@ namespace Core.Characters.Enemy.Finder
         public bool IsTarget => PlayerTower || Item;
 
         public Transform Brick => _brick.transform;
-        public Transform Tower => _tower.DetectorBag.transform;
+        public Transform Tower => _tower.BaseDetectorBag;
         public Transform PlayerTower { get; private set; }
         public Transform Item { get; private set; }
         public Transform NoBuilding { get; private set; }
@@ -43,6 +43,13 @@ namespace Core.Characters.Enemy.Finder
                         PlayerTower = tower.transform;
                     }
                 }
+                else if (tower.Owner.GetType() == typeof(Enemy) && tower.HealthComponent.IsDeath == false)
+                {
+                    if (tower.Level.IsMaxLevel == false)
+                    {
+                        _tower = tower;
+                    }
+                }
             }
             
             if (other.TryGetComponent(out ItemSpawn item))
@@ -56,11 +63,6 @@ namespace Core.Characters.Enemy.Finder
                     BlockItem = item.transform;
                 }
             }
-            
-        }
-        
-        private void OnTriggerEnter(Collider other)
-        {
             if (other.TryGetComponent(out Brick brick))
             {
                 if (brick.IsSet == false)
@@ -68,23 +70,12 @@ namespace Core.Characters.Enemy.Finder
                     _brick = brick;
                 }
             }
-            if (other.TryGetComponent(out Tower tower))
-            {
-                if (tower.Owner.GetType() == typeof(Enemy) && tower.HealthComponent.IsDeath == false)
-                {
-                    if (tower.Level.IsMaxLevel == false)
-                    {
-                        _tower = tower;
-                    }
-                }
-            }
             if (other.TryGetComponent(out NoBuilding noBuilding))
             {
                 NoBuilding = noBuilding.transform;
             }
-            
         }
-
+        
         private void OnTriggerExit(Collider other)
         {
             if (other.TryGetComponent(out ItemSpawn item))

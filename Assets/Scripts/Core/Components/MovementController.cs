@@ -1,10 +1,8 @@
 using System;
-using Base.Level;
-using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Core.Character.Behavior
+namespace Core.Components
 {
     public abstract class MovementController : MonoBehaviour
     {
@@ -52,15 +50,13 @@ namespace Core.Character.Behavior
             _navMeshAgent.Warp(target);
         }
 
-        public void SpeedBoost()
+        protected void SpeedBoost()
         {
-            _speed *= 1.5f;
-            _navMeshAgent.speed = _speed;
+            _navMeshAgent.speed = _speed * 2.5f;;
         }
 
-        public void SpeedDeboost()
+        protected void SpeedDeboost()
         {
-            _speed /= 1.5f;
             _navMeshAgent.speed = _speed;
         }
     }

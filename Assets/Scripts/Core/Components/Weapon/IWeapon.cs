@@ -6,7 +6,7 @@ namespace Core.Components.Weapon
 {
     public interface IWeapon
     {
-        Action OnTakeDamage { get; set; }
+        event Action OnTakeDamage;
         void TakeDamage(Transform target, IHealthComponent health);
     }
 }

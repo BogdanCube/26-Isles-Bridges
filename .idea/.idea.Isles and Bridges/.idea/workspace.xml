@@ -2,34 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d59320d8-84cf-43b4-b90d-b08e0da32404" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/DespawnBlockItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/DespawnBlockItem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JetBrains.Frontend.2019.4.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JetBrains.Frontend.2020.2.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JetBrains.Frontend.2021.2.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/DetectorBag.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/DetectorBag/BaseDetectorBag.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/DetectorBag/BaseDetectorBag.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/DetectorBag/DetectorBagEnemy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/DetectorBag/DetectorBagPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/DetectorBag/DetectorBagPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ignore.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Isles and Bridges/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Isles and Bridges/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Camp (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Camp (Enemy).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Def Tower (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Def Tower (Enemy).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Mine (Enemy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyTower/Mine (Enemy).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Free Island (No Building).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Free Island (No Building).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Free Island.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Free Island.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Camp (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Camp (Player).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Def Tower (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Def Tower (Player).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Mine (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerTower/Mine (Player).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Player).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Recruit (Player).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/BlockItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/BlockItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Chest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Coin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/No Recruit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/No Recruit.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Sword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_ItemSpawn/Sword.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base/PlayerVibration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base/PlayerVibration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/FinderOutside.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/Finder/FinderOutside.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/MovementEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Enemy/MovementEnemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Recruit/MovementRecruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Characters/Recruit/MovementRecruit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/AnimationStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/AnimationStateController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/MovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/MovementController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/Bag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/Bag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DetectorBag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DetectorBag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/ItemSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_Spawners/ItemSpawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Island/DespawnBrick.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Island/DespawnBrick.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/_Base/HealthTower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/_Base/HealthTower.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/_Base/TowerLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/_Base/TowerLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/Bow/Bow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/Bow/Bow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/IWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/IWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Components/Weapon/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DetectorBag.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DetectorBag.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/DetectorBag/DetectorBagEnemy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Bridge/Brick/Brick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Bridge/Brick/Brick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/_Base/Tower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/_Base/Tower.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +44,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/DetectorDisplayShop/DetectorNoBuilding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/Wallet/Wallet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/Bag.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DetectorBag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Bag/DisplayCountBrick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/ComponentData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Components/_ProgressComponents/Health/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,9 +54,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Environment/Bridge/Bridge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Environment/Island/FreeIsland.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Environment/Island/Island.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/DetectorBag/DetectorBagEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/_Base/LoaderTower.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Environment/Tower/_Base/TowerLevel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Package/NiceVibrations/Common/Scripts/NiceVibrations/MMVibrationManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.17.1/Editor/PlasticSCM/PlasticWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Robin-3D-main/Robin 3D Project/Assets/Scripts/Player/PlayerAnimator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2fb3a52ec9904b61a2b1d7fc8bbfb32c26c00/af/d58b5bc1/AnimationState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/409b515b57b348c7a0a186d4cfac6c1e157800/45/4d2c67b1/Transform.cs" root0="SKIP_HIGHLIGHTING" />
@@ -172,7 +175,10 @@
       <workItem from="1660755855748" duration="833000" />
       <workItem from="1660804274421" duration="519000" />
       <workItem from="1660805497926" duration="2315000" />
-      <workItem from="1660809048929" duration="16689000" />
+      <workItem from="1660809048929" duration="16870000" />
+      <workItem from="1660897739469" duration="1072000" />
+      <workItem from="1660899237897" duration="9318000" />
+      <workItem from="1660934006488" duration="2403000" />
     </task>
     <servers />
   </component>

@@ -14689,6 +14689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2168203483262270592}
   - component: {fileID: 4054891030784209564}
+  - component: {fileID: 8512474043601691912}
   - component: {fileID: 2707789178671934103}
   m_Layer: 0
   m_Name: Chest
@@ -14727,6 +14728,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.62902784, y: 0.6213228, z: 0.40622723}
   m_Center: {x: -0.0075104237, y: 0.44729784, z: 0.012888849}
+--- !u!54 &8512474043601691912
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539335211340064314}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!114 &2707789178671934103
 MonoBehaviour:
   m_ObjectHideFlags: 0

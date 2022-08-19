@@ -483,7 +483,6 @@ MonoBehaviour:
   _island: {fileID: 0}
   _healthTower: {fileID: 1110656629614492940}
   _level: {fileID: 0}
-  _detectorBag: {fileID: 0}
 --- !u!114 &1110656629614492936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5319,7 +5318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7351088910801514771}
   - component: {fileID: 4277090449562260308}
-  - component: {fileID: 333050924870512164}
+  - component: {fileID: 5618560650392229836}
   - component: {fileID: 5597400649052449697}
   - component: {fileID: 1535127077527827954}
   m_Layer: 7
@@ -5357,7 +5356,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.15, y: 1.85, z: 3.54}
   m_Center: {x: 0, y: 0.33, z: 0.33}
---- !u!114 &333050924870512164
+--- !u!114 &5618560650392229836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5366,11 +5365,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3377357286618599143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1006811523449e0af8aa6982774d650, type: 3}
+  m_Script: {fileID: 11500000, guid: ced53623f53144e0971658f0a20ec72e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _currenPumping: 0.1
-  _tower: {fileID: 1110656629614492941}
   _towerLevel: {fileID: 1110656629614492936}
   _tempBag: {fileID: 1535127077527827954}
 --- !u!114 &5597400649052449697

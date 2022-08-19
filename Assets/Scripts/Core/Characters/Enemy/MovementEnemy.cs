@@ -1,21 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Core.Character.Behavior;
 using Core.Characters.Enemy.Finder;
 using Core.Components;
 using Core.Components._ProgressComponents.Bag;
-using Core.Components._ProgressComponents.OwnerRecruit;
 using Core.Components.DataTowers;
-using Core.Components.Wallet;
 using Core.Environment.Tower;
-using DG.Tweening;
 using NaughtyAttributes;
 using Rhodos.Toolkit.Extensions;
 using Toolkit.Extensions;
 using UnityEngine;
 using UnityEngine.AI;
-using Random = UnityEngine.Random;
 
 namespace Core.Characters.Enemy
 {
@@ -61,16 +54,35 @@ namespace Core.Characters.Enemy
 
             base.Move();
             
-            if (_currentTarget && _currentTarget.gameObject.activeSelf && Vector3.Distance(transform.position, _currentTarget.position) > 1)
+           
+
+            if (_currentTarget == null || _currentTarget.gameObject.activeSelf == false || IsMove == false)
             {
-                //_model.SlowLookY(_currentTarget,1);
+                if (_bag.IsZero == false)
+                {
+                    if (_finderOutside.BlockItem == false)
+                    {
+                        SetTarget(_startPos);
+                    }
+                    else if (_bag.HasCanAdd && _finderOutside.BlockItem && _bag.CheckCount(0.9f) == false)
+                    {
+                        SetCheckTarget(_finderOutside.BlockItem);
+                    }
+                }
+                else 
+                {
+                    if (_finderOutside.IsTower && _bag.IsZero == false)
+                    {
+                        SetTarget(_finderOutside.Tower);
+                    }
+                }
             }
-            else
+            
+            if (_currentTarget  && Vector3.Distance(transform.position, _currentTarget.position) < 1)
             {
                 _currentTarget = null;
-                _navMeshAgent.SetRandomDestination(25);
+                // _navMeshAgent.SetRandomDestination(25);
             }
-
             if (_isAhead &&_currentTarget  && transform.DistanceToTarget(_currentTarget) < _finderOutside.Radius)
             {
                 _isAhead = false;
@@ -111,28 +123,26 @@ namespace Core.Characters.Enemy
         private void FindFarm()
         {
             if (IsTarget) return;
-            if (_dataProgress.CanBuySomething && _finderInside.ShopTower)
-            {
-                SetTarget(_finderInside.ShopTower);
-            }
+           
             if (_bag.IsZero || _bag.CheckCount(0.5f) == false)
             {
                 if (_finderOutside.BlockItem == false)
                 {
                     SetTarget(_startPos);
                 }
-                if (_bag.HasCanAdd && _finderOutside.BlockItem && _bag.CheckCount(0.9f) == false)
+                else if (_bag.HasCanAdd && _finderOutside.BlockItem && _bag.CheckCount(0.9f) == false)
                 {
                     SetCheckTarget(_finderOutside.BlockItem);
                 }
             }
             else
             {
-                if (_finderOutside.IsTower && _bag.CheckCount(0.9f))
+                
+                if (_finderOutside.IsTower && _finderOutside.IsBrick == false && _bag.CheckCount(0.9f))
                 {
                     SetTarget(_finderOutside.Tower);
                 }
-                if (_finderOutside.IsBrick && _bag.CheckCount(0.7f))
+                else if (_finderOutside.IsBrick && _bag.CheckCount(0.7f))
                 {
                     SetTarget(_finderOutside.Brick);
                 }
@@ -140,9 +150,13 @@ namespace Core.Characters.Enemy
                 {
                     SetCheckTarget(_finderOutside.NoBuilding);
                 }
-                if (_finderOutside.Item) 
+                else if (_finderOutside.Item) 
                 {
                     SetCheckTarget(_finderOutside.Item);
+                }
+                else if (_dataProgress.CanBuySomething && _finderInside.ShopTower)
+                {
+                    SetTarget(_finderInside.ShopTower);
                 }
             }
         }
