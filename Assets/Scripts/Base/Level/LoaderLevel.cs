@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Cinemachine;
 using Core.Character.Player;
-using Core.Characters.Enemy;
 using Core.Characters.Player;
 using Core.Components._ProgressComponents.Health;
+using Core.Environment.Tower;
 using MoreMountains.NiceVibrations;
 using NaughtyAttributes;
 using Rhodos.Toolkit.Extensions;
@@ -24,11 +24,10 @@ namespace Base.Level
         [SerializeField] private TextMeshProUGUI _text;
         [SerializeField] private CinemachineVirtualCamera _virtualCamera;
         public static LoaderLevel Instance;
-        private Enemy CurrentEnemy=> _levels[_numberLevel].Enemy;
-        public Level CurrentLevel => _levels[_numberLevel];
-        public Player CurrentPlayer => _levels[_numberLevel].Player;
-        public HealthComponent HealthPlayer => (HealthComponent)CurrentPlayer.HealthComponent;
-        public HealthComponent HealthEnemy => (HealthComponent)CurrentEnemy.HealthComponent;
+        private Level CurrentLevel => _levels[_numberLevel];
+        public Player CurrentPlayer => CurrentLevel.Player;
+        public IHealthComponent PlayerTower => CurrentLevel.PlayerTower.HealthComponent;
+        public IHealthComponent EnemyTower => CurrentLevel.EnemyTower.HealthComponent;
         #region Singleton
         private void Awake()
         {
@@ -45,13 +44,13 @@ namespace Base.Level
         
         public void Load()
         {
-            if (PlayerPrefs.GetInt("Level") > _levels.Count - 1)
+            if (PlayerPrefs.GetInt("level") > _levels.Count - 1)
             {
                 PlayerPrefs.DeleteAll();
             }
             else
             {
-                _numberLevel = PlayerPrefs.GetInt("Level");
+                _numberLevel = PlayerPrefs.GetInt("level");
                 _text.text = $"Level {_numberLevel}";
                 _levels.ForEach(level => level.transform.Deactivate());
                 CurrentLevel.transform.Activate();
@@ -62,8 +61,8 @@ namespace Base.Level
         public void StartLevel()
         {
             MMVibrationManager.Haptic (HapticTypes.Selection);
-            CurrentLevel.StartLevel();
             UpdateBake();
+            CurrentLevel.StartLevel();
         }
 
         #region Debug
@@ -82,7 +81,13 @@ namespace Base.Level
         public void LevelCompleted()
         {
             _numberLevel++;
-            PlayerPrefs.SetInt("Level",_numberLevel);
+            PlayerPrefs.SetInt("level",_numberLevel);
+        }
+
+        [Button]
+        private void DeleteKey()
+        {
+            PlayerPrefs.DeleteAll();
         }
     }
 }

@@ -11,14 +11,15 @@ namespace Base
     public class GamePresent : MonoBehaviour
     {
         [SerializeField] private LoaderLevel _loaderLevel;
+        [SerializeField] private PlayerVibration _vibration;
         public UnityEvent OnStartGame;
         public UnityEvent OnWin;
         public UnityEvent OnLose;
 
         private void OnDisable()
         {
-            _loaderLevel.HealthPlayer.OnOver -= Lose;
-            _loaderLevel.HealthEnemy.OnOver -= Win;
+            _loaderLevel.PlayerTower.OnOver -= Lose;
+            _loaderLevel.EnemyTower.OnOver -= Win;
         }
         
         private void Start()
@@ -30,12 +31,9 @@ namespace Base
         {
             OnStartGame.Invoke();
             _loaderLevel.Load();
-            _loaderLevel.HealthPlayer.OnOver += Lose;
-            _loaderLevel.HealthEnemy.OnOver += Win;
-        }
-        // Pause
-        private void Restart()
-        {
+            _loaderLevel.PlayerTower.OnOver += Lose;
+            _loaderLevel.EnemyTower.OnOver += Win;
+            _vibration.Load(_loaderLevel.CurrentPlayer);
         }
         private void Win()
         {

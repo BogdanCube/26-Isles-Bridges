@@ -14,7 +14,7 @@ namespace Base.Level
 {
     public class Level : MonoBehaviour
     {
-        [SerializeField] [CanBeNull] private Tower _playerTower;
+        [SerializeField] private Tower _playerTower;
         [SerializeField] private Tower _enemyTower;
         [SerializeField] private Player _player;
         [SerializeField] private Enemy _enemy;
@@ -23,6 +23,8 @@ namespace Base.Level
         [SerializeField] private bool _isAutoLoad;
         public Player Player => _player;
         public Enemy Enemy => _enemy;
+        public Tower PlayerTower => _playerTower;
+        public Tower EnemyTower => _enemyTower;
 
         private void Start()
         {

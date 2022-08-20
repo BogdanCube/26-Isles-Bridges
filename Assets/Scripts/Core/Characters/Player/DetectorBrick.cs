@@ -10,7 +10,7 @@ namespace Core.Characters.Player
     {
         [SerializeField] private Bag _bag;
 
-        private void OnTriggerStay(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
             if(_bag.HasCanSpend() && other.TryGetComponent(out Brick brick))
             {

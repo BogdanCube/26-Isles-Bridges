@@ -87,5 +87,10 @@ namespace Core.Components._ProgressComponents.Health
             _currentCount *= 0;
             Hit(1);
         }
+
+        public void Over()
+        {
+            IsOver = true;
+        }
     }
 }

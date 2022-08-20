@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Core.Characters.Enemy;
 using Core.Components._ProgressComponents.Bag;
@@ -15,10 +16,12 @@ namespace Core.Environment.Tower.DetectorBag
         private IEnumerator _coroutineSpend;
         private BagCharacter _currentBag;
         private float _startPumping;
+        private BoxCollider _collider;
         private Tween _tween;
         private void Start()
         {
             _startPumping = _currenPumping;
+            _collider = GetComponent<BoxCollider>();
         }
         
         private void OnTriggerEnter(Collider other)
@@ -39,6 +42,7 @@ namespace Core.Environment.Tower.DetectorBag
                     _coroutineAdd = _tempBag.MovedCount(_currentBag, _currenPumping, () =>
                     {
                         enemy.MovementController.IsStopped = false;
+                        _collider.size = new Vector3(_collider.size.x, _collider.size.y, 0.35f);
                         StopCoroutine(_coroutineAdd);
                         _coroutineSpend = _towerLevel.ReplenishmentBrick(_tempBag, () => { StopCoroutine(_coroutineAdd); });
                         StartCoroutine(_coroutineSpend);
@@ -56,6 +60,7 @@ namespace Core.Environment.Tower.DetectorBag
                 _currentBag = null;
                 _tween.Kill();
                 _currenPumping = _startPumping;
+                _collider.size = new Vector3(_collider.size.x, _collider.size.y, 2.35f);
                 if (_coroutineAdd != null)
                 {
                     StopCoroutine(_coroutineAdd);

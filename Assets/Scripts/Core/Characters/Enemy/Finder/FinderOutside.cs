@@ -32,7 +32,7 @@ namespace Core.Characters.Enemy.Finder
         public Transform NoBuilding { get; private set; }
         public Transform BlockItem { get; private set; }
 
-        private void OnTriggerStay(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out Tower tower))
             {

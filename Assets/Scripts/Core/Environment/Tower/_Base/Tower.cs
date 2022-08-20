@@ -37,7 +37,6 @@ namespace Core.Environment.Tower
             _owner = owner;
             _noBuilding = noBuilding;
             _island = island;
-            Owner.HealthComponent.OnOver += _healthTower.Over;
 
             transform.DOScale(1, 1f).OnComplete(() =>
             {
@@ -50,7 +49,12 @@ namespace Core.Environment.Tower
         {
             if (_noBuilding)
             {
-                _noBuilding.Enable();
+                _noBuilding.gameObject.SetActive(true);
+                _noBuilding.FreeIsland.SetColor(Color.gray, 1);
+            }
+            else
+            {
+                _owner.HealthComponent.Over();
             }
         }
     }

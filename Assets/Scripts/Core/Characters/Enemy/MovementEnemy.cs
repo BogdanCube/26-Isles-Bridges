@@ -51,37 +51,42 @@ namespace Core.Characters.Enemy
         public override void Move()
         {
             if (_navMeshAgent.isStopped) return;
-
             base.Move();
             
-           
-
-            if (_currentTarget == null || _currentTarget.gameObject.activeSelf == false || IsMove == false)
+            if (_currentTarget && Vector3.Distance(transform.position,_currentTarget.position) < 0.25f && IsMove == false)
+            {                
+                _currentTarget = null;
+            }
+            if(_currentTarget && _currentTarget.gameObject.active == false)
             {
+                _currentTarget = null;
+            }
+            
+            if (_currentTarget == null || _currentTarget.gameObject.active == false || IsMove == false)
+            {
+                
                 if (_bag.IsZero == false)
                 {
                     if (_finderOutside.BlockItem == false)
                     {
                         SetTarget(_startPos);
                     }
-                    else if (_bag.HasCanAdd && _finderOutside.BlockItem && _bag.CheckCount(0.9f) == false)
+                    if (_bag.HasCanAdd && _finderOutside.BlockItem && _bag.CheckCount(0.9f) == false)
                     {
                         SetCheckTarget(_finderOutside.BlockItem);
                     }
                 }
                 else 
                 {
-                    if (_finderOutside.IsTower && _bag.IsZero == false)
+                    if (_finderOutside.IsBrick && _bag.CheckCount(0.6f))
+                    {
+                        SetTarget(_finderOutside.Brick);
+                    }
+                    else if (_finderOutside.IsTower && _bag.CheckCount(0.8f))
                     {
                         SetTarget(_finderOutside.Tower);
                     }
                 }
-            }
-            
-            if (_currentTarget  && Vector3.Distance(transform.position, _currentTarget.position) < 1)
-            {
-                _currentTarget = null;
-                // _navMeshAgent.SetRandomDestination(25);
             }
             if (_isAhead &&_currentTarget  && transform.DistanceToTarget(_currentTarget) < _finderOutside.Radius)
             {
@@ -137,7 +142,6 @@ namespace Core.Characters.Enemy
             }
             else
             {
-                
                 if (_finderOutside.IsTower && _finderOutside.IsBrick == false && _bag.CheckCount(0.9f))
                 {
                     SetTarget(_finderOutside.Tower);
@@ -150,20 +154,20 @@ namespace Core.Characters.Enemy
                 {
                     SetCheckTarget(_finderOutside.NoBuilding);
                 }
-                else if (_finderOutside.Item) 
-                {
-                    SetCheckTarget(_finderOutside.Item);
-                }
-                else if (_dataProgress.CanBuySomething && _finderInside.ShopTower)
-                {
-                    SetTarget(_finderInside.ShopTower);
-                }
+            }
+            if (_finderOutside.Item) 
+            {
+                SetCheckTarget(_finderOutside.Item);
+            }
+            else if (_dataProgress.CanBuySomething && _finderInside.ShopTower)
+            {
+                SetTarget(_finderInside.ShopTower);
             }
         }
         
         private void SetTarget(Transform target)
         {
-            if (target.gameObject.activeSelf)
+            if (target.gameObject.active)
             {
                 _currentTarget = target;
                 _navMeshAgent.SetDestination(_currentTarget.position);

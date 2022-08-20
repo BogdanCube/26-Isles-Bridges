@@ -10,5 +10,6 @@ namespace Core.Components._ProgressComponents.Health
         event Action OnDeath;
         event Action OnOver;
         void Hit(int damage);
+        void Over();
     }
 }

@@ -14,11 +14,5 @@ namespace Core.Environment.Tower.NoBuilding
 
         public FreeIsland FreeIsland => _freeIsland;
         public DisplayDataTower DisplayData => _displayData;
-
-        public void Enable()
-        {
-            transform.Activate();
-            _freeIsland.SetColor(Color.gray, 1);
-        }
     }
 }

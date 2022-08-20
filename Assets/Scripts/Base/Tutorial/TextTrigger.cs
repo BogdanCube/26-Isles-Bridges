@@ -2,6 +2,7 @@ using System;
 using Core.Characters.Player;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Base.Tutorial
 {
@@ -9,7 +10,7 @@ namespace Base.Tutorial
     {
         [SerializeField] private TextMeshProUGUI _textMeshPro;
         [SerializeField] private string _text;
-
+        public UnityEvent OnTrigger;
         private void Start()
         {
             _textMeshPro.gameObject.SetActive(true);
@@ -20,6 +21,7 @@ namespace Base.Tutorial
             if (other.TryGetComponent(out Player player))
             {
                 _textMeshPro.text = _text;
+                OnTrigger.Invoke();
                 Destroy(gameObject);
             }
         }

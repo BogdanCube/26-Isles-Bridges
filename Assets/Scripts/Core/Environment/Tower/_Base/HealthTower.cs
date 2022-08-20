@@ -18,17 +18,12 @@ namespace Core.Environment.Tower
         [SerializeField] private LootSpawner _lootSpawner;
         [SerializeField] private LoaderTower _loaderTower;
         [SerializeField] private ParticleSystem _particleHit;
-       
         public event Action<Transform> OnHit;
         public event Action OnDeath;
         public event Action OnOver;
 
         public bool IsDeath => _bag.CurrentCount <= 0;
         
-        private void OnDisable()
-        {
-            _tower.Owner.HealthComponent.OnOver -= Over;
-        }
         
         [Button]
         public void Hit(int damage = 1)
@@ -46,12 +41,12 @@ namespace Core.Environment.Tower
         public void Over()
         {
             _lootSpawner?.DespawnLoot();
+            OnOver?.Invoke();
             transform.DOScale(0, 1f).OnComplete(() =>
             {
-                OnDeath?.Invoke();
                 _tower.ReturnNoBuilding();
-                Destroy(gameObject);
                 LoaderLevel.Instance.UpdateBake();
+                Destroy(gameObject);
             });
         }
     }

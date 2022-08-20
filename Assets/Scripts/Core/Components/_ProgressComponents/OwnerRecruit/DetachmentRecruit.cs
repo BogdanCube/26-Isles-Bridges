@@ -27,13 +27,13 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         #region Enable/Disable
         private void OnEnable()
         {
-            _healthComponent.OnDeath += RemoveAll;
+            _healthComponent.OnDeath += OverAll;
             _healthComponent.OnOver += OverAll;
             _movementController.OnChangePosition += GroupMovement;
         }
         private void OnDisable()
         {
-            _healthComponent.OnDeath -= RemoveAll;
+            _healthComponent.OnDeath -= OverAll;
             _healthComponent.OnOver -= OverAll;
             _movementController.OnChangePosition -= GroupMovement;
         }
@@ -60,15 +60,6 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         }
         
         [Button]
-        private void RemoveAll()
-        {
-            if (!IsRecruits) return;
-            foreach (var recruit in _recruits)
-            {
-                recruit.StopMove();
-            }
-            _recruits = new List<MovementRecruit>();
-        }
         private void OverAll()
         {
             if (!IsRecruits) return;
@@ -76,6 +67,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
             {
                 NightPool.Despawn(recruit);
             }
+            _recruits = new List<MovementRecruit>();
         }
 
         private void GroupMovement(Vector3 center)
@@ -86,7 +78,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
             List<Vector3> result = new List<Vector3>();
             for (int i = 0; i < _recruits.Count; i++)
             {
-                result.Add(new Vector3(Mathf.Sin(i * step),0,Mathf.Cos(i * step)));
+                result.Add(new Vector3(Mathf.Cos(i * step),0,Mathf.Sin(i * step)));
             }
 
             for (int i = 0; i < _recruits.Count; i++)

@@ -8,13 +8,11 @@ namespace Base
 {
     public class PlayerVibration : MonoBehaviour
     {
-        [SerializeField] private LoaderLevel _loaderLevel;
         private Player _player;
 
-        #region Enable / Disable
-        private void OnEnable()
+        public void Load(Player player)
         {
-            _player = _loaderLevel.CurrentPlayer;
+            _player = player;
             _player.Bag.OnUpdateBag += UpdateBag;
             _player.Weapon.OnTakeDamage += TakeDamage;
         }
@@ -23,7 +21,6 @@ namespace Base
             _player.Bag.OnUpdateBag -= UpdateBag;
             _player.Weapon.OnTakeDamage -= TakeDamage;
         }
-        #endregion
         private void UpdateBag(int count)
         {
             MMVibrationManager.Haptic (HapticTypes.LightImpact);

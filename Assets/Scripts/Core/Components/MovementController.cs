@@ -8,7 +8,6 @@ namespace Core.Components
     {
         [SerializeField] private protected float _speed;
         [SerializeField] private protected NavMeshAgent _navMeshAgent;
-        [SerializeField] private protected Transform _model;
         private Vector3 _lastPose;
         public event Action<Vector3> OnChangePosition;
 

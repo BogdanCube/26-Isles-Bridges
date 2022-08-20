@@ -12,7 +12,7 @@ namespace Core.Environment.Island
         [SerializeField] private float _duration;
         [SerializeField] private bool _isDelight;
         public event Action OnDelightIsland;
-        public bool IsDelight => _isDelight;
+
         private void Start()
         {
             if (_isDelight == false)

@@ -39,27 +39,22 @@ namespace Core.Characters.Recruit
                 MoveTo(target);
             }
         }
-        
         private void MoveTo(Vector3 target)
         {
             if (_healthComponent.IsDeath) return;
             _navMeshAgent.SetDestination(target);
-            _model.DOLookAt(target,1);
         }
         public void Init(Base.Character owner, DetachmentRecruit detachmentRecruit)
         {
             _owner = owner;
             _detachmentRecruit = detachmentRecruit;
+            _healthComponent.OnDeath += Deinit;
         }
 
-        private void Deinit()
+        public void Deinit()
         {
             _detachmentRecruit.Remove(this);
             _healthComponent.OnDeath -= Deinit;
-        }
-
-        public void StopMove()
-        {
             _healthComponent.Death();
         }
     }
