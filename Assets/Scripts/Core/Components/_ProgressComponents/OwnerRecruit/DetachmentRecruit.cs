@@ -47,7 +47,8 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         [Button]
         public void Add()
         {
-            var recruit = Instantiate(_prefab, transform.position, Quaternion.identity);
+            var recruit = NightPool.Spawn(_prefab);
+            recruit.SetStartPos(transform.position);
             recruit.Init(_owner,this);
             _recruits.Add(recruit);
             UpdateCount();

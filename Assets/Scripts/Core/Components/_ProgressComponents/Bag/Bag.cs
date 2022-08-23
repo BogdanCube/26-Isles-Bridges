@@ -47,6 +47,10 @@ namespace Core.Components._ProgressComponents.Bag
         public virtual void Spend(int count = 1)
         {
             _currentCount -= count;
+            if (_currentCount < 0)
+            {
+                _currentCount = 0;
+            }
             UpdateCount();
         }
         public void Reset()

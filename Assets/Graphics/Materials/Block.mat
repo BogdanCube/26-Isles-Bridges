@@ -73,13 +73,13 @@ Material:
     - _Lumin: 0.45
     - _MaxLight: 0.994
     - _Metallic: 0
-    - _MinLight: 0
+    - _MinLight: 0.639
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Offset: 0.72
     - _Parallax: 0.02
     - _Segmented: 1
-    - _ShnIntense: 0.093
+    - _ShnIntense: 0
     - _ShnOverlap: 0
     - _ShnRange: 0.475
     - _ShnSmooth: 0.717

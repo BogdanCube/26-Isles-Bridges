@@ -73,7 +73,7 @@ Material:
     - _Lumin: 0.45
     - _MaxLight: 0.994
     - _Metallic: 0
-    - _MinLight: 0
+    - _MinLight: 0.606
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Offset: 0.29

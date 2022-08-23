@@ -100,12 +100,8 @@ namespace Core.Environment.Tower
         }
         public void Hit(int damage)
         {
-            if (_shopBag.IsZero == false)
-            {
-                _shopBag.Spend(damage);
-                OnHit.Invoke(_shopBag.CurrentCount, _loaderTower.PriceNextLevel(_level),_isReserve);
-            }
-            
+            _shopBag.Spend(damage);
+            OnHit.Invoke(_shopBag.CurrentCount, _loaderTower.PriceNextLevel(_level),_isReserve);
         }
         
         public void DestroyTower(Action callback)
