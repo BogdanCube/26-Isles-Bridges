@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Core.Components._ProgressComponents;
 using Core.Components._Spawners.RandomSpawner;
 using Core.Environment.Block;
@@ -62,7 +63,6 @@ namespace Core.Components._Spawners
                 itemSpawn.SetSpawner(this,randomVector);
             }
         }
-        
         private float GetRandomPos(Island island)
         {
             var spawnRadius = new Vector2(island.Radius * 0.3f,island.Radius);

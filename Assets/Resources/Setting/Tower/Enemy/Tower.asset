@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Tower
   m_EditorClassIdentifier: 
   Templates:
-  - Model: {fileID: 1307419418133522450, guid: 25ca98ccdba991b4793d3009e357df67, type: 3}
+  - Model: {fileID: 5772474315968021416, guid: 9afddeda22cc546608e9def53e2cf5e3, type: 3}
     TimeSpawn: 5
     Price: 20
-  - Model: {fileID: 3115033361882452212, guid: de28d3505c449aa488d0bcce995367ab, type: 3}
+  - Model: {fileID: 2566573488798019069, guid: 8e18c6f7c2dc0438b9c87b14cf41de17, type: 3}
     TimeSpawn: 4
     Price: 35
-  - Model: {fileID: 1826486161593071305, guid: 30c6737a9826da149888375d6c84ac95, type: 3}
+  - Model: {fileID: 5995651914576986709, guid: 53e1a249e1d2c46b1aaaea2e2d3494e5, type: 3}
     TimeSpawn: 3
-    Price: 0
+    Price: 1

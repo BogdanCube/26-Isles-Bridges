@@ -36,12 +36,12 @@ namespace Base.Level
 
         public void Load()
         {
-            _enemy.transform.Deactivate();
+            _enemy.MovementController.IsStopped = true;
         }
 
         public void StartLevel()
         {
-            _enemy.transform.Activate();
+            _enemy.MovementController.IsStopped = false;
             _playerTower?.Level.LoadTower();
             _enemyTower.Level.LoadTower();
         }

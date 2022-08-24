@@ -12,16 +12,15 @@ namespace Core.Environment._ItemSpawn
         [SerializeField] private int _speed;
         [SerializeField] private Collider _collider;
         [SerializeField] private GrayscaleModel _grayscaleModel;
-        [SerializeField] private float _timeFade = 3;
         private readonly int _runningNameId = Animator.StringToHash("IsRunning");
         public override void SetSpawner(Spawner spawner, Vector3 position)
         {
-            base.SetSpawner(spawner, new Vector3());
             _collider.enabled = false;
             _grayscaleModel.FadeGray(0);
-            _animator.SetBool(_runningNameId, true);
-            transform.DOLookAt(position, 1f);
-            transform.DOLocalMove(position, _speed).SetSpeedBased().SetEase(Ease.Flash).OnComplete(() =>
+            base.SetSpawner(spawner, new Vector3(0,0,-0.75f));
+            
+            transform.DOLookAt(position,1);
+            transform.DOLocalMove(position, _speed).SetSpeedBased().OnComplete(() =>
             {
                 _animator.SetBool(_runningNameId, false);
                 _collider.enabled = true;

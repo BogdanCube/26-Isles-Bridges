@@ -6,6 +6,8 @@ using Core.Components.Loot;
 using Core.Environment.Tower._Base;
 using DG.Tweening;
 using NaughtyAttributes;
+using NTC.Global.Pool;
+using Rhodos.Toolkit.Extensions;
 using UnityEngine;
 
 namespace Core.Environment.Tower
@@ -28,25 +30,22 @@ namespace Core.Environment.Tower
         [Button]
         public void Hit(int damage = 1)
         {
-            _towerLevel.Hit(damage);
+            _towerLevel.Hit(damage, Over);
+            
             _loaderTower.ResetTower();
             OnHit?.Invoke(_tower.Island.transform);
             _particleHit.gameObject.SetActive(true);
-            if (IsDeath)
-            {
-                _towerLevel.DestroyTower(Over);
-            }
         }
         [Button]
         public void Over()
         {
-            _lootSpawner?.DespawnLoot();
             OnOver?.Invoke();
+            _lootSpawner?.DespawnLoot();
             transform.DOScale(0, 1f).OnComplete(() =>
             {
                 _tower.ReturnNoBuilding();
                 LoaderLevel.Instance.UpdateBake();
-                Destroy(gameObject);
+                transform.Deactivate();
             });
         }
     }

@@ -1,18 +1,11 @@
 using System;
 using System.Collections;
-using Base.Level;
 using Core.Components._ProgressComponents.Bag;
-using Core.Components._ProgressComponents.Health;
-using Core.Environment.Tower._Base;
 using DG.Tweening;
-using Managers.Level;
 using NaughtyAttributes;
-using NTC.Global.Pool;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 
-namespace Core.Environment.Tower
+namespace Core.Environment.Tower._Base
 {
     public class TowerLevel : MonoBehaviour
     {
@@ -98,19 +91,28 @@ namespace Core.Environment.Tower
         {
             OnUpdate.Invoke(_shopBag.CurrentCount, _loaderTower.PriceNextLevel(_level),_isReserve);
         }
-        public void Hit(int damage)
+        public void Hit(int damage, Action callback)
         {
-            _shopBag.Spend(damage);
-            OnHit.Invoke(_shopBag.CurrentCount, _loaderTower.PriceNextLevel(_level),_isReserve);
+            if (_shopBag.HasCanSpend(damage))
+            {
+                _shopBag.Spend(damage);
+                OnHit.Invoke(_shopBag.CurrentCount, _loaderTower.PriceNextLevel(_level),_isReserve);
+            }
+            else
+            {
+                DestroyTower(callback);
+            }
+            
         }
-        
-        public void DestroyTower(Action callback)
+
+        private void DestroyTower(Action callback)
         {
-            if (_isReserve == false)
+            if (_isReserve == false && IsMaxLevel == false)
             {
                 _isReserve = true;
                 _shopBag.Reset();
                 _shopBag.Add(_loaderTower.PriceNextLevel(_level) - 1);
+
                 UpdateDisplay();
             }
             else

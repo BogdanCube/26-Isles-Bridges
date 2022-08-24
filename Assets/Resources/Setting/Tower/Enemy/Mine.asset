@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Mine
   m_EditorClassIdentifier: 
   Templates:
-  - Model: {fileID: 1454889852477475580, guid: bddb221b6a5f0dc44b3d83df27a8d686, type: 3}
+  - Model: {fileID: 4255748582814576661, guid: be36bc4a5a37f42f09e0ecdc79de721a, type: 3}
     TimeSpawn: 20
     Price: 20
-  - Model: {fileID: 8078736933946096707, guid: e4fe0f9ef1d28194e9c4dd9cebb08394, type: 3}
+  - Model: {fileID: 3756603568024565758, guid: 2f765e22a70eb4b659768258b5bc76bc, type: 3}
     TimeSpawn: 15
     Price: 30
-  - Model: {fileID: 8822074500984792707, guid: 4623b71c4d6aa6545bb85c358596b385, type: 3}
+  - Model: {fileID: 4158703360029981054, guid: 15252778dc5444e0ebfc36fe22a7de9a, type: 3}
     TimeSpawn: 10
     Price: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Base.Level;
 using Core.Components._ProgressComponents.Bag;
 using Core.Components._ProgressComponents.Health;
+using Core.Environment.Tower._Base;
 using Core.Environment.Tower.DetectorBag;
 using DG.Tweening;
 using UnityEngine;

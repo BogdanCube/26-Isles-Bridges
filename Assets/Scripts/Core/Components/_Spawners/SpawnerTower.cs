@@ -10,11 +10,11 @@ namespace Core.Components._Spawners
 {
     public class SpawnerTower : Spawner
     {
-        [Expandable][SerializeField] private RandomData _randomData;
-        [ShowNonSerializedField] private int _currentTimeSpawn;
+        [Expandable][SerializeField] private protected RandomData _randomData;
+        [ShowNonSerializedField] private protected int _currentTimeSpawn;
         private IEnumerator _coroutine;
         
-        public void StartSpawn(int time, Tower tower, Action<int> callback)
+        public virtual void StartSpawn(int time, Tower tower, Action<int> callback)
         {
             if (_coroutine != null)
             {
@@ -26,7 +26,7 @@ namespace Core.Components._Spawners
             StartCoroutine(_coroutine);
         }
 
-        public void ResetSpawn(Action<Action> callback)
+        public virtual void ResetSpawn(Action<Action> callback)
         {
             StopCoroutine(_coroutine);
             callback?.Invoke(() =>

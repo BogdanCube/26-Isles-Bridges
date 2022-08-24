@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using Core.Characters.Enemy;
 using Core.Components._ProgressComponents.Bag;
+using Core.Environment.Tower._Base;
 using DG.Tweening;
 using UnityEngine;
 

@@ -10057,6 +10057,10 @@ MonoBehaviour:
   _rotationY: {x: 0, y: 360}
   _trailRenderer: {fileID: 1526409046246794514}
   _count: {x: 1, y: 2}
+  _startHeight: 2
+  _collider: {fileID: -3309012721245121776}
+  _timeInUp: 1.25
+  _timeGravity: 0.55
 --- !u!1 &6586799325266982451
 GameObject:
   m_ObjectHideFlags: 0

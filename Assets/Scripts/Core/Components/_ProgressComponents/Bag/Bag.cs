@@ -39,17 +39,27 @@ namespace Core.Components._ProgressComponents.Bag
         [Button]
         public void Add(int count = 1)
         {
-            _currentCount += count;
+            if (_currentCount + count < 0)
+            {
+                _currentCount = 0;
+            }
+            else
+            {
+                _currentCount += count;
+            }
             UpdateCount();
         }
 
         [Button]
         public virtual void Spend(int count = 1)
         {
-            _currentCount -= count;
-            if (_currentCount < 0)
+            if (_currentCount - count < 0)
             {
                 _currentCount = 0;
+            }
+            else
+            {           
+                _currentCount -= count;
             }
             UpdateCount();
         }

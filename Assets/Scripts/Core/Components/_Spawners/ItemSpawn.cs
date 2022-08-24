@@ -33,7 +33,11 @@ namespace Core.Components._Spawners
 
         private void SetPosition(Vector3 position)
         {
-            transform.localPosition = position;
+            if (position != Vector3.zero)
+            {
+                transform.localPosition = position;
+            }
+            
         }
 
         public void SpendCount()
