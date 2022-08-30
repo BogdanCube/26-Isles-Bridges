@@ -1,9 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using Core.Components._ProgressComponents.Health;
-using NTC.Global.Pool;
-using Rhodos.Toolkit.Extensions;
+using Toolkit.Extensions;
 using UnityEngine;
 
 namespace Core.Components.Weapon.Bow

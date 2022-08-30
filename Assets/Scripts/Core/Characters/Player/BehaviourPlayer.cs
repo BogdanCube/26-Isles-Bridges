@@ -1,41 +1,37 @@
 using System;
-using Core.Character.Behavior;
+using Core.Characters._Base;
 using Core.Characters.Base.Behavior;
-using NaughtyAttributes;
+using Core.Characters.Player.Behavior;
+using NTC.Global.Cache;
 using UnityEngine;
 
-namespace Core.Character.Player
+namespace Core.Characters.Player
 {
     public class BehaviourPlayer : BehaviourSystem
     {
-        private void Start()
+        [SerializeField] private State _currentState;
+        [SerializeField] private Player _player;
+        protected override IState CurrentState => _currentState;
+        public Player Player => _player;
+
+        public void SetState(State state)
+        {
+            if (_currentState != null) {
+                _currentState.End();
+            }
+            _currentState = Instantiate(state);
+            _currentState.BehaviourSystem = this;
+            _currentState.Start();
+        }
+
+
+        protected override void SetIdleState()
         {
             SetState(ScriptableObject.CreateInstance<IdleState>());
         }
-
-        private void Update()
+        public override void SetDanceState()
         {
-            _currentState.Update();
-            if (_character.HealthComponent.IsDeath == false)
-            {
-                if (_character.MovementController.IsMove)
-                {
-                    SetState(ScriptableObject.CreateInstance<RunningState>());
-                    
-                }
-                else if (_character.DetectorFighting.IsFight)
-                {
-                    SetState(ScriptableObject.CreateInstance<FightingState>());
-                }
-                else
-                {
-                    SetState(ScriptableObject.CreateInstance<IdleState>());
-                }
-            }
-            else
-            {
-                SetState(ScriptableObject.CreateInstance<DeathState>()); 
-            }
+            SetState(ScriptableObject.CreateInstance<DanceState>());
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Core.Components._ProgressComponents.Bag;
 using Core.Environment.Tower._Base;
@@ -9,14 +10,14 @@ namespace Core.Environment.Tower.DetectorBag
     public class DetectorBagPlayer : BaseDetectorBag
     {
         [SerializeField] private float _currenPumping = 0.1f;
-        [SerializeField] private TowerLevel _towerLevel;
-        [SerializeField] private Bag _tempBag;
         private IEnumerator _coroutineAdd;
         private IEnumerator _coroutineSpend;
         private BagCharacter _currentBag;
         private float _startPumping;
         private Tween _tween;
         private bool _isMoved;
+
+       
         private void Start()
         {
             _startPumping = _currenPumping;
@@ -24,7 +25,7 @@ namespace Core.Environment.Tower.DetectorBag
         
         private void OnTriggerStay(Collider other)
         {
-            if (other.TryGetComponent(out Characters.Player.Player player) && other.TryGetComponent(out BagCharacter bag)
+            if (_towerLevel.IsMaxLevel == false && other.TryGetComponent(out Characters.Player.Player player) && other.TryGetComponent(out BagCharacter bag)
                                                                            && _isMoved == false  
                                                                            && player.MovementController.IsMove == false) 
             {
@@ -46,7 +47,7 @@ namespace Core.Environment.Tower.DetectorBag
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.TryGetComponent(out Characters.Player.Player player) && other.TryGetComponent(out BagCharacter bag))
+            if (_towerLevel.IsMaxLevel == false && other.TryGetComponent(out Characters.Player.Player player) && other.TryGetComponent(out BagCharacter bag))
             {
                 _currentBag = null;
                 _tween.Kill();

@@ -4,7 +4,7 @@ using Core.Components.DataTowers;
 using Core.Environment.Tower.NoBuilding;
 using Core.Environment.Tower.ShopDataTower;
 using NTC.Global.Pool;
-using Rhodos.Toolkit.Extensions;
+using Toolkit.Extensions;
 using UnityEngine;
 
 namespace UI.DisplayParameters
@@ -31,7 +31,7 @@ namespace UI.DisplayParameters
         {
             for (int i = 0; i < _parent.childCount; i++)
             {
-                _parent.GetChild(i).transform.Deactivate();
+                _parent.GetChild(i).Deactivate();
             }
             _shopDataTower = new List<ShopDataTower>();
         }

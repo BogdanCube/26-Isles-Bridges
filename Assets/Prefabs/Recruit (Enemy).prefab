@@ -628,7 +628,7 @@ MonoBehaviour:
   _camera: {fileID: 0}
   _healthComponent: {fileID: 6244592346247998390}
   _background: {fileID: 811160000325509848}
-  _sliderHp: {fileID: 811159999887278076}
+  _slider: {fileID: 811159999887278076}
   _text: {fileID: 811159998653076936}
 --- !u!1 &855261288671918617
 GameObject:
@@ -3131,7 +3131,7 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: cd034a7657d1fbb4ebb7bd50806eb6e2, type: 2}
-  - {fileID: -2724451520672956055, guid: 4effa3d96dc5b4552b94c52ef3e37161, type: 3}
+  - {fileID: 2100000, guid: cc2c3d5fd9d5b4bbf97489e7098c887e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8891,7 +8891,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d9a3c813d36b4fb8a6fd93a03218700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grayMaterial: {fileID: 2437434711447429779}
+  _renderers:
+  - {fileID: 8722038873022616577}
+  - {fileID: 1941393045333994971}
 --- !u!1 &8887383725284032615
 GameObject:
   m_ObjectHideFlags: 0

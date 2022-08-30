@@ -1,7 +1,6 @@
 using System;
-using Components;
 using NaughtyAttributes;
-using Rhodos.Toolkit.Extensions;
+using Toolkit.Extensions;
 using UnityEngine;
 using UnityEngine.Events;
 

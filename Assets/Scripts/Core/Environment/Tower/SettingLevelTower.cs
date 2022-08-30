@@ -14,5 +14,6 @@ namespace Core.Environment.Tower
         public Transform Model;
         public int TimeSpawn;
         public int Price;
+        public int Health;
     }
 }

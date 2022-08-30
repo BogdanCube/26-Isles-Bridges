@@ -7,7 +7,7 @@ namespace Core.Components.DetectorItems
     public class DetectorBlockItem : MonoBehaviour
     {
         [SerializeField] private _ProgressComponents.Bag.Bag _bag;
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerStay(Collider other)
         {
             if (_bag.HasCanAdd && other.TryGetComponent(out BlockItem block))
             {

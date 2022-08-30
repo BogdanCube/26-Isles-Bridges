@@ -15,7 +15,7 @@ namespace Core.Components._ProgressComponents
         public string ProgressText => $"{CurrentMaxCount} -> {NextMaxCount}" ;
         private int CurrentMaxCount => _componentData.Template[_level].MaxCount;
         private int NextMaxCount => IsMaxLevel == false ? _componentData.Template[_level + 1].MaxCount : 0;
-        public bool IsProgress => _componentData;
+        protected bool IsProgress => _componentData;
         public Sprite Icon => _componentData.Icon;
         protected void Load()
         {

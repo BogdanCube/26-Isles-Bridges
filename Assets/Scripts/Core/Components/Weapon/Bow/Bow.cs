@@ -1,10 +1,8 @@
 using System;
 using Core.Components._ProgressComponents.Health;
 using Core.Environment.Tower;
-using DG.Tweening;
 using NaughtyAttributes;
 using NTC.Global.Pool;
-using Rhodos.Toolkit.Extensions;
 using UnityEngine;
 
 namespace Core.Components.Weapon.Bow

@@ -1,5 +1,6 @@
 using Core.Character;
 using Core.Components;
+using Core.Components._ProgressComponents.Health;
 using Core.Environment.Tower;
 using UnityEngine;
 
@@ -9,10 +10,10 @@ namespace Core.Characters.Enemy
     {
         private void OnTriggerStay(Collider other)
         {
-            if (other.TryGetComponent(out Player.Player player))
+            if (other.TryGetComponent(out Player.Player player) && other.TryGetComponent(out IHealthComponent ihealthComponent))
             {
                 _currentTarget = player.transform;
-                _currentHealth = player.HealthComponent;
+                _currentHealth = ihealthComponent;
             }
             if (other.TryGetComponent(out Tower tower))
             {
@@ -26,7 +27,7 @@ namespace Core.Characters.Enemy
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.TryGetComponent(out  Player.Player player))
+            if (other.TryGetComponent(out Player.Player player) && other.TryGetComponent(out IHealthComponent ihealthComponent))
             {
                 _currentTarget = null;
             }

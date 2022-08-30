@@ -1,13 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Core.Character.Player;
 using Core.Characters.Enemy;
 using Core.Characters.Player;
-using Core.Components._ProgressComponents.Health;
 using Core.Environment.Tower;
-using JetBrains.Annotations;
-using Rhodos.Toolkit.Extensions;
+using Toolkit.Extensions;
 using UnityEngine;
 
 namespace Base.Level
@@ -18,9 +12,7 @@ namespace Base.Level
         [SerializeField] private Tower _enemyTower;
         [SerializeField] private Player _player;
         [SerializeField] private Enemy _enemy;
-        
-        [Header("Debug")] 
-        [SerializeField] private bool _isAutoLoad;
+        private bool _isAutoLoad = true;
         public Player Player => _player;
         public Enemy Enemy => _enemy;
         public Tower PlayerTower => _playerTower;
@@ -36,12 +28,13 @@ namespace Base.Level
 
         public void Load()
         {
-            _enemy.MovementController.IsStopped = true;
+            _isAutoLoad = false;
+            _enemy.Deactivate();
         }
 
         public void StartLevel()
         {
-            _enemy.MovementController.IsStopped = false;
+            _enemy.Activate();
             _playerTower?.Level.LoadTower();
             _enemyTower.Level.LoadTower();
         }

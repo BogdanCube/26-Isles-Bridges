@@ -17,11 +17,14 @@ MonoBehaviour:
     Speed: 1
     Damage: 1
     Price: 25
+    Health: 20
   - Model: {fileID: 3020536615590530599, guid: 7807fa4a40bea44b7bc61c7b74af9f7a, type: 3}
     Speed: 1.2
     Damage: 2
     Price: 45
+    Health: 28
   - Model: {fileID: 1684114256846836043, guid: b1dafb1098174487c8ad1e2d5fae1464, type: 3}
     Speed: 1.5
     Damage: 3
     Price: 0
+    Health: 36

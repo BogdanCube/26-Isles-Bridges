@@ -1,5 +1,4 @@
 using Base.Level;
-using Core.Character.Player;
 using Core.Characters.Player;
 using MoreMountains.NiceVibrations;
 using UnityEngine;

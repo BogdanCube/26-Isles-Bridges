@@ -1,30 +1,27 @@
-using Core.Characters.Player.Behaviour;
+using System;
+using NaughtyAttributes;
+using NTC.Global.Cache;
 using UnityEngine;
 
-namespace Core.Characters.Base.Behavior
+namespace Core.Characters._Base
 {
-    public abstract class BehaviourSystem : MonoBehaviour 
+    public abstract class BehaviourSystem : NightCache,INightRun
     {
-        [SerializeField] private protected State _currentState;
-        [SerializeField] private protected Character _character;
-        [HideInInspector] public bool IsStop { private get; set; }
-        public Character Character => _character;
-        
-        protected void SetState(State state)
+        public bool IsStop { private get; set; }
+        protected abstract IState CurrentState { get; }
+
+        private void Awake()
         {
-            if (IsStop == false)
+            SetIdleState();
+        }
+        public void Run()
+        {
+            if (IsStop == false && CurrentState != null)
             {
-                if (_currentState != null) {
-                    _currentState.End();
-                }
-                _currentState = Instantiate(state);
-                _currentState.BehaviourSystem = this;
-                _currentState.Start();
+                CurrentState.Update();
             }
         }
-        public void SetDanceState()
-        {
-            SetState(ScriptableObject.CreateInstance<DanceState>());
-        }
+        protected abstract void SetIdleState();
+        public virtual void SetDanceState(){}
     }
 }

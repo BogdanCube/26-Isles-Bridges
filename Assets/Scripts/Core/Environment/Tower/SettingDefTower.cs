@@ -16,5 +16,6 @@ namespace Core.Environment.Tower
         [Range(1, 2)] public float Speed = 1;
         public int Damage;
         public int Price;
+        public int Health;
     }
 }

@@ -1,13 +1,9 @@
 using System.Collections.Generic;
 using Core.Components._ProgressComponents;
-using Core.Components._ProgressComponents.Bag;
-using Core.Components.DataTowers;
 using Core.Components.Wallet;
-using Core.Environment.Tower.NoBuilding;
-using Core.Environment.Tower.ShopDataTower;
 using Core.Environment.Tower.ShopProgressItem;
 using NTC.Global.Pool;
-using Rhodos.Toolkit.Extensions;
+using Toolkit.Extensions;
 using UnityEngine;
 
 namespace UI.DisplayParameters
@@ -33,7 +29,7 @@ namespace UI.DisplayParameters
         {
             for (int i = 0; i < _parent.childCount; i++)
             {
-                _parent.GetChild(i).transform.Deactivate();
+                _parent.GetChild(i).Deactivate();
             }
         }
     }

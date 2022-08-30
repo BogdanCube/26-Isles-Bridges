@@ -11,6 +11,7 @@ namespace Core.Environment.Bridge.Brick
     public class Brick : MonoBehaviour
     {
         [SerializeField] private GameObject _brick;
+        [SerializeField] private MeshRenderer _meshRenderer;
         private Collider _collider;
         public bool IsSet => !_collider.enabled;
         private void Start()
@@ -24,10 +25,9 @@ namespace Core.Environment.Bridge.Brick
             transform.localPosition = position;
             transform.localScale = Vector3.one; 
         }
-
-        [Button]
-        public void SetBrick()
+        public void SetBrick(Color color)
         {
+            _meshRenderer.material.color = color;
             _brick.SetActive(true);
             LoaderLevel.Instance.UpdateBake();
             _collider.enabled = false;

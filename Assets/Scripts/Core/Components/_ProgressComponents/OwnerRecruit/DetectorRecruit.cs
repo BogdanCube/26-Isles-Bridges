@@ -1,3 +1,4 @@
+using System;
 using Core.Environment._ItemSpawn;
 using NaughtyAttributes;
 using NTC.Global.Pool;
@@ -10,25 +11,41 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
     {
         [SerializeField] private DetachmentRecruit _detachmentRecruit;
         [SerializeField] private Wallet.Wallet _wallet;
+        [SerializeField] private Characters.Base.Character _character;
         [MinMaxSlider(0f, 25f)] [SerializeField] private Vector2Int _additionalCoin;
         private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out RecruitItem recruit))
             {
-                if (_detachmentRecruit.HasCanAdd)
+                if(other.TryGetComponent(out Characters.Base.Character character))
                 {
-                    _detachmentRecruit.Add();
-                    recruit.MoveToCharacter(transform);
+                    if (character.GetType() == _character.GetType())
+                    {
+                        CollisionNoRecruit(recruit);
+                    }
                 }
                 else
                 {
-                    recruit.PickUp(() =>
-                    {
-                        _detachmentRecruit.OnMax.Invoke();
-                        var count = _additionalCoin.RandomRange();
-                        _wallet.Add(count);
-                    });
+                    CollisionNoRecruit(recruit);
                 }
+            }
+        }
+
+        private void CollisionNoRecruit(RecruitItem recruit)
+        {
+            if (_detachmentRecruit.HasCanAdd)
+            {
+                _detachmentRecruit.Add();
+                recruit.MoveToCharacter(transform);
+            }
+            else
+            {
+                recruit.PickUp(() =>
+                {
+                    _detachmentRecruit.OnMax.Invoke();
+                    var count = _additionalCoin.RandomRange();
+                    _wallet.Add(count);
+                });
             }
         }
     }

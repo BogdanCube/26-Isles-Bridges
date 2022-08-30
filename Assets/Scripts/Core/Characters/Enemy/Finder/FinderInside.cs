@@ -34,7 +34,7 @@ namespace Core.Characters.Enemy.Finder
                     
                     foreach (var data in shopDataTowers.Where(data => _bag.HasCanSpend(data.Price)))
                     {
-                        data.BuyAhead(_movementEnemy.AheadMove); 
+                        data.BuyAhead(_movementEnemy.SetAhead); 
                         _bag.Spend(data.Price);
                         displayData.Deload();
                         break;

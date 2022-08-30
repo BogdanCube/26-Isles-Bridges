@@ -1,17 +1,18 @@
 using System;
+using NTC.Global.Cache;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace Core.Components
 {
-    public abstract class MovementController : MonoBehaviour
+    public abstract class MovementController : NightCache
     {
         [SerializeField] private protected float _speed;
         [SerializeField] private protected NavMeshAgent _navMeshAgent;
         private Vector3 _lastPose;
         public event Action<Vector3> OnChangePosition;
 
-        public abstract bool IsMove { get; }
+        public virtual bool IsMove { get; }
         private bool _isStopped;
         public bool IsStopped
         {
@@ -21,7 +22,7 @@ namespace Core.Components
                 if (value != _isStopped)
                 {
                     _isStopped = value;
-                    _navMeshAgent.isStopped = _isStopped;
+                    _navMeshAgent.speed = _isStopped ? 0 : _speed;
                 }
             }
         }
@@ -49,12 +50,12 @@ namespace Core.Components
             _navMeshAgent.Warp(target);
         }
 
-        protected void SpeedBoost()
+        public void SpeedBoost(float coefficient)
         {
-            _navMeshAgent.speed = _speed * 2.5f;;
+            _navMeshAgent.speed = _speed * coefficient;
         }
 
-        protected void SpeedDeboost()
+        public void SpeedDeboost()
         {
             _navMeshAgent.speed = _speed;
         }

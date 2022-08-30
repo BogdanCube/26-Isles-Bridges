@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _brick: {fileID: 6048834963863538920}
-  _collider: {fileID: 2809930216619770994}
+  _meshRenderer: {fileID: 6048834963863538901}
 --- !u!65 &2809930216619770994
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 6048834963863538900}
   - component: {fileID: 6048834963863538901}
   m_Layer: 7
-  m_Name: Cube
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,7 +7,7 @@ public class DetectorNoBuilding : MonoBehaviour
     [SerializeField] private DataTowers _dataTowers;
     private bool isLoaded;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.TryGetComponent(out NoBuilding noBuilding))
         {
@@ -24,12 +24,9 @@ public class DetectorNoBuilding : MonoBehaviour
     {
         if (other.TryGetComponent(out NoBuilding noBuilding))
         {
-            if (isLoaded)
-            {
-                var displayData = noBuilding.DisplayData;
-                displayData.Deload();
-                isLoaded = false;
-            }
+            var displayData = noBuilding.DisplayData;
+            displayData.Deload();
+            isLoaded = false;
         }
     }
 }

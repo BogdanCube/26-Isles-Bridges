@@ -118,7 +118,7 @@ Material:
     - _IndirectIntensity: 1
     - _IndirectIntensityOutline: 0
     - _InvFade: 1
-    - _Lumin: 0.43
+    - _Lumin: 0.92
     - _MatCapMaskChannel: 0
     - _MatCapType: 0
     - _MaxAtten: 0
@@ -134,8 +134,8 @@ Material:
     - _NormalsUVType: 0
     - _OcclusionChannel: 0
     - _OcclusionStrength: 1
-    - _Offset: 0.02
-    - _OtlWidth: 2.08
+    - _Offset: -0.4
+    - _OtlWidth: 2.2
     - _OutlineLightingType: 0
     - _OutlineLightingTypeURP: 0
     - _OutlineMinWidth: 1
@@ -170,9 +170,9 @@ Material:
     - _RimTolerc: 0.35
     - _RimWidth: 3
     - _Segmented: 1
-    - _ShnIntense: 0.127
+    - _ShnIntense: 0
     - _ShnOverlap: 0
-    - _ShnRange: 0.052
+    - _ShnRange: 0
     - _ShnSmooth: 0
     - _SingleIndirectColor: 0
     - _SmoothnessTextureChannel: 0
@@ -212,7 +212,7 @@ Material:
     - __outline_gui_dummy__: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.24222142, g: 0.7924528, b: 0.28713825, a: 1}
+    - _Color: {r: 0.18284085, g: 0.9056604, b: 0.23963392, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HColor: {r: 1, g: 1, b: 1, a: 1}
     - _HologramColor: {r: 0, g: 0.502, b: 1, a: 1}

@@ -8,14 +8,14 @@ namespace Core.Characters.Player
 {
     public class DetectorBrick : MonoBehaviour
     {
-        [SerializeField] private Bag _bag;
+        [SerializeField] private BagCharacter _bag;
 
         private void OnTriggerEnter(Collider other)
         {
             if(_bag.HasCanSpend() && other.TryGetComponent(out Brick brick))
             {
                 _bag.Spend();
-                brick.SetBrick();
+                brick.SetBrick(_bag.Character.Color);
             }
         }
     }

@@ -12,6 +12,7 @@ namespace Core.Components._Spawners
     {
         [MinMaxSlider(0, 360)] [SerializeField] private Vector2 _rotationY;
         [SerializeField] [CanBeNull] private TrailRenderer _trailRenderer;
+        [SerializeField] private protected Collider _collider;
         private float _speedMagnet = 6;
         private Spawner _spawner;
         private Vector3 _startScale;
@@ -26,7 +27,7 @@ namespace Core.Components._Spawners
             if (_trailRenderer) _trailRenderer.enabled = false;
             _spawner = spawner;
             SetPosition(position);
-
+            _collider.enabled = true;
             var randomRotation = _rotationY.RandomRange();
             transform.localRotation = Quaternion.Euler(0, randomRotation, 0);
         }
@@ -48,6 +49,7 @@ namespace Core.Components._Spawners
 
         public void MoveToCharacter(Transform character,Action callback = null)
         {
+            _collider.enabled = false;
             if (_trailRenderer) _trailRenderer.enabled = true;
             transform.DOMove(character.position, _speedMagnet).SetSpeedBased().SetEase(Ease.Flash);
             transform.DOScale(0, _speedMagnet).SetSpeedBased().SetEase(Ease.Flash).OnComplete(() =>

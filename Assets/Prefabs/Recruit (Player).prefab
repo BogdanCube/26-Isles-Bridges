@@ -5117,7 +5117,7 @@ MonoBehaviour:
   _camera: {fileID: 0}
   _healthComponent: {fileID: 8368246196949314360}
   _background: {fileID: 3010961516451668566}
-  _sliderHp: {fileID: 3010961516885720946}
+  _slider: {fileID: 3010961516885720946}
   _text: {fileID: 3010961514911257926}
 --- !u!1 &3010961516885720948
 GameObject:
@@ -7482,7 +7482,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d9a3c813d36b4fb8a6fd93a03218700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grayMaterial: {fileID: 3765131472738546324}
+  _renderers:
+  - {fileID: 8368246196599558390}
+  - {fileID: 8368246196996053507}
 --- !u!1 &8368246196981717370
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ namespace Core.Player
         {
             base.Move();
             Rotation(GetMoveVector());
-            _navMeshAgent.Move(GetMoveVector() * _speed * Time.deltaTime);
+            _navMeshAgent.Move(GetMoveVector() * (_speed * Time.deltaTime));
         }
         private void Rotation(Vector3 moveVector)
         {

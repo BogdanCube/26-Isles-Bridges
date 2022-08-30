@@ -18,6 +18,6 @@ MonoBehaviour:
   - ItemSpawn: {fileID: 2707789178671934103, guid: a5eae7796c67c054faadb0772c2d22da, type: 3}
     CountSpawn: {x: 1, y: 2}
   - ItemSpawn: {fileID: 1860245523469249030, guid: 1b85a78a2c8e64fcdb4cb5edbbeec94b, type: 3}
-    CountSpawn: {x: 1, y: 1}
-  - ItemSpawn: {fileID: 2868718832915065774, guid: dad842c74fb67954ea1b3088860ee604, type: 3}
-    CountSpawn: {x: 1, y: 2}
+    CountSpawn: {x: 0, y: 1}
+  - ItemSpawn: {fileID: 2868718832915065774, guid: 2ddbebfc3876e4e07a7d87b5ff13629e, type: 3}
+    CountSpawn: {x: 1, y: 3}

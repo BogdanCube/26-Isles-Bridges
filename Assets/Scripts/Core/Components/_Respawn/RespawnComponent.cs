@@ -1,6 +1,8 @@
 using Base.Level;
 using Core.Character.Behavior;
+using Core.Characters._Base;
 using Core.Characters.Base.Behavior;
+using Core.Characters.Player;
 using Core.Components._ProgressComponents.Bag;
 using DG.Tweening;
 using UnityEngine;
@@ -9,7 +11,7 @@ namespace Core.Components
 {
     public class RespawnComponent : RespawnRecruit
     {
-        [SerializeField] private BehaviourSystem _behaviourSystem;
+        [SerializeField] private BehaviourPlayer behaviourPlayer;
         [SerializeField] private MovementController _movementController;
         [SerializeField] private AnimationStateController _animationState;
         [SerializeField] private BagCharacter _bag;
@@ -26,7 +28,7 @@ namespace Core.Components
             _movementController.SetStartPos(_startPos);
             transform.DOScale(1, 0.2f).OnComplete(() =>
             {
-                _behaviourSystem.IsStop = false;
+                behaviourPlayer.IsStop = false;
                 LoaderLevel.Instance.UpdateBake();
             });
          

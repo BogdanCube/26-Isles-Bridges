@@ -35,11 +35,10 @@ namespace Core.Environment.Tower.ShopDataTower
 
         private void Buy()
         {
-            if (_bag.HasCanSpend(_price) && _isBuy == false)
+            if (_bag.HasCanSpend(_price))
             {
                 _bag.Spend(_price);
                 BuyAhead();
-                _isBuy = true;
             }
             else
             {

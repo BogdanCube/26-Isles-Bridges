@@ -1,13 +1,9 @@
-using System.Runtime.InteropServices;
 using Core.Components._ProgressComponents.Health;
 using Core.Components._Spawners;
 using Core.Components._Spawners.RandomSpawner;
-using Core.Environment.Island;
 using NaughtyAttributes;
-using NTC.Global.Pool;
-using Rhodos.Toolkit.Extensions;
+using Toolkit.Extensions;
 using UnityEngine;
-using UnityEngine.Scripting;
 
 namespace Core.Components.Loot
 {

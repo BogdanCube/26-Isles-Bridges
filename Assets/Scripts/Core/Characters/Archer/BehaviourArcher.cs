@@ -1,26 +1,14 @@
-using Core.Character.Behavior;
-using Core.Characters.Base.Behavior;
+using Core.Characters._Base;
 using UnityEngine;
 
 namespace Core.Characters.Archer
 {
     public class BehaviourArcher : BehaviourSystem
     {
-        private void Start()
-        {
-            SetState(ScriptableObject.CreateInstance<IdleState>());
-        }
+        protected override IState CurrentState { get; }
 
-        private void Update()
+        protected override void SetIdleState()
         {
-            if (_character.DetectorFighting.IsFight)
-            {
-                SetState(ScriptableObject.CreateInstance<FightingState>());
-            }
-            else
-            {
-                SetState(ScriptableObject.CreateInstance<IdleState>());
-            }
         }
     }
 }

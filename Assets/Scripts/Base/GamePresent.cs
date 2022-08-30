@@ -1,6 +1,8 @@
 using System.Linq;
 using Base.Level;
+using Core.Characters._Base;
 using Core.Characters.Base.Behavior;
+using Core.Characters.Player;
 using Managers.Level;
 using MoreMountains.NiceVibrations;
 using UnityEngine;
@@ -22,7 +24,7 @@ namespace Base
             _loaderLevel.EnemyTower.OnOver -= Win;
         }
         
-        private void Start()
+        private void Awake()
         {
             LoadGame();
         }
@@ -37,7 +39,7 @@ namespace Base
         }
         private void Win()
         {
-            var characters = FindObjectsOfType<BehaviourSystem>().ToList();
+            var characters = FindObjectsOfType<BehaviourPlayer>().ToList();
             characters.ForEach(character => character.SetDanceState());
             _loaderLevel.LevelCompleted();
             OnWin.Invoke();

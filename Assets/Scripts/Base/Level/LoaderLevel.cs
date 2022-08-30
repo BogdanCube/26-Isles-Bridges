@@ -1,15 +1,10 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using Cinemachine;
-using Core.Character.Player;
 using Core.Characters.Player;
 using Core.Components._ProgressComponents.Health;
-using Core.Environment.Tower;
 using MoreMountains.NiceVibrations;
 using NaughtyAttributes;
-using Rhodos.Toolkit.Extensions;
 using TMPro;
+using Toolkit.Extensions;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -22,7 +17,6 @@ namespace Base.Level
         [SerializeField] private int _numberLevel;
         [SerializeField] private NavMeshSurface _navMeshSurface;
         [SerializeField] private TextMeshProUGUI _text;
-        [SerializeField] private CinemachineVirtualCamera _virtualCamera;
         public static LoaderLevel Instance;
         private Level CurrentLevel => _levels[_numberLevel];
         public Player CurrentPlayer => CurrentLevel.Player;
@@ -52,9 +46,8 @@ namespace Base.Level
             {
                 _numberLevel = PlayerPrefs.GetInt("level");
                 _text.text = $"Level {_numberLevel}";
-                _levels.ForEach(level => level.transform.Deactivate());
-                CurrentLevel.transform.Activate();
-                _virtualCamera.Follow = CurrentLevel.Player.transform;
+                _levels.ForEach(level => level.Deactivate());
+                CurrentLevel.Activate();
                 CurrentLevel.Load();
             }
         }

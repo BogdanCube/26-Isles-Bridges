@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offset: 1.4
-  _poolCount: 5
+  _poolCount: 9
 --- !u!114 &823748199782308387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _brick: {fileID: 823748200617189174}
+  _meshRenderer: {fileID: 823748200617189173}
 --- !u!65 &823748199784352318
 BoxCollider:
   m_ObjectHideFlags: 0

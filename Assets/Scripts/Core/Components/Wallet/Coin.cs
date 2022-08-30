@@ -12,7 +12,6 @@ namespace Core.Components.Wallet
         [MinMaxSlider(0, 50)] [SerializeField]
         private Vector2Int _count;
         [SerializeField] private float _startHeight = 2;
-        [SerializeField] private Collider _collider;
         [SerializeField] private float _timeInUp = 1.25f;
         [SerializeField] private float _timeGravity = 0.55f;
         public int RandomCount => _count.RandomRange();

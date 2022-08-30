@@ -8,7 +8,6 @@ namespace Core.Environment._ItemSpawn.Block
     public class BlockItem : ItemSpawn
     {
         [SerializeField] private float _startHeight = 2;
-        [SerializeField] private Collider _collider;
         [SerializeField] private float _timeInUp = 1.25f;
         [SerializeField] private float _timeGravity = 0.55f;
 

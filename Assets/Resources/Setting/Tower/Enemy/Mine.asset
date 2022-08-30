@@ -16,9 +16,12 @@ MonoBehaviour:
   - Model: {fileID: 4255748582814576661, guid: be36bc4a5a37f42f09e0ecdc79de721a, type: 3}
     TimeSpawn: 20
     Price: 20
+    Health: 12
   - Model: {fileID: 3756603568024565758, guid: 2f765e22a70eb4b659768258b5bc76bc, type: 3}
     TimeSpawn: 15
     Price: 30
+    Health: 16
   - Model: {fileID: 4158703360029981054, guid: 15252778dc5444e0ebfc36fe22a7de9a, type: 3}
     TimeSpawn: 10
     Price: 0
+    Health: 20

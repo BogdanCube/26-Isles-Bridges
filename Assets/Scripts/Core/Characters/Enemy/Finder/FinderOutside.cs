@@ -1,18 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Core.Components._ProgressComponents.Health;
 using Core.Components._Spawners;
-using Core.Environment._ItemSpawn;
 using Core.Environment._ItemSpawn.Block;
-using Core.Environment.Block;
 using Core.Environment.Bridge.Brick;
-using Core.Environment.Island;
 using Core.Environment.Tower;
 using Core.Environment.Tower.NoBuilding;
 using NaughtyAttributes;
-using Rhodos.Toolkit.Extensions;
-using UnityEditor;
 using UnityEngine;
 
 namespace Core.Characters.Enemy.Finder
@@ -21,18 +12,22 @@ namespace Core.Characters.Enemy.Finder
     {
         private Brick _brick;
         private Tower _tower;
-        public bool IsBrick => _brick &&_brick.enabled && _brick.IsSet == false;
+        private BlockItem _blockItem;
+        private ItemSpawn _item;
+        private NoBuilding _noBuilding;
+        public bool IsBrick => _brick && _brick.enabled;
         public bool IsTower => _tower && _tower.Level.IsMaxLevel == false;
-        public bool IsTarget => PlayerTower || Item;
-
-        public Transform Brick => _brick.transform;
+        public bool IsBlockItem => _blockItem && _blockItem.gameObject.activeSelf;
+        public bool IsItem => _item && _item.gameObject.activeSelf;
+        public bool IsNoBuilding => _noBuilding && _noBuilding.gameObject.activeSelf;
+        public Transform Brick => _brick.transform; 
         public Transform Tower => _tower.BaseDetectorBag;
+        public Transform BlockItem => _blockItem.transform;
+        public Transform Item => _item.transform;
+        public Transform NoBuilding => _noBuilding.transform;
         public Transform PlayerTower { get; private set; }
-        public Transform Item { get; private set; }
-        public Transform NoBuilding { get; private set; }
-        public Transform BlockItem { get; private set; }
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerStay(Collider other)
         {
             if (other.TryGetComponent(out Tower tower))
             {
@@ -56,11 +51,11 @@ namespace Core.Characters.Enemy.Finder
             {
                 if (item.GetType() != typeof(BlockItem))
                 {
-                    Item = item.transform;
+                    _item = item;
                 }
                 else
                 {
-                    BlockItem = item.transform;
+                    _blockItem = (BlockItem)item;
                 }
             }
             if (other.TryGetComponent(out Brick brick))
@@ -72,7 +67,7 @@ namespace Core.Characters.Enemy.Finder
             }
             if (other.TryGetComponent(out NoBuilding noBuilding))
             {
-                NoBuilding = noBuilding.transform;
+                _noBuilding = noBuilding;
             }
         }
         
@@ -80,11 +75,11 @@ namespace Core.Characters.Enemy.Finder
         {
             if (other.TryGetComponent(out ItemSpawn item))
             {
-                Item = null;
+                _item = null;
             }
             if (other.TryGetComponent(out BlockItem blockItem))
             {
-                BlockItem = null;
+                _blockItem = null;
             }
         }
     }

@@ -38,11 +38,11 @@ namespace Core.Environment.Tower
             _owner = owner;
             _noBuilding = noBuilding;
             _island = island;
+            _level.LoadTower();
 
             transform.DOScale(1, 1f).OnComplete(() =>
             {
                 LoaderLevel.Instance.UpdateBake();
-                _level.LoadTower();
             });
         }
 

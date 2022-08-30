@@ -17,35 +17,20 @@ namespace Core.Environment.Tower
         private void OnEnable()
         {
             _towerLevel.OnUpdate += UpdateDisplayed;
-            _towerLevel.OnHit += UpdateHit;
             _towerLevel.OnMaxUpgrade += MaxUpgrade;
         }
         
         private void OnDisable()
         {
             _towerLevel.OnUpdate -= UpdateDisplayed;
-            _towerLevel.OnHit -= UpdateHit;
             _towerLevel.OnMaxUpgrade -= MaxUpgrade;
         }
         #endregion
         
-        private void UpdateDisplayed(int shopMoney, int priceNextLevel,bool isReserve)
+        private void UpdateDisplayed(int shopMoney, int priceNextLevel)
         {
-            if (isReserve == false)
-            {
-                _text.text = $"{shopMoney}/{priceNextLevel}";
-            }
-            else
-            {
-                _text.text = $"{shopMoney}";
-            }
-        }
-        private void UpdateHit(int shopMoney, int priceNextLevel,bool isReserve)
-        {
-            UpdateDisplayed(shopMoney, priceNextLevel,isReserve);
-            transform.DOKill();
-            _text.DOColor(_towerLevel.IsMaxLevel ? Color.red : Color.white, 1f);
-            _text.color = _towerLevel.IsMaxLevel ? Color.white : Color.red;
+            _text.text = $"{shopMoney}/{priceNextLevel}";
+
         }
         private void MaxUpgrade()
         {

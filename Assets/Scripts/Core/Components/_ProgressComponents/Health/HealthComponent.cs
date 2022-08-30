@@ -22,8 +22,7 @@ namespace Core.Components._ProgressComponents.Health
             get => _currentCount <= 0;
             set => throw new NotImplementedException();
         }
-       
-
+        
         public bool IsOver
         {
             get => _isOver;

@@ -1,4 +1,5 @@
 using System;
+using Core.Components._ProgressComponents.Health;
 using UnityEngine;
 
 namespace Core.Characters.Enemy.Finder
@@ -11,9 +12,9 @@ namespace Core.Characters.Enemy.Finder
 
         private void OnTriggerStay(Collider other)
         {
-            if (other.TryGetComponent(out Player.Player player))
+            if (other.TryGetComponent(out Player.Player player) && other.TryGetComponent(out HealthComponent healthComponent))
             {
-                if (player.HealthComponent.IsDeath == false)
+                if (healthComponent.IsDeath == false)
                 {
                     _player = player;
                 }
@@ -21,7 +22,7 @@ namespace Core.Characters.Enemy.Finder
         }
         private void OnTriggerExit(Collider other)
         { 
-            if (other.TryGetComponent(out Player.Player player))
+            if (other.TryGetComponent(out Player.Player player) && other.TryGetComponent(out HealthComponent healthComponent))
             {
                 _player = null;
             }

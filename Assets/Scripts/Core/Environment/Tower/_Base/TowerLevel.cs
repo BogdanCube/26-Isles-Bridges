@@ -14,9 +14,7 @@ namespace Core.Environment.Tower._Base
         [SerializeField] private Bag _shopBag;
         [SerializeField] private LoaderTower _loaderTower;
         [SerializeField] private ParticleSystem _particleLevel;
-        private bool _isReserve = false;
-        public Action<int,int,bool> OnUpdate;
-        public Action<int,int,bool> OnHit;
+        public Action<int,int> OnUpdate;
         public Action OnMaxUpgrade;
         public bool IsMaxLevel => _level + 1 >= _loaderTower.MaxLevel;
 
@@ -39,16 +37,7 @@ namespace Core.Environment.Tower._Base
                     {
                         if (_shopBag.CurrentCount >= _loaderTower.PriceNextLevel(_level))
                         {
-                            if (_isReserve)
-                            {
-                                _isReserve = false;
-                                _shopBag.Reset();
-                                _shopBag.Add();
-                            }
-                            else
-                            {
-                                LevelUp();
-                            }
+                            LevelUp();
                         }
                     }
                     UpdateDisplay();
@@ -89,43 +78,18 @@ namespace Core.Environment.Tower._Base
 
         private void UpdateDisplay()
         {
-            OnUpdate.Invoke(_shopBag.CurrentCount, _loaderTower.PriceNextLevel(_level),_isReserve);
+            OnUpdate.Invoke(_shopBag.CurrentCount, _loaderTower.PriceNextLevel(_level));
         }
-        public void Hit(int damage, Action callback)
+        
+        public void DestroyTower(Action callback)
         {
-            if (_shopBag.HasCanSpend(damage))
+            if (_level > 0)
             {
-                _shopBag.Spend(damage);
-                OnHit.Invoke(_shopBag.CurrentCount, _loaderTower.PriceNextLevel(_level),_isReserve);
+                LevelDown();
             }
             else
             {
-                DestroyTower(callback);
-            }
-            
-        }
-
-        private void DestroyTower(Action callback)
-        {
-            if (_isReserve == false && IsMaxLevel == false)
-            {
-                _isReserve = true;
-                _shopBag.Reset();
-                _shopBag.Add(_loaderTower.PriceNextLevel(_level) - 1);
-
-                UpdateDisplay();
-            }
-            else
-            {
-                if (_level > 0)
-                {
-                    LevelDown();
-                    //_isReserve = false;
-                }
-                else
-                {
-                    callback.Invoke();
-                }
+                callback.Invoke();
             }
         }
     }

@@ -16,6 +16,9 @@ namespace Core.Environment.Tower.Def_Tower
         private float Radius => _tower.Island.Radius * _coefficient;
         public override int MaxLevel => _setting.Templates.Count;
         public override int PriceNextLevel(int level) => _setting.Templates[level].Price;
+        public override int HealthLevel(int level) => _setting.Templates[level].Health;
+       
+
         protected override Transform TowerModel(int index) => _setting.Templates[index].Model;
 
         public override void Load(int index)

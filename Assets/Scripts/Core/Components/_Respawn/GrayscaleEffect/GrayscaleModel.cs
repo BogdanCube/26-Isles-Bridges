@@ -1,15 +1,12 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using Core.Characters.Base;
-using Core.Components.GrayscaleEffect;
+using System.Linq;
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 
 public class GrayscaleModel : MonoBehaviour
 {
-    [SerializeField] private GrayMaterial _grayMaterial;
+    [SerializeField] private List<Renderer> _renderers;
     private readonly string _nameID = "_AmbientCol";
     
     [Button]
@@ -25,6 +22,9 @@ public class GrayscaleModel : MonoBehaviour
     }
     private void SetFade(float value)
     {
-        _grayMaterial.Material.SetFloat(_nameID, value);
+        foreach (var material in _renderers.SelectMany(renderer => renderer.materials))
+        {
+            material.SetFloat(_nameID, value);
+        }
     }
 }

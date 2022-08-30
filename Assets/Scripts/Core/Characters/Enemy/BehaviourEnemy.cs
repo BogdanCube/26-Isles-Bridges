@@ -1,39 +1,40 @@
 using Core.Character.Behavior;
+using Core.Characters._Base;
 using Core.Characters.Base.Behavior;
+using Core.Characters.Enemy.Behaviour;
+using Core.Characters.Player.Behavior;
+using NTC.Global.Cache;
 using UnityEngine;
 
 namespace Core.Characters.Enemy
 {
     public class BehaviourEnemy : BehaviourSystem
     {
-        private void Start()
+        [SerializeField] private StateEnemy _currentState;
+        [SerializeField] private Enemy _enemy;
+        protected override IState CurrentState => _currentState;
+        public Enemy Enemy => _enemy;
+
+        public void SetState(StateEnemy state)
         {
-            SetState(ScriptableObject.CreateInstance<RunningState>());
+            if (_currentState != null) {
+                _currentState.End();
+            }
+            _currentState = Instantiate(state);
+            _currentState.BehaviourSystem = this;
+            _currentState.Start();
         }
 
-        private void Update()
+
+        protected override void SetIdleState()
         {
-            if (_character.HealthComponent.IsDeath == false)
-            {
-                _currentState.Update();
-                
-                if (_character.DetectorFighting.IsFight)
-                {
-                    SetState(ScriptableObject.CreateInstance<FightingState>());
-                }
-                else if (_character.MovementController.IsMove)
-                {
-                    SetState(ScriptableObject.CreateInstance<RunningState>());
-                }
-                else
-                {
-                    SetState(ScriptableObject.CreateInstance<IdleState>());
-                }
-            }
-            else
-            {
-                SetState(ScriptableObject.CreateInstance<DeathState>());
-            }
+            SetState(ScriptableObject.CreateInstance<IdleStateEnemy>());
+        }
+
+        public void SetDanceState()
+        {
+            SetState(ScriptableObject.CreateInstance<DanceStateEnemy>());
+
         }
     }
 }

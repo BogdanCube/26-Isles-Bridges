@@ -1,11 +1,6 @@
-using System;
-using Core.Character.Behavior;
 using Core.Components;
 using Core.Components._ProgressComponents.Health;
 using Core.Components._ProgressComponents.OwnerRecruit;
-using DG.Tweening;
-using NaughtyAttributes;
-using Rhodos.Toolkit.Extensions;
 using UnityEngine;
 
 namespace Core.Characters.Recruit

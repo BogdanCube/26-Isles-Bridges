@@ -42,6 +42,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         {
             Load();
             _owner = GetComponent<Characters.Base.Character>();
+            UpdateCount();
         }
         
         [Button]
@@ -69,6 +70,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
                 NightPool.Despawn(recruit);
             }
             _recruits = new List<MovementRecruit>();
+            UpdateCount();
         }
 
         private void GroupMovement(Vector3 center)

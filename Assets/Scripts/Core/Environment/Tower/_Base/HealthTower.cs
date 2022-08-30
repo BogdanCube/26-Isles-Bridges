@@ -1,40 +1,52 @@
 using System;
 using Base.Level;
-using Core.Components._ProgressComponents.Bag;
 using Core.Components._ProgressComponents.Health;
 using Core.Components.Loot;
-using Core.Environment.Tower._Base;
 using DG.Tweening;
 using NaughtyAttributes;
-using NTC.Global.Pool;
-using Rhodos.Toolkit.Extensions;
+using Toolkit.Extensions;
 using UnityEngine;
 
-namespace Core.Environment.Tower
+namespace Core.Environment.Tower._Base
 {
     public class HealthTower : MonoBehaviour, IHealthComponent
     {
-        [SerializeField] private Bag _bag;
         [SerializeField] private Tower _tower;
         [SerializeField] private TowerLevel _towerLevel;
         [SerializeField] private LootSpawner _lootSpawner;
         [SerializeField] private LoaderTower _loaderTower;
         [SerializeField] private ParticleSystem _particleHit;
+        private int _maxCount;
+        private int _currentCount;
         public event Action<Transform> OnHit;
         public event Action OnDeath;
+        public event Action<int, int> OnUpdateHealth; 
         public event Action OnOver;
+        [ShowNativeProperty] private int CurrentHealth => _currentCount;
 
-        public bool IsDeath => _bag.CurrentCount <= 0;
-        
-        
+        public bool IsDeath => _currentCount <= 0;
+
+
+        public void Load(int count)
+        {
+            _maxCount = count;
+            _currentCount = _maxCount;
+            UpdateCount();
+        }
         [Button]
         public void Hit(int damage = 1)
         {
-            _towerLevel.Hit(damage, Over);
-            
-            _loaderTower.ResetTower();
+            _currentCount -= damage;
+            //_loaderTower.ResetTower();
             OnHit?.Invoke(_tower.Island.transform);
+            UpdateCount();
             _particleHit.gameObject.SetActive(true);
+            
+            if (IsDeath)
+            {
+                _currentCount = 0;
+                _towerLevel.DestroyTower(Over);
+            }
         }
         [Button]
         public void Over()
@@ -47,6 +59,12 @@ namespace Core.Environment.Tower
                 LoaderLevel.Instance.UpdateBake();
                 transform.Deactivate();
             });
+        }
+
+        private void UpdateCount()
+        {
+            OnUpdateHealth?.Invoke(_currentCount,_maxCount);
+
         }
     }
 }
