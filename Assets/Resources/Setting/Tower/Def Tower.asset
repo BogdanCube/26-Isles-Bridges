@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Templates:
   - Model: {fileID: 3416537025462099405, guid: 16db80354ed054f429e32395687179fa, type: 3}
-    Speed: 1
+    Speed: 2
     Damage: 1
-    Price: 25
-    Health: 20
-  - Model: {fileID: 2415999113119186904, guid: e9a94ab4cd97c4853a4d988fca378caa, type: 3}
-    Speed: 1.2
-    Damage: 2
-    Price: 45
+    Price: 10
     Health: 28
-  - Model: {fileID: 4955604590713557577, guid: 1986f28dab416465c8a6f6d660d8ac84, type: 3}
-    Speed: 1.5
-    Damage: 3
-    Price: 0
+  - Model: {fileID: 2415999113119186904, guid: e9a94ab4cd97c4853a4d988fca378caa, type: 3}
+    Speed: 2
+    Damage: 2
+    Price: 20
     Health: 36
+  - Model: {fileID: 4955604590713557577, guid: 1986f28dab416465c8a6f6d660d8ac84, type: 3}
+    Speed: 2
+    Damage: 3
+    Price: 1
+    Health: 44

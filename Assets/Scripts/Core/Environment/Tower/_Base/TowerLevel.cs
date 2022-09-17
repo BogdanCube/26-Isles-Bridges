@@ -4,6 +4,7 @@ using Core.Components._ProgressComponents.Bag;
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Core.Environment.Tower._Base
 {
@@ -16,6 +17,7 @@ namespace Core.Environment.Tower._Base
         [SerializeField] private ParticleSystem _particleLevel;
         public Action<int,int> OnUpdate;
         public Action OnMaxUpgrade;
+        public UnityEvent OnLevelUp;
         public bool IsMaxLevel => _level + 1 >= _loaderTower.MaxLevel;
 
         public void LoadTower()
@@ -66,13 +68,14 @@ namespace Core.Environment.Tower._Base
             _shopBag.Reset();
             _shopBag.Add();
             UpdateDisplay();
+            OnLevelUp?.Invoke();
         }
         private void LevelDown()
         {
             _level--;
             _loaderTower.Load(_level);
             _shopBag.Reset();
-            _shopBag.Add(_loaderTower.PriceNextLevel(_level) - 1);
+            _shopBag.Add();
             UpdateDisplay();
         }
 

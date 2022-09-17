@@ -4,13 +4,14 @@
 // Copyright (c) 2021-2022 Night Train Code
 // ----------------------------------------------------------------------------
 
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace NTC.Global.Pool
 {
     public class NightPoolEntry : MonoBehaviour
     {
-        [SerializeField] private PoolPreset poolPreset;
+        [Expandable][SerializeField] private PoolPreset poolPreset;
 
         private void Awake()
         {

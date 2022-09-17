@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Core.Characters.Enemy;
 using Core.Characters.Player;
 using Core.Components._ProgressComponents.Health;
 using MoreMountains.NiceVibrations;
@@ -20,8 +21,12 @@ namespace Base.Level
         public static LoaderLevel Instance;
         private Level CurrentLevel => _levels[_numberLevel];
         public Player CurrentPlayer => CurrentLevel.Player;
+        public Enemy CurrentEnemy => CurrentLevel.Enemy;
         public IHealthComponent PlayerTower => CurrentLevel.PlayerTower.HealthComponent;
         public IHealthComponent EnemyTower => CurrentLevel.EnemyTower.HealthComponent;
+        private string _key = "Level";
+        public int NumberLevel => _numberLevel;
+
         #region Singleton
         private void Awake()
         {
@@ -38,22 +43,14 @@ namespace Base.Level
         
         public void Load()
         {
-            if (PlayerPrefs.GetInt("level") > _levels.Count - 1)
-            {
-                PlayerPrefs.DeleteAll();
-            }
-            else
-            {
-                _numberLevel = PlayerPrefs.GetInt("level");
-                _text.text = $"Level {_numberLevel}";
-                _levels.ForEach(level => level.Deactivate());
-                CurrentLevel.Activate();
-                CurrentLevel.Load();
-            }
+            _numberLevel = GetMaxInt(_key, _levels.Count - 1);
+            _text.text = $"Level {_numberLevel}";
+            
+            _levels.ForEach(level => level.Deactivate());
+            CurrentLevel.Init();
         }
         public void StartLevel()
         {
-            MMVibrationManager.Haptic (HapticTypes.Selection);
             UpdateBake();
             CurrentLevel.StartLevel();
         }
@@ -71,16 +68,47 @@ namespace Base.Level
 
         #endregion
 
-        public void LevelCompleted()
+        public void WinCompleted()
         {
+            CurrentPlayer.BehaviourSystem.SetDanceState();
+            if (CurrentEnemy)
+            {
+                CurrentEnemy.BehaviourSystem.SetCryingState();
+            }
+
+            
+            Completed();
+        }
+
+        public void LoseCompleted()
+        {
+            CurrentPlayer.BehaviourSystem.SetCryingState();
+            CurrentEnemy.BehaviourSystem.SetDanceState();
+            
+            Completed();
+        }
+        private void Completed()
+        {
+            CurrentPlayer.Detachment.OverAll();
+            CurrentEnemy.Detachment.OverAll();
+
             _numberLevel++;
-            PlayerPrefs.SetInt("level",_numberLevel);
+            PlayerPrefs.SetInt(_key,_numberLevel);
         }
 
         [Button]
         private void DeleteKey()
         {
             PlayerPrefs.DeleteAll();
+        }
+        private int GetMaxInt(string key, int maxCount)
+        {
+            if (PlayerPrefs.HasKey(key) == false)
+            {
+                return 0;
+            }
+
+            return PlayerPrefs.GetInt(key) > maxCount ? 0 : PlayerPrefs.GetInt(_key);
         }
     }
 }

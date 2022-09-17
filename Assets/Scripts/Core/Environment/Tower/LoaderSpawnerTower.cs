@@ -24,12 +24,7 @@ namespace Core.Environment.Tower
             base.Load(index);
             _spawner.StartSpawn(_setting.Templates[index].TimeSpawn, _tower,OnSpawn);
         }
-
-        public override void ResetTower()
-        {
-            _spawner.ResetSpawn(OnReset);
-        }
-
+        
         public void Shake()
         {
             transform.DOShakeScale(1f, Vector3.one/25f).SetEase(Ease.InBack);

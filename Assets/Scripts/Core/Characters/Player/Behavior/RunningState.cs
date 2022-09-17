@@ -1,27 +1,18 @@
-using Core.Character.Behavior;
-using Core.Characters.Base.Behavior;
-
 namespace Core.Characters.Player.Behavior
 {
-    public class RunningState : State
+    public class RunningState : StatePlayer
     {
-        private Player Player => BehaviourSystem.Player;
-
         public override void Start()
         {
-            Player.AnimationStateController.IsRunning = true;
+            AnimationStateController.IsRunning = true;
         }
         public override void Update()
         {
-            if (Player.HealthComponent.IsDeath == false)
+            if (HealthComponent.IsDeath == false)
             {
-                if (Player.DetectorFighting.IsFight)
+                if (MovementController.IsMove)
                 {
-                    BehaviourSystem.SetState(CreateInstance<FightingState>());
-                }
-                if (Player.MovementController.IsMove)
-                {
-                    Player.MovementController.Move();
+                    MovementController.Move();
                 }
                 else
                 {
@@ -36,7 +27,7 @@ namespace Core.Characters.Player.Behavior
 
         public override void End()
         {
-            Player.AnimationStateController.IsRunning = false;
+            AnimationStateController.IsRunning = false;
         }
     }
 }

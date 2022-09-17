@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Core.Environment.Tower;
+using Core.Environment.Tower._Base;
 using UnityEngine;
 
 namespace Core.Components.DataTowers

@@ -1,5 +1,7 @@
 using System;
+using Core.Characters._Base;
 using Core.Components;
+using Core.Components._ProgressComponents.OwnerRecruit;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -19,14 +21,14 @@ namespace Core.Environment.Island
             {
                 SetColor(Color.gray, 0);
             }
+            OnDelightIsland?.Invoke();
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if(_isDelight == false && other.TryGetComponent(out Characters.Base.Character character))
+            if(_isDelight == false && other.TryGetComponent(out Character character) && other.TryGetComponent(out DetachmentRecruit detachmentRecruit))
             {
                 _isDelight = true;
-                OnDelightIsland?.Invoke();
                 SetColor(character.Color,_duration);
             }
         }

@@ -17,13 +17,11 @@ namespace Core.Environment.Tower
         private void OnEnable()
         {
             _towerLevel.OnUpdate += UpdateDisplayed;
-            _towerLevel.OnMaxUpgrade += MaxUpgrade;
         }
         
         private void OnDisable()
         {
             _towerLevel.OnUpdate -= UpdateDisplayed;
-            _towerLevel.OnMaxUpgrade -= MaxUpgrade;
         }
         #endregion
         
@@ -31,10 +29,6 @@ namespace Core.Environment.Tower
         {
             _text.text = $"{shopMoney}/{priceNextLevel}";
 
-        }
-        private void MaxUpgrade()
-        {
-            _text.DOColor(Color.red,_duration);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Core.Components.Weapon.Bow
         [SerializeField] private Arrow _arrow;
         [SerializeField] private Transform _spawnPoint;
         [SerializeField] private AnimationStateController _animation;
-        [ShowNonSerializedField] private int _damage;
+        [SerializeField] private int _damage;
         private Transform _transform;
         public event Action OnTakeDamage;
 

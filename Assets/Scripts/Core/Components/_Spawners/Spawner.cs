@@ -65,8 +65,8 @@ namespace Core.Components._Spawners
         }
         private float GetRandomPos(Island island)
         {
-            var spawnRadius = new Vector2(island.Radius * 0.3f,island.Radius);
-            return (RandomMinus * spawnRadius.RandomRange()) / _coefficientToIsland;
+            var spawnRadius = new Vector2(island.Radius * 0.45f,island.Radius);
+            return RandomMinus * spawnRadius.RandomRange() / _coefficientToIsland;
         }
         public void Spend()
         {

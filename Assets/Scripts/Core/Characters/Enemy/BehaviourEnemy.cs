@@ -1,6 +1,4 @@
-using Core.Character.Behavior;
 using Core.Characters._Base;
-using Core.Characters.Base.Behavior;
 using Core.Characters.Enemy.Behaviour;
 using Core.Characters.Player.Behavior;
 using NTC.Global.Cache;
@@ -26,15 +24,18 @@ namespace Core.Characters.Enemy
         }
 
 
-        protected override void SetIdleState()
+        public override void SetIdleState()
         {
             SetState(ScriptableObject.CreateInstance<IdleStateEnemy>());
         }
 
-        public void SetDanceState()
+        public override void SetDanceState()
         {
             SetState(ScriptableObject.CreateInstance<DanceStateEnemy>());
-
+        }
+        public override void SetCryingState()
+        {
+            SetState(ScriptableObject.CreateInstance<CryingStateEnemy>());
         }
     }
 }

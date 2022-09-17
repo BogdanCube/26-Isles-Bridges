@@ -1,6 +1,5 @@
 using System;
 using Core.Characters._Base;
-using Core.Characters.Base.Behavior;
 using Core.Characters.Player.Behavior;
 using NTC.Global.Cache;
 using UnityEngine;
@@ -9,12 +8,12 @@ namespace Core.Characters.Player
 {
     public class BehaviourPlayer : BehaviourSystem
     {
-        [SerializeField] private State _currentState;
+        [SerializeField] private StatePlayer _currentState;
         [SerializeField] private Player _player;
         protected override IState CurrentState => _currentState;
         public Player Player => _player;
 
-        public void SetState(State state)
+        public void SetState(StatePlayer state)
         {
             if (_currentState != null) {
                 _currentState.End();
@@ -23,15 +22,18 @@ namespace Core.Characters.Player
             _currentState.BehaviourSystem = this;
             _currentState.Start();
         }
-
-
-        protected override void SetIdleState()
+        
+        public override void SetIdleState()
         {
             SetState(ScriptableObject.CreateInstance<IdleState>());
         }
         public override void SetDanceState()
         {
             SetState(ScriptableObject.CreateInstance<DanceState>());
+        }
+        public override void SetCryingState()
+        {
+            SetState(ScriptableObject.CreateInstance<CryingState>());
         }
     }
 }

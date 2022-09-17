@@ -2,21 +2,37 @@ namespace Core.Characters.Enemy.Behaviour
 {
     public class BuyProgressStateEnemy : StateEnemy
     {
-        public override void Start()
+        public override void Update()
         {
-            AnimationStateController.IsRunning = true;
-        }
-
-        public override void UpdateAction()
-        {
-            if (DataProgressComponent.CanBuySomething)
+            if (HealthComponent.IsDeath)
             {
-                MovementController.SetTarget(FinderInside.ShopTower);
-                MovementController.Move();
+                BehaviourSystem.SetState(CreateInstance<DeathStateEnemy>());
             }
             else
             {
-                BehaviourSystem.SetState(CreateInstance<IdleStateEnemy>());
+                if (Enemy.DetectorFighting.IsFight)
+                {
+                    BehaviourSystem.SetState(CreateInstance<FightingStateEnemy>());
+                }
+                else
+                {
+                    if (IsAggressive)
+                    {
+                        BehaviourSystem.SetState(CreateInstance<AggressiveStateEnemy>());
+                    }
+                    else
+                    {
+                        if (DataProgressComponent.CanBuySomething)
+                        {
+                            MovementController.SetTarget(FinderOutside.ShopTower);
+                            MovementController.Move();
+                        }
+                        else
+                        {
+                            BehaviourSystem.SetState(CreateInstance<IdleStateEnemy>());
+                        }
+                    }
+                }
             }
         }
     }

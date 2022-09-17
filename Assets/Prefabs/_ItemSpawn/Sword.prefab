@@ -15007,6 +15007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rotationY: {x: 0, y: 360}
   _trailRenderer: {fileID: 8504216752229173434}
+  _collider: {fileID: 902086249543190073}
   _weapons:
   - {fileID: 11400000, guid: 3baaa245a73ed432986928ec7a118053, type: 2}
   - {fileID: 11400000, guid: 74b3a30f026fa48ca905792b9e14f68a, type: 2}

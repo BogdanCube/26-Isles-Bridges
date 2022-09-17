@@ -13,7 +13,7 @@ namespace Core.Environment.Tower
     public class TemplateDefTower
     {
         public Transform Model;
-        [Range(1, 2)] public float Speed = 1;
+        [Range(1, 3)] public float Speed = 1;
         public int Damage;
         public int Price;
         public int Health;

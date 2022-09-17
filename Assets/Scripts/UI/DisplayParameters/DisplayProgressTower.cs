@@ -5,6 +5,7 @@ using Core.Environment.Tower.ShopProgressItem;
 using NTC.Global.Pool;
 using Toolkit.Extensions;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace UI.DisplayParameters
 {
@@ -14,14 +15,15 @@ namespace UI.DisplayParameters
         [SerializeField] private Transform _parent;
         private List<ShopProgressComponent> _shopDataTower = new List<ShopProgressComponent>();
         public List<ShopProgressComponent> ShopDataTowers => _shopDataTower;
-        
+        public UnityEvent OnBought;
+
         public void Load(List<ProgressComponent> components,Wallet wallet)
         {
             foreach (var component in components)
             {
                 var shop = NightPool.Spawn(_prefab, _parent);
                 _shopDataTower.Add(shop);
-                shop.Load(component,wallet);
+                shop.Load(component,wallet,OnBought);
             }
         }
 

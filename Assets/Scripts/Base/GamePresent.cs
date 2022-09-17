@@ -1,10 +1,12 @@
 using System.Linq;
 using Base.Level;
 using Core.Characters._Base;
-using Core.Characters.Base.Behavior;
+using Core.Characters.Enemy;
 using Core.Characters.Player;
+using Core.Characters.Recruit;
 using Managers.Level;
 using MoreMountains.NiceVibrations;
+using NTC.Global.Pool;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,7 +15,6 @@ namespace Base
     public class GamePresent : MonoBehaviour
     {
         [SerializeField] private LoaderLevel _loaderLevel;
-        [SerializeField] private PlayerVibration _vibration;
         public UnityEvent OnStartGame;
         public UnityEvent OnWin;
         public UnityEvent OnLose;
@@ -35,20 +36,16 @@ namespace Base
             _loaderLevel.Load();
             _loaderLevel.PlayerTower.OnOver += Lose;
             _loaderLevel.EnemyTower.OnOver += Win;
-            _vibration.Load(_loaderLevel.CurrentPlayer);
         }
         private void Win()
         {
-            var characters = FindObjectsOfType<BehaviourPlayer>().ToList();
-            characters.ForEach(character => character.SetDanceState());
-            _loaderLevel.LevelCompleted();
+            _loaderLevel.WinCompleted();
             OnWin.Invoke();
-            MMVibrationManager.Haptic (HapticTypes.Success);
         }
         private void Lose()
         {
+            _loaderLevel.LoseCompleted();
             OnLose.Invoke();
-            MMVibrationManager.Haptic (HapticTypes.Warning);
         }
     }
 }

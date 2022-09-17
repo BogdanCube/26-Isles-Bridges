@@ -1074,8 +1074,8 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 92b536ad874984145a4c7db919e558a0, type: 2}
-  - {fileID: 2100000, guid: cc2c3d5fd9d5b4bbf97489e7098c887e, type: 2}
-  - {fileID: 2100000, guid: cd034a7657d1fbb4ebb7bd50806eb6e2, type: 2}
+  - {fileID: 2100000, guid: b70cd8ebc31094c08ba82de0066c54ff, type: 2}
+  - {fileID: 2100000, guid: eeb29f7a34076de44b55ec0e450d1200, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1522,6 +1522,7 @@ GameObject:
   - component: {fileID: 3835149317231361849}
   - component: {fileID: 3835149317231361733}
   - component: {fileID: 3835149317231361730}
+  - component: {fileID: 2017346445906063096}
   m_Layer: 0
   m_Name: Archer (Player)
   m_TagString: Untagged
@@ -1559,16 +1560,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519bbeba22c0fea4d8cea5db57e1a335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementController: {fileID: 0}
+  _behaviourSystem: {fileID: 0}
   _animationStateController: {fileID: 3835149317231361849}
   _healthComponent: {fileID: 0}
   _detectorFighting: {fileID: 5554454766960401906}
   _weapon: {fileID: 3835149317231361730}
-  _color: {r: 0.33333334, g: 0.6509804, b: 0.33333334, a: 1}
-  _winParticle: {fileID: 3797365221515514527}
   _bag: {fileID: 0}
   _wallet: {fileID: 0}
+  _material: {fileID: 2100000, guid: 94cec67b968914c15ad1beda34897601, type: 2}
+  _winParticle: {fileID: 3797365221515514527}
   _detachment: {fileID: 0}
+  _movementController: {fileID: 0}
   _data: {fileID: 0}
 --- !u!114 &3835149317231361849
 MonoBehaviour:
@@ -1596,7 +1598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentState: {fileID: 0}
-  _character: {fileID: 3835149317231361741}
+  _archer: {fileID: 3835149317231361741}
 --- !u!114 &3835149317231361730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1612,6 +1614,19 @@ MonoBehaviour:
   _arrow: {fileID: 5811912623596504809, guid: 95bb2d15d7f3344ff9431fcaeb7ee133, type: 3}
   _spawnPoint: {fileID: 8938689015674812283}
   _animation: {fileID: 3835149317231361849}
+  _damage: 0
+--- !u!114 &2017346445906063096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835149317231361853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287e88db736f451198df6c2f621b2885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3835149318168787735
 GameObject:
   m_ObjectHideFlags: 0

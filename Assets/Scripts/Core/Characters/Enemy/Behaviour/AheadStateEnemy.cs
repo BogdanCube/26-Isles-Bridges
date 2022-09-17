@@ -2,27 +2,24 @@ namespace Core.Characters.Enemy.Behaviour
 {
     public class AheadStateEnemy : StateEnemy
     {
-        public override void Start()
+        public override void Update()
         {
-            MovementController.SpeedBoost(2.5f);
-            AnimationStateController.IsRunning = true;
-        }
-        public override void UpdateAction()
-        {
-            if (Enemy.IsAggressive)
+            if (HealthComponent.IsDeath)
             {
-                MovementController.Move();
-                MovementController.SetTargetAhead();
+                BehaviourSystem.SetState(CreateInstance<DeathStateEnemy>());
             }
             else
             {
-                BehaviourSystem.SetState(CreateInstance<IdleStateEnemy>()); 
+                if (MovementController.IsAhead)
+                {
+                    MovementController.SetTargetAhead();
+                    MovementController.Move();
+                }
+                else
+                {
+                    BehaviourSystem.SetState(CreateInstance<IdleStateEnemy>());
+                }
             }
-        }
-
-        public override void End()
-        {
-            MovementController.SpeedDeboost();
         }
     }
 }

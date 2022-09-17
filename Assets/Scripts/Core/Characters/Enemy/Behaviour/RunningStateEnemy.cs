@@ -2,28 +2,31 @@ namespace Core.Characters.Enemy.Behaviour
 {
     public class RunningStateEnemy : StateEnemy
     {
-        public override void Start()
+        protected override void LateUpdate()
         {
-            MovementController.SpeedBoost(1.5f);
-            AnimationStateController.IsRunning = true;
-        }
-        public override void UpdateAction()
-        {
-            if (Enemy.IsNonState)
+            if (DataProgressComponent.CanBuySomething)
             {
-                MovementController.SetStartTarget();
-                MovementController.Move();
+                BehaviourSystem.SetState(CreateInstance<BuyProgressStateEnemy>());
             }
             else
             {
-                BehaviourSystem.SetState(CreateInstance<IdleStateEnemy>()); 
+                if (IsCollectionItem)
+                {
+                    BehaviourSystem.SetState(CreateInstance<CollectionItemStateEnemy>());
+                }
+                else
+                {
+                    if (IsNonState)
+                    {
+                        MovementController.SetStartTarget();
+                        MovementController.Move();
+                    }
+                    else
+                    {
+                        BehaviourSystem.SetState(CreateInstance<IdleStateEnemy>()); 
+                    }
+                }
             }
         }
-
-        public override void End()
-        {
-            MovementController.SpeedDeboost();
-        }
     }
-    
 }

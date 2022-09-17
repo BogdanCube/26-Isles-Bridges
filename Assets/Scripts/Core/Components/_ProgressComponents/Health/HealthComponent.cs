@@ -12,11 +12,13 @@ namespace Core.Components._ProgressComponents.Health
         [SerializeField] private ParticleSystem _particleHit;
         private bool _isOver;
         public event Action<int> OnUpdateHealth;
-        public event Action<Transform> OnHit;
+        public event Action OnHit;
         public event Action OnDeath;
         public event Action OnRespawn;
         public event Action OnOver;
         public int CurrentCount => _currentCount;
+        public int MaxCount => _maxCount;
+        public bool IsFull => _currentCount == _maxCount;
         public bool IsDeath
         {
             get => _currentCount <= 0;
@@ -30,11 +32,10 @@ namespace Core.Components._ProgressComponents.Health
             {
                 _isOver = value; 
                 OnOver?.Invoke();
-                NightPool.Despawn(transform);
             }
         }
        
-        public int MaxCount => _maxCount;
+      
         private void Start()
         {
             if (IsProgress)
@@ -62,6 +63,7 @@ namespace Core.Components._ProgressComponents.Health
                 _currentCount = 0;
                 OnDeath?.Invoke();
             }
+            OnHit?.Invoke();
             OnUpdateHealth?.Invoke(_currentCount);
         }
         

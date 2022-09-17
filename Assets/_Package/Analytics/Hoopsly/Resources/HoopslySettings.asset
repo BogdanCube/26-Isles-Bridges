@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4174701733449966980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c130f8e6936a540b7d5a175973b599, type: 3}
+  m_Name: HoopslyGeneralSettings
+  m_EditorClassIdentifier: 
+  m_startSdkManually: 0
+  m_fpsMeasureIntervals: 1
+  m_debugFpsMeasurment: 0
+  m_hoopslyEventsLogLevel: 1
+  m_enableGDPR_screen: 1
+  m_overrideGDPR_region: 0
+  m_pauseGameOnGDPR: 1
+  m_activeGDPR_Preset: {fileID: 11400000, guid: e1099272382009e44b44398e8b23e3c4, type: 2}
+  m_defaultGDPR_Preset: {fileID: 11400000, guid: e1099272382009e44b44398e8b23e3c4, type: 2}
+  m_useFacebook: 1
+  m_enableIngameConsole: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79689e1fb0f60248904c8886c7b0529, type: 3}
+  m_Name: HoopslySettings
+  m_EditorClassIdentifier: 
+  m_applovinSettings: {fileID: 8621314405268552846}
+  m_generalSettings: {fileID: -4174701733449966980}
+  m_adjustSettings: {fileID: 3799255717386280426}
+--- !u!114 &3799255717386280426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006ea353547dd364c984c1a6cb583126, type: 3}
+  m_Name: HoopslyAdjustSettings
+  m_EditorClassIdentifier: 
+  m_useAdjust: 1
+  m_adjustAppToken: yj27s8424a2o
+  m_adjustLogLevel: 3
+  m_adjustEnviroment: 1
+  m_adjustSendInBackground: 0
+  m_adjustEvenBufferingEnabled: 0
+  m_adjustLaunchDeferredDeeplink: 1
+--- !u!114 &8621314405268552846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3065f5c7c61b86948a7ed0e4b0218e94, type: 3}
+  m_Name: HoopslyApplovinSettings
+  m_EditorClassIdentifier: 
+  m_maxSdkKey: _wOZWz-JINT4NAeLckviPsx8oVbzyzoTi2Ph4g0yTwoK8qG7PLd4a0yV9iP9QKkXg93dMU34ohb3b3EaJcmb3x
+  m_enableVerboseLogging: 0
+  m_showMediationDebuggerOnStart: 0
+  m_useInterstitialAd: 0
+  m_interstitialAdUnitId_IOS: 
+  m_interstitialAdUnitId_ANDROID: 
+  m_useRewardedAd: 0
+  m_rewardedAdUnitId_IOS: 
+  m_rewardedAdUnitId_ANDROID: 
+  m_useMRECAd: 0
+  m_MRECAdUnitId_IOS: 
+  m_MRECAdUnitId_ANDROID: 
+  m_mrecPosition: 3
+  m_useBannerAd: 0
+  m_bannerAdUnitId_IOS: 
+  m_bannerAdUnitId_ANDROID: 
+  m_useAdaptiveBanner: 0
+  m_bannerPosition: 7
+  m_bannerBackgroundColor: {r: 0, g: 0, b: 0, a: 1}

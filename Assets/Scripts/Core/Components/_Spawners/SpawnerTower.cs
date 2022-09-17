@@ -3,6 +3,7 @@ using System.Collections;
 using Core.Components._Spawners.RandomSpawner;
 using Core.Environment.Island;
 using Core.Environment.Tower;
+using Core.Environment.Tower._Base;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -24,15 +25,6 @@ namespace Core.Components._Spawners
             _currentTimeSpawn = time;
             _coroutine = SpawnCoroutine(_randomData,tower.Island,_currentTimeSpawn,callback);
             StartCoroutine(_coroutine);
-        }
-
-        public void ResetSpawn(Action<Action> callback)
-        {
-            StopCoroutine(_coroutine);
-            callback?.Invoke(() =>
-            {
-                StartCoroutine(_coroutine);
-            });
         }
     }
 }

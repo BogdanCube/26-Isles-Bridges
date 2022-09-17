@@ -22,8 +22,8 @@ namespace Core.Characters.Enemy
         [SerializeField] private HealthTower _healthTower;
         private Transform _aheadTarget;
         private NavMeshPath _navMeshPath;
-        private bool _isAhead;
-        public bool IsAhead => _isAhead &&_aheadTarget && transform.DistanceToTarget(_aheadTarget) < _finderOutside.Radius;
+        //public bool IsAhead => ;
+        public bool IsAhead => _aheadTarget;
         public bool IsAtStart => transform.DistanceToTarget(_startPos) < 1;
 
         #region Ahead
@@ -54,20 +54,18 @@ namespace Core.Characters.Enemy
             base.Move();
             
             
-            if (_currentTarget)
+            if (_currentTarget && _currentTarget.IsActive())
             {
                 _navMeshAgent.SetDestination(_currentTarget.position);
-                if (Vector3.Distance(transform.position, _currentTarget.position) < 0.2f ||
-                    _currentTarget.gameObject.activeSelf == false)
-                {
-                    _currentTarget = null;
+            }
 
-                }
+            if (_aheadTarget && transform.DistanceToTarget(_aheadTarget) < _finderOutside.Radius)
+            {
+                _aheadTarget = null;
             }
         }
        
         
-
         #region SetTarget
         public void UpdatePos()
         {
@@ -83,12 +81,17 @@ namespace Core.Characters.Enemy
         }
         public void SetTarget(Transform target)
         {
-            if (target.gameObject.activeSelf)
+            if (target.IsActive())
             {
-                _currentTarget = null;
                 _currentTarget = target;
-                _navMeshAgent.SetDestination(_currentTarget.position);
             }
+        }
+
+        public bool CheckTarget(Transform target)
+        {
+            _navMeshAgent.CalculatePath(target.position, _navMeshPath);
+            return _navMeshPath.status == NavMeshPathStatus.PathComplete;
+
         }
         public void SetCheckTarget(Transform target)
         {

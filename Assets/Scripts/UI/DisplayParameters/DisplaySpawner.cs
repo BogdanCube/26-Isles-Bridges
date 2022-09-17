@@ -16,15 +16,12 @@ namespace UI.DisplayParameters
         private void OnEnable()
         {
             _loaderSpawner.OnSpawn += StartSlider;
-            _loaderSpawner.OnReset += ResetSlider;
         }
 
        
         private void OnDisable()
         {
             _loaderSpawner.OnSpawn -= StartSlider;
-            _loaderSpawner.OnReset -= ResetSlider;
-
         }
 
         #endregion
@@ -32,17 +29,10 @@ namespace UI.DisplayParameters
         private void StartSlider(int time)
         {
             _image.fillAmount = 0;
-            _tween = _image.DOFillAmount(1, time).SetEase(Ease.InCubic).OnComplete(() =>
+            _image.DOFillAmount(1, time).OnComplete(() =>
             {
                 _loaderSpawner.Shake();
             });
         }
-
-        private void ResetSlider(Action callback)
-        {
-            _tween.Kill();
-            _image.DOFillAmount(0, 1).OnComplete(callback.Invoke);
-        }
-
     }
 }

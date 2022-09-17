@@ -1,3 +1,4 @@
+using System;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -10,12 +11,13 @@ namespace Core.Components._ProgressComponents
         [SerializeField] private protected int _maxCount;
 
         private int _level;
-        public int Price => _componentData.Template[_level].Price;
-        public bool IsMaxLevel => _level + 1 >= _componentData.Template.Count;
-        public string ProgressText => $"{CurrentMaxCount} -> {NextMaxCount}" ;
+        public event Action OnLevelUp;
         private int CurrentMaxCount => _componentData.Template[_level].MaxCount;
         private int NextMaxCount => IsMaxLevel == false ? _componentData.Template[_level + 1].MaxCount : 0;
         protected bool IsProgress => _componentData;
+        public int Price => _componentData.Template[_level].Price;
+        public bool IsMaxLevel => _level + 1 >= _componentData.Template.Count;
+        public string ProgressText => $"{CurrentMaxCount} -> {NextMaxCount}";
         public Sprite Icon => _componentData.Icon;
         protected void Load()
         {
@@ -26,6 +28,7 @@ namespace Core.Components._ProgressComponents
         {
             _level++;
             _maxCount = CurrentMaxCount;
+            OnLevelUp?.Invoke();
             UpdateCount();
         }
 

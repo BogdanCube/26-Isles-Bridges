@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: EnemyTowers
   m_EditorClassIdentifier: 
   Templates:
-  - Tower: {fileID: 8519713285479395139, guid: 275655ea77a034833a3fe6cdd4b6cb10, type: 3}
-    Icon: {fileID: 21300000, guid: 28161baa26e7341e48f53f74557b53ff, type: 3}
-    Price: 15
-  - Tower: {fileID: 6778660544289046882, guid: ab00729230c59c248bafba246b3d0bfb, type: 3}
-    Icon: {fileID: 21300000, guid: d127788c3505a435cb410442f381d7fd, type: 3}
-    Price: 10
   - Tower: {fileID: 3983419277790982604, guid: 1919e4c1517aeeb47914b645b7ac6149, type: 3}
     Icon: {fileID: 21300000, guid: 0cfc9b1d34af14ff2a690e7452a78b6d, type: 3}
+    Price: 5
+  - Tower: {fileID: 6778660544289046882, guid: ab00729230c59c248bafba246b3d0bfb, type: 3}
+    Icon: {fileID: 21300000, guid: d127788c3505a435cb410442f381d7fd, type: 3}
+    Price: 5
+  - Tower: {fileID: 8519713285479395139, guid: 275655ea77a034833a3fe6cdd4b6cb10, type: 3}
+    Icon: {fileID: 21300000, guid: 28161baa26e7341e48f53f74557b53ff, type: 3}
     Price: 5

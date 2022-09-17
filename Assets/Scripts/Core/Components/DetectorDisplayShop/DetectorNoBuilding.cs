@@ -5,18 +5,13 @@ using UnityEngine;
 public class DetectorNoBuilding : MonoBehaviour
 {
     [SerializeField] private DataTowers _dataTowers;
-    private bool isLoaded;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out NoBuilding noBuilding))
         {
-            if (isLoaded == false)
-            {
-                var displayData = noBuilding.DisplayData;
-                displayData.Load(_dataTowers.TowerData, _dataTowers.Bag);
-                isLoaded = true;
-            }
+            var displayData = noBuilding.DisplayData;
+            displayData.Load(_dataTowers.TowerData, _dataTowers.Bag);
         }
     }
 
@@ -26,7 +21,6 @@ public class DetectorNoBuilding : MonoBehaviour
         {
             var displayData = noBuilding.DisplayData;
             displayData.Deload();
-            isLoaded = false;
         }
     }
 }

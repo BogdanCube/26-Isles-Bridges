@@ -1230,6 +1230,7 @@ GameObject:
   - component: {fileID: 3352212447597578619}
   - component: {fileID: 3352212447597578616}
   - component: {fileID: 2691058666318368316}
+  - component: {fileID: 8592969946037793764}
   m_Layer: 6
   m_Name: Detector Inside
   m_TagString: Untagged
@@ -1282,6 +1283,21 @@ MonoBehaviour:
   _isDebuged: 0
   _sphereCollider: {fileID: 3352212447597578616}
   _outline: {fileID: 6244592345306378142}
+--- !u!114 &8592969946037793764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3352212447597578621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2859d9d1d04460585499b880b9a29b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _detectorOutside: {fileID: 8152086256201319533}
+  _movementRecruit: {fileID: 9033622210821594679}
+  _navMeshAgent: {fileID: 6244592346247998025}
 --- !u!1 &3463470812240114706
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,8 +2184,8 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 7c2d2e664781645778019f9d7dab80b6, type: 2}
-  - {fileID: 2100000, guid: cc2c3d5fd9d5b4bbf97489e7098c887e, type: 2}
-  - {fileID: 2100000, guid: cd034a7657d1fbb4ebb7bd50806eb6e2, type: 2}
+  - {fileID: 2100000, guid: 22b37bdff5d0e8a45a61c859a4280800, type: 2}
+  - {fileID: 2100000, guid: 4708dd19a0d822e4e8269af803e791f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2762,6 +2778,7 @@ GameObject:
   - component: {fileID: 6244592346247998390}
   - component: {fileID: 628432287755830959}
   - component: {fileID: 6244592346247998385}
+  - component: {fileID: 557006154791358621}
   m_Layer: 0
   m_Name: Recruit (Enemy)
   m_TagString: Untagged
@@ -2799,7 +2816,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 6244592346247998387}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.33
+  m_Radius: 0.18
   m_Speed: 5
   m_Acceleration: 28
   avoidancePriority: 50
@@ -2808,7 +2825,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.00001
+  m_Height: 1.07
   m_BaseOffset: 0
   m_WalkableMask: 3
   m_ObstacleAvoidanceType: 4
@@ -2854,13 +2871,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571abae2e5d7f7c478186e88cb726595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementController: {fileID: 9033622210821594679}
+  _behaviourSystem: {fileID: 0}
   _animationStateController: {fileID: 6244592346247998391}
   _healthComponent: {fileID: 6244592346247998390}
   _detectorFighting: {fileID: 2691058666318368316}
   _weapon: {fileID: 6244592346247998385}
-  _color: {r: 0.77254903, g: 0.32941177, b: 0.30980393, a: 1}
+  _bag: {fileID: 0}
+  _wallet: {fileID: 0}
+  _material: {fileID: 2100000, guid: f61803765a65247a9b578534cefa2f11, type: 2}
   _winParticle: {fileID: 1311933895196661950}
+  _detachment: {fileID: 0}
+  _movementController: {fileID: 0}
+  _finderOutside: {fileID: 0}
+  _finderInside: {fileID: 0}
+  _finderPlayer: {fileID: 0}
+  _finderTower: {fileID: 0}
+  _dataTowers: {fileID: 0}
+  _dataProgress: {fileID: 0}
 --- !u!114 &6244592346247998389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2874,7 +2901,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentState: {fileID: 0}
-  _character: {fileID: 6734222073476607286}
+  _recruit: {fileID: 6734222073476607286}
+  _movementRecruit: {fileID: 9033622210821594679}
+  _detectorCharacter: {fileID: 8152086256201319533}
 --- !u!114 &9033622210821594679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2890,7 +2919,6 @@ MonoBehaviour:
   _speed: 4.5
   _navMeshAgent: {fileID: 6244592346247998025}
   _healthComponent: {fileID: 6244592346247998390}
-  _outsideDetector: {fileID: 8152086256201319533}
 --- !u!114 &6244592346247998391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2918,7 +2946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _componentData: {fileID: 0}
   _maxCount: 5
-  _currentCount: 0
+  _currentCount: 1
   _particleHit: {fileID: 2357259222873721268}
 --- !u!114 &628432287755830959
 MonoBehaviour:
@@ -2932,7 +2960,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe334ca2ad0405ea843d8fd65967a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeRespawn: 5
   _grayscaleModel: {fileID: 4597780721429738703}
   _healthComponent: {fileID: 6244592346247998390}
   _lootSpawner: {fileID: 3122246940749348367}
@@ -2948,8 +2975,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47884ca3fccbb714d8397b927b56e45e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentData: {fileID: 11400000, guid: 95c69b15d743e4f08879e97a11aa071f, type: 2}
+  _currentData: {fileID: 11400000, guid: 8124333a04d624ba8bc9da90b2f6a7ea, type: 2}
   _meshFilter: {fileID: 3979999682748619211}
+--- !u!114 &557006154791358621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6244592346247998387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287e88db736f451198df6c2f621b2885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6266184587099089908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,8 +3169,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cd034a7657d1fbb4ebb7bd50806eb6e2, type: 2}
-  - {fileID: 2100000, guid: cc2c3d5fd9d5b4bbf97489e7098c887e, type: 2}
+  - {fileID: 2100000, guid: 4708dd19a0d822e4e8269af803e791f0, type: 2}
+  - {fileID: 2100000, guid: 22b37bdff5d0e8a45a61c859a4280800, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

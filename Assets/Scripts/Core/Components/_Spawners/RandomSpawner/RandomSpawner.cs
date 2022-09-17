@@ -22,7 +22,7 @@ namespace Core.Components._Spawners.RandomSpawner
         }
         #endregion
         [Button]
-        private void SpawnRandom()
+        public void SpawnRandom()
         {
             Spawn(_randomData,_freeIsland);
         }

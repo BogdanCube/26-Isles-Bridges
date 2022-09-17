@@ -1,6 +1,7 @@
 using Core.Components._ProgressComponents.Health;
 using Core.Components._Spawners;
 using Core.Components._Spawners.RandomSpawner;
+using DG.Tweening;
 using NaughtyAttributes;
 using Toolkit.Extensions;
 using UnityEngine;
@@ -29,7 +30,10 @@ namespace Core.Components.Loot
 
         private void SpawnLoot()
         {
-            Spawn(_randomData,_radius);
+            if (_randomData)
+            {
+                Spawn(_randomData,_radius);
+            }
         }
         public void DespawnLoot()
         {

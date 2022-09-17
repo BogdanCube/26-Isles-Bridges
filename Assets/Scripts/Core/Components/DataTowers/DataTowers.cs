@@ -13,5 +13,9 @@ namespace Core.Components.DataTowers
         public _ProgressComponents.Bag.BagCharacter Bag => _bag;
         public bool CanBuySomething => _towerData.Templates.Count(template => _bag.CurrentCount >= template.Price) > 0;
 
+        public void SetTowerData(TowerData towerData)
+        {
+            _towerData = towerData;
+        }
     }
 }

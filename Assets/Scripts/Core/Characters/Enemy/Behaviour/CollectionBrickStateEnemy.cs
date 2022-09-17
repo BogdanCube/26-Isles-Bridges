@@ -2,13 +2,9 @@ namespace Core.Characters.Enemy.Behaviour
 {
     public class CollectionBrickStateEnemy : StateEnemy
     {
-        public override void Start()
+        protected override void LateUpdate()
         {
-            AnimationStateController.IsRunning = true;
-        }
-        public override void UpdateAction()
-        {
-            if (Enemy.IsCollection)
+            if (IsCollection)
             {
                 MovementController.SetTarget(FinderOutside.BlockItem);
                 MovementController.Move();

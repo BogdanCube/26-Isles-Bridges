@@ -1,4 +1,5 @@
 using System;
+using Core.Characters._Base;
 using Core.Environment._ItemSpawn;
 using NaughtyAttributes;
 using NTC.Global.Pool;
@@ -11,13 +12,13 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
     {
         [SerializeField] private DetachmentRecruit _detachmentRecruit;
         [SerializeField] private Wallet.Wallet _wallet;
-        [SerializeField] private Characters.Base.Character _character;
+        [SerializeField] private Character _character;
         [MinMaxSlider(0f, 25f)] [SerializeField] private Vector2Int _additionalCoin;
         private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out RecruitItem recruit))
             {
-                if(other.TryGetComponent(out Characters.Base.Character character))
+                if(other.TryGetComponent(out Character character))
                 {
                     if (character.GetType() == _character.GetType())
                     {
@@ -42,7 +43,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
             {
                 recruit.PickUp(() =>
                 {
-                    _detachmentRecruit.OnMax.Invoke();
+                    _detachmentRecruit.OnMax?.Invoke();
                     var count = _additionalCoin.RandomRange();
                     _wallet.Add(count);
                 });

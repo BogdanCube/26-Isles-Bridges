@@ -54,8 +54,7 @@ namespace Core.Environment.Tower.ShopDataTower
             tower.HealthComponent.OnHit += callback;
             var colorCharacter = _bag.Character.Color;
             
-            _noBuilding.gameObject.SetActive(false);
-            _noBuilding.FreeIsland.SetColor(colorCharacter,1f);
+            _noBuilding.BuildTower(colorCharacter);
         }
     }
 }

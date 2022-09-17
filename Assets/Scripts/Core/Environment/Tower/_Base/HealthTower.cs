@@ -14,15 +14,13 @@ namespace Core.Environment.Tower._Base
         [SerializeField] private Tower _tower;
         [SerializeField] private TowerLevel _towerLevel;
         [SerializeField] private LootSpawner _lootSpawner;
-        [SerializeField] private LoaderTower _loaderTower;
         [SerializeField] private ParticleSystem _particleHit;
         private int _maxCount;
-        private int _currentCount;
+        [SerializeField] private int _currentCount;
         public event Action<Transform> OnHit;
         public event Action OnDeath;
         public event Action<int, int> OnUpdateHealth; 
         public event Action OnOver;
-        [ShowNativeProperty] private int CurrentHealth => _currentCount;
 
         public bool IsDeath => _currentCount <= 0;
 
@@ -37,14 +35,12 @@ namespace Core.Environment.Tower._Base
         public void Hit(int damage = 1)
         {
             _currentCount -= damage;
-            //_loaderTower.ResetTower();
             OnHit?.Invoke(_tower.Island.transform);
             UpdateCount();
             _particleHit.gameObject.SetActive(true);
             
             if (IsDeath)
             {
-                _currentCount = 0;
                 _towerLevel.DestroyTower(Over);
             }
         }
@@ -63,6 +59,10 @@ namespace Core.Environment.Tower._Base
 
         private void UpdateCount()
         {
+            if (_currentCount < 0)
+            {
+                _currentCount = 0;
+            }
             OnUpdateHealth?.Invoke(_currentCount,_maxCount);
 
         }

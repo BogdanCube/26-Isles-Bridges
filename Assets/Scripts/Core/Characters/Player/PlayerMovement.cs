@@ -1,11 +1,7 @@
-using System;
-using DG.Tweening;
-using Core.Character.Behavior;
 using Core.Components;
-using NaughtyAttributes;
 using UnityEngine;
 
-namespace Core.Player
+namespace Core.Characters.Player
 {
     public class PlayerMovement : MovementController
     {

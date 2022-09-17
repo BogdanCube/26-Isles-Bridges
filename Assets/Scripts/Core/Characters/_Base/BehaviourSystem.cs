@@ -16,12 +16,14 @@ namespace Core.Characters._Base
         }
         public void Run()
         {
-            if (IsStop == false && CurrentState != null)
+            if (IsStop == false)
             {
                 CurrentState.Update();
             }
         }
-        protected abstract void SetIdleState();
+        
+        public abstract void SetIdleState();
         public virtual void SetDanceState(){}
+        public virtual void SetCryingState(){}
     }
 }

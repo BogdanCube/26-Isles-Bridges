@@ -4,20 +4,27 @@ namespace Core.Characters.Enemy.Behaviour
     {
         public override void Start()
         {
-            Enemy.AnimationStateController.IsFighting = true;
+            AnimationStateController.IsFighting = true;
         }
 
-        public override void UpdateAction()
+        public override void Update()
         {
-            if (Enemy.DetectorFighting.IsFight == false)
+            if (HealthComponent.IsDeath)
             {
-                BehaviourSystem.SetState(CreateInstance<IdleStateEnemy>());
+                BehaviourSystem.SetState(CreateInstance<DeathStateEnemy>());
+            }
+            else
+            {
+                if (Enemy.DetectorFighting.IsFight == false)
+                {
+                    BehaviourSystem.SetState(CreateInstance<IdleStateEnemy>());
+                }
             }
         }
 
         public override void End()
         {          
-            Enemy.AnimationStateController.IsFighting = false;
+            AnimationStateController.IsFighting = false;
         }
     }
 }

@@ -6,6 +6,7 @@ using Core.Components.Wallet;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 
@@ -20,10 +21,11 @@ namespace Core.Environment.Tower.ShopProgressItem
         private ProgressComponent _currentComponent;
         private Wallet _wallet;
         private int _price;
-        private bool _isBuy = false;
+        private bool _isBuy;
+        private UnityEvent OnBought;
 
         public int Price => _price;
-        public void Load(ProgressComponent component, Wallet wallet)
+        public void Load(ProgressComponent component, Wallet wallet,UnityEvent Bought = null)
         {
             transform.localScale = Vector3.one;
             _currentComponent = component;
@@ -34,13 +36,16 @@ namespace Core.Environment.Tower.ShopProgressItem
             _priceText.text = _currentComponent.IsMaxLevel ? "MAX" :_price.ToString();
             _progressText.text = _currentComponent.IsMaxLevel ? String.Empty :_currentComponent.ProgressText;
             _button.onClick.AddListener(Buy);
+            if (Bought != null)
+            {
+                OnBought = Bought;
+            }
         }
 
         private void Buy()
         {
-            if (_wallet.HasCanSpend(_price) && _isBuy == false)
+            if (_wallet.HasCanSpend(_price))
             {
-                _isBuy = true;
                 BuyAhead();
             } 
             else
@@ -57,7 +62,7 @@ namespace Core.Environment.Tower.ShopProgressItem
                 _currentComponent.LevelUp();
                 _wallet.Spend(_price);
                 Load(_currentComponent,_wallet);
-                _isBuy = false;
+                OnBought?.Invoke();
             }
         }
     } 

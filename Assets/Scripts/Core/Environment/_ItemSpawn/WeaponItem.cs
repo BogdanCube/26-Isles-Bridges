@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using Components.Weapon;
 using Core.Components._Spawners;
+using Core.Components.Weapon;
 using NaughtyAttributes;
 using Toolkit.Extensions;
 using UnityEngine;

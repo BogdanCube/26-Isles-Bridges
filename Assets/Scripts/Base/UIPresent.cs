@@ -2,14 +2,14 @@ using NaughtyAttributes;
 using UI.Screen;
 using UnityEngine;
 
-namespace Managers
+namespace Base
 {
     public class UIPresent : MonoBehaviour
     {
         [ShowNonSerializedField] private UIScreen _currentScreen;
         private void Awake()
         {
-            DisableAllScreen();
+            //DisableAllScreen();
         }
 
         private void DisableAllScreen()
@@ -17,7 +17,7 @@ namespace Managers
             var screens = FindObjectsOfType<UIScreen>();
             foreach (var screen in screens)
             {
-                screen.gameObject.SetActive(false);
+                screen.SetNo();
             }
         }
 

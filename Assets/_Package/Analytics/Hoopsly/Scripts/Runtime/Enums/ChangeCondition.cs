@@ -1,0 +1,1 @@
+public enum ChangeCondition { milestone, buy, ad_watch };

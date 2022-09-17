@@ -1617,8 +1617,8 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 7c2d2e664781645778019f9d7dab80b6, type: 2}
-  - {fileID: 2100000, guid: cc2c3d5fd9d5b4bbf97489e7098c887e, type: 2}
-  - {fileID: 2100000, guid: cd034a7657d1fbb4ebb7bd50806eb6e2, type: 2}
+  - {fileID: 2100000, guid: 22b37bdff5d0e8a45a61c859a4280800, type: 2}
+  - {fileID: 2100000, guid: 4708dd19a0d822e4e8269af803e791f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2655,6 +2655,7 @@ GameObject:
   - component: {fileID: 6812245567821791026}
   - component: {fileID: 6812245567821790926}
   - component: {fileID: 6812245567821790921}
+  - component: {fileID: 9052129208592095778}
   m_Layer: 0
   m_Name: Archer (Enemy)
   m_TagString: Untagged
@@ -2692,13 +2693,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571abae2e5d7f7c478186e88cb726595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementController: {fileID: 0}
+  _behaviourSystem: {fileID: 0}
   _animationStateController: {fileID: 6812245567821791026}
   _healthComponent: {fileID: 0}
   _detectorFighting: {fileID: 3276445138496756409}
   _weapon: {fileID: 6812245567821790921}
-  _color: {r: 0.77254903, g: 0.32941177, b: 0.30980393, a: 1}
+  _bag: {fileID: 0}
+  _wallet: {fileID: 0}
+  _material: {fileID: 2100000, guid: f61803765a65247a9b578534cefa2f11, type: 2}
   _winParticle: {fileID: 3433475562337906195}
+  _detachment: {fileID: 0}
+  _movementController: {fileID: 0}
+  _finderOutside: {fileID: 0}
+  _finderInside: {fileID: 0}
+  _finderPlayer: {fileID: 0}
+  _finderTower: {fileID: 0}
+  _dataTowers: {fileID: 0}
+  _dataProgress: {fileID: 0}
 --- !u!114 &6812245567821791026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2725,7 +2736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentState: {fileID: 0}
-  _character: {fileID: 6812245567821790920}
+  _archer: {fileID: 6812245567821790920}
 --- !u!114 &6812245567821790921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2741,6 +2752,19 @@ MonoBehaviour:
   _arrow: {fileID: 5811912623596504809, guid: 95bb2d15d7f3344ff9431fcaeb7ee133, type: 3}
   _spawnPoint: {fileID: 1710313361023743856}
   _animation: {fileID: 6812245567821791026}
+  _damage: 0
+--- !u!114 &9052129208592095778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6812245567821791030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287e88db736f451198df6c2f621b2885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6833437595432828785
 GameObject:
   m_ObjectHideFlags: 0

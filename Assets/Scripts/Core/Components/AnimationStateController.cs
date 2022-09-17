@@ -11,6 +11,7 @@ namespace Core.Components
         private readonly int _deathNameId = Animator.StringToHash("Death");
         private readonly int _liveNameId = Animator.StringToHash("Live");
         private readonly int _danceNameId = Animator.StringToHash("Dance");
+        private readonly int _cryingNameId = Animator.StringToHash("Crying");
 
         private bool _isRunning;
         private bool _isFighting;
@@ -58,6 +59,10 @@ namespace Core.Components
         public void Dance()
         {
             _animator.SetTrigger(_danceNameId);
+        }
+        public void Crying()
+        {
+            _animator.SetTrigger(_cryingNameId);
         }
     }
 }

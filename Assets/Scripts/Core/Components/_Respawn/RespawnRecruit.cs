@@ -1,5 +1,4 @@
 using System;
-using Core.Character.Behavior;
 using Core.Components._ProgressComponents.Bag;
 using Core.Components._ProgressComponents.Health;
 using Core.Components.Loot;
@@ -12,7 +11,7 @@ namespace Core.Components
 {
     public class RespawnRecruit : MonoBehaviour
     {
-        [SerializeField] private float _timeRespawn;
+        private float _timeRespawn = 3;
         [SerializeField] private GrayscaleModel _grayscaleModel;
         [SerializeField] private HealthComponent _healthComponent;
         [SerializeField] private LootSpawner _lootSpawner;
@@ -35,10 +34,10 @@ namespace Core.Components
 
         private void HideBody()
         {
-            _grayscaleModel.FadeGray(_timeRespawn * 0.75f).OnComplete(() =>
-            {
-                _lootSpawner.DespawnLoot();
-                transform.DOScale(0,_timeRespawn * 0.25f).OnComplete(() =>
+            var sequence = DOTween.Sequence()
+                .Append(_grayscaleModel.FadeGray(_timeRespawn * 0.7f)).OnComplete(_lootSpawner.DespawnLoot)
+                .Append(transform.DOScale(0,_timeRespawn * 0.3f))
+                .OnComplete(() =>
                 {
                     if (_healthComponent.IsOver == false)
                     {
@@ -47,8 +46,6 @@ namespace Core.Components
                         _grayscaleModel.FadeToDefault(0);
                     }
                 });
-                
-            });
         }
         protected virtual void Respawn()
         {

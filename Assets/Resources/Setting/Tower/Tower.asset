@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Templates:
   - Model: {fileID: 3624161409942222896, guid: 2bb4bf5d25cd248d19fef571cc14ed4c, type: 3}
-    TimeSpawn: 5
-    Price: 20
-    Health: 16
-  - Model: {fileID: 270108311685952785, guid: 5eac7c646fb8c4ca792e47a4011db468, type: 3}
-    TimeSpawn: 4
-    Price: 35
-    Health: 24
-  - Model: {fileID: 8741376706077780373, guid: 67132bcd552884c9785c2b8120283792, type: 3}
     TimeSpawn: 3
-    Price: 1
+    Price: 20
+    Health: 24
+  - Model: {fileID: 270108311685952785, guid: 5eac7c646fb8c4ca792e47a4011db468, type: 3}
+    TimeSpawn: 2
+    Price: 35
     Health: 32
+  - Model: {fileID: 8741376706077780373, guid: 67132bcd552884c9785c2b8120283792, type: 3}
+    TimeSpawn: 1
+    Price: 1
+    Health: 40

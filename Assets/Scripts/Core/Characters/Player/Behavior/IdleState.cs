@@ -1,25 +1,20 @@
-using Core.Character.Behavior;
-using Core.Characters.Base.Behavior;
-
 namespace Core.Characters.Player.Behavior
 {
-    public class IdleState : State
+    public class IdleState : StatePlayer
     {
-        private Player Player => BehaviourSystem.Player;
-
         public override void Start()
         {
-            BehaviourSystem.Player.AnimationStateController.IsRunning = false;
+            AnimationStateController.IsRunning = false;
         }
         public override void Update()
         {
-            if (Player.HealthComponent.IsDeath == false)
+            if (HealthComponent.IsDeath == false)
             {
-                if (Player.MovementController.IsMove)
+                if (MovementController.IsMove)
                 {
                     BehaviourSystem.SetState(CreateInstance<RunningState>());
                 }
-                if (Player.DetectorFighting.IsFight)
+                if (DetectorFighting.IsFight)
                 {
                     BehaviourSystem.SetState(CreateInstance<FightingState>());
                 } 

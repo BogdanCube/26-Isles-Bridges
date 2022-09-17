@@ -15,6 +15,17 @@ namespace Core.Components.DataTowers
         public Wallet.Wallet Wallet => _wallet;
         public ProgressComponent LowPricedComponent => _lowPricedComponent;
 
-        [ShowNativeProperty] public bool CanBuySomething => _components.Count(component => component.Price <= _wallet.CurrentCount && component.IsMaxLevel == false) > 0;
+        [ShowNativeProperty] public bool CanBuySomething 
+            => _components.Count > 0 &&
+               _components.Count(component => component.Price <= _wallet.CurrentCount 
+                                                         && component.IsMaxLevel == false) > 0;
+
+        public void AddComponent(ProgressComponent progressComponent)
+        {
+            var list = new List<ProgressComponent> { progressComponent };
+            _components.ForEach(component => list.Add(component));
+            
+            _components = list;
+        }
     }
 }

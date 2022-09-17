@@ -1,15 +1,12 @@
-using Core.Characters.Base.Behavior;
-using UnityEngine;
-
-namespace Core.Character.Behavior
+namespace Core.Characters.Player.Behavior
 {
-    public class DeathState : State
+    public class DeathState : StatePlayer
     {
         public override void Start()
         {
-            BehaviourSystem.Player.AnimationStateController.Death();
+            AnimationStateController.Death();
             BehaviourSystem.IsStop = true;
-            BehaviourSystem.Player.MovementController.IsStopped = true;
+            MovementController.IsStopped = true;
         }
     }
 }

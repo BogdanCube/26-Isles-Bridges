@@ -11,6 +11,7 @@ namespace UI.Screen
         [SerializeField] private Animator _animator;
         private readonly int _showNameId = Animator.StringToHash("Show");
         private readonly int _hideNameId = Animator.StringToHash("Hide");
+        private readonly int _noNameId = Animator.StringToHash("No");
         
         private Action OnHideScreen;
         public UnityEvent OnHideEvent;
@@ -19,6 +20,11 @@ namespace UI.Screen
         {
             transform.Activate();
             _animator.SetTrigger(_showNameId);
+        }
+
+        public void SetNo()
+        {
+            _animator.SetTrigger(_noNameId);
         }
         public void Hide(Action callback)
         {

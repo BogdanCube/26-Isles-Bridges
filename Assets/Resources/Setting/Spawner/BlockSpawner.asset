@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Templates:
   - ItemSpawn: {fileID: 2603998876523478737, guid: c944aab376d5247e082bb9dd3056e178, type: 3}
-    CountSpawn: {x: 3, y: 6}
+    CountSpawn: {x: 1, y: 3}

@@ -23,7 +23,5 @@ namespace Core.Environment.Tower._Base
             _healthTower.Load(HealthLevel(index));
             LoaderLevel.Instance.UpdateBake();
         }
-
-        public virtual void ResetTower() { }
     }
 }

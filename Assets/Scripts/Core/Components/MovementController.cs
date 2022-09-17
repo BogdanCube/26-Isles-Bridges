@@ -22,7 +22,7 @@ namespace Core.Components
                 if (value != _isStopped)
                 {
                     _isStopped = value;
-                    _navMeshAgent.speed = _isStopped ? 0 : _speed;
+                    _navMeshAgent.enabled = !_isStopped;
                 }
             }
         }
@@ -36,6 +36,8 @@ namespace Core.Components
         }
         public virtual void Move()
         {
+            if (IsStopped) return;
+            
             if (transform.position != _lastPose)
             {
                 OnChangePosition?.Invoke(transform.position);
@@ -46,18 +48,9 @@ namespace Core.Components
 
         public void SetStartPos(Vector3 target)
         {
-            IsStopped = false;
+            IsStopped = true;
             _navMeshAgent.Warp(target);
-        }
-
-        public void SpeedBoost(float coefficient)
-        {
-            _navMeshAgent.speed = _speed * coefficient;
-        }
-
-        public void SpeedDeboost()
-        {
-            _navMeshAgent.speed = _speed;
+            IsStopped = false;
         }
     }
 }

@@ -2,16 +2,11 @@ namespace Core.Characters.Enemy.Behaviour
 {
     public class BuildTowerStateEnemy : StateEnemy
     {
-        public override void Start()
+        protected override void LateUpdate()
         {
-            AnimationStateController.IsRunning = true;
-        }
-
-        public override void UpdateAction()
-        {
-            if (Enemy.IsBuildTower)
+            if (IsBuildTower)
             {
-                MovementController.SetTarget(FinderOutside.Tower);
+                MovementController.SetTarget(FinderTower.Tower);
                 MovementController.Move();
             }
             else

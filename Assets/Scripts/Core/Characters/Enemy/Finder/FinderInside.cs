@@ -7,6 +7,7 @@ using Core.Components.Wallet;
 using Core.Environment.Block;
 using Core.Environment.Island;
 using Core.Environment.Tower;
+using Core.Environment.Tower._Base;
 using Core.Environment.Tower.NoBuilding;
 using Toolkit.Extensions;
 using UnityEngine;
@@ -20,7 +21,6 @@ namespace Core.Characters.Enemy.Finder
         [SerializeField] private BagCharacter _bag;
         [SerializeField] private Wallet _wallet;
         [SerializeField] private MovementEnemy _movementEnemy;
-        public Transform ShopTower { get; private set; }
 
         private void OnTriggerStay(Collider other)
         {
@@ -32,20 +32,19 @@ namespace Core.Characters.Enemy.Finder
                     displayData.Load(_dataTowers.TowerData, _dataTowers.Bag);
                     var shopDataTowers = displayData.ShopDataTowers;
                     
-                    foreach (var data in shopDataTowers.Where(data => _bag.HasCanSpend(data.Price)))
+                    if(_bag.HasCanSpend(shopDataTowers[0].Price))
                     {
+                        var data = shopDataTowers.RandomItem();
                         data.BuyAhead(_movementEnemy.SetAhead); 
                         _bag.Spend(data.Price);
                         displayData.Deload();
-                        break;
                     }
                 }
             }
-            if (other.TryGetComponent(out Tower tower) && other.TryGetComponent(out ShopTower shopTower))
+            if (other.TryGetComponent(out ShopTower shopTower))
             {
-                if (tower.Owner == _bag.Character)
+                if (shopTower.Owner == _bag.Character)
                 {
-                    ShopTower = tower.transform;
                     var dataProgress = _dataProgress.Сomponents;
                     
                     if (dataProgress.Count(data => data.Price <= _wallet.CurrentCount && data.IsMaxLevel == false) > 0)

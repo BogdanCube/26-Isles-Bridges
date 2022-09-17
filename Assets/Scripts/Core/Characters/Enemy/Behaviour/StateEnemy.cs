@@ -20,12 +20,32 @@ namespace Core.Characters.Enemy.Behaviour
         protected FinderOutside FinderOutside => Enemy.FinderOutside;
         protected FinderInside FinderInside => Enemy.FinderInside;
         protected FinderPlayer FinderPlayer => Enemy.FinderPlayer;
+        protected FinderTower FinderTower => Enemy.FinderTower;
         protected DataTowers DataTowers => Enemy.DataTowers;
         protected DataProgressComponent DataProgressComponent => Enemy.DataProgress;
 
+        #region Bool
+
+        protected bool IsAggressive => 
+            IsTowerAttack 
+            || (FinderPlayer.IsPlayer && MovementController.CheckTarget(FinderPlayer.Player)) 
+            || IsRush;
+
+        protected bool IsRush => FinderTower.IsFullMax && IsBuildTower == false; 
+        //protected bool IsTowerAttack => FinderTower.IsTowerPlayer;
+        protected bool IsTowerAttack => FinderTower.IsTowerPlayer && FinderTower.IsFullMax;
+        private bool HasBrick => Enemy.Bag.CheckCount(0.5f);
+        protected bool IsCollection => FinderOutside.IsBlockItem && Enemy.Bag.HasCanAdd;
+        protected bool IsCollectionItem => FinderOutside.IsItem && MovementController.CheckTarget(FinderOutside.Item);
+        protected bool IsNonState => (HasBrick == false || IsCollection == false) && MovementController.IsAtStart == false;
+        protected bool IsBuildTower => HasBrick && FinderTower.IsTower;
+        protected bool IsBuild => HasBrick && (FinderOutside.IsBrick || (FinderOutside.IsNoBuilding && DataTowers.CanBuySomething));
+        #endregion
+      
+
         public virtual void Start()
         {
-            Enemy.AnimationStateController.IsRunning = true;
+            AnimationStateController.IsRunning = true;
         }
 
         public virtual void Update()
@@ -42,7 +62,7 @@ namespace Core.Characters.Enemy.Behaviour
                 }
                 else
                 {
-                    if (Enemy.IsAggressive)
+                    if (IsAggressive)
                     {
                         BehaviourSystem.SetState(CreateInstance<AggressiveStateEnemy>());
                     }
@@ -54,34 +74,15 @@ namespace Core.Characters.Enemy.Behaviour
                         }
                         else
                         {
-                            if (DataProgressComponent.CanBuySomething)
-                            {
-                                BehaviourSystem.SetState(CreateInstance<BuyProgressStateEnemy>());
-                            }
-                            else
-                            {
-                                UpdateAction();
-                                /*if (FinderOutside.IsItem)
-                                {
-                                    BehaviourSystem.SetState(CreateInstance<CollectionItemStateEnemy>());
-                                }
-                                else
-                                {
-                                    UpdateAction();
-                                }*/
-                            }
+                            LateUpdate();
                         }
                     }
                 }
             }
         }
-        public virtual void End()
-        {
-            Enemy.AnimationStateController.IsRunning = false;
-        }
+        public virtual void End() { }
         
-        
-        public virtual void UpdateAction() {}
+        protected virtual void LateUpdate() {}
 
     }
 }

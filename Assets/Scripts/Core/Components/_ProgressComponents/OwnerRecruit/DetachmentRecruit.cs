@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Core.Character.Behavior;
+using Core.Characters._Base;
 using Core.Characters.Recruit;
 using Core.Components._ProgressComponents.Health;
 using NaughtyAttributes;
@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace Core.Components._ProgressComponents.OwnerRecruit
 {
-    [RequireComponent(typeof(Characters.Base.Character))]
+    [RequireComponent(typeof(Character))]
     public class DetachmentRecruit : ProgressComponent
     {
         [SerializeField] private float _radius = 3;
@@ -17,7 +17,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         [SerializeField] private List<MovementRecruit> _recruits = new List<MovementRecruit>();
         [SerializeField] private MovementRecruit _prefab;
         [SerializeField] private HealthComponent _healthComponent;
-        private Characters.Base.Character _owner;
+        private Character _owner;
         public event Action<int> OnUpdateCount;
         public Action OnMax;
         public bool HasCanAdd => _recruits.Count + 1 <= _maxCount;
@@ -41,7 +41,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         private void Start()
         {
             Load();
-            _owner = GetComponent<Characters.Base.Character>();
+            _owner = GetComponent<Character>();
             UpdateCount();
         }
         
@@ -62,7 +62,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
         }
         
         [Button]
-        private void OverAll()
+        public void OverAll()
         {
             if (!IsRecruits) return;
             foreach (var recruit in _recruits)
@@ -86,7 +86,7 @@ namespace Core.Components._ProgressComponents.OwnerRecruit
 
             for (int i = 0; i < _recruits.Count; i++)
             {
-                _recruits[i].MoveToTarget(center + result[i] * _radius);
+                _recruits[i].SetPosition(center + result[i] * _radius);
             }
         }
         

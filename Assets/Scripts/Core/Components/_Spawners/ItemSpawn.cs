@@ -16,12 +16,7 @@ namespace Core.Components._Spawners
         private float _speedMagnet = 6;
         private Spawner _spawner;
         private Vector3 _startScale;
-
-        private void Start()
-        {
-            _startScale = transform.localScale;
-        }
-
+        
         public virtual void SetSpawner(Spawner spawner,Vector3 position)
         {
             if (_trailRenderer) _trailRenderer.enabled = false;
@@ -30,6 +25,7 @@ namespace Core.Components._Spawners
             _collider.enabled = true;
             var randomRotation = _rotationY.RandomRange();
             transform.localRotation = Quaternion.Euler(0, randomRotation, 0);
+            transform.localScale = Vector3.one;
         }
 
         private void SetPosition(Vector3 position)
@@ -38,12 +34,14 @@ namespace Core.Components._Spawners
             {
                 transform.localPosition = position;
             }
-            
         }
 
         public void SpendCount()
         {
-            _spawner.Spend();
+            if (_spawner)
+            {
+                _spawner.Spend();
+            }
             NightPool.Despawn(this);
         }
 
@@ -54,7 +52,6 @@ namespace Core.Components._Spawners
             transform.DOMove(character.position, _speedMagnet).SetSpeedBased().SetEase(Ease.Flash);
             transform.DOScale(0, _speedMagnet).SetSpeedBased().SetEase(Ease.Flash).OnComplete(() =>
             {
-                transform.localScale = _startScale;
                 callback?.Invoke();
                 SpendCount();
             });

@@ -4,30 +4,41 @@ namespace Core.Characters.Enemy.Behaviour
 {
     public class AggressiveStateEnemy : StateEnemy
     {
-        public override void Start()
+        public override void Update()
         {
-            AnimationStateController.IsRunning = true;
-        }
-        public override void UpdateAction()
-        {
-            AnimationStateController.IsRunning = false;
-            if (Enemy.IsAggressive)
+            if (HealthComponent.IsDeath)
             {
-                /*if (FinderOutside.PlayerTower)
-                {
-                    MovementController.SetCheckTarget(FinderOutside.PlayerTower);
-                }*/
-                
-                MovementController.SetStartTarget();
-                /*if (FinderPlayer.IsPlayer)
-                {
-                    MovementController.SetTarget(FinderPlayer.Player);
-                }
-                MovementController.Move();*/
+                BehaviourSystem.SetState(CreateInstance<DeathStateEnemy>());
             }
             else
             {
-                BehaviourSystem.SetState(CreateInstance<IdleStateEnemy>());
+                if (Enemy.DetectorFighting.IsFight)
+                {
+                    BehaviourSystem.SetState(CreateInstance<FightingStateEnemy>());
+                }
+                else
+                {
+                    if (IsAggressive)
+                    {
+                        if (IsTowerAttack)
+                        {
+                            MovementController.SetTarget(FinderTower.PlayerTower);
+                        }
+                        else if (FinderPlayer.IsPlayer)
+                        {
+                            MovementController.SetTarget(FinderPlayer.Player);
+                        }
+                        else if (IsRush)
+                        {
+                            MovementController.SetTarget(FinderPlayer.FindPlayer);
+                        }
+                        MovementController.Move();
+                    }
+                    else
+                    {
+                        BehaviourSystem.SetState(CreateInstance<IdleStateEnemy>());
+                    }
+                }
             }
         }
     }

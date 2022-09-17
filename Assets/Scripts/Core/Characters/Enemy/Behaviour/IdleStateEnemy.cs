@@ -1,3 +1,4 @@
+using Core.Characters.Player;
 using Core.Characters.Player.Behavior;
 using UnityEngine;
 namespace Core.Characters.Enemy.Behaviour
@@ -8,22 +9,22 @@ namespace Core.Characters.Enemy.Behaviour
         {
             AnimationStateController.IsRunning = false;
         }
-        
-        public override void UpdateAction()
+
+        protected override void LateUpdate()
         {
-            if (Enemy.IsBuild)
+            if (IsBuild)
             {
                 BehaviourSystem.SetState(CreateInstance<BuildStateEnemy>());
             }
-            else if (Enemy.IsBuildTower)
+            else if (IsBuildTower)
             {
                 BehaviourSystem.SetState(CreateInstance<BuildTowerStateEnemy>());
             }
-            else if(Enemy.IsCollection)
+            else if(IsCollection)
             {
                 BehaviourSystem.SetState(CreateInstance<CollectionBrickStateEnemy>());
             }
-            else if(Enemy.IsNonState)
+            else if (IsNonState)
             {
                 BehaviourSystem.SetState(CreateInstance<RunningStateEnemy>());
             }

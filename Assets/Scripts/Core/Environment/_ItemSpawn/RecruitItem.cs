@@ -15,9 +15,9 @@ namespace Core.Environment._ItemSpawn
         public override void SetSpawner(Spawner spawner, Vector3 position)
         {
             _grayscaleModel.FadeToDefault(0);
-            base.SetSpawner(spawner, new Vector3(0,0,-0.75f));
-            
-            transform.DOLookAt(position,1);
+            base.SetSpawner(spawner, new Vector3(0, 0, -0.75f));
+
+            transform.DOLookAt(position, 1);
             transform.DOLocalMove(position, _speed).SetSpeedBased().OnComplete(() =>
             {
                 _animator.SetBool(_runningNameId, false);
@@ -27,15 +27,17 @@ namespace Core.Environment._ItemSpawn
         public void PickUp(Action callback)
         {
             _grayscaleModel.FadeGray(1);
-            transform.DOShakeScale(1f, Vector3.one/2f).OnComplete((() =>
+
+            var sequence = DOTween.Sequence()
+                .Append(transform.DOShakeScale(1f, Vector3.one / 2f))
+                .Append(transform.DOScale(0, 1));
+            
+            sequence.OnComplete(() =>
             {
-                transform.DOScale(0, 1).OnComplete(() =>
-                {
-                    callback.Invoke();
-                    SpendCount();
-                });
-            }));
-         
+                callback?.Invoke();
+                SpendCount();
+            });;
+
         }
     }
 }

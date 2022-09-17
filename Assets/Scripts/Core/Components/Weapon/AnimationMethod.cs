@@ -7,6 +7,7 @@ namespace Core.Components.Weapon
         [SerializeField] [InterfaceType(typeof(IWeapon))] private Object _weapon;
         [SerializeField] private DetectorFighting _detectorFighting;
         private IWeapon Weapon => (IWeapon)_weapon;
+        
         public void Attack()
         {
             var target = _detectorFighting.CurrentTarget;

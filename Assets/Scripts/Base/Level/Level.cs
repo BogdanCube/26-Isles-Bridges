@@ -1,6 +1,7 @@
 using Core.Characters.Enemy;
 using Core.Characters.Player;
 using Core.Environment.Tower;
+using Core.Environment.Tower._Base;
 using Toolkit.Extensions;
 using UnityEngine;
 
@@ -26,8 +27,9 @@ namespace Base.Level
             }
         }
 
-        public void Load()
+        public void Init()
         {
+            transform.Activate();
             _isAutoLoad = false;
             _enemy.Deactivate();
         }
@@ -35,7 +37,7 @@ namespace Base.Level
         public void StartLevel()
         {
             _enemy.Activate();
-            _playerTower?.Level.LoadTower();
+            _playerTower.Level.LoadTower();
             _enemyTower.Level.LoadTower();
         }
     }
