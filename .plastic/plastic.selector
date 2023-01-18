@@ -1,4 +1,0 @@
-repository "Isles and Bridges@HappyDays_Studio@cloud"
-  path "/"
-    smartbranch "/main" changeset "16"          
-     
